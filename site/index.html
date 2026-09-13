@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CFB Edge Finder</title>
+<style>
+  :root {
+    --bg: #0d1117; --panel: #161b22; --panel2: #1c2330; --border: #2b3442;
+    --text: #e6edf3; --muted: #8b98a9; --green: #3fb950; --green-dim: #238636;
+    --red: #f85149; --gold: #d29922; --blue: #58a6ff; --accent: #339966;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 15px/1.5 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 24px 16px 64px; }
+  header { display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px; margin-bottom: 4px; }
+  h1 { font-size: 26px; margin: 0; letter-spacing: -0.5px; }
+  h1 .accent { color: var(--green); }
+  .sub { color: var(--muted); font-size: 14px; }
+  .stamp { margin-left: auto; color: var(--muted); font-size: 13px; }
+  .banner {
+    background: #3d2e00; border: 1px solid var(--gold); color: #f0d060;
+    padding: 10px 14px; border-radius: 8px; margin: 14px 0; font-size: 14px;
+  }
+  h2 { font-size: 18px; margin: 28px 0 12px; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 12px; }
+  .card {
+    background: linear-gradient(160deg, var(--panel2), var(--panel));
+    border: 1px solid var(--border); border-radius: 10px; padding: 14px 14px 12px;
+    position: relative;
+  }
+  .card .rank {
+    position: absolute; top: 10px; right: 12px; font-size: 12px; color: var(--muted);
+  }
+  .card .pick { font-size: 17px; font-weight: 700; color: var(--green); margin: 2px 0 4px; }
+  .card .matchup { font-size: 13px; color: var(--muted); }
+  .card .meta { font-size: 12.5px; color: var(--text); margin-top: 8px; }
+  .card .meta div { margin-top: 2px; }
+  .tag {
+    display: inline-block; font-size: 11px; padding: 1px 8px; border-radius: 999px;
+    border: 1px solid var(--border); color: var(--muted); text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .controls { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0 10px; align-items: center; }
+  .controls input, .controls select {
+    background: var(--panel); color: var(--text); border: 1px solid var(--border);
+    border-radius: 8px; padding: 7px 10px; font-size: 14px;
+  }
+  .controls label { font-size: 13px; color: var(--muted); display: flex; gap: 6px; align-items: center; }
+  .tablewrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 10px; }
+  table { border-collapse: collapse; width: 100%; min-width: 940px; font-size: 13.5px; }
+  th, td { padding: 8px 10px; text-align: left; white-space: nowrap; }
+  thead th {
+    background: var(--panel2); color: var(--muted); font-weight: 600; font-size: 12px;
+    text-transform: uppercase; letter-spacing: 0.4px; position: sticky; top: 0; cursor: pointer;
+  }
+  tbody tr { border-top: 1px solid var(--border); }
+  tbody tr:hover { background: #1a2130; }
+  .teams b { font-weight: 650; }
+  .rec { color: var(--muted); font-size: 12px; }
+  .edge-hi { color: var(--green); font-weight: 700; }
+  .edge-md { color: var(--gold); font-weight: 600; }
+  .edge-lo { color: var(--muted); }
+  .neg { color: var(--red); }
+  .value-row { box-shadow: inset 3px 0 0 var(--green); }
+  .lowconf { opacity: 0.55; }
+  .books { color: var(--muted); font-size: 12px; }
+  footer { margin-top: 36px; color: var(--muted); font-size: 12.5px; border-top: 1px solid var(--border); padding-top: 14px; }
+  a { color: var(--blue); text-decoration: none; }
+  .empty { color: var(--muted); padding: 24px; text-align: center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>CFB <span class="accent">Edge</span> Finder</h1>
+    <span class="sub" id="weekLabel">Loading…</span>
+    <span class="stamp" id="stamp"></span>
+  </header>
+  <div class="sub">Every FBS game this week, market lines vs. a four-model ensemble (SP+ · FPI · Elo · SRS). Green rows are where the model disagrees with Vegas the most.</div>
+
+  <div id="demoBanner" class="banner" style="display:none">
+    <b>Demo data.</b> The CFBD_API_KEY secret isn't configured yet, so these are sample games.
+    See SETUP.md in the repo to wire up live data.
+  </div>
+
+  <h2>Top 5 Value Plays This Week</h2>
+  <div class="cards" id="topPicks"><div class="empty">Loading…</div></div>
+
+  <h2>Full Board</h2>
+  <div class="controls">
+    <input id="search" type="search" placeholder="Filter teams / conference…">
+    <label><input type="checkbox" id="valueOnly"> Value bets only</label>
+    <label><input type="checkbox" id="hideLowConf" checked> Hide low-confidence (FCS) games</label>
+    <select id="sortBy">
+      <option value="time">Sort: kickoff time</option>
+      <option value="edge">Sort: biggest edge</option>
+      <option value="ev">Sort: best EV</option>
+    </select>
+  </div>
+  <div class="tablewrap">
+    <table id="board">
+      <thead><tr>
+        <th>Kickoff</th><th>Matchup</th><th>Market Spread</th><th>Model Spread</th>
+        <th>Spread Edge</th><th>Market O/U</th><th>Model Total</th><th>Total Edge</th>
+        <th>Model Score</th><th>Win Prob</th><th>Best Bet</th>
+      </tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </div>
+
+  <footer>
+    <p><b>How to read this:</b> "Edge" is how many points the model disagrees with the market line. Edges under ~2 points are noise. The Top 5 ranks bets by expected value per unit staked, assuming -110 pricing on spreads/totals and best available moneyline prices. Model methodology is in <a href="https://github.com/" id="repoLink">MODEL.md</a>.</p>
+    <p>Data: <a href="https://collegefootballdata.com" target="_blank" rel="noopener">CollegeFootballData.com</a>. Ratings: SP+ (Bill Connelly/ESPN), FPI (ESPN), Elo, SRS. Lines shown are for reference only and move constantly — always confirm at the book. No model beats closing lines consistently; bet responsibly and only what you can afford to lose.</p>
+  </footer>
+</div>
+
+<script>
+let DATA = null;
+
+const fmt = {
+  spread(v) { return v == null ? '—' : (v > 0 ? '+' + v : String(v)); },
+  time(iso) {
+    if (!iso) return '—';
+    const d = new Date(iso);
+    return d.toLocaleString(undefined, { weekday: 'short', month: 'numeric', day: 'numeric', hour: 'numeric', minute: '2-digit' });
+  },
+  pct(p) { return p == null ? '—' : Math.round(p * 100) + '%'; },
+  price(v) { return v == null ? '' : (v > 0 ? '+' + v : String(v)); },
+};
+
+function edgeClass(e) {
+  if (e == null) return 'edge-lo';
+  if (e >= 4) return 'edge-hi';
+  if (e >= 2) return 'edge-md';
+  return 'edge-lo';
+}
+
+function bestBet(g) {
+  const eligible = (g.bets || []).filter(b => b.eligible && b.ev > 0);
+  if (!eligible.length) return null;
+  return eligible.sort((a, b) => b.ev - a.ev)[0];
+}
+
+function spreadEdge(g) {
+  const s = g.bets && g.bets.find(b => b.type === 'spread');
+  return s ? s.edgePts : null;
+}
+function totalEdge(g) {
+  const t = g.bets && g.bets.find(b => b.type === 'total');
+  return t ? t.edgePts : null;
+}
+
+function renderTop() {
+  const el = document.getElementById('topPicks');
+  const picks = DATA.topPicks || [];
+  if (!picks.length) {
+    el.innerHTML = '<div class="empty">No bets cleared the value threshold this week. That happens — the market is sharp.</div>';
+    return;
+  }
+  el.innerHTML = picks.map((p, i) => `
+    <div class="card">
+      <span class="rank">#${i + 1}</span>
+      <span class="tag">${p.type}</span>
+      <div class="pick">${p.pick} ${p.type !== 'spread' && p.type !== 'total' ? '' : fmt.price(p.price)}</div>
+      <div class="matchup">${p.matchup}<br>${fmt.time(p.startDate)}</div>
+      <div class="meta">
+        <div>Model hit prob: <b>${fmt.pct(p.prob)}</b></div>
+        <div>EV: <b class="${p.ev > 0 ? 'edge-hi' : 'neg'}">${(p.ev * 100).toFixed(1)}%</b> per unit</div>
+        <div style="color:var(--muted)">${p.detail}</div>
+      </div>
+    </div>`).join('');
+}
+
+function renderBoard() {
+  const q = document.getElementById('search').value.trim().toLowerCase();
+  const valueOnly = document.getElementById('valueOnly').checked;
+  const hideLow = document.getElementById('hideLowConf').checked;
+  const sortBy = document.getElementById('sortBy').value;
+
+  let games = (DATA.games || []).slice();
+  if (q) games = games.filter(g =>
+    [g.homeTeam, g.awayTeam, g.homeConference, g.awayConference]
+      .some(x => (x || '').toLowerCase().includes(q)));
+  if (hideLow) games = games.filter(g => !g.model.lowConfidence);
+  if (valueOnly) games = games.filter(g => bestBet(g));
+
+  if (sortBy === 'edge') {
+    games.sort((a, b) => Math.max(spreadEdge(b) || 0, totalEdge(b) || 0) - Math.max(spreadEdge(a) || 0, totalEdge(a) || 0));
+  } else if (sortBy === 'ev') {
+    games.sort((a, b) => ((bestBet(b) || {}).ev || -9) - ((bestBet(a) || {}).ev || -9));
+  } else {
+    games.sort((a, b) => (a.startDate || '').localeCompare(b.startDate || ''));
+  }
+
+  const tbody = document.getElementById('rows');
+  if (!games.length) {
+    tbody.innerHTML = '<tr><td colspan="11" class="empty">No games match the filters.</td></tr>';
+    return;
+  }
+  tbody.innerHTML = games.map(g => {
+    const m = g.model, ln = g.lines || {};
+    const bb = bestBet(g);
+    const sEdge = spreadEdge(g), tEdge = totalEdge(g);
+    const rowCls = [bb ? 'value-row' : '', m.lowConfidence ? 'lowconf' : ''].join(' ');
+    const books = (ln.books || []).slice(0, 3).map(b => b.provider).join(', ');
+    return `<tr class="${rowCls}">
+      <td>${fmt.time(g.startDate)}</td>
+      <td class="teams"><b>${g.awayTeam}</b> <span class="rec">${g.awayRecord || ''}</span><br>
+          at <b>${g.homeTeam}</b> <span class="rec">${g.homeRecord || ''}</span>
+          ${g.neutralSite ? '<span class="tag">N</span>' : ''}</td>
+      <td>${ln.spread != null ? g.homeTeam + ' ' + fmt.spread(ln.spread) : '—'}
+          <div class="books">${books}</div></td>
+      <td>${fmt.spread(m.spread)}</td>
+      <td class="${edgeClass(sEdge)}">${sEdge != null ? sEdge.toFixed(1) : '—'}</td>
+      <td>${ln.total != null ? ln.total : '—'}</td>
+      <td>${m.total}</td>
+      <td class="${edgeClass(tEdge)}">${tEdge != null ? tEdge.toFixed(1) : '—'}</td>
+      <td>${m.awayScore} — ${m.homeScore}</td>
+      <td>${g.homeTeam} ${fmt.pct(m.pHomeWin)}</td>
+      <td>${bb ? `<span class="edge-hi">${bb.pick}</span> <span class="books">EV ${(bb.ev * 100).toFixed(1)}%</span>` : '<span class="books">—</span>'}</td>
+    </tr>`;
+  }).join('');
+}
+
+async function init() {
+  try {
+    const resp = await fetch('data.json?t=' + Date.now());
+    DATA = await resp.json();
+  } catch (e) {
+    document.getElementById('weekLabel').textContent = 'Could not load data.json';
+    return;
+  }
+  const st = DATA.seasonType === 'postseason' ? 'Bowls/Playoff' : 'Week ' + DATA.week;
+  document.getElementById('weekLabel').textContent = `${DATA.season} · ${st}`;
+  document.getElementById('stamp').textContent =
+    'Updated ' + new Date(DATA.generatedAt).toLocaleString();
+  if (DATA.demo) document.getElementById('demoBanner').style.display = 'block';
+  renderTop();
+  renderBoard();
+  ['search', 'valueOnly', 'hideLowConf', 'sortBy'].forEach(id =>
+    document.getElementById(id).addEventListener('input', renderBoard));
+}
+init();
+</script>
+</body>
+</html>

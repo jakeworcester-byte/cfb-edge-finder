@@ -1,0 +1,892 @@
+{
+ "generatedAt": "2026-09-13T18:23:30.078309+00:00",
+ "demo": true,
+ "season": 2026,
+ "week": 0,
+ "seasonType": "regular",
+ "games": [
+  {
+   "id": 1000,
+   "startDate": "2026-09-13T18:23:30.078309+00:00",
+   "homeTeam": "Georgia",
+   "awayTeam": "Alabama",
+   "homeConference": "-",
+   "awayConference": "-",
+   "homeRecord": "",
+   "awayRecord": "",
+   "neutralSite": false,
+   "tv": null,
+   "venue": "Demo Stadium",
+   "model": {
+    "homeRating": 12.7,
+    "awayRating": 10.3,
+    "sources": {
+     "home": [
+      "sp",
+      "fpi",
+      "elo",
+      "srs"
+     ],
+     "away": [
+      "sp",
+      "fpi",
+      "elo",
+      "srs"
+     ]
+    },
+    "margin": 4.6,
+    "spread": -4.6,
+    "total": 55.9,
+    "homeScore": 30.3,
+    "awayScore": 25.6,
+    "pHomeWin": 0.618,
+    "lowConfidence": false
+   },
+   "lines": {
+    "books": [
+     {
+      "provider": "DraftKings",
+      "spread": -3.5,
+      "overUnder": 52.5,
+      "homeMoneyline": -165,
+      "awayMoneyline": 140,
+      "formattedSpread": "Georgia -3.5"
+     }
+    ],
+    "spread": -3.5,
+    "total": 52.5,
+    "mlHome": -165,
+    "mlAway": 140
+   },
+   "bets": [
+    {
+     "type": "spread",
+     "pick": "Georgia -3.5",
+     "team": "Georgia",
+     "edgePts": 1.1,
+     "prob": 0.534,
+     "price": -110,
+     "ev": 0.0193,
+     "eligible": false,
+     "detail": "Model: Georgia by +4.6 vs market +3.5"
+    },
+    {
+     "type": "total",
+     "pick": "Over 52.5",
+     "team": null,
+     "edgePts": 3.4,
+     "prob": 0.599,
+     "price": -110,
+     "ev": 0.1444,
+     "eligible": false,
+     "detail": "Model total 55.9 vs market 52.5"
+    },
+    {
+     "type": "moneyline",
+     "pick": "Georgia ML -165",
+     "team": "Georgia",
+     "edgePts": -0.5,
+     "prob": 0.618,
+     "price": -165,
+     "ev": -0.0076,
+     "eligible": false,
+     "detail": "Model win prob 62% vs implied 62%"
+    },
+    {
+     "type": "moneyline",
+     "pick": "Alabama ML +140",
+     "team": "Alabama",
+     "edgePts": -3.5,
+     "prob": 0.382,
+     "price": 140,
+     "ev": -0.083,
+     "eligible": false,
+     "detail": "Model win prob 38% vs implied 42%"
+    }
+   ]
+  },
+  {
+   "id": 1001,
+   "startDate": "2026-09-13T18:23:30.078309+00:00",
+   "homeTeam": "Ohio State",
+   "awayTeam": "Penn State",
+   "homeConference": "-",
+   "awayConference": "-",
+   "homeRecord": "",
+   "awayRecord": "",
+   "neutralSite": false,
+   "tv": null,
+   "venue": "Demo Stadium",
+   "model": {
+    "homeRating": 17.7,
+    "awayRating": 10.3,
+    "sources": {
+     "home": [
+      "sp",
+      "fpi",
+      "elo",
+      "srs"
+     ],
+     "away": [
+      "sp",
+      "fpi",
+      "elo",
+      "srs"
+     ]
+    },
+    "margin": 9.7,
+    "spread": -9.7,
+    "total": 45.2,
+    "homeScore": 27.5,
+    "awayScore": 17.7,
+    "pHomeWin": 0.735,
+    "lowConfidence": false
+   },
+   "lines": {
+    "books": [
+     {
+      "provider": "DraftKings",
+      "spread": -6.5,
+      "overUnder": 48.5,
+      "homeMoneyline": -240,
+      "awayMoneyline": 198,
+      "formattedSpread": "Ohio State -6.5"
+     }
+    ],
+    "spread": -6.5,
+    "total": 48.5,
+    "mlHome": -240,
+    "mlAway": 198
+   },
+   "bets": [
+    {
+     "type": "spread",
+     "pick": "Ohio State -6.5",
+     "team": "Ohio State",
+     "edgePts": 3.2,
+     "prob": 0.595,
+     "price": -110,
+     "ev": 0.1361,
+     "eligible": true,
+     "detail": "Model: Ohio State by +9.7 vs market +6.5"
+    },
+    {
+     "type": "total",
+     "pick": "Under 48.5",
+     "team": null,
+     "edgePts": 3.3,
+     "prob": 0.597,
+     "price": -110,
+     "ev": 0.1389,
+     "eligible": false,
+     "detail": "Model total 45.2 vs market 48.5"
+    },
+    {
+     "type": "moneyline",
+     "pick": "Ohio State ML -240",
+     "team": "Ohio State",
+     "edgePts": 2.9,
+     "prob": 0.735,
+     "price": -240,
+     "ev": 0.0417,
+     "eligible": false,
+     "detail": "Model win prob 74% vs implied 71%"
+    },
+    {
+     "type": "moneyline",
+     "pick": "Penn State ML +198",
+     "team": "Penn State",
+     "edgePts": -7.1,
+     "prob": 0.265,
+     "price": 198,
+     "ev": -0.2113,
+     "eligible": false,
+     "detail": "Model win prob 26% vs implied 34%"
+    }
+   ]
+  },
+  {
+   "id": 1002,
+   "startDate": "2026-09-13T18:23:30.078309+00:00",
+   "homeTeam": "Texas",
+   "awayTeam": "Oklahoma",
+   "homeConference": "-",
+   "awayConference": "-",
+   "homeRecord": "",
+   "awayRecord": "",
+   "neutralSite": false,
+   "tv": null,
+   "venue": "Demo Stadium",
+   "model": {
+    "homeRating": 11.9,
+    "awayRating": 10.3,
+    "sources": {
+     "home": [
+      "sp",
+      "fpi",
+      "elo",
+      "srs"
+     ],
+     "away": [
+      "sp",
+      "fpi",
+      "elo",
+      "srs"
+     ]
+    },
+    "margin": 3.9,
+    "spread": -3.9,
+    "total": 59.3,
+    "homeScore": 31.6,
+    "awayScore": 27.7,
+    "pHomeWin": 0.601,
+    "lowConfidence": false
+   },
+   "lines": {
+    "books": [
+     {
+      "provider": "DraftKings",
+      "spread": -7.0,
+      "overUnder": 56.0,
+      "homeMoneyline": -260,
+      "awayMoneyline": 215,
+      "formattedSpread": "Texas -7"
+     }
+    ],
+    "spread": -7.0,
+    "total": 56.0,
+    "mlHome": -260,
+    "mlAway": 215
+   },
+   "bets": [
+    {
+     "type": "spread",
+     "pick": "Oklahoma +7",
+     "team": "Oklahoma",
+     "edgePts": 3.1,
+     "prob": 0.589,
+     "price": -110,
+     "ev": 0.1252,
+     "eligible": true,
+     "detail": "Model: Texas by +3.9 vs market +7.0"
+    },
+    {
+     "type": "total",
+     "pick": "Over 56",
+     "team": null,
+     "edgePts": 3.3,
+     "prob": 0.597,
+     "price": -110,
+     "ev": 0.1389,
+     "eligible": false,
+     "detail": "Model total 59.3 vs market 56"
+    },
+    {
+     "type": "moneyline",
+     "pick": "Texas ML -260",
+     "team": "Texas",
+     "edgePts": -12.2,
+     "prob": 0.601,
+     "price": -260,
+     "ev": -0.1684,
+     "eligible": false,
+     "detail": "Model win prob 60% vs implied 72%"
+    },
+    {
+     "type": "moneyline",
+     "pick": "Oklahoma ML +215",
+     "team": "Oklahoma",
+     "edgePts": 8.2,
+     "prob": 0.399,
+     "price": 215,
+     "ev": 0.2582,
+     "eligible": true,
+     "detail": "Model win prob 40% vs implied 32%"
+    }
+   ]
+  },
+  {
+   "id": 1003,
+   "startDate": "2026-09-13T18:23:30.078309+00:00",
+   "homeTeam": "Oregon",
+   "awayTeam": "Washington",
+   "homeConference": "-",
+   "awayConference": "-",
+   "homeRecord": "",
+   "awayRecord": "",
+   "neutralSite": false,
+   "tv": null,
+   "venue": "Demo Stadium",
+   "model": {
+    "homeRating": 14.2,
+    "awayRating": 10.3,
+    "sources": {
+     "home": [
+      "sp",
+      "fpi",
+      "elo",
+      "srs"
+     ],
+     "away": [
+      "sp",
+      "fpi",
+      "elo",
+      "srs"
+     ]
+    },
+    "margin": 6.1,
+    "spread": -6.1,
+    "total": 64.8,
+    "homeScore": 35.5,
+    "awayScore": 29.3,
+    "pHomeWin": 0.654,
+    "lowConfidence": false
+   },
+   "lines": {
+    "books": [
+     {
+      "provider": "DraftKings",
+      "spread": -9.5,
+      "overUnder": 61.5,
+      "homeMoneyline": -340,
+      "awayMoneyline": 270,
+      "formattedSpread": "Oregon -9.5"
+     }
+    ],
+    "spread": -9.5,
+    "total": 61.5,
+    "mlHome": -340,
+    "mlAway": 270
+   },
+   "bets": [
+    {
+     "type": "spread",
+     "pick": "Washington +9.5",
+     "team": "Washington",
+     "edgePts": 3.4,
+     "prob": 0.598,
+     "price": -110,
+     "ev": 0.1416,
+     "eligible": true,
+     "detail": "Model: Oregon by +6.1 vs market +9.5"
+    },
+    {
+     "type": "total",
+     "pick": "Over 61.5",
+     "team": null,
+     "edgePts": 3.3,
+     "prob": 0.597,
+     "price": -110,
+     "ev": 0.1389,
+     "eligible": false,
+     "detail": "Model total 64.8 vs market 61.5"
+    },
+    {
+     "type": "moneyline",
+     "pick": "Oregon ML -340",
+     "team": "Oregon",
+     "edgePts": -11.8,
+     "prob": 0.654,
+     "price": -340,
+     "ev": -0.1533,
+     "eligible": false,
+     "detail": "Model win prob 65% vs implied 77%"
+    },
+    {
+     "type": "moneyline",
+     "pick": "Washington ML +270",
+     "team": "Washington",
+     "edgePts": 7.5,
+     "prob": 0.346,
+     "price": 270,
+     "ev": 0.2793,
+     "eligible": true,
+     "detail": "Model win prob 35% vs implied 27%"
+    }
+   ]
+  },
+  {
+   "id": 1004,
+   "startDate": "2026-09-13T18:23:30.078309+00:00",
+   "homeTeam": "Kansas State",
+   "awayTeam": "Iowa State",
+   "homeConference": "-",
+   "awayConference": "-",
+   "homeRecord": "",
+   "awayRecord": "",
+   "neutralSite": false,
+   "tv": null,
+   "venue": "Demo Stadium",
+   "model": {
+    "homeRating": 13.4,
+    "awayRating": 10.3,
+    "sources": {
+     "home": [
+      "sp",
+      "fpi",
+      "elo",
+      "srs"
+     ],
+     "away": [
+      "sp",
+      "fpi",
+      "elo",
+      "srs"
+     ]
+    },
+    "margin": 5.4,
+    "spread": -5.4,
+    "total": 41.0,
+    "homeScore": 23.2,
+    "awayScore": 17.8,
+    "pHomeWin": 0.637,
+    "lowConfidence": false
+   },
+   "lines": {
+    "books": [
+     {
+      "provider": "DraftKings",
+      "spread": -2.5,
+      "overUnder": 44.5,
+      "homeMoneyline": -135,
+      "awayMoneyline": 115,
+      "formattedSpread": "Kansas State -2.5"
+     }
+    ],
+    "spread": -2.5,
+    "total": 44.5,
+    "mlHome": -135,
+    "mlAway": 115
+   },
+   "bets": [
+    {
+     "type": "spread",
+     "pick": "Kansas State -2.5",
+     "team": "Kansas State",
+     "edgePts": 2.9,
+     "prob": 0.586,
+     "price": -110,
+     "ev": 0.1197,
+     "eligible": true,
+     "detail": "Model: Kansas State by +5.4 vs market +2.5"
+    },
+    {
+     "type": "total",
+     "pick": "Under 44.5",
+     "team": null,
+     "edgePts": 3.5,
+     "prob": 0.602,
+     "price": -110,
+     "ev": 0.1498,
+     "eligible": true,
+     "detail": "Model total 41.0 vs market 44.5"
+    },
+    {
+     "type": "moneyline",
+     "pick": "Kansas State ML -135",
+     "team": "Kansas State",
+     "edgePts": 6.3,
+     "prob": 0.637,
+     "price": -135,
+     "ev": 0.1096,
+     "eligible": true,
+     "detail": "Model win prob 64% vs implied 57%"
+    },
+    {
+     "type": "moneyline",
+     "pick": "Iowa State ML +115",
+     "team": "Iowa State",
+     "edgePts": -10.3,
+     "prob": 0.363,
+     "price": 115,
+     "ev": -0.2205,
+     "eligible": false,
+     "detail": "Model win prob 36% vs implied 47%"
+    }
+   ]
+  },
+  {
+   "id": 1005,
+   "startDate": "2026-09-13T18:23:30.078309+00:00",
+   "homeTeam": "Michigan",
+   "awayTeam": "USC",
+   "homeConference": "-",
+   "awayConference": "-",
+   "homeRecord": "",
+   "awayRecord": "",
+   "neutralSite": false,
+   "tv": null,
+   "venue": "Demo Stadium",
+   "model": {
+    "homeRating": 5.9,
+    "awayRating": 10.3,
+    "sources": {
+     "home": [
+      "sp",
+      "fpi",
+      "elo",
+      "srs"
+     ],
+     "away": [
+      "sp",
+      "fpi",
+      "elo",
+      "srs"
+     ]
+    },
+    "margin": -2.1,
+    "spread": 2.1,
+    "total": 54.5,
+    "homeScore": 26.2,
+    "awayScore": 28.3,
+    "pHomeWin": 0.447,
+    "lowConfidence": false
+   },
+   "lines": {
+    "books": [
+     {
+      "provider": "DraftKings",
+      "spread": 1.5,
+      "overUnder": 51.0,
+      "homeMoneyline": 105,
+      "awayMoneyline": -125,
+      "formattedSpread": "Michigan +1.5"
+     }
+    ],
+    "spread": 1.5,
+    "total": 51.0,
+    "mlHome": 105,
+    "mlAway": -125
+   },
+   "bets": [
+    {
+     "type": "spread",
+     "pick": "USC -1.5",
+     "team": "USC",
+     "edgePts": 0.6,
+     "prob": 0.516,
+     "price": -110,
+     "ev": -0.0144,
+     "eligible": false,
+     "detail": "Model: Michigan by -2.1 vs market -1.5"
+    },
+    {
+     "type": "total",
+     "pick": "Over 51",
+     "team": null,
+     "edgePts": 3.5,
+     "prob": 0.602,
+     "price": -110,
+     "ev": 0.1498,
+     "eligible": true,
+     "detail": "Model total 54.5 vs market 51"
+    },
+    {
+     "type": "moneyline",
+     "pick": "Michigan ML +105",
+     "team": "Michigan",
+     "edgePts": -4.0,
+     "prob": 0.447,
+     "price": 105,
+     "ev": -0.0829,
+     "eligible": false,
+     "detail": "Model win prob 45% vs implied 49%"
+    },
+    {
+     "type": "moneyline",
+     "pick": "USC ML -125",
+     "team": "USC",
+     "edgePts": -0.3,
+     "prob": 0.553,
+     "price": -125,
+     "ev": -0.0053,
+     "eligible": false,
+     "detail": "Model win prob 55% vs implied 56%"
+    }
+   ]
+  },
+  {
+   "id": 1006,
+   "startDate": "2026-09-13T18:23:30.078309+00:00",
+   "homeTeam": "Notre Dame",
+   "awayTeam": "Clemson",
+   "homeConference": "-",
+   "awayConference": "-",
+   "homeRecord": "",
+   "awayRecord": "",
+   "neutralSite": false,
+   "tv": null,
+   "venue": "Demo Stadium",
+   "model": {
+    "homeRating": 11.0,
+    "awayRating": 10.3,
+    "sources": {
+     "home": [
+      "sp",
+      "fpi",
+      "elo",
+      "srs"
+     ],
+     "away": [
+      "sp",
+      "fpi",
+      "elo",
+      "srs"
+     ]
+    },
+    "margin": 3.0,
+    "spread": -3.0,
+    "total": 44.1,
+    "homeScore": 23.6,
+    "awayScore": 20.5,
+    "pHomeWin": 0.578,
+    "lowConfidence": false
+   },
+   "lines": {
+    "books": [
+     {
+      "provider": "DraftKings",
+      "spread": -4.5,
+      "overUnder": 47.5,
+      "homeMoneyline": -190,
+      "awayMoneyline": 160,
+      "formattedSpread": "Notre Dame -4.5"
+     }
+    ],
+    "spread": -4.5,
+    "total": 47.5,
+    "mlHome": -190,
+    "mlAway": 160
+   },
+   "bets": [
+    {
+     "type": "spread",
+     "pick": "Clemson +4.5",
+     "team": "Clemson",
+     "edgePts": 1.5,
+     "prob": 0.543,
+     "price": -110,
+     "ev": 0.0362,
+     "eligible": false,
+     "detail": "Model: Notre Dame by +3.0 vs market +4.5"
+    },
+    {
+     "type": "total",
+     "pick": "Under 47.5",
+     "team": null,
+     "edgePts": 3.4,
+     "prob": 0.599,
+     "price": -110,
+     "ev": 0.1444,
+     "eligible": false,
+     "detail": "Model total 44.1 vs market 47.5"
+    },
+    {
+     "type": "moneyline",
+     "pick": "Notre Dame ML -190",
+     "team": "Notre Dame",
+     "edgePts": -7.7,
+     "prob": 0.578,
+     "price": -190,
+     "ev": -0.1178,
+     "eligible": false,
+     "detail": "Model win prob 58% vs implied 66%"
+    },
+    {
+     "type": "moneyline",
+     "pick": "Clemson ML +160",
+     "team": "Clemson",
+     "edgePts": 3.7,
+     "prob": 0.422,
+     "price": 160,
+     "ev": 0.0972,
+     "eligible": false,
+     "detail": "Model win prob 42% vs implied 38%"
+    }
+   ]
+  },
+  {
+   "id": 1007,
+   "startDate": "2026-09-13T18:23:30.078309+00:00",
+   "homeTeam": "LSU",
+   "awayTeam": "Ole Miss",
+   "homeConference": "-",
+   "awayConference": "-",
+   "homeRecord": "",
+   "awayRecord": "",
+   "neutralSite": false,
+   "tv": null,
+   "venue": "Demo Stadium",
+   "model": {
+    "homeRating": 12.2,
+    "awayRating": 10.3,
+    "sources": {
+     "home": [
+      "sp",
+      "fpi",
+      "elo",
+      "srs"
+     ],
+     "away": [
+      "sp",
+      "fpi",
+      "elo",
+      "srs"
+     ]
+    },
+    "margin": 4.2,
+    "spread": -4.2,
+    "total": 66.2,
+    "homeScore": 35.2,
+    "awayScore": 31.0,
+    "pHomeWin": 0.608,
+    "lowConfidence": false
+   },
+   "lines": {
+    "books": [
+     {
+      "provider": "DraftKings",
+      "spread": -1.5,
+      "overUnder": 63.5,
+      "homeMoneyline": -120,
+      "awayMoneyline": 100,
+      "formattedSpread": "LSU -1.5"
+     }
+    ],
+    "spread": -1.5,
+    "total": 63.5,
+    "mlHome": -120,
+    "mlAway": 100
+   },
+   "bets": [
+    {
+     "type": "spread",
+     "pick": "LSU -1.5",
+     "team": "LSU",
+     "edgePts": 2.7,
+     "prob": 0.581,
+     "price": -110,
+     "ev": 0.1086,
+     "eligible": true,
+     "detail": "Model: LSU by +4.2 vs market +1.5"
+    },
+    {
+     "type": "total",
+     "pick": "Over 63.5",
+     "team": null,
+     "edgePts": 2.7,
+     "prob": 0.579,
+     "price": -110,
+     "ev": 0.1059,
+     "eligible": false,
+     "detail": "Model total 66.2 vs market 63.5"
+    },
+    {
+     "type": "moneyline",
+     "pick": "LSU ML -120",
+     "team": "LSU",
+     "edgePts": 6.3,
+     "prob": 0.608,
+     "price": -120,
+     "ev": 0.1147,
+     "eligible": true,
+     "detail": "Model win prob 61% vs implied 55%"
+    },
+    {
+     "type": "moneyline",
+     "pick": "Ole Miss ML +100",
+     "team": "Ole Miss",
+     "edgePts": -10.8,
+     "prob": 0.392,
+     "price": 100,
+     "ev": -0.2161,
+     "eligible": false,
+     "detail": "Model win prob 39% vs implied 50%"
+    }
+   ]
+  }
+ ],
+ "topPicks": [
+  {
+   "gameId": 1003,
+   "matchup": "Washington @ Oregon",
+   "startDate": "2026-09-13T18:23:30.078309+00:00",
+   "type": "moneyline",
+   "pick": "Washington ML +270",
+   "team": "Washington",
+   "edgePts": 7.5,
+   "prob": 0.346,
+   "price": 270,
+   "ev": 0.2793,
+   "eligible": true,
+   "detail": "Model win prob 35% vs implied 27%"
+  },
+  {
+   "gameId": 1002,
+   "matchup": "Oklahoma @ Texas",
+   "startDate": "2026-09-13T18:23:30.078309+00:00",
+   "type": "moneyline",
+   "pick": "Oklahoma ML +215",
+   "team": "Oklahoma",
+   "edgePts": 8.2,
+   "prob": 0.399,
+   "price": 215,
+   "ev": 0.2582,
+   "eligible": true,
+   "detail": "Model win prob 40% vs implied 32%"
+  },
+  {
+   "gameId": 1004,
+   "matchup": "Iowa State @ Kansas State",
+   "startDate": "2026-09-13T18:23:30.078309+00:00",
+   "type": "total",
+   "pick": "Under 44.5",
+   "team": null,
+   "edgePts": 3.5,
+   "prob": 0.602,
+   "price": -110,
+   "ev": 0.1498,
+   "eligible": true,
+   "detail": "Model total 41.0 vs market 44.5"
+  },
+  {
+   "gameId": 1005,
+   "matchup": "USC @ Michigan",
+   "startDate": "2026-09-13T18:23:30.078309+00:00",
+   "type": "total",
+   "pick": "Over 51",
+   "team": null,
+   "edgePts": 3.5,
+   "prob": 0.602,
+   "price": -110,
+   "ev": 0.1498,
+   "eligible": true,
+   "detail": "Model total 54.5 vs market 51"
+  },
+  {
+   "gameId": 1001,
+   "matchup": "Penn State @ Ohio State",
+   "startDate": "2026-09-13T18:23:30.078309+00:00",
+   "type": "spread",
+   "pick": "Ohio State -6.5",
+   "team": "Ohio State",
+   "edgePts": 3.2,
+   "prob": 0.595,
+   "price": -110,
+   "ev": 0.1361,
+   "eligible": true,
+   "detail": "Model: Ohio State by +9.7 vs market +6.5"
+  }
+ ],
+ "modelInfo": {
+  "weights": {
+   "sp": 0.35,
+   "fpi": 0.3,
+   "elo": 0.2,
+   "srs": 0.15
+  },
+  "homeField": 2.3,
+  "sigmaAts": 13.5,
+  "sigmaMl": 15.5
+ }
+}

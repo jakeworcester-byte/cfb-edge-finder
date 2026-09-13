@@ -1,0 +1,50 @@
+name: Build data and deploy to Pages
+
+on:
+  schedule:
+    # During the season (Aug-Jan): Tue & Thu 15:00 UTC (~10am ET, lines settled)
+    # and Sat 12:00 UTC (~7am ET, final look before kickoffs).
+    - cron: "0 15 * 1,8-12 2,4"
+    - cron: "0 12 * 1,8-12 6"
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build data.json from CFBD
+        env:
+          CFBD_API_KEY: ${{ secrets.CFBD_API_KEY }}
+        run: python scripts/build_data.py
+
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
