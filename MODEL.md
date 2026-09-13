@@ -50,7 +50,7 @@ it slots in at ~10-15% by trimming SP+/FPI.
 |---|---|
 | Spread | Model disagrees with market by ≥ 2.0 points |
 | Total | Model disagrees by ≥ 3.5 points |
-| Moneyline | Model win prob beats the implied prob by ≥ 5 points, and EV > 0 |
+| Moneyline | Model win prob beats the implied prob by ≥ 5 points, EV > 0, model win prob ≥ 35%, and price between −300 and +300. The prob and price floors exist because the normal-curve tail systematically overrates longshot underdogs — a "+2000 dog with 165% EV" is a model artifact, not a bet. |
 
 Expected value assumes −110 pricing on spreads and totals (CFBD does not
 carry juice) and the **best available moneyline** across listed books.

@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-13T18:49:11.814227+00:00",
+ "generatedAt": "2026-09-13T18:51:47.219804+00:00",
  "demo": true,
  "season": 2026,
  "week": 0,
@@ -7,7 +7,7 @@
  "games": [
   {
    "id": 1000,
-   "startDate": "2026-09-13T18:49:11.814227+00:00",
+   "startDate": "2026-09-13T18:51:47.219804+00:00",
    "homeTeam": "Georgia",
    "awayTeam": "Alabama",
    "homeConference": "-",
@@ -107,7 +107,7 @@
   },
   {
    "id": 1001,
-   "startDate": "2026-09-13T18:49:11.814227+00:00",
+   "startDate": "2026-09-13T18:51:47.219804+00:00",
    "homeTeam": "Ohio State",
    "awayTeam": "Penn State",
    "homeConference": "-",
@@ -207,7 +207,7 @@
   },
   {
    "id": 1002,
-   "startDate": "2026-09-13T18:49:11.814227+00:00",
+   "startDate": "2026-09-13T18:51:47.219804+00:00",
    "homeTeam": "Texas",
    "awayTeam": "Oklahoma",
    "homeConference": "-",
@@ -307,7 +307,7 @@
   },
   {
    "id": 1003,
-   "startDate": "2026-09-13T18:49:11.814227+00:00",
+   "startDate": "2026-09-13T18:51:47.219804+00:00",
    "homeTeam": "Oregon",
    "awayTeam": "Washington",
    "homeConference": "-",
@@ -400,14 +400,14 @@
      "prob": 0.346,
      "price": 270,
      "ev": 0.2793,
-     "eligible": true,
+     "eligible": false,
      "detail": "Model win prob 35% vs implied 27%"
     }
    ]
   },
   {
    "id": 1004,
-   "startDate": "2026-09-13T18:49:11.814227+00:00",
+   "startDate": "2026-09-13T18:51:47.219804+00:00",
    "homeTeam": "Kansas State",
    "awayTeam": "Iowa State",
    "homeConference": "-",
@@ -507,7 +507,7 @@
   },
   {
    "id": 1005,
-   "startDate": "2026-09-13T18:49:11.814227+00:00",
+   "startDate": "2026-09-13T18:51:47.219804+00:00",
    "homeTeam": "Michigan",
    "awayTeam": "USC",
    "homeConference": "-",
@@ -607,7 +607,7 @@
   },
   {
    "id": 1006,
-   "startDate": "2026-09-13T18:49:11.814227+00:00",
+   "startDate": "2026-09-13T18:51:47.219804+00:00",
    "homeTeam": "Notre Dame",
    "awayTeam": "Clemson",
    "homeConference": "-",
@@ -707,7 +707,7 @@
   },
   {
    "id": 1007,
-   "startDate": "2026-09-13T18:49:11.814227+00:00",
+   "startDate": "2026-09-13T18:51:47.219804+00:00",
    "homeTeam": "LSU",
    "awayTeam": "Ole Miss",
    "homeConference": "-",
@@ -808,23 +808,9 @@
  ],
  "topPicks": [
   {
-   "gameId": 1003,
-   "matchup": "Washington @ Oregon",
-   "startDate": "2026-09-13T18:49:11.814227+00:00",
-   "type": "moneyline",
-   "pick": "Washington ML +270",
-   "team": "Washington",
-   "edgePts": 7.5,
-   "prob": 0.346,
-   "price": 270,
-   "ev": 0.2793,
-   "eligible": true,
-   "detail": "Model win prob 35% vs implied 27%"
-  },
-  {
    "gameId": 1002,
    "matchup": "Oklahoma @ Texas",
-   "startDate": "2026-09-13T18:49:11.814227+00:00",
+   "startDate": "2026-09-13T18:51:47.219804+00:00",
    "type": "moneyline",
    "pick": "Oklahoma ML +215",
    "team": "Oklahoma",
@@ -838,7 +824,7 @@
   {
    "gameId": 1004,
    "matchup": "Iowa State @ Kansas State",
-   "startDate": "2026-09-13T18:49:11.814227+00:00",
+   "startDate": "2026-09-13T18:51:47.219804+00:00",
    "type": "total",
    "pick": "Under 44.5",
    "team": null,
@@ -852,7 +838,7 @@
   {
    "gameId": 1005,
    "matchup": "USC @ Michigan",
-   "startDate": "2026-09-13T18:49:11.814227+00:00",
+   "startDate": "2026-09-13T18:51:47.219804+00:00",
    "type": "total",
    "pick": "Over 51",
    "team": null,
@@ -864,9 +850,23 @@
    "detail": "Model total 54.5 vs market 51"
   },
   {
+   "gameId": 1003,
+   "matchup": "Washington @ Oregon",
+   "startDate": "2026-09-13T18:51:47.219804+00:00",
+   "type": "spread",
+   "pick": "Washington +9.5",
+   "team": "Washington",
+   "edgePts": 3.4,
+   "prob": 0.598,
+   "price": -110,
+   "ev": 0.1416,
+   "eligible": true,
+   "detail": "Model: Oregon by +6.1 vs market +9.5"
+  },
+  {
    "gameId": 1001,
    "matchup": "Penn State @ Ohio State",
-   "startDate": "2026-09-13T18:49:11.814227+00:00",
+   "startDate": "2026-09-13T18:51:47.219804+00:00",
    "type": "spread",
    "pick": "Ohio State -6.5",
    "team": "Ohio State",

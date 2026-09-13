@@ -44,6 +44,8 @@ ASSUMED_SPREAD_PRICE = -110  # CFBD does not carry spread/total prices
 MIN_EDGE_SPREAD = 2.0        # pts of edge required to be pick-eligible
 MIN_EDGE_TOTAL = 3.5
 MIN_EDGE_ML_PROB = 0.05      # model prob must beat implied prob by this
+ML_MIN_PROB = 0.35           # no longshot MLs: normal-tail probs are unreliable
+ML_MAX_PRICE = 300           # ignore moneylines longer than +300 / shorter than -300
 TOP_N = 5
 
 BOOK_PRIORITY = ["consensus", "DraftKings", "ESPN Bet", "Bovada", "Caesars"]
@@ -432,7 +434,8 @@ def evaluate_game(game, ratings, elo_mean, sp_means, records, lines):
             "prob": round(p_win, 3),
             "price": ml,
             "ev": round(ev, 4),
-            "eligible": gap >= MIN_EDGE_ML_PROB and ev > 0,
+            "eligible": (gap >= MIN_EDGE_ML_PROB and ev > 0
+                         and p_win >= ML_MIN_PROB and abs(ml) <= ML_MAX_PRICE),
             "detail": f"Model win prob {p_win:.0%} vs implied {imp:.0%}",
         })
 
