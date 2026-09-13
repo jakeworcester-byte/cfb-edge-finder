@@ -396,7 +396,7 @@ def evaluate_game(game, ratings, elo_mean, sp_means, records, lines):
             "price": ASSUMED_SPREAD_PRICE,
             "ev": round(ev, 4),
             "eligible": abs(edge) >= MIN_EDGE_SPREAD,
-            "detail": f"Model: {home} by {model_margin:+.1f} vs market {vegas_margin:+.1f}",
+            "detail": f"Model line: {home} {-model_margin:+.1f} vs market {ln['spread']:+.1f}",
         })
 
     # --- total ---
