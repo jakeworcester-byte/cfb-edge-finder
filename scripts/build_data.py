@@ -32,6 +32,9 @@ API_KEY = os.environ.get("CFBD_API_KEY", "").strip()
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT_PATH = ROOT / "site" / "data.json"
+LEDGER_PATH = ROOT / "data" / "picks_history.json"
+RESULTS_PATH = ROOT / "site" / "results.json"
+STAKE = 10.0                 # flat bet size for the season P/L tally
 
 # --- model constants -------------------------------------------------------
 WEIGHTS = {"sp": 0.35, "fpi": 0.30, "elo": 0.20, "srs": 0.15}
@@ -391,6 +394,8 @@ def evaluate_game(game, ratings, elo_mean, sp_means, records, lines):
             "type": "spread",
             "pick": f"{team} {line_for_side:+g}",
             "team": team,
+            "side": side,
+            "line": line_for_side,
             "edgePts": round(abs(edge), 1),
             "prob": round(p_cover, 3),
             "price": ASSUMED_SPREAD_PRICE,
@@ -409,6 +414,8 @@ def evaluate_game(game, ratings, elo_mean, sp_means, records, lines):
             "type": "total",
             "pick": f"{direction} {ln['total']:g}",
             "team": None,
+            "side": direction.lower(),
+            "line": ln["total"],
             "edgePts": round(abs(edge_t), 1),
             "prob": round(p_hit, 3),
             "price": ASSUMED_SPREAD_PRICE,
@@ -430,6 +437,8 @@ def evaluate_game(game, ratings, elo_mean, sp_means, records, lines):
             "type": "moneyline",
             "pick": f"{team} ML {ml:+g}",
             "team": team,
+            "side": side,
+            "line": None,
             "edgePts": round(gap * 100, 1),             # prob gap in pct pts
             "prob": round(p_win, 3),
             "price": ml,
@@ -450,6 +459,8 @@ def top_picks(games):
                 cands.append({
                     "gameId": g["id"],
                     "matchup": f"{g['awayTeam']} @ {g['homeTeam']}",
+                    "homeTeam": g["homeTeam"],
+                    "awayTeam": g["awayTeam"],
                     "startDate": g["startDate"],
                     **b,
                 })
@@ -464,6 +475,121 @@ def top_picks(games):
         if len(out) == TOP_N:
             break
     return out
+
+
+# --- pick ledger and grading ---------------------------------------------------
+
+def load_ledger():
+    if LEDGER_PATH.exists():
+        try:
+            data = json.loads(LEDGER_PATH.read_text(encoding="utf-8"))
+            if isinstance(data.get("picks"), list):
+                return data
+        except Exception as e:
+            print(f"could not read ledger ({e}); starting fresh", file=sys.stderr)
+    return {"picks": []}
+
+
+def pick_started(p, now):
+    st = parse_iso(p.get("startDate"))
+    return st is not None and st <= now
+
+
+def grade_one(p, home_pts, away_pts):
+    """Return a result dict for a pick given the final score."""
+    t, side, line = p["type"], p.get("side"), p.get("line")
+    if t == "total":
+        actual = home_pts + away_pts
+        if actual == line:
+            outcome = "push"
+        elif (actual > line) == (side == "over"):
+            outcome = "win"
+        else:
+            outcome = "loss"
+    else:
+        team_pts, opp_pts = (home_pts, away_pts) if side == "home" else (away_pts, home_pts)
+        if t == "spread":
+            adj = team_pts + (line or 0)
+            outcome = "push" if adj == opp_pts else ("win" if adj > opp_pts else "loss")
+        else:  # moneyline
+            outcome = ("win" if team_pts > opp_pts
+                       else "push" if team_pts == opp_pts else "loss")
+    profit = (0.0 if outcome == "push"
+              else STAKE * american_payout(p["price"]) if outcome == "win"
+              else -STAKE)
+    return {"homeScore": home_pts, "awayScore": away_pts,
+            "outcome": outcome, "profit": round(profit, 2)}
+
+
+def grade_picks(ledger, now):
+    """Grade ungraded picks whose games have kicked off, using final scores."""
+    pending = [p for p in ledger["picks"] if not p.get("result") and pick_started(p, now)]
+    if not pending:
+        return 0
+    scores = {}
+    for season, stype, wk in {(p["season"], p["seasonType"], p["week"]) for p in pending}:
+        try:
+            for g in api_get("/games", year=season, week=wk, seasonType=stype):
+                if pick(g, "completed", default=False):
+                    hp = pick(g, "homePoints", "home_points")
+                    ap = pick(g, "awayPoints", "away_points")
+                    if hp is not None and ap is not None:
+                        scores[pick(g, "id")] = (hp, ap)
+        except Exception as e:
+            print(f"score fetch failed ({season} {stype} wk {wk}): {e}", file=sys.stderr)
+    graded = 0
+    for p in pending:
+        if p["gameId"] in scores:
+            p["result"] = grade_one(p, *scores[p["gameId"]])
+            graded += 1
+    return graded
+
+
+def update_week_picks(ledger, top, season, season_type, week, now):
+    """Record this week's top picks. Picks lock at kickoff; unlocked picks
+    are replaced by the latest run's board so the ledger reflects the last
+    line before the game."""
+    key = (season, season_type, week)
+
+    def wk(p):
+        return (p["season"], p["seasonType"], p["week"])
+
+    others = [p for p in ledger["picks"] if wk(p) != key]
+    current = [p for p in ledger["picks"] if wk(p) == key]
+    locked = [p for p in current if p.get("result") or pick_started(p, now)]
+    locked_games = {p["gameId"] for p in locked}
+
+    fresh = []
+    for c in top:
+        if len(locked) + len(fresh) >= TOP_N:
+            break
+        if c["gameId"] in locked_games:
+            continue
+        fresh.append({
+            "season": season, "seasonType": season_type, "week": week,
+            "gameId": c["gameId"], "matchup": c["matchup"],
+            "homeTeam": c.get("homeTeam"), "awayTeam": c.get("awayTeam"),
+            "startDate": c["startDate"], "type": c["type"], "pick": c["pick"],
+            "side": c.get("side"), "line": c.get("line"), "price": c["price"],
+            "prob": c["prob"], "ev": c["ev"], "detail": c.get("detail"),
+            "pickedAt": datetime.now(timezone.utc).isoformat(),
+            "result": None,
+        })
+    ledger["picks"] = others + locked + fresh
+
+
+def write_results(ledger, now, demo=False):
+    def order(p):
+        return (p["season"], 0 if p["seasonType"] == "regular" else 1,
+                p["week"], p.get("startDate") or "")
+
+    payload = {
+        "generatedAt": now.isoformat(),
+        "demo": demo,
+        "stake": STAKE,
+        "picks": sorted(ledger["picks"], key=order),
+    }
+    RESULTS_PATH.write_text(json.dumps(payload, indent=1), encoding="utf-8")
 
 
 # --- demo fallback ------------------------------------------------------------
@@ -505,6 +631,37 @@ def demo_payload(now):
     return demo_games
 
 
+def demo_ledger(payload, now):
+    """Fake two graded weeks plus the current demo picks, so results.html renders."""
+    season = payload["season"]
+    samples = [
+        # week 1
+        ("Utah @ BYU", "BYU", "Utah", "spread", "BYU -3.5", "home", -3.5, -110, 24, 20),
+        ("Auburn @ Vanderbilt", "Vanderbilt", "Auburn", "moneyline", "Vanderbilt ML +180", "home", None, 180, 31, 27),
+        ("Duke @ Cal", "Cal", "Duke", "total", "Under 51.5", "under", 51.5, -110, 21, 17),
+        ("Rice @ Navy", "Navy", "Rice", "spread", "Navy -7.5", "home", -7.5, -110, 28, 24),
+        ("Toledo @ Kentucky", "Kentucky", "Toledo", "spread", "Toledo +11.5", "away", 11.5, -110, 30, 13),
+        # week 2
+        ("Tulsa @ SMU", "SMU", "Tulsa", "spread", "SMU -13.5", "home", -13.5, -110, 38, 17),
+        ("Akron @ Ohio", "Ohio", "Akron", "total", "Over 44.5", "over", 44.5, -110, 31, 24),
+        ("Nevada @ UNLV", "UNLV", "Nevada", "moneyline", "UNLV ML -145", "home", None, -145, 27, 30),
+        ("Troy @ Memphis", "Memphis", "Troy", "spread", "Troy +9.5", "away", 9.5, -110, 35, 28),
+        ("Buffalo @ Kent State", "Kent State", "Buffalo", "total", "Under 47.5", "under", 47.5, -110, 24, 23),
+    ]
+    ledger = {"picks": []}
+    for i, (matchup, home, away, btype, bpick, side, line, price, hp, ap) in enumerate(samples):
+        week = 1 if i < 5 else 2
+        p = {"season": season, "seasonType": "regular", "week": week,
+             "gameId": 9000 + i, "matchup": matchup, "homeTeam": home, "awayTeam": away,
+             "startDate": now.isoformat(), "type": btype, "pick": bpick,
+             "side": side, "line": line, "price": price, "prob": 0.6, "ev": 0.1,
+             "detail": "", "pickedAt": now.isoformat(), "result": None}
+        p["result"] = grade_one(p, hp, ap)
+        ledger["picks"].append(p)
+    update_week_picks(ledger, payload["topPicks"], season, "regular", 0, now)
+    return ledger
+
+
 # --- main ---------------------------------------------------------------------
 
 def main():
@@ -528,6 +685,7 @@ def main():
         payload["seasonType"] = "regular"
         payload["games"] = demo_payload(now)
         payload["topPicks"] = top_picks(payload["games"])
+        write_results(demo_ledger(payload, now), now, demo=True)
     else:
         year = current_season(now)
         season_type, week, games = fetch_upcoming_week(year, now)
@@ -544,6 +702,14 @@ def main():
 
         payload.update({"season": year, "week": week, "seasonType": season_type,
                         "games": evaluated, "topPicks": top_picks(evaluated)})
+
+        ledger = load_ledger()
+        graded = grade_picks(ledger, now)
+        update_week_picks(ledger, payload["topPicks"], year, season_type, week, now)
+        LEDGER_PATH.parent.mkdir(parents=True, exist_ok=True)
+        LEDGER_PATH.write_text(json.dumps(ledger, indent=1), encoding="utf-8")
+        write_results(ledger, now)
+        print(f"Ledger: {len(ledger['picks'])} picks total, {graded} newly graded")
 
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     OUT_PATH.write_text(json.dumps(payload, indent=1), encoding="utf-8")

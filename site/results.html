@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CFB Edge Finder — Results</title>
+<style>
+  :root {
+    --bg: #0d1117; --panel: #161b22; --panel2: #1c2330; --border: #2b3442;
+    --text: #e6edf3; --muted: #8b98a9; --green: #3fb950; --green-dim: #238636;
+    --red: #f85149; --gold: #d29922; --blue: #58a6ff;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+    font: 15px/1.5 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 24px 16px 64px; }
+  header { display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px; margin-bottom: 4px; }
+  h1 { font-size: 26px; margin: 0; letter-spacing: -0.5px; }
+  h1 .accent { color: var(--green); }
+  .nav { margin-left: auto; font-size: 14px; }
+  a { color: var(--blue); text-decoration: none; }
+  .sub { color: var(--muted); font-size: 14px; }
+  .banner { background: #3d2e00; border: 1px solid var(--gold); color: #f0d060;
+    padding: 10px 14px; border-radius: 8px; margin: 14px 0; font-size: 14px; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px; margin: 20px 0; }
+  .stat { background: linear-gradient(160deg, var(--panel2), var(--panel));
+    border: 1px solid var(--border); border-radius: 10px; padding: 14px; }
+  .stat .label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  .stat .value { font-size: 26px; font-weight: 750; margin-top: 4px; }
+  .pos { color: var(--green); } .negv { color: var(--red); }
+  .chartbox { background: var(--panel); border: 1px solid var(--border); border-radius: 10px;
+    padding: 14px; margin: 8px 0 24px; }
+  .chartbox .label { font-size: 12px; color: var(--muted); text-transform: uppercase;
+    letter-spacing: 0.5px; margin-bottom: 6px; }
+  h2 { font-size: 17px; margin: 26px 0 8px; display: flex; align-items: baseline; gap: 10px; }
+  h2 .wknet { font-size: 13px; font-weight: 500; }
+  h2 .running { font-size: 13px; font-weight: 500; color: var(--muted); margin-left: auto; }
+  .tablewrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 10px; }
+  table { border-collapse: collapse; width: 100%; min-width: 780px; font-size: 13.5px; }
+  th, td { padding: 8px 10px; text-align: left; white-space: nowrap; }
+  thead th { background: var(--panel2); color: var(--muted); font-weight: 600; font-size: 12px;
+    text-transform: uppercase; letter-spacing: 0.4px; }
+  tbody tr { border-top: 1px solid var(--border); }
+  .badge { display: inline-block; font-size: 11.5px; font-weight: 700; padding: 2px 10px;
+    border-radius: 999px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .b-win { background: #12351c; color: var(--green); border: 1px solid var(--green-dim); }
+  .b-loss { background: #3c1514; color: var(--red); border: 1px solid #7d2a27; }
+  .b-push { background: #2b3442; color: var(--muted); border: 1px solid var(--border); }
+  .b-pending { background: #2b2610; color: var(--gold); border: 1px solid #5c4a12; }
+  .tag { display: inline-block; font-size: 11px; padding: 1px 8px; border-radius: 999px;
+    border: 1px solid var(--border); color: var(--muted); text-transform: uppercase; }
+  footer { margin-top: 36px; color: var(--muted); font-size: 12.5px;
+    border-top: 1px solid var(--border); padding-top: 14px; }
+  .empty { color: var(--muted); padding: 24px; text-align: center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Season <span class="accent">Results</span></h1>
+    <span class="sub" id="stamp"></span>
+    <span class="nav"><a href="index.html">← This Week's Board</a></span>
+  </header>
+  <div class="sub">Every Top 5 pick, locked at kickoff and graded against the final score. Flat $10 per bet; payouts follow the posted odds.</div>
+
+  <div id="demoBanner" class="banner" style="display:none">
+    <b>Demo data.</b> Sample history shown until the CFBD_API_KEY secret is configured and real weeks are played.
+  </div>
+
+  <div class="cards" id="stats"></div>
+
+  <div class="chartbox">
+    <div class="label">Season bankroll — running profit/loss ($)</div>
+    <svg id="chart" width="100%" height="120" viewBox="0 0 960 120" preserveAspectRatio="none"></svg>
+  </div>
+
+  <div id="weeks"><div class="empty">Loading…</div></div>
+
+  <footer>
+    <p>Picks are snapshotted by the automated Tuesday/Thursday/Saturday runs and lock at kickoff — what you see is the last recorded line before the game, graded against the final score. Pushes return the stake ($0). Past performance does not predict future results; bet responsibly.</p>
+  </footer>
+</div>
+
+<script>
+const money = v => (v < 0 ? '-$' : '$') + Math.abs(v).toFixed(2);
+const fmtPrice = v => v == null ? '' : (v > 0 ? '+' + v : String(v));
+const fmtTime = iso => iso ? new Date(iso).toLocaleString(undefined,
+  { weekday: 'short', month: 'numeric', day: 'numeric', hour: 'numeric', minute: '2-digit' }) : '—';
+
+function badge(outcome) {
+  if (!outcome) return '<span class="badge b-pending">Pending</span>';
+  return `<span class="badge b-${outcome}">${outcome}</span>`;
+}
+
+function weekLabel(p) {
+  return p.seasonType === 'postseason' ? `${p.season} · Bowls/Playoff` : `${p.season} · Week ${p.week}`;
+}
+
+function drawChart(points) {
+  const svg = document.getElementById('chart');
+  if (points.length < 2) { svg.parentElement.style.display = 'none'; return; }
+  const W = 960, H = 120, pad = 8;
+  const min = Math.min(0, ...points), max = Math.max(0, ...points);
+  const y = v => H - pad - (v - min) / (max - min || 1) * (H - 2 * pad);
+  const x = i => pad + i / (points.length - 1) * (W - 2 * pad);
+  const path = points.map((v, i) => `${i ? 'L' : 'M'}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join(' ');
+  const zero = y(0);
+  const last = points[points.length - 1];
+  svg.innerHTML = `
+    <line x1="0" y1="${zero}" x2="${W}" y2="${zero}" stroke="#2b3442" stroke-dasharray="4 4"/>
+    <path d="${path}" fill="none" stroke="${last >= 0 ? '#3fb950' : '#f85149'}" stroke-width="2.5"/>
+    <circle cx="${x(points.length - 1)}" cy="${y(last)}" r="4" fill="${last >= 0 ? '#3fb950' : '#f85149'}"/>`;
+}
+
+async function init() {
+  let data;
+  try {
+    data = await (await fetch('results.json?t=' + Date.now())).json();
+  } catch (e) {
+    document.getElementById('weeks').innerHTML = '<div class="empty">Could not load results.json</div>';
+    return;
+  }
+  document.getElementById('stamp').textContent =
+    'Updated ' + new Date(data.generatedAt).toLocaleString();
+  if (data.demo) document.getElementById('demoBanner').style.display = 'block';
+
+  const picks = data.picks || [];
+  const graded = picks.filter(p => p.result);
+  const wins = graded.filter(p => p.result.outcome === 'win').length;
+  const losses = graded.filter(p => p.result.outcome === 'loss').length;
+  const pushes = graded.filter(p => p.result.outcome === 'push').length;
+  const net = graded.reduce((s, p) => s + p.result.profit, 0);
+  const staked = graded.length * data.stake;
+  const decided = wins + losses;
+
+  document.getElementById('stats').innerHTML = `
+    <div class="stat"><div class="label">Record</div>
+      <div class="value">${wins}–${losses}${pushes ? '–' + pushes : ''}</div></div>
+    <div class="stat"><div class="label">Win rate</div>
+      <div class="value">${decided ? Math.round(wins / decided * 100) + '%' : '—'}</div></div>
+    <div class="stat"><div class="label">Season P/L ($10/bet)</div>
+      <div class="value ${net >= 0 ? 'pos' : 'negv'}">${money(net)}</div></div>
+    <div class="stat"><div class="label">Total staked</div>
+      <div class="value">${money(staked)}</div></div>
+    <div class="stat"><div class="label">Return on risk</div>
+      <div class="value ${net >= 0 ? 'pos' : 'negv'}">${staked ? (net / staked * 100).toFixed(1) + '%' : '—'}</div></div>`;
+
+  // cumulative chart over graded picks in chronological order
+  let run = 0;
+  drawChart([0, ...graded.map(p => run += p.result.profit)]);
+
+  // group by week, newest first; running tally computed oldest-first
+  const groups = new Map();
+  for (const p of picks) {
+    const k = `${p.season}|${p.seasonType}|${p.week}`;
+    if (!groups.has(k)) groups.set(k, []);
+    groups.get(k).push(p);
+  }
+  const keys = [...groups.keys()];
+  let running = 0;
+  const runningByKey = new Map();
+  for (const k of keys) {
+    running += groups.get(k).reduce((s, p) => s + (p.result ? p.result.profit : 0), 0);
+    runningByKey.set(k, running);
+  }
+
+  const el = document.getElementById('weeks');
+  if (!picks.length) {
+    el.innerHTML = '<div class="empty">No picks recorded yet. The first automated run of the week records them.</div>';
+    return;
+  }
+  el.innerHTML = keys.slice().reverse().map(k => {
+    const rows = groups.get(k);
+    const wkNet = rows.reduce((s, p) => s + (p.result ? p.result.profit : 0), 0);
+    const anyGraded = rows.some(p => p.result);
+    return `
+    <h2>${weekLabel(rows[0])}
+      ${anyGraded ? `<span class="wknet ${wkNet >= 0 ? 'pos' : 'negv'}">${money(wkNet)} this week</span>
+      <span class="running">season to date: ${money(runningByKey.get(k))}</span>` : '<span class="wknet tag">upcoming</span>'}
+    </h2>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Kickoff</th><th>Matchup</th><th>Pick</th><th>Odds</th>
+        <th>Final</th><th>Result</th><th>$10 Bet</th></tr></thead>
+      <tbody>${rows.map(p => {
+        const r = p.result;
+        const final = r ? `${p.awayTeam} ${r.awayScore} — ${p.homeTeam} ${r.homeScore}` : '—';
+        const profit = r ? `<span class="${r.profit > 0 ? 'pos' : r.profit < 0 ? 'negv' : ''}">${r.profit === 0 ? 'push' : money(r.profit)}</span>` : '—';
+        return `<tr>
+          <td>${fmtTime(p.startDate)}</td>
+          <td>${p.matchup}</td>
+          <td><span class="tag">${p.type}</span> <b>${p.pick}</b></td>
+          <td>${fmtPrice(p.price)}</td>
+          <td>${final}</td>
+          <td>${badge(r && r.outcome)}</td>
+          <td>${profit}</td>
+        </tr>`;
+      }).join('')}</tbody>
+    </table></div>`;
+  }).join('');
+}
+init();
+</script>
+</body>
+</html>
