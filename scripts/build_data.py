@@ -94,36 +94,67 @@ def current_season(now):
     return now.year if now.month >= 6 else now.year - 1
 
 
-def detect_week(year, now):
-    """Return (seasonType, week) for the first week that hasn't ended yet."""
+def parse_iso(raw):
+    if not raw:
+        return None
+    try:
+        return datetime.fromisoformat(raw.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+
+
+def calendar_weeks(year):
+    """All calendar weeks as (start, end, seasonType, week), ordered by start."""
     try:
         cal = api_get("/calendar", year=year)
     except Exception as e:
         print(f"calendar fetch failed ({e}); defaulting to regular wk 1", file=sys.stderr)
-        return "regular", 1
-    best = None
+        return []
+    weeks = []
     for wk in cal:
-        end_raw = pick(wk, "endDate", "lastGameStart", "end_date")
-        if not end_raw:
+        end = parse_iso(pick(wk, "endDate", "lastGameStart", "end_date"))
+        if end is None:
             continue
-        try:
-            end = datetime.fromisoformat(end_raw.replace("Z", "+00:00"))
-        except ValueError:
-            continue
-        if end >= now:
-            start_raw = pick(wk, "startDate", "firstGameStart", "start_date", default=end_raw)
-            try:
-                start = datetime.fromisoformat(start_raw.replace("Z", "+00:00"))
-            except ValueError:
-                start = end
-            if best is None or start < best[0]:
-                best = (start, pick(wk, "seasonType", "season_type", default="regular"),
-                        int(pick(wk, "week", default=1)))
-    if best is None:  # season over - show the last listed week
-        wk = cal[-1]
-        return (pick(wk, "seasonType", "season_type", default="postseason"),
-                int(pick(wk, "week", default=1)))
-    return best[1], best[2]
+        start = parse_iso(pick(wk, "startDate", "firstGameStart", "start_date")) or end
+        weeks.append((start, end,
+                      pick(wk, "seasonType", "season_type", default="regular"),
+                      int(pick(wk, "week", default=1))))
+    weeks.sort(key=lambda w: w[0])
+    return weeks
+
+
+def is_upcoming(game, now):
+    """True if the game hasn't been played and hasn't kicked off yet."""
+    if pick(game, "completed", default=False):
+        return False
+    start = parse_iso(pick(game, "startDate", "start_date"))
+    return start is None or start >= now
+
+
+def fetch_upcoming_week(year, now):
+    """Find the next week with games still to play.
+
+    Walks the calendar forward from today and returns
+    (seasonType, week, upcoming_games). A week whose games have all been
+    played (e.g. it's Sunday and the calendar week hasn't rolled over yet)
+    is skipped in favor of the next one. If the season is over, returns the
+    final week's full slate as played.
+    """
+    weeks = calendar_weeks(year)
+    if not weeks:
+        return "regular", 1, api_get("/games", year=year, week=1,
+                                     seasonType="regular", classification="fbs")
+    candidates = [w for w in weeks if w[1] >= now] or weeks[-1:]
+    last_fetch = None
+    for _, _, season_type, week in candidates[:3]:
+        games = api_get("/games", year=year, week=week,
+                        seasonType=season_type, classification="fbs")
+        last_fetch = (season_type, week, games)
+        upcoming = [g for g in games if is_upcoming(g, now)]
+        if upcoming:
+            return season_type, week, upcoming
+    # nothing upcoming (season over / long dead period): show last week as played
+    return last_fetch
 
 
 # --- ratings ----------------------------------------------------------------
@@ -496,18 +527,15 @@ def main():
         payload["topPicks"] = top_picks(payload["games"])
     else:
         year = current_season(now)
-        season_type, week = detect_week(year, now)
-        print(f"Season {year}, {season_type} week {week}")
+        season_type, week, games = fetch_upcoming_week(year, now)
+        print(f"Season {year}, {season_type} week {week}: {len(games)} upcoming games")
 
-        games = api_get("/games", year=year, week=week,
-                        seasonType=season_type, classification="fbs")
         ratings, elo_mean, sp_means = fetch_ratings(year)
         records = fetch_records(year)
         lines = fetch_lines(year, week, season_type)
 
         evaluated = [evaluate_game(g, ratings, elo_mean, sp_means, records, lines)
                      for g in games]
-        # completed games have final scores - keep only games not yet final
         evaluated = [e for e in evaluated if e["homeTeam"] and e["awayTeam"]]
         evaluated.sort(key=lambda e: (e["startDate"] or "", e["homeTeam"]))
 

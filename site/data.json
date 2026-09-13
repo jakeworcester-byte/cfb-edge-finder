@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-13T18:23:30.078309+00:00",
+ "generatedAt": "2026-09-13T18:49:11.814227+00:00",
  "demo": true,
  "season": 2026,
  "week": 0,
@@ -7,7 +7,7 @@
  "games": [
   {
    "id": 1000,
-   "startDate": "2026-09-13T18:23:30.078309+00:00",
+   "startDate": "2026-09-13T18:49:11.814227+00:00",
    "homeTeam": "Georgia",
    "awayTeam": "Alabama",
    "homeConference": "-",
@@ -107,7 +107,7 @@
   },
   {
    "id": 1001,
-   "startDate": "2026-09-13T18:23:30.078309+00:00",
+   "startDate": "2026-09-13T18:49:11.814227+00:00",
    "homeTeam": "Ohio State",
    "awayTeam": "Penn State",
    "homeConference": "-",
@@ -207,7 +207,7 @@
   },
   {
    "id": 1002,
-   "startDate": "2026-09-13T18:23:30.078309+00:00",
+   "startDate": "2026-09-13T18:49:11.814227+00:00",
    "homeTeam": "Texas",
    "awayTeam": "Oklahoma",
    "homeConference": "-",
@@ -307,7 +307,7 @@
   },
   {
    "id": 1003,
-   "startDate": "2026-09-13T18:23:30.078309+00:00",
+   "startDate": "2026-09-13T18:49:11.814227+00:00",
    "homeTeam": "Oregon",
    "awayTeam": "Washington",
    "homeConference": "-",
@@ -407,7 +407,7 @@
   },
   {
    "id": 1004,
-   "startDate": "2026-09-13T18:23:30.078309+00:00",
+   "startDate": "2026-09-13T18:49:11.814227+00:00",
    "homeTeam": "Kansas State",
    "awayTeam": "Iowa State",
    "homeConference": "-",
@@ -507,7 +507,7 @@
   },
   {
    "id": 1005,
-   "startDate": "2026-09-13T18:23:30.078309+00:00",
+   "startDate": "2026-09-13T18:49:11.814227+00:00",
    "homeTeam": "Michigan",
    "awayTeam": "USC",
    "homeConference": "-",
@@ -607,7 +607,7 @@
   },
   {
    "id": 1006,
-   "startDate": "2026-09-13T18:23:30.078309+00:00",
+   "startDate": "2026-09-13T18:49:11.814227+00:00",
    "homeTeam": "Notre Dame",
    "awayTeam": "Clemson",
    "homeConference": "-",
@@ -707,7 +707,7 @@
   },
   {
    "id": 1007,
-   "startDate": "2026-09-13T18:23:30.078309+00:00",
+   "startDate": "2026-09-13T18:49:11.814227+00:00",
    "homeTeam": "LSU",
    "awayTeam": "Ole Miss",
    "homeConference": "-",
@@ -810,7 +810,7 @@
   {
    "gameId": 1003,
    "matchup": "Washington @ Oregon",
-   "startDate": "2026-09-13T18:23:30.078309+00:00",
+   "startDate": "2026-09-13T18:49:11.814227+00:00",
    "type": "moneyline",
    "pick": "Washington ML +270",
    "team": "Washington",
@@ -824,7 +824,7 @@
   {
    "gameId": 1002,
    "matchup": "Oklahoma @ Texas",
-   "startDate": "2026-09-13T18:23:30.078309+00:00",
+   "startDate": "2026-09-13T18:49:11.814227+00:00",
    "type": "moneyline",
    "pick": "Oklahoma ML +215",
    "team": "Oklahoma",
@@ -838,7 +838,7 @@
   {
    "gameId": 1004,
    "matchup": "Iowa State @ Kansas State",
-   "startDate": "2026-09-13T18:23:30.078309+00:00",
+   "startDate": "2026-09-13T18:49:11.814227+00:00",
    "type": "total",
    "pick": "Under 44.5",
    "team": null,
@@ -852,7 +852,7 @@
   {
    "gameId": 1005,
    "matchup": "USC @ Michigan",
-   "startDate": "2026-09-13T18:23:30.078309+00:00",
+   "startDate": "2026-09-13T18:49:11.814227+00:00",
    "type": "total",
    "pick": "Over 51",
    "team": null,
@@ -866,7 +866,7 @@
   {
    "gameId": 1001,
    "matchup": "Penn State @ Ohio State",
-   "startDate": "2026-09-13T18:23:30.078309+00:00",
+   "startDate": "2026-09-13T18:49:11.814227+00:00",
    "type": "spread",
    "pick": "Ohio State -6.5",
    "team": "Ohio State",
