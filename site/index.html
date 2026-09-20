@@ -308,7 +308,9 @@ function renderLastWeek(LW) {
   const rec = t => `${t[0]}–${t[1]}${t[2] ? '–' + t[2] : ''}`;
   const pct = t => (t[0] + t[1]) ? Math.round(t[0] / (t[0] + t[1]) * 100) + '%' : '—';
   document.getElementById('lastSub').textContent =
-    `${gradedCount} of ${games.length} games final. Every game's model lean was locked at kickoff and graded against the final score.`;
+    `${gradedCount} of ${games.length} games final. ` + (wk.backfilled
+      ? 'Model leans for this week were reconstructed after the games (see note below).'
+      : 'Every game\'s model lean was locked at kickoff and graded against the final score.');
   stats.innerHTML = `
     <div class="stat"><div class="label">Against the spread</div><div class="value">${rec(tally.spread)}</div><div class="note">${pct(tally.spread)} of model sides covered</div></div>
     <div class="stat"><div class="label">Over / Under</div><div class="value">${rec(tally.total)}</div><div class="note">${pct(tally.total)} of model totals hit</div></div>
