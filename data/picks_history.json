@@ -43,7 +43,12 @@
    "ev": 0.485,
    "detail": "Model win prob 46% vs implied 31%",
    "pickedAt": "2026-09-19T15:45:30.312317+00:00",
-   "result": null
+   "result": {
+    "homeScore": 16,
+    "awayScore": 10,
+    "outcome": "loss",
+    "profit": -10.0
+   }
   },
   {
    "season": 2026,
@@ -63,7 +68,12 @@
    "ev": 0.4261,
    "detail": "Model line: Penn State -30.8 vs market -39.8",
    "pickedAt": "2026-09-19T15:45:30.312333+00:00",
-   "result": null
+   "result": {
+    "homeScore": 55,
+    "awayScore": 13,
+    "outcome": "loss",
+    "profit": -10.0
+   }
   },
   {
    "season": 2026,
@@ -83,7 +93,12 @@
    "ev": 0.4158,
    "detail": "Model line: Arizona -25.0 vs market -33.8",
    "pickedAt": "2026-09-19T15:45:30.312338+00:00",
-   "result": null
+   "result": {
+    "homeScore": 42,
+    "awayScore": 17,
+    "outcome": "win",
+    "profit": 9.09
+   }
   },
   {
    "season": 2026,
@@ -103,6 +118,111 @@
    "ev": 0.3879,
    "detail": "Model total 50.6 vs market 58.75",
    "pickedAt": "2026-09-19T15:45:30.312342+00:00",
+   "result": {
+    "homeScore": 59,
+    "awayScore": 3,
+    "outcome": "loss",
+    "profit": -10.0
+   }
+  },
+  {
+   "season": 2026,
+   "seasonType": "regular",
+   "week": 4,
+   "gameId": 401856698,
+   "matchup": "Vanderbilt @ Auburn",
+   "homeTeam": "Auburn",
+   "awayTeam": "Vanderbilt",
+   "startDate": "2026-09-26T20:15:00.000Z",
+   "type": "moneyline",
+   "pick": "Vanderbilt ML +285",
+   "side": "away",
+   "line": null,
+   "price": 285,
+   "prob": 0.38,
+   "ev": 0.4637,
+   "detail": "Model win prob 38% vs implied 26%",
+   "pickedAt": "2026-09-20T15:19:21.825349+00:00",
+   "result": null
+  },
+  {
+   "season": 2026,
+   "seasonType": "regular",
+   "week": 4,
+   "gameId": 401858463,
+   "matchup": "Iowa @ Michigan",
+   "homeTeam": "Michigan",
+   "awayTeam": "Iowa",
+   "startDate": "2026-09-26T19:30:00.000Z",
+   "type": "total",
+   "pick": "Over 37.5",
+   "side": "over",
+   "line": 37.5,
+   "price": -110,
+   "prob": 0.744,
+   "ev": 0.4203,
+   "detail": "Model total 46.4 vs market 37.5",
+   "pickedAt": "2026-09-20T15:19:21.825363+00:00",
+   "result": null
+  },
+  {
+   "season": 2026,
+   "seasonType": "regular",
+   "week": 4,
+   "gameId": 401858243,
+   "matchup": "Wake Forest @ Louisville",
+   "homeTeam": "Louisville",
+   "awayTeam": "Wake Forest",
+   "startDate": "2026-09-26T16:00:00.000Z",
+   "type": "total",
+   "pick": "Under 58.5",
+   "side": "under",
+   "line": 58.5,
+   "price": -110,
+   "prob": 0.736,
+   "ev": 0.4042,
+   "detail": "Model total 50.0 vs market 58.5",
+   "pickedAt": "2026-09-20T15:19:21.825367+00:00",
+   "result": null
+  },
+  {
+   "season": 2026,
+   "seasonType": "regular",
+   "week": 4,
+   "gameId": 401858238,
+   "matchup": "Central Michigan @ Miami",
+   "homeTeam": "Miami",
+   "awayTeam": "Central Michigan",
+   "startDate": "2026-09-26T22:30:00.000Z",
+   "type": "total",
+   "pick": "Under 54.5",
+   "side": "under",
+   "line": 54.5,
+   "price": -110,
+   "prob": 0.708,
+   "ev": 0.352,
+   "detail": "Model total 47.1 vs market 54.5",
+   "pickedAt": "2026-09-20T15:19:21.825370+00:00",
+   "result": null
+  },
+  {
+   "season": 2026,
+   "seasonType": "regular",
+   "week": 4,
+   "gameId": 401858466,
+   "matchup": "Wisconsin @ Penn State",
+   "homeTeam": "Penn State",
+   "awayTeam": "Wisconsin",
+   "startDate": "2026-09-26T21:00:00.000Z",
+   "type": "spread",
+   "pick": "Penn State -9.5",
+   "side": "home",
+   "line": -9.5,
+   "price": -110,
+   "prob": 0.698,
+   "ev": 0.3321,
+   "detail": "Model line: Penn State -16.5 vs market -9.5",
+   "pickedAt": "2026-09-20T15:19:21.825373+00:00",
    "result": null
   }
  ]
