@@ -142,7 +142,7 @@
    "prob": 0.38,
    "ev": 0.4637,
    "detail": "Model win prob 38% vs implied 26%",
-   "pickedAt": "2026-09-20T15:19:21.825349+00:00",
+   "pickedAt": "2026-09-20T15:21:33.874364+00:00",
    "result": null
   },
   {
@@ -162,7 +162,7 @@
    "prob": 0.744,
    "ev": 0.4203,
    "detail": "Model total 46.4 vs market 37.5",
-   "pickedAt": "2026-09-20T15:19:21.825363+00:00",
+   "pickedAt": "2026-09-20T15:21:33.874370+00:00",
    "result": null
   },
   {
@@ -182,7 +182,7 @@
    "prob": 0.736,
    "ev": 0.4042,
    "detail": "Model total 50.0 vs market 58.5",
-   "pickedAt": "2026-09-20T15:19:21.825367+00:00",
+   "pickedAt": "2026-09-20T15:21:33.874372+00:00",
    "result": null
   },
   {
@@ -202,7 +202,7 @@
    "prob": 0.708,
    "ev": 0.352,
    "detail": "Model total 47.1 vs market 54.5",
-   "pickedAt": "2026-09-20T15:19:21.825370+00:00",
+   "pickedAt": "2026-09-20T15:21:33.874374+00:00",
    "result": null
   },
   {
@@ -222,7 +222,7 @@
    "prob": 0.698,
    "ev": 0.3321,
    "detail": "Model line: Penn State -16.5 vs market -9.5",
-   "pickedAt": "2026-09-20T15:19:21.825373+00:00",
+   "pickedAt": "2026-09-20T15:21:33.874376+00:00",
    "result": null
   }
  ]
