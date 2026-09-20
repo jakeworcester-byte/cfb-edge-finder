@@ -2,8 +2,11 @@ name: Build data and deploy to Pages
 
 on:
   schedule:
-    # During the season (Aug-Jan): Tue & Thu 15:00 UTC (~10am ET, lines settled)
-    # and Sat 12:00 UTC (~7am ET, final look before kickoffs).
+    # During the season (Aug-Jan):
+    #   Sun 08:00 UTC (3am EST / 4am EDT) - grade Saturday's games, post results
+    #   Tue & Thu 15:00 UTC (~10am ET)    - fresh lines for the coming week
+    #   Sat 12:00 UTC (~7am ET)           - final look before kickoffs
+    - cron: "0 8 * 1,8-12 0"
     - cron: "0 15 * 1,8-12 2,4"
     - cron: "0 12 * 1,8-12 6"
   workflow_dispatch: {}
@@ -38,7 +41,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/picks_history.json
+          git add data/
           git diff --cached --quiet || { git commit -m "Update pick ledger [skip ci]"; git push; }
 
       - name: Upload site

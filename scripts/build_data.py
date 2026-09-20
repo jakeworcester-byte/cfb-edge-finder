@@ -33,7 +33,9 @@ API_KEY = os.environ.get("CFBD_API_KEY", "").strip()
 ROOT = Path(__file__).resolve().parent.parent
 OUT_PATH = ROOT / "site" / "data.json"
 LEDGER_PATH = ROOT / "data" / "picks_history.json"
+BOARDS_PATH = ROOT / "data" / "boards.json"
 RESULTS_PATH = ROOT / "site" / "results.json"
+LASTWEEK_PATH = ROOT / "site" / "lastweek.json"
 STAKE = 10.0                 # flat bet size for the season P/L tally
 
 # --- model constants -------------------------------------------------------
@@ -136,28 +138,33 @@ def is_upcoming(game, now):
     return start is None or start >= now
 
 
-def fetch_upcoming_week(year, now):
+def fetch_upcoming_week(year, now, weeks):
     """Find the next week with games still to play.
 
     Walks the calendar forward from today and returns
-    (seasonType, week, upcoming_games). A week whose games have all been
-    played (e.g. it's Sunday and the calendar week hasn't rolled over yet)
-    is skipped in favor of the next one. If the season is over, returns the
-    final week's full slate as played.
+    (seasonType, week, upcoming_games, previous_week). A week whose games
+    have all been played (e.g. it's Sunday and the calendar week hasn't
+    rolled over yet) is skipped in favor of the next one. previous_week is
+    the (seasonType, week) immediately before the chosen one, or None.
+    If the season is over, returns the final week's full slate as played.
     """
-    weeks = calendar_weeks(year)
     if not weeks:
         return "regular", 1, api_get("/games", year=year, week=1,
-                                     seasonType="regular", classification="fbs")
+                                     seasonType="regular", classification="fbs"), None
+
+    def prev_of(stype, wk):
+        idx = next((i for i, w in enumerate(weeks) if (w[2], w[3]) == (stype, wk)), 0)
+        return (weeks[idx - 1][2], weeks[idx - 1][3]) if idx > 0 else None
+
     candidates = [w for w in weeks if w[1] >= now] or weeks[-1:]
     last_fetch = None
     for _, _, season_type, week in candidates[:3]:
         games = api_get("/games", year=year, week=week,
                         seasonType=season_type, classification="fbs")
-        last_fetch = (season_type, week, games)
+        last_fetch = (season_type, week, games, prev_of(season_type, week))
         upcoming = [g for g in games if is_upcoming(g, now)]
         if upcoming:
-            return season_type, week, upcoming
+            return season_type, week, upcoming, prev_of(season_type, week)
     # nothing upcoming (season over / long dead period): show last week as played
     return last_fetch
 
@@ -292,7 +299,8 @@ def fetch_lines(year, week, season_type):
 
         def consensus(field):
             vals = [b[field] for b in books if isinstance(b.get(field), (int, float))]
-            return statistics.median(vals) if vals else None
+            # median of several books can land on .25/.75 - snap to a bettable half-point
+            return round(statistics.median(vals) * 2) / 2 if vals else None
 
         def best_price(field):
             vals = [b[field] for b in books if isinstance(b.get(field), (int, float))]
@@ -521,13 +529,10 @@ def grade_one(p, home_pts, away_pts):
             "outcome": outcome, "profit": round(profit, 2)}
 
 
-def grade_picks(ledger, now):
-    """Grade ungraded picks whose games have kicked off, using final scores."""
-    pending = [p for p in ledger["picks"] if not p.get("result") and pick_started(p, now)]
-    if not pending:
-        return 0
+def fetch_scores(week_keys):
+    """Final scores for completed games: {gameId: (home_pts, away_pts)}."""
     scores = {}
-    for season, stype, wk in {(p["season"], p["seasonType"], p["week"]) for p in pending}:
+    for season, stype, wk in sorted(week_keys):
         try:
             for g in api_get("/games", year=season, week=wk, seasonType=stype):
                 if pick(g, "completed", default=False):
@@ -537,12 +542,114 @@ def grade_picks(ledger, now):
                         scores[pick(g, "id")] = (hp, ap)
         except Exception as e:
             print(f"score fetch failed ({season} {stype} wk {wk}): {e}", file=sys.stderr)
+    return scores
+
+
+def grade_picks(ledger, scores, now):
+    """Grade ungraded ledger picks whose games have kicked off."""
     graded = 0
-    for p in pending:
-        if p["gameId"] in scores:
+    for p in ledger["picks"]:
+        if not p.get("result") and pick_started(p, now) and p["gameId"] in scores:
             p["result"] = grade_one(p, *scores[p["gameId"]])
             graded += 1
     return graded
+
+
+# --- full-board snapshots (every game, locked at kickoff) ------------------------
+
+def week_key(season, stype, week):
+    return f"{season}-{stype}-{week}"
+
+
+def load_boards():
+    if BOARDS_PATH.exists():
+        try:
+            data = json.loads(BOARDS_PATH.read_text(encoding="utf-8"))
+            if isinstance(data.get("weeks"), dict):
+                return data
+        except Exception as e:
+            print(f"could not read boards ({e}); starting fresh", file=sys.stderr)
+    return {"weeks": {}}
+
+
+def record_board(boards, evaluated, season, stype, week, now, backfilled=False):
+    """Snapshot the model's call on every game. Games already kicked off or
+    graded keep their earlier snapshot; the rest refresh to this run."""
+    wk = boards["weeks"].setdefault(week_key(season, stype, week), {
+        "season": season, "seasonType": stype, "week": week,
+        "backfilled": backfilled, "games": {}})
+    for e in evaluated:
+        gid = str(e["id"])
+        old = wk["games"].get(gid)
+        if old and (old.get("result") or pick_started(old, now)):
+            continue
+        snap = dict(e)
+        snap["result"] = None
+        snap["lockedAt"] = now.isoformat()
+        wk["games"][gid] = snap
+
+
+def grade_game(g, home_pts, away_pts):
+    """Grade the model's lean on each market for one game."""
+    calls = {}
+    for b in g.get("bets", []):
+        if b["type"] == "moneyline" and b["prob"] < 0.5:
+            continue  # only the side the model actually favors
+        calls[b["type"]] = {"pick": b["pick"], "outcome": grade_one(b, home_pts, away_pts)["outcome"]}
+    return {"homeScore": home_pts, "awayScore": away_pts, "calls": calls}
+
+
+def grade_boards(boards, scores, now):
+    graded = 0
+    for wk in boards["weeks"].values():
+        for gid, g in wk["games"].items():
+            if not g.get("result") and pick_started(g, now) and g["id"] in scores:
+                g["result"] = grade_game(g, *scores[g["id"]])
+                graded += 1
+    return graded
+
+
+def pending_week_keys(ledger, boards, now):
+    keys = {(p["season"], p["seasonType"], p["week"]) for p in ledger["picks"]
+            if not p.get("result") and pick_started(p, now)}
+    for wk in boards["weeks"].values():
+        if any(not g.get("result") and pick_started(g, now) for g in wk["games"].values()):
+            keys.add((wk["season"], wk["seasonType"], wk["week"]))
+    return keys
+
+
+def backfill_previous_week(boards, prev, year, now, ratings, elo_mean, sp_means, records):
+    """One-time snapshot of a week that was played before this run ever saw
+    it (only happens the first week after this feature ships). Uses current
+    ratings, which already reflect those results, so it's flagged."""
+    if not prev:
+        return
+    stype, week = prev
+    if week_key(year, stype, week) in boards["weeks"]:
+        return
+    games = api_get("/games", year=year, week=week, seasonType=stype, classification="fbs")
+    lines = fetch_lines(year, week, stype)
+    evaluated = [evaluate_game(g, ratings, elo_mean, sp_means, records, lines) for g in games]
+    evaluated = [e for e in evaluated if e["homeTeam"] and e["awayTeam"]]
+    record_board(boards, evaluated, year, stype, week, now, backfilled=True)
+    print(f"Backfilled board for {stype} week {week}: {len(evaluated)} games")
+
+
+def write_lastweek(boards, current_key, now, demo=False):
+    """Publish the most recent completed week (excluding the current one)."""
+    def order(wk):
+        return (wk["season"], 0 if wk["seasonType"] == "regular" else 1, wk["week"])
+
+    done = [wk for k, wk in boards["weeks"].items()
+            if k != current_key and any(g.get("result") for g in wk["games"].values())]
+    payload = {"generatedAt": now.isoformat(), "demo": demo, "week": None}
+    if done:
+        wk = max(done, key=order)
+        games = sorted(wk["games"].values(), key=lambda g: (g.get("startDate") or "", g["homeTeam"]))
+        payload["week"] = {"season": wk["season"], "seasonType": wk["seasonType"],
+                           "week": wk["week"], "backfilled": wk.get("backfilled", False),
+                           "games": games}
+    LASTWEEK_PATH.write_text(json.dumps(payload, indent=1), encoding="utf-8")
 
 
 def update_week_picks(ledger, top, season, season_type, week, now):
@@ -662,6 +769,16 @@ def demo_ledger(payload, now):
     return ledger
 
 
+def demo_boards(payload, now):
+    """Fake 'last week' board: the demo games with made-up finals."""
+    boards = {"weeks": {}}
+    record_board(boards, payload["games"], payload["season"], "regular", -1, now)
+    finals = [(31, 24), (21, 27), (38, 20), (45, 42), (17, 20), (28, 31), (24, 10), (35, 38)]
+    for (hp, ap), g in zip(finals, boards["weeks"][week_key(payload["season"], "regular", -1)]["games"].values()):
+        g["result"] = grade_game(g, hp, ap)
+    return boards
+
+
 # --- main ---------------------------------------------------------------------
 
 def main():
@@ -686,9 +803,11 @@ def main():
         payload["games"] = demo_payload(now)
         payload["topPicks"] = top_picks(payload["games"])
         write_results(demo_ledger(payload, now), now, demo=True)
+        write_lastweek(demo_boards(payload, now), "current", now, demo=True)
     else:
         year = current_season(now)
-        season_type, week, games = fetch_upcoming_week(year, now)
+        weeks = calendar_weeks(year)
+        season_type, week, games, prev_week = fetch_upcoming_week(year, now, weeks)
         print(f"Season {year}, {season_type} week {week}: {len(games)} upcoming games")
 
         ratings, elo_mean, sp_means = fetch_ratings(year)
@@ -704,12 +823,23 @@ def main():
                         "games": evaluated, "topPicks": top_picks(evaluated)})
 
         ledger = load_ledger()
-        graded = grade_picks(ledger, now)
+        boards = load_boards()
+        record_board(boards, evaluated, year, season_type, week, now)
+        backfill_previous_week(boards, prev_week, year, now,
+                               ratings, elo_mean, sp_means, records)
+
+        scores = fetch_scores(pending_week_keys(ledger, boards, now))
+        graded = grade_picks(ledger, scores, now)
+        graded_games = grade_boards(boards, scores, now)
         update_week_picks(ledger, payload["topPicks"], year, season_type, week, now)
+
         LEDGER_PATH.parent.mkdir(parents=True, exist_ok=True)
         LEDGER_PATH.write_text(json.dumps(ledger, indent=1), encoding="utf-8")
+        BOARDS_PATH.write_text(json.dumps(boards, indent=1), encoding="utf-8")
         write_results(ledger, now)
-        print(f"Ledger: {len(ledger['picks'])} picks total, {graded} newly graded")
+        write_lastweek(boards, week_key(year, season_type, week), now)
+        print(f"Ledger: {len(ledger['picks'])} picks total, {graded} newly graded; "
+              f"board games graded this run: {graded_games}")
 
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     OUT_PATH.write_text(json.dumps(payload, indent=1), encoding="utf-8")

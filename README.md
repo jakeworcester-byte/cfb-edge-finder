@@ -11,15 +11,24 @@ and surfaces the five highest-value bets each week.
 ## How it stays updated
 
 A GitHub Actions workflow ([.github/workflows/build-and-deploy.yml](.github/workflows/build-and-deploy.yml))
-runs Tuesday and Thursday at 10am ET and Saturday at 7am ET during the season
-(Aug–Jan). Each run:
+runs during the season (Aug–Jan) on this schedule:
 
-1. Detects the current week from the CFBD calendar
+- **Sunday 3am ET** — grades Saturday's games and posts results
+- **Tuesday and Thursday 10am ET** — fresh lines for the coming week
+- **Saturday 7am ET** — final look before kickoffs
+
+Each run:
+
+1. Finds the next week with games still to play
 2. Pulls the FBS schedule, betting lines (DraftKings, ESPN Bet, Bovada,
    consensus), and the four rating systems
 3. Runs the ensemble, scores every spread / total / moneyline for expected
    value, and picks the top 5
-4. Writes `site/data.json` and deploys the static site to GitHub Pages
+4. Snapshots the model's call on every game (`data/boards.json`) and the
+   top 5 picks (`data/picks_history.json`); snapshots lock at kickoff
+5. Grades any locked snapshots whose games are final, then writes
+   `site/data.json`, `site/lastweek.json`, `site/results.json` and
+   deploys to GitHub Pages
 
 You can also trigger a refresh anytime from the repo's Actions tab
 (**Run workflow**).

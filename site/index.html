@@ -71,6 +71,23 @@
   footer { margin-top: 36px; color: var(--muted); font-size: 12.5px; border-top: 1px solid var(--border); padding-top: 14px; }
   a { color: var(--blue); text-decoration: none; }
   .empty { color: var(--muted); padding: 24px; text-align: center; }
+  .tabs { display: flex; gap: 4px; margin: 18px 0 4px; border-bottom: 1px solid var(--border); }
+  .tab { background: none; border: none; color: var(--muted); font: inherit; font-size: 14.5px;
+    font-weight: 600; padding: 8px 14px; cursor: pointer; border-bottom: 2px solid transparent;
+    margin-bottom: -1px; }
+  .tab:hover { color: var(--text); }
+  .tab.active { color: var(--green); border-bottom-color: var(--green); }
+  .stat { background: linear-gradient(160deg, var(--panel2), var(--panel));
+    border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; }
+  .stat .label { font-size: 11.5px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  .stat .value { font-size: 22px; font-weight: 750; margin-top: 2px; }
+  .stat .note { font-size: 12px; color: var(--muted); }
+  .ind { display: inline-block; min-width: 22px; text-align: center; font-weight: 800; border-radius: 6px; padding: 0 6px; }
+  .ind-win { color: var(--green); background: #12351c; }
+  .ind-loss { color: var(--red); background: #3c1514; }
+  .ind-push { color: var(--muted); background: #2b3442; }
+  .ind-none { color: var(--muted); }
+  .final { font-weight: 650; }
 </style>
 </head>
 <body>
@@ -88,6 +105,12 @@
     See SETUP.md in the repo to wire up live data.
   </div>
 
+  <div class="tabs">
+    <button class="tab active" data-tab="board">This Week's Board</button>
+    <button class="tab" data-tab="last">Last Week's Results</button>
+  </div>
+
+  <div id="tabBoard">
   <h2>Top 5 Value Plays This Week</h2>
   <div class="cards" id="topPicks"><div class="empty">Loading…</div></div>
 
@@ -111,6 +134,28 @@
       </tr></thead>
       <tbody id="rows"></tbody>
     </table>
+  </div>
+  </div>
+
+  <div id="tabLast" hidden>
+    <h2 id="lastTitle">Last Week's Results</h2>
+    <div class="sub" id="lastSub"></div>
+    <div id="backfillNote" class="banner" style="display:none">
+      <b>Backfilled week.</b> This week was played before the site started snapshotting every game, so these model numbers were computed after the fact with ratings that already include these results. Treat it as a preview; from the next week on, every game's call is locked at kickoff.
+    </div>
+    <div class="cards" id="lastStats"></div>
+    <div class="tablewrap">
+      <table id="lastBoard">
+        <thead><tr>
+          <th>Kickoff</th><th>Matchup</th><th>Final</th>
+          <th>Market Spread</th><th>Model Side</th><th>ATS</th>
+          <th>Market O/U</th><th>Model Side</th><th>O/U</th>
+          <th>Model Winner</th><th>SU</th>
+        </tr></thead>
+        <tbody id="lastRows"></tbody>
+      </table>
+    </div>
+    <p class="sub" style="margin-top:12px">ATS = the model's preferred side against the spread. SU = straight-up winner. The five Top Value plays and their $10 payouts are graded on the <a href="results.html">Season Results</a> page.</p>
   </div>
 
   <footer>
@@ -227,7 +272,82 @@ function renderBoard() {
   }).join('');
 }
 
+function ind(outcome) {
+  if (!outcome) return '<span class="ind ind-none">—</span>';
+  const sym = { win: '✓', loss: '✗', push: 'P' }[outcome] || '—';
+  return `<span class="ind ind-${outcome}" title="${outcome}">${sym}</span>`;
+}
+
+function renderLastWeek(LW) {
+  const title = document.getElementById('lastTitle');
+  const rows = document.getElementById('lastRows');
+  const stats = document.getElementById('lastStats');
+  if (!LW || !LW.week) {
+    title.textContent = 'Last Week\'s Results';
+    document.getElementById('lastSub').textContent = '';
+    stats.innerHTML = '';
+    rows.innerHTML = '<tr><td colspan="11" class="empty">No completed week on record yet. Results post the morning after games.</td></tr>';
+    return;
+  }
+  const wk = LW.week;
+  const label = wk.seasonType === 'postseason' ? 'Bowls/Playoff' : 'Week ' + wk.week;
+  title.textContent = `${wk.season} ${label} — Model vs. Results`;
+  document.getElementById('backfillNote').style.display = wk.backfilled ? 'block' : 'none';
+
+  const tally = { spread: [0, 0, 0], total: [0, 0, 0], moneyline: [0, 0, 0] };
+  const games = wk.games.slice().sort((a, b) => (a.startDate || '').localeCompare(b.startDate || ''));
+  let gradedCount = 0;
+  for (const g of games) {
+    if (!g.result) continue;
+    gradedCount++;
+    for (const [type, call] of Object.entries(g.result.calls || {})) {
+      const i = { win: 0, loss: 1, push: 2 }[call.outcome];
+      if (i != null) tally[type][i]++;
+    }
+  }
+  const rec = t => `${t[0]}–${t[1]}${t[2] ? '–' + t[2] : ''}`;
+  const pct = t => (t[0] + t[1]) ? Math.round(t[0] / (t[0] + t[1]) * 100) + '%' : '—';
+  document.getElementById('lastSub').textContent =
+    `${gradedCount} of ${games.length} games final. Every game's model lean was locked at kickoff and graded against the final score.`;
+  stats.innerHTML = `
+    <div class="stat"><div class="label">Against the spread</div><div class="value">${rec(tally.spread)}</div><div class="note">${pct(tally.spread)} of model sides covered</div></div>
+    <div class="stat"><div class="label">Over / Under</div><div class="value">${rec(tally.total)}</div><div class="note">${pct(tally.total)} of model totals hit</div></div>
+    <div class="stat"><div class="label">Straight-up winners</div><div class="value">${rec(tally.moneyline)}</div><div class="note">${pct(tally.moneyline)} of favored teams won</div></div>
+    <div class="stat"><div class="label">Top 5 value plays</div><div class="value"><a href="results.html">See P/L →</a></div><div class="note">$10 flat bets, graded by odds</div></div>`;
+
+  rows.innerHTML = games.map(g => {
+    const m = g.model, ln = g.lines || {}, r = g.result, calls = (r && r.calls) || {};
+    const final = r ? `<span class="final">${g.awayTeam} ${r.awayScore} — ${g.homeTeam} ${r.homeScore}</span>` : '<span class="books">not final</span>';
+    const sp = calls.spread, tt = calls.total, ml = calls.moneyline;
+    const spreadBet = (g.bets || []).find(b => b.type === 'spread');
+    const totalBet = (g.bets || []).find(b => b.type === 'total');
+    const mlBet = (g.bets || []).find(b => b.type === 'moneyline' && b.prob >= 0.5);
+    return `<tr class="${m.lowConfidence ? 'lowconf' : ''}">
+      <td>${fmt.time(g.startDate)}</td>
+      <td class="teams"><b>${g.awayTeam}</b><br>at <b>${g.homeTeam}</b>${g.neutralSite ? ' <span class="tag">N</span>' : ''}</td>
+      <td>${final}</td>
+      <td>${ln.spread != null ? g.homeTeam + ' ' + fmt.spread(ln.spread) : '—'}</td>
+      <td>${spreadBet ? spreadBet.pick : '—'}</td>
+      <td>${ind(sp && sp.outcome)}</td>
+      <td>${ln.total != null ? ln.total : '—'}</td>
+      <td>${totalBet ? totalBet.pick : '—'}</td>
+      <td>${ind(tt && tt.outcome)}</td>
+      <td>${mlBet ? mlBet.team : (m.pHomeWin >= 0.5 ? g.homeTeam : g.awayTeam)}</td>
+      <td>${ind(ml && ml.outcome)}</td>
+    </tr>`;
+  }).join('');
+}
+
+function showTab(name) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.tab === name));
+  document.getElementById('tabBoard').hidden = name !== 'board';
+  document.getElementById('tabLast').hidden = name !== 'last';
+  if (name === 'last') history.replaceState(null, '', '#last'); else history.replaceState(null, '', location.pathname);
+}
+
 async function init() {
+  document.querySelectorAll('.tab').forEach(t => t.addEventListener('click', () => showTab(t.dataset.tab)));
+  if (location.hash === '#last') showTab('last');
   try {
     const resp = await fetch('data.json?t=' + Date.now());
     DATA = await resp.json();
@@ -235,6 +355,8 @@ async function init() {
     document.getElementById('weekLabel').textContent = 'Could not load data.json';
     return;
   }
+  fetch('lastweek.json?t=' + Date.now()).then(r => r.json()).then(renderLastWeek)
+    .catch(() => renderLastWeek(null));
   const st = DATA.seasonType === 'postseason' ? 'Bowls/Playoff' : 'Week ' + DATA.week;
   document.getElementById('weekLabel').textContent = `${DATA.season} · ${st}`;
   document.getElementById('stamp').textContent =
