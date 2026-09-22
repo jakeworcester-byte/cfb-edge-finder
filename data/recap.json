@@ -1,22 +1,21 @@
 {
  "weekKey": "2026-regular-3",
- "factsHash": null,
- "source": "builtin",
- "lastError": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': \"output_config.format.schema: For 'array' type, property 'maxItems' is not supported\"}, 'request_id': 'req_011CfHgvYzYojG3ph1nTcSZv'}",
- "generatedAt": "2026-09-22T02:28:26.472888+00:00",
- "headline": "40-25-1 on 66 value plays, +$110.47",
+ "factsHash": "27f7a3b9d5c4f1c1",
+ "source": "claude",
+ "lastError": null,
+ "generatedAt": "2026-09-22T02:29:17.326034+00:00",
+ "headline": "The Model Cleaned Up After The Games Were Already Over",
  "paragraphs": [
-  "Week 3 put 75 graded games in front of the model. It found a playable edge in 46 of them and left the other 29 alone. Those plays went 40-25-1, worth +$110.47 at $10 a play (16.7% on the $660 at risk).",
-  "By market, spreads went 26-13-1, totals went 8-8 and moneylines went 6-4. The best of them was Northern Illinois +34.5 in Northern Illinois at Arizona, a 9.6-point disagreement with the market that finished Arizona 42, Northern Illinois 17. The one that stung was Florida International ML +225, a 12-point gap between the model and the price that finished Florida Atlantic 16, Florida International 10.",
-  "The five plays that actually got published went 2-3 for -$11.82, behind the full board. Ranking by expected value is supposed to concentrate the good ones at the top, and whether it does is something only a season of these will answer.",
-  "None of this counts toward the season record. The week was graded after the fact, with ratings that already knew how the games turned out, so it shows the format rather than testing the model. The real ledger starts with the first week called before kickoff."
+  "Fair warning before anyone frames the number: Week 3 was graded in hindsight, which means the model got to fill out its card with the box scores sitting right there. It went 40-25-1 on 66 plays for +110.47 and a 16.7 percent ROI. Impressive in the way that shooting free throws in an empty gym is impressive. The real ledger still reads zero weeks graded, zero plays, zero dollars.",
+  "Inside the retrospective fantasy, the spread was doing the heavy lifting: 26-13-1 across 40 plays, +106.34, a 26.6 percent ROI. Totals went 8-8 for a loss of 7.28, which is a lot of typing for nothing, and the ten moneylines came back 6-4 and +11.41. Best call was Northern Illinois plus 34.5 at a 9.6 point edge, cashed by a mile in a 42-17 game. The model's favorite loser was Florida International at plus 225, a 12.4 point edge that finished 16-10 the wrong way.",
+  "The part that actually happened in public is the part that hurt. The published top five went 2-3 for minus 11.82 and a negative 23.6 percent ROI, off an expected win rate of 68.1 percent. So the model hit 61.5 percent on the 66 games nobody was watching and 40 percent on the five it stood behind. Overall win rate matched the expectation exactly, which is either calibration or the universe's driest joke."
  ],
  "recent": [
   {
    "weekKey": "2026-regular-3",
    "label": "Week 3",
-   "headline": "40-25-1 on 66 value plays, +$110.47",
-   "opening": "Week 3 put 75 graded games in front of the model. It found a playable edge in 46 of them and left the other 29 alone. Those plays went 40-25-1, worth +$110.47 a"
+   "headline": "The Model Cleaned Up After The Games Were Already Over",
+   "opening": "Fair warning before anyone frames the number: Week 3 was graded in hindsight, which means the model got to fill out its card with the box scores sitting right t"
   }
  ]
 }
