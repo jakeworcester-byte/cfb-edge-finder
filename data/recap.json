@@ -1,0 +1,21 @@
+{
+ "weekKey": "2026-regular-3",
+ "factsHash": null,
+ "source": "builtin",
+ "generatedAt": "2026-09-22T02:18:48.206704+00:00",
+ "headline": "40-25-1 on 66 value plays, +$110.47",
+ "paragraphs": [
+  "Week 3 put 75 graded games in front of the model. It found a playable edge in 46 of them and left the other 29 alone. Those plays went 40-25-1, worth +$110.47 at $10 a play (16.7% on the $660 at risk).",
+  "By market, spreads went 26-13-1, totals went 8-8 and moneylines went 6-4. The best of them was Northern Illinois +34.5 in Northern Illinois at Arizona, a 9.6-point disagreement with the market that finished Arizona 42, Northern Illinois 17. The one that stung was Florida International ML +225, a 12-point gap between the model and the price that finished Florida Atlantic 16, Florida International 10.",
+  "The five plays that actually got published went 2-3 for -$11.82, behind the full board. Ranking by expected value is supposed to concentrate the good ones at the top, and whether it does is something only a season of these will answer.",
+  "None of this counts toward the season record. The week was graded after the fact, with ratings that already knew how the games turned out, so it shows the format rather than testing the model. The real ledger starts with the first week called before kickoff."
+ ],
+ "recent": [
+  {
+   "weekKey": "2026-regular-3",
+   "label": "Week 3",
+   "headline": "40-25-1 on 66 value plays, +$110.47",
+   "opening": "Week 3 put 75 graded games in front of the model. It found a playable edge in 46 of them and left the other 29 alone. Those plays went 40-25-1, worth +$110.47 a"
+  }
+ ]
+}
