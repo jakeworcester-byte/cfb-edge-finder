@@ -115,6 +115,33 @@ shows up in 20 or 30 picks. A win rate takes hundreds. Beating closing
 lines is also a much harder test than beating results, so a good drift
 number with a mediocre record is more encouraging than the reverse.
 
+## The Sunday recap
+
+The recap is written by Claude (`claude-opus-5`) from a facts payload built
+out of the graded week: every value play with its edge, probability, outcome
+and payout, the market splits, the notable calls, the published Top 5, and
+the season to date. It gets numbers, never prose to paraphrase, and it is
+told to use nothing outside that payload.
+
+Three things keep it honest:
+
+- **A number whitelist.** Every figure in the generated text is checked
+  against the numbers in the facts payload, in the forms prose would
+  naturally use. A figure that is not in the data fails the check and the
+  deterministic recap publishes instead. Invented stats are the one
+  unacceptable failure on a page about honest self-grading.
+- **No invented categories.** The payload has the week, the three markets,
+  and the individual plays. It has no split for road dogs or primetime
+  games, so the writer is told it does not know those things.
+- **A fallback that is not scaffolding.** No key, no network, a rate limit,
+  malformed output, too many paragraphs, a bad number: every path returns
+  the deterministic recap and logs the reason. The build never fails over
+  prose.
+
+It runs once per graded week, cached in `data/recap.json`, so the midweek
+runs do not reword Sunday's text or pay to regenerate it. The recap also
+sees its last few openings and is told not to repeat them.
+
 ## Backfilled weeks
 
 A week played before the site started snapshotting gets graded after the

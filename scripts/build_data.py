@@ -17,6 +17,7 @@ Requires env var CFBD_API_KEY. Without it, writes demo data so the site
 still renders (with a banner) until the key is configured.
 """
 
+import hashlib
 import json
 import math
 import os
@@ -37,6 +38,7 @@ BOARDS_PATH = ROOT / "data" / "boards.json"
 RESULTS_PATH = ROOT / "site" / "results.json"
 LASTWEEK_PATH = ROOT / "site" / "lastweek.json"
 RECORD_PATH = ROOT / "site" / "modelrecord.json"
+RECAP_PATH = ROOT / "data" / "recap.json"
 STAKE = 10.0                 # flat bet size for the season P/L tally
 
 # --- model constants -------------------------------------------------------
@@ -1141,6 +1143,7 @@ def build_narrative(boards, ledger, record, now):
 
     return {
         "generatedAt": now.isoformat(),
+        "source": "builtin",
         "season": wk["season"], "seasonType": wk["seasonType"], "week": wk["week"],
         "headline": (f"{rec_str(wt)} on {wt['plays']} value "
                      f"{plural(wt['plays'], 'play')}, {money(wt['profit'])}"
@@ -1148,6 +1151,219 @@ def build_narrative(boards, ledger, record, now):
         "paragraphs": paras,
         "week_tally": wt,
     }
+
+
+# --- facts for the written recap ---------------------------------------------
+
+def facts_week_label(wk):
+    return "Bowls/Playoff" if wk.get("seasonType") == "postseason" else f"Week {wk['week']}"
+
+
+def pct_num(x, places=1):
+    return None if x is None else round(x * 100, places)
+
+
+def tally_facts(t):
+    return {"plays": t["plays"], "record": rec_str(t) if t["plays"] else None,
+            "wins": t["wins"], "losses": t["losses"], "pushes": t["pushes"],
+            "profit": t["profit"], "staked": t["staked"],
+            "winRatePct": pct_num(t["winRate"]), "roiPct": pct_num(t["roi"]),
+            "modelExpectedPct": pct_num(t["expected"])}
+
+
+def drift_pts(call, g):
+    """Points the market moved toward this call's side between the week's
+    opening number and the last one seen. Mirrors the site's drift column."""
+    hist = g.get("lineHistory") or []
+    if len(hist) < 2:
+        return None
+    o, c = hist[0], hist[-1]
+    t, side = call["type"], call.get("side")
+    if t == "spread":
+        if o.get("spread") is None or c.get("spread") is None:
+            return None
+        frm = o["spread"] if side == "home" else -o["spread"]
+        to = c["spread"] if side == "home" else -c["spread"]
+        return round(frm - to, 1)
+    if t == "total":
+        if o.get("total") is None or c.get("total") is None:
+            return None
+        return round((c["total"] - o["total"]) if side == "over"
+                     else (o["total"] - c["total"]), 1)
+    if t == "moneyline":
+        frm = o.get("mlHome") if side == "home" else o.get("mlAway")
+        to = c.get("mlHome") if side == "home" else c.get("mlAway")
+        if not frm or not to:
+            return None
+        return round((implied_prob(to) - implied_prob(frm)) * 100, 1)
+    return None
+
+
+def play_facts(c, g):
+    r = g.get("result") or {}
+    return {
+        "matchup": f"{g['awayTeam']} at {g['homeTeam']}",
+        "pick": c["pick"],
+        "market": c["type"],
+        "edge": c.get("edgePts"),
+        "edgeUnit": "probability points" if c["type"] == "moneyline" else "points",
+        "modelProbPct": pct_num(c.get("prob"), 0),
+        "outcome": c["outcome"],
+        "profit": c["profit"],
+        "finalScore": final_str(g),
+    }
+
+
+def narrative_facts(boards, ledger, record, now):
+    """Everything the writer is allowed to know, and nothing else.
+
+    Any number absent from here is a number the recap cannot use, so this
+    doubles as the whitelist the output is checked against.
+    """
+    weeks = graded_weeks(boards)
+    if not weeks:
+        return None
+    wk = weeks[-1]
+    plays = week_plays(wk)
+    finished = [g for g in wk["games"].values() if g.get("result")]
+
+    wt = new_tally()
+    types = {t: new_tally() for t in ("spread", "total", "moneyline")}
+    for c, g in plays:
+        add_play(wt, c)
+        add_play(types[c["type"]], c)
+    close_tally(wt)
+    for t in types.values():
+        close_tally(t)
+
+    wins = [(c, g) for c, g in plays if c["outcome"] == "win"]
+    losses = [(c, g) for c, g in plays if c["outcome"] == "loss"]
+    notable = {}
+    if wins:
+        c, g = max(wins, key=lambda x: x[0].get("ev") or 0)
+        notable["bestCall"] = play_facts(c, g)
+    if losses:
+        c, g = max(losses, key=lambda x: x[0].get("ev") or 0)
+        notable["worstCall"] = play_facts(c, g)
+
+    moved = [d for d in (drift_pts(c, g) for c, g in plays) if d]
+    drift = None
+    if moved:
+        our_way = sum(1 for d in moved if d > 0)
+        drift = {"playsWhoseLineMoved": len(moved), "movedTowardTheModel": our_way,
+                 "movedTowardTheModelPct": round(our_way / len(moved) * 100, 1)}
+
+    wk_picks = [p for p in ledger["picks"]
+                if p.get("result") and p["season"] == wk["season"]
+                and p["seasonType"] == wk["seasonType"] and p["week"] == wk["week"]]
+    published = None
+    if wk_picks:
+        tp = new_tally()
+        for p in wk_picks:
+            add_play(tp, {"outcome": p["result"]["outcome"],
+                          "profit": p["result"]["profit"], "prob": p.get("prob")})
+        published = tally_facts(close_tally(tp))
+
+    ov = record["overall"]
+    hs = record.get("hindsight") or {}
+    season = {"weeksGradedForReal": sum(1 for w in record["byWeek"] if not w["backfilled"]),
+              **tally_facts(ov)}
+    if hs.get("plays"):
+        season["excludedHindsightWeek"] = tally_facts(hs)
+
+    return {
+        "stakePerPlay": STAKE,
+        "week": {
+            "season": wk["season"],
+            "label": facts_week_label(wk),
+            "gradedInHindsight": bool(wk.get("backfilled")),
+            "gamesGraded": len(finished),
+            "gamesWithAPlay": len({g["id"] for _, g in plays}),
+            "gamesPassedOn": len(finished) - len({g["id"] for _, g in plays}),
+            **tally_facts(wt),
+        },
+        "weekByMarket": [{"market": name, **tally_facts(t)}
+                         for name, t in types.items() if t["plays"]],
+        "notable": notable,
+        "publishedTopFiveThisWeek": published,
+        "marketDrift": drift,
+        "season": season,
+        "everyPlay": [play_facts(c, g) for c, g in plays],
+    }
+
+
+# --- recap store: generate once per graded week ------------------------------
+
+def facts_hash(facts):
+    blob = json.dumps(facts, sort_keys=True, separators=(",", ":"))
+    return hashlib.sha256(blob.encode("utf-8")).hexdigest()[:16]
+
+
+def load_recap_store():
+    if RECAP_PATH.exists():
+        try:
+            data = json.loads(RECAP_PATH.read_text(encoding="utf-8"))
+            if isinstance(data, dict):
+                return data
+        except Exception as e:
+            print(f"could not read recap store ({e})", file=sys.stderr)
+    return {}
+
+
+def save_recap_store(store):
+    RECAP_PATH.parent.mkdir(parents=True, exist_ok=True)
+    RECAP_PATH.write_text(json.dumps(store, indent=1), encoding="utf-8")
+
+
+def compose_narrative(boards, ledger, record, now):
+    """The deterministic recap, upgraded to a written one when Claude is
+    available. Generated once per graded week: the Sunday read should not
+    quietly reword itself on Tuesday, and there is no reason to pay for the
+    same paragraphs four times."""
+    builtin = build_narrative(boards, ledger, record, now)
+    if not builtin:
+        return None
+    builtin["source"] = "builtin"
+
+    facts = narrative_facts(boards, ledger, record, now)
+    if not facts:
+        return builtin
+
+    wk = graded_weeks(boards)[-1]
+    wkey = week_key(wk["season"], wk["seasonType"], wk["week"])
+    fhash = facts_hash(facts)
+    store = load_recap_store()
+
+    if store.get("factsHash") == fhash and store.get("paragraphs"):
+        return {**builtin, "headline": store["headline"],
+                "paragraphs": store["paragraphs"],
+                "source": store.get("source", "claude"),
+                "writtenAt": store.get("generatedAt")}
+
+    written = None
+    try:
+        import recap
+        written = recap.write_recap(facts, store.get("recent"))
+    except Exception as e:                      # noqa: BLE001 - never fail the build
+        print(f"recap: builtin ({type(e).__name__}: {e})", file=sys.stderr)
+
+    chosen = {**builtin, **written} if written else builtin
+
+    recent = [r for r in (store.get("recent") or []) if r.get("weekKey") != wkey]
+    recent.append({"weekKey": wkey, "label": facts["week"]["label"],
+                   "headline": chosen["headline"],
+                   "opening": chosen["paragraphs"][0][:160] if chosen["paragraphs"] else ""})
+    save_recap_store({
+        "weekKey": wkey,
+        # only pin the hash on a real write, so a transient failure retries
+        "factsHash": fhash if written else None,
+        "source": chosen["source"],
+        "generatedAt": now.isoformat(),
+        "headline": chosen["headline"],
+        "paragraphs": chosen["paragraphs"],
+        "recent": recent[-3:],
+    })
+    return chosen
 
 
 def write_lastweek(boards, current_key, now, demo=False, narrative=None):
@@ -1409,7 +1625,7 @@ def main():
         attach_clv(ledger, boards)
 
         record = build_model_record(boards, ledger, now)
-        narrative = build_narrative(boards, ledger, record, now)
+        narrative = compose_narrative(boards, ledger, record, now)
 
         LEDGER_PATH.parent.mkdir(parents=True, exist_ok=True)
         LEDGER_PATH.write_text(json.dumps(ledger, indent=1), encoding="utf-8")

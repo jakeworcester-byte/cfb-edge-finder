@@ -80,6 +80,28 @@ during the season (August through January).
 - **Want a fresh update right now** (say, Saturday morning after Friday line
   moves) → Actions tab → Run workflow. Takes a minute.
 
+## Optional: the written Sunday recap
+
+Without this, the site still posts a recap each week, just a plainly worded
+one generated from the data. With it, Claude writes the recap instead.
+
+1. Go to **https://console.anthropic.com** and sign in. This is the developer
+   console and is separate from a Claude.ai subscription, which does not
+   include API credits.
+2. **Billing** -> add a payment method and buy prepaid credits. The $5 minimum
+   will outlast the season; this feature costs roughly a dime a week.
+3. **API keys** -> **Create Key**, name it `cfb-edge-finder`, and copy it. The
+   console will not show it again.
+4. In the repo: **Settings -> Secrets and variables -> Actions -> New
+   repository secret**. Name it `ANTHROPIC_API_KEY` and paste the value.
+5. Actions tab -> **Run workflow**. The build log prints `recap: claude` on
+   success, or `recap: builtin (...)` with the reason if it fell back.
+
+The recap is generated once per graded week and cached in `data/recap.json`,
+so the Tuesday and Thursday runs reuse Sunday's text instead of paying to
+reword it. If the key is missing, revoked, or rate limited, the build prints
+why and publishes the deterministic recap. It never fails the build.
+
 ## Optional later upgrades
 
 - Add The Odds API (the-odds-api.com, free tier) for live prices from more

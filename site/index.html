@@ -462,6 +462,9 @@ function renderRecap(nar) {
   const box = document.getElementById('recap');
   if (!nar || !(nar.paragraphs || []).length) { box.style.display = 'none'; return; }
   box.style.display = 'block';
+  document.getElementById('recapKicker').innerHTML = nar.source === 'claude'
+    ? 'The Sunday read <span style="text-transform:none;letter-spacing:0">· written by Claude from the graded board</span>'
+    : 'The Sunday read';
   document.getElementById('recapHeadline').textContent = nar.headline || '';
   document.getElementById('recapBody').innerHTML =
     nar.paragraphs.map(p => `<p>${p}</p>`).join('');

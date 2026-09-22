@@ -32,8 +32,12 @@ Each run:
 5. Grades every play that cleared a value threshold, on every game — not
    just the top 5. Games where the model found no edge are recorded as
    no-plays and never enter the record
-6. Writes `site/data.json`, `site/lastweek.json`, `site/results.json`,
-   `site/modelrecord.json` and the Sunday write-up, then deploys to Pages
+6. Writes the Sunday recap, sending the graded week to Claude when
+   `ANTHROPIC_API_KEY` is set and falling back to a deterministic write-up
+   when it is not. Generated once per graded week and cached in
+   `data/recap.json`
+7. Writes `site/data.json`, `site/lastweek.json`, `site/results.json` and
+   `site/modelrecord.json`, then deploys to GitHub Pages
 
 You can also trigger a refresh anytime from the repo's Actions tab
 (**Run workflow**).
@@ -52,7 +56,8 @@ demo data so the site still renders.
 ## Repo layout
 
 ```
-scripts/build_data.py     data pipeline + model + grading + write-up
+scripts/build_data.py     data pipeline + model + grading + recap facts
+scripts/recap.py          the Claude-written recap, with a fact check
 site/index.html           the site: board, last week, season record
 site/results.html         the published Top 5 and its running P/L
 site/data.json            generated weekly data (committed copy is demo/stale)
@@ -60,6 +65,8 @@ site/modelrecord.json     season record across every value play
 site/lastweek.json        last completed week + the Sunday write-up
 data/boards.json          locked per-game snapshots and line history
 data/picks_history.json   the Top 5 pick ledger
+data/recap.json           the current recap + the last few openings
+requirements.txt          anthropic, only needed for the written recap
 .github/workflows/        the automation
 MODEL.md                  methodology and honest limitations
 SETUP.md                  one-time manual setup steps

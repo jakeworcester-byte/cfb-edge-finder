@@ -1,0 +1,4 @@
+# Only needed for the written Sunday recap. The data pipeline itself is
+# pure stdlib, and the build falls back to the deterministic recap if this
+# package or ANTHROPIC_API_KEY is missing.
+anthropic

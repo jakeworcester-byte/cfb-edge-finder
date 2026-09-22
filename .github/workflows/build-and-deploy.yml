@@ -32,9 +32,13 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
       - name: Build data.json from CFBD
         env:
           CFBD_API_KEY: ${{ secrets.CFBD_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python scripts/build_data.py
 
       - name: Persist pick ledger
