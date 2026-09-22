@@ -71,12 +71,11 @@ SCHEMA = {
         "properties": {
             "headline": {"type": "string"},
             "paragraphs": {
+                # structured outputs reject minItems above 1 and maxItems
+                # entirely, so the two-to-four bound lives in the prompt and
+                # the code trims to MAX_PARAGRAPHS
                 "type": "array",
                 "items": {"type": "string"},
-                # structured outputs only accept minItems 0 or 1, so the
-                # two-paragraph floor lives in the prompt, not the schema
-                "minItems": 1,
-                "maxItems": MAX_PARAGRAPHS,
             },
         },
         "required": ["headline", "paragraphs"],
