@@ -36,6 +36,7 @@ LEDGER_PATH = ROOT / "data" / "picks_history.json"
 BOARDS_PATH = ROOT / "data" / "boards.json"
 RESULTS_PATH = ROOT / "site" / "results.json"
 LASTWEEK_PATH = ROOT / "site" / "lastweek.json"
+RECORD_PATH = ROOT / "site" / "modelrecord.json"
 STAKE = 10.0                 # flat bet size for the season P/L tally
 
 # --- model constants -------------------------------------------------------
@@ -52,6 +53,14 @@ MIN_EDGE_ML_PROB = 0.05      # model prob must beat implied prob by this
 ML_MIN_PROB = 0.35           # no longshot MLs: normal-tail probs are unreliable
 ML_MAX_PRICE = 300           # ignore moneylines longer than +300 / shorter than -300
 TOP_N = 5
+
+# EV tiers used to break the season record down by how strong the model
+# thought each play was. Answers "does a higher modeled edge actually win more?"
+EV_TIERS = [(0.20, "20%+"), (0.10, "10-20%"), (0.05, "5-10%"), (-9.9, "0-5%")]
+# Calibration buckets on the model's own win probability.
+CAL_BUCKETS = [(0.70, 1.01, "70%+"), (0.65, 0.70, "65-70%"), (0.60, 0.65, "60-65%"),
+               (0.55, 0.60, "55-60%"), (0.50, 0.55, "50-55%"),
+               (0.00, 0.50, "Under 50%")]
 
 BOOK_PRIORITY = ["consensus", "DraftKings", "ESPN Bet", "Bovada", "Caesars"]
 
@@ -572,31 +581,113 @@ def load_boards():
     return {"weeks": {}}
 
 
+def line_snapshot(lines, now):
+    """The bettable numbers from one run, for the line-movement history."""
+    if not lines:
+        return None
+    return {
+        "at": now.isoformat(),
+        "spread": lines.get("spread"),
+        "total": lines.get("total"),
+        "mlHome": lines.get("mlHome"),
+        "mlAway": lines.get("mlAway"),
+    }
+
+
+def same_line(a, b):
+    if not a or not b:
+        return False
+    return all(a.get(k) == b.get(k) for k in ("spread", "total", "mlHome", "mlAway"))
+
+
 def record_board(boards, evaluated, season, stype, week, now, backfilled=False):
     """Snapshot the model's call on every game. Games already kicked off or
-    graded keep their earlier snapshot; the rest refresh to this run."""
+    graded keep their earlier snapshot; the rest refresh to this run.
+
+    Every run appends to the game's lineHistory (when the numbers actually
+    moved), including the run that locks it, so we keep the opening number
+    the site published alongside the last one seen before kickoff.
+    """
     wk = boards["weeks"].setdefault(week_key(season, stype, week), {
         "season": season, "seasonType": stype, "week": week,
         "backfilled": backfilled, "games": {}})
     for e in evaluated:
         gid = str(e["id"])
         old = wk["games"].get(gid)
+        history = list((old or {}).get("lineHistory") or [])
+        snapshot = line_snapshot(e.get("lines"), now)
+        if snapshot and not same_line(snapshot, history[-1] if history else None):
+            history.append(snapshot)
+
         if old and (old.get("result") or pick_started(old, now)):
+            # already locked: the model call stays frozen, but a line seen
+            # in this run is still the freshest read on where it closed
+            if history:
+                old["lineHistory"] = history
             continue
+
         snap = dict(e)
         snap["result"] = None
         snap["lockedAt"] = now.isoformat()
+        snap["lineHistory"] = history
         wk["games"][gid] = snap
 
 
-def grade_game(g, home_pts, away_pts):
-    """Grade the model's lean on each market for one game."""
-    calls = {}
+def value_bets(g):
+    """The plays the model actually flagged on this game. Most games have
+    none, and that is the point: no edge, no play."""
+    out = []
     for b in g.get("bets", []):
-        if b["type"] == "moneyline" and b["prob"] < 0.5:
-            continue  # only the side the model actually favors
-        calls[b["type"]] = {"pick": b["pick"], "outcome": grade_one(b, home_pts, away_pts)["outcome"]}
+        if b.get("eligible") and b.get("ev", 0) > 0:
+            out.append(b)
+    return out
+
+
+def attach_line_history(boards, evaluated, season, stype, week):
+    """Copy each game's line history onto the published board so the site can
+    show how the number moved since the week opened."""
+    wk = boards["weeks"].get(week_key(season, stype, week))
+    if not wk:
+        return
+    for e in evaluated:
+        snap = wk["games"].get(str(e["id"]))
+        if snap:
+            e["lineHistory"] = snap.get("lineHistory") or []
+
+
+def grade_game(g, home_pts, away_pts):
+    """Grade every value play the model flagged on this game.
+
+    Games where the model found no edge grade to an empty call list - they
+    are scored, but they are a no-play and never count in the record.
+    """
+    calls = []
+    for b in value_bets(g):
+        res = grade_one(b, home_pts, away_pts)
+        calls.append({
+            "type": b["type"], "pick": b["pick"], "side": b.get("side"),
+            "line": b.get("line"), "price": b["price"], "prob": b["prob"],
+            "edgePts": b.get("edgePts"), "ev": b["ev"],
+            "outcome": res["outcome"], "profit": res["profit"],
+        })
     return {"homeScore": home_pts, "awayScore": away_pts, "calls": calls}
+
+
+def regrade_boards(boards):
+    """Re-derive the graded calls on every finished game from its locked
+    snapshot. Idempotent, and it keeps older weeks consistent whenever the
+    value thresholds or the grading rules change."""
+    changed = 0
+    for wk in boards["weeks"].values():
+        for g in wk["games"].values():
+            res = g.get("result")
+            if not res or res.get("homeScore") is None:
+                continue
+            fresh = grade_game(g, res["homeScore"], res["awayScore"])
+            if fresh != res:
+                g["result"] = fresh
+                changed += 1
+    return changed
 
 
 def grade_boards(boards, scores, now):
@@ -635,14 +726,439 @@ def backfill_previous_week(boards, prev, year, now, ratings, elo_mean, sp_means,
     print(f"Backfilled board for {stype} week {week}: {len(evaluated)} games")
 
 
-def write_lastweek(boards, current_key, now, demo=False):
+# --- line movement and closing line value ------------------------------------
+
+def opening_line(g):
+    hist = g.get("lineHistory") or []
+    return hist[0] if hist else None
+
+
+def closing_line(g):
+    """The last line seen before kickoff. Runs land Tue/Thu/Sat morning, so
+    this is the final number the site saw, not a true post-close capture."""
+    hist = g.get("lineHistory") or []
+    if hist:
+        return hist[-1]
+    ln = g.get("lines") or {}
+    if not ln:
+        return None
+    return {"at": g.get("lockedAt"), "spread": ln.get("spread"), "total": ln.get("total"),
+            "mlHome": ln.get("mlHome"), "mlAway": ln.get("mlAway")}
+
+
+def clv_for(bet_type, side, line, price, close):
+    """Points (or cents of win probability) gained or given up between the
+    number we posted and the last number seen. Positive means the market
+    moved toward our side after we published the play."""
+    if not close:
+        return None
+    if bet_type == "spread":
+        cs = close.get("spread")
+        if not isinstance(cs, (int, float)) or not isinstance(line, (int, float)):
+            return None
+        close_side = cs if side == "home" else -cs
+        return {"pts": round(line - close_side, 1), "closeLine": close_side,
+                "at": close.get("at")}
+    if bet_type == "total":
+        ct = close.get("total")
+        if not isinstance(ct, (int, float)) or not isinstance(line, (int, float)):
+            return None
+        pts = (ct - line) if side == "over" else (line - ct)
+        return {"pts": round(pts, 1), "closeLine": ct, "at": close.get("at")}
+    if bet_type == "moneyline":
+        cp = close.get("mlHome") if side == "home" else close.get("mlAway")
+        if not isinstance(cp, (int, float)) or not cp or not price:
+            return None
+        return {"probPts": round((implied_prob(cp) - implied_prob(price)) * 100, 1),
+                "closePrice": cp, "at": close.get("at")}
+    return None
+
+
+def board_index(boards):
+    return {str(g["id"]): g for wk in boards["weeks"].values() for g in wk["games"].values()}
+
+
+def attach_clv(ledger, boards):
+    """Score each posted pick against the last line seen before kickoff."""
+    games = board_index(boards)
+    for p in ledger["picks"]:
+        g = games.get(str(p["gameId"]))
+        if not g:
+            continue
+        line = p.get("openLine", p.get("line"))
+        price = p.get("openPrice", p.get("price"))
+        p["clv"] = clv_for(p["type"], p.get("side"), line, price, closing_line(g))
+
+
+def clv_value(clv):
+    """One comparable number per pick: points for spreads and totals,
+    probability points for moneylines. Different units, but the sign is
+    what matters."""
+    if not clv:
+        return None
+    return clv.get("pts") if clv.get("pts") is not None else clv.get("probPts")
+
+
+def clv_summary(items):
+    vals = [clv_value(i.get("clv")) for i in items]
+    vals = [v for v in vals if v is not None]
+    moved = [v for v in vals if v != 0]
+    if not vals:
+        return {"n": 0, "moved": 0, "beat": 0, "beatRate": None, "avgPts": None}
+    beat = sum(1 for v in moved if v > 0)
+    return {"n": len(vals), "moved": len(moved), "beat": beat,
+            "beatRate": round(beat / len(moved), 4) if moved else None,
+            "avgPts": round(sum(vals) / len(vals), 2)}
+
+
+# --- season record across every value play -----------------------------------
+
+def new_tally(label=None):
+    t = {"plays": 0, "wins": 0, "losses": 0, "pushes": 0,
+         "profit": 0.0, "staked": 0.0, "_prob": 0.0}
+    if label:
+        t["label"] = label
+    return t
+
+
+def add_play(t, c):
+    key = {"win": "wins", "loss": "losses", "push": "pushes"}[c["outcome"]]
+    t["plays"] += 1
+    t[key] += 1
+    t["profit"] += c["profit"]
+    t["staked"] += STAKE
+    t["_prob"] += c.get("prob") or 0.0
+
+
+def close_tally(t):
+    decided = t["wins"] + t["losses"]
+    t["winRate"] = round(t["wins"] / decided, 4) if decided else None
+    t["expected"] = round(t["_prob"] / t["plays"], 4) if t["plays"] else None
+    t["profit"] = round(t["profit"], 2)
+    t["roi"] = round(t["profit"] / t["staked"], 4) if t["staked"] else None
+    t["units"] = round(t["profit"] / STAKE, 2)
+    t.pop("_prob", None)
+    return t
+
+
+def ev_tier(ev):
+    for floor, label in EV_TIERS:
+        if ev >= floor:
+            return label
+    return EV_TIERS[-1][1]
+
+
+def graded_weeks(boards):
+    """Weeks with at least one finished game, oldest first."""
+    def order(wk):
+        return (wk["season"], 0 if wk["seasonType"] == "regular" else 1, wk["week"])
+    done = [wk for wk in boards["weeks"].values()
+            if any(g.get("result") for g in wk["games"].values())]
+    return sorted(done, key=order)
+
+
+def week_plays(wk):
+    """(graded call, its game) for every value play in a finished week."""
+    out = []
+    for g in sorted(wk["games"].values(), key=lambda x: (x.get("startDate") or "")):
+        res = g.get("result")
+        if not res:
+            continue
+        for c in res.get("calls", []):
+            out.append((c, g))
+    return out
+
+
+def build_model_record(boards, ledger, now, demo=False):
+    """Every value play the model has made this season, graded.
+
+    This is the wide sample: 15-20 plays a week across the whole board
+    versus 5 for the published Top 5. Games where the model found no edge
+    count as no-plays and never enter the record.
+    """
+    overall = new_tally()
+    hindsight = new_tally()
+    by_type = {t: new_tally(t) for t in ("spread", "total", "moneyline")}
+    by_ev = {label: new_tally(label) for _, label in EV_TIERS}
+    cal = {label: new_tally(label) for _, _, label in CAL_BUCKETS}
+    weeks = []
+
+    for wk in graded_weeks(boards):
+        backfilled = bool(wk.get("backfilled"))
+        wt = new_tally()
+        finished = [g for g in wk["games"].values() if g.get("result")]
+        plays = week_plays(wk)
+        for c, g in plays:
+            add_play(wt, c)
+            if backfilled:
+                add_play(hindsight, c)
+                continue
+            add_play(overall, c)
+            add_play(by_type[c["type"]], c)
+            add_play(by_ev[ev_tier(c.get("ev") or 0)], c)
+            for lo, hi, label in CAL_BUCKETS:
+                if lo <= (c.get("prob") or 0) < hi:
+                    add_play(cal[label], c)
+                    break
+        played = len({g["id"] for _, g in plays})
+        weeks.append({
+            "season": wk["season"], "seasonType": wk["seasonType"], "week": wk["week"],
+            "backfilled": wk.get("backfilled", False),
+            "gamesGraded": len(finished),
+            "gamesWithPlay": played,
+            "noPlay": len(finished) - played,
+            **close_tally(wt),
+        })
+
+    clean_weeks = {(w["season"], w["seasonType"], w["week"]) for w in weeks
+                   if not w["backfilled"]}
+    graded_picks = [p for p in ledger["picks"] if p.get("result")
+                    and (p["season"], p["seasonType"], p["week"]) in clean_weeks]
+    top = new_tally()
+    for p in graded_picks:
+        add_play(top, {"outcome": p["result"]["outcome"],
+                       "profit": p["result"]["profit"], "prob": p.get("prob")})
+
+    return {
+        "generatedAt": now.isoformat(),
+        "demo": demo,
+        "stake": STAKE,
+        "thresholds": {"spread": MIN_EDGE_SPREAD, "total": MIN_EDGE_TOTAL,
+                       "moneylineProb": MIN_EDGE_ML_PROB},
+        "overall": close_tally(overall),
+        "hindsight": close_tally(hindsight),
+        "byType": [close_tally(by_type[t]) for t in ("spread", "total", "moneyline")],
+        "byEv": [close_tally(by_ev[label]) for _, label in EV_TIERS],
+        "calibration": [close_tally(cal[label]) for _, _, label in CAL_BUCKETS],
+        "byWeek": weeks,
+        "topFive": close_tally(top),
+        "clv": clv_summary(graded_picks),
+    }
+
+
+# --- Sunday narrative ---------------------------------------------------------
+
+def rec_str(t):
+    """8-5 or 8-5-1."""
+    base = f"{t['wins']}-{t['losses']}"
+    return base + (f"-{t['pushes']}" if t["pushes"] else "")
+
+
+def money(x):
+    if x is None:
+        return "even"
+    sign = "+" if x > 0 else ("-" if x < 0 else "")
+    return f"{sign}${abs(x):,.2f}"
+
+
+def pct_str(x, places=0):
+    return "n/a" if x is None else f"{x * 100:.{places}f}%"
+
+
+def money0(x):
+    """Whole dollars: $10, not $10.00."""
+    return f"${x:,.0f}" if float(x).is_integer() else f"${x:,.2f}"
+
+
+def article(n):
+    """a 5-point edge, an 8-point edge."""
+    head = f"{abs(n):.0f}".lstrip("0") or "0"
+    return "an" if head[0] == "8" or head in ("11", "18") else "a"
+
+
+def plural(n, one, many=None):
+    return one if n == 1 else (many or one + "s")
+
+
+def describe_edge(c):
+    e = abs(c.get("edgePts") or 0)
+    if c["type"] == "moneyline":
+        return f"{article(e)} {e:.0f}-point gap between the model and the price"
+    return f"a {e:.1f}-point disagreement with the market"
+
+
+def final_str(g):
+    r = g.get("result") or {}
+    h, a = r.get("homeScore"), r.get("awayScore")
+    if h is None or a is None:
+        return ""
+    if a > h:
+        return f"{g['awayTeam']} {a}, {g['homeTeam']} {h}"
+    return f"{g['homeTeam']} {h}, {g['awayTeam']} {a}"
+
+
+def matchup_str(g):
+    return f"{g['awayTeam']} at {g['homeTeam']}"
+
+
+def week_label_str(wk):
+    if wk.get("seasonType") == "postseason":
+        return "the postseason slate"
+    return f"Week {wk['week']}"
+
+
+def build_narrative(boards, ledger, record, now):
+    """A short written read on the most recent completed week.
+
+    Generated from the graded board, so it never claims anything the data
+    does not support. Deterministic by design: the Sunday workflow run has
+    no model available to write prose, and a wrong-but-fluent recap would
+    be worse than a plain one.
+    """
+    weeks = graded_weeks(boards)
+    if not weeks:
+        return None
+    wk = weeks[-1]
+    plays = week_plays(wk)
+    finished = [g for g in wk["games"].values() if g.get("result")]
+    label = week_label_str(wk)
+
+    wt = new_tally()
+    types = {t: new_tally() for t in ("spread", "total", "moneyline")}
+    for c, g in plays:
+        add_play(wt, c)
+        add_play(types[c["type"]], c)
+    close_tally(wt)
+    for t in types.values():
+        close_tally(t)
+
+    paras = []
+
+    # --- 1: what it played and how it did ---
+    played_games = len({g["id"] for _, g in plays})
+    skipped = len(finished) - played_games
+    if not plays:
+        paras.append(
+            f"{label} came and went without a single playable edge. The model "
+            f"graded {len(finished)} games and found nothing clearing the "
+            f"thresholds, so it sat the week out. That happens, and it beats "
+            f"manufacturing a play to have something to say.")
+    else:
+        openers = [
+            f"{label} put {len(finished)} graded games in front of the model.",
+            f"The model looked at {len(finished)} games in {label}.",
+            f"{len(finished)} games finished in {label}.",
+        ]
+        opener = openers[(wk.get("week") or 0) % len(openers)]
+        result_clause = (
+            f"It found a playable edge in {played_games} of them and left the "
+            f"other {skipped} alone. Those plays went {rec_str(wt)}"
+        ) if skipped else (
+            f"It found a playable edge in every one of them, and those plays "
+            f"went {rec_str(wt)}"
+        )
+        pl = (f", worth {money(wt['profit'])} at {money0(STAKE)} a play "
+              f"({pct_str(wt['roi'], 1)} on the {money0(wt['staked'])} at risk)."
+              if wt["staked"] else ".")
+        paras.append(f"{opener} {result_clause}{pl}")
+
+    # --- 2: where it came from, plus the best and worst call ---
+    if plays:
+        bits = [f"{name}s went {rec_str(t)}" if t["plays"] != 1
+                else f"the lone {name} {'won' if t['wins'] else ('pushed' if t['pushes'] else 'lost')}"
+                for name, t in (("spread", types["spread"]), ("total", types["total"]),
+                                ("moneyline", types["moneyline"])) if t["plays"]]
+        by_type_line = ""
+        if len(bits) > 1:
+            by_type_line = "By market, " + ", ".join(bits[:-1]) + " and " + bits[-1] + ". "
+        elif bits:
+            by_type_line = "Every play was the same market: " + bits[0] + ". "
+
+        wins = [(c, g) for c, g in plays if c["outcome"] == "win"]
+        losses = [(c, g) for c, g in plays if c["outcome"] == "loss"]
+        detail = ""
+        def where(c, g):
+            # the moneyline pick already names the team; don't say it twice
+            return "" if c["type"] == "moneyline" else f" in {matchup_str(g)}"
+
+        if wins:
+            c, g = max(wins, key=lambda x: x[0].get("ev") or 0)
+            detail += (f"The best of them was {c['pick']}{where(c, g)}, "
+                       f"{describe_edge(c)} that finished {final_str(g)}. ")
+        if losses:
+            c, g = max(losses, key=lambda x: x[0].get("ev") or 0)
+            detail += (f"The one that stung was {c['pick']}{where(c, g)}, "
+                       f"{describe_edge(c)} that finished {final_str(g)}.")
+        if by_type_line or detail:
+            paras.append((by_type_line + detail).strip())
+
+    # --- 3: the published Top 5 against the full board ---
+    wk_picks = [p for p in ledger["picks"]
+                if p.get("result") and p["season"] == wk["season"]
+                and p["seasonType"] == wk["seasonType"] and p["week"] == wk["week"]]
+    if wk_picks and plays:
+        tp = new_tally()
+        for p in wk_picks:
+            add_play(tp, {"outcome": p["result"]["outcome"],
+                          "profit": p["result"]["profit"], "prob": p.get("prob")})
+        close_tally(tp)
+        cmp_word = ("ahead of" if (tp["winRate"] or 0) > (wt["winRate"] or 0)
+                    else "behind" if (tp["winRate"] or 0) < (wt["winRate"] or 0)
+                    else "in line with")
+        paras.append(
+            f"The five plays that actually got published went {rec_str(tp)} for "
+            f"{money(tp['profit'])}, {cmp_word} the full board. Ranking by expected "
+            f"value is supposed to concentrate the good ones at the top, and "
+            f"whether it does is something only a season of these will answer.")
+
+    # --- 4: season to date, closing line value, and the honest caveat ---
+    ov = record["overall"]
+    tail = []
+    if ov["plays"]:
+        tail.append(
+            f"Season to date the model has made {ov['plays']} value "
+            f"{plural(ov['plays'], 'play')} and gone {rec_str(ov)}, {money(ov['profit'])} "
+            f"on flat {money0(STAKE)} bets ({pct_str(ov['roi'], 1)}).")
+        if ov["winRate"] is not None and ov["expected"] is not None:
+            tail.append(
+                f"It expected to win {pct_str(ov['expected'])} of those and won "
+                f"{pct_str(ov['winRate'])}.")
+    clv = record.get("clv") or {}
+    if clv.get("moved"):
+        tail.append(
+            f"On line movement, {clv['beat']} of the {clv['moved']} published picks "
+            f"whose numbers moved closed worse than the site posted them, so the "
+            f"market came our way {pct_str(clv['beatRate'])} of the time.")
+    n = ov["plays"]
+    if n and n < 60:
+        tail.append(
+            f"Treat all of it as early. At {n} {plural(n, 'play')} the record is "
+            f"still mostly noise, and the thing worth watching is not the win rate "
+            f"but whether the market keeps moving toward these numbers.")
+    elif n:
+        tail.append(
+            "Sample is getting real enough to argue with, though a model that beats "
+            "closing lines is rarer than one that beats a few hundred results.")
+    if tail:
+        paras.append(" ".join(tail))
+
+    if wk.get("backfilled"):
+        paras.append(
+            "None of this counts toward the season record. The week was graded "
+            "after the fact, with ratings that already knew how the games turned "
+            "out, so it shows the format rather than testing the model. The real "
+            "ledger starts with the first week called before kickoff.")
+
+    return {
+        "generatedAt": now.isoformat(),
+        "season": wk["season"], "seasonType": wk["seasonType"], "week": wk["week"],
+        "headline": (f"{rec_str(wt)} on {wt['plays']} value "
+                     f"{plural(wt['plays'], 'play')}, {money(wt['profit'])}"
+                     if wt["plays"] else "No playable edges this week"),
+        "paragraphs": paras,
+        "week_tally": wt,
+    }
+
+
+def write_lastweek(boards, current_key, now, demo=False, narrative=None):
     """Publish the most recent completed week (excluding the current one)."""
     def order(wk):
         return (wk["season"], 0 if wk["seasonType"] == "regular" else 1, wk["week"])
 
     done = [wk for k, wk in boards["weeks"].items()
             if k != current_key and any(g.get("result") for g in wk["games"].values())]
-    payload = {"generatedAt": now.isoformat(), "demo": demo, "week": None}
+    payload = {"generatedAt": now.isoformat(), "demo": demo, "stake": STAKE,
+               "narrative": narrative, "week": None}
     if done:
         wk = max(done, key=order)
         games = sorted(wk["games"].values(), key=lambda g: (g.get("startDate") or "", g["homeTeam"]))
@@ -665,6 +1181,9 @@ def update_week_picks(ledger, top, season, season_type, week, now):
     current = [p for p in ledger["picks"] if wk(p) == key]
     locked = [p for p in current if p.get("result") or pick_started(p, now)]
     locked_games = {p["gameId"] for p in locked}
+    # the number a reader would have gotten the first time we published this
+    # play, kept across refreshes so closing line value means something
+    prior = {(p["gameId"], p["type"], p.get("side")): p for p in current}
 
     fresh = []
     for c in top:
@@ -672,6 +1191,7 @@ def update_week_picks(ledger, top, season, season_type, week, now):
             break
         if c["gameId"] in locked_games:
             continue
+        was = prior.get((c["gameId"], c["type"], c.get("side")))
         fresh.append({
             "season": season, "seasonType": season_type, "week": week,
             "gameId": c["gameId"], "matchup": c["matchup"],
@@ -680,8 +1200,16 @@ def update_week_picks(ledger, top, season, season_type, week, now):
             "side": c.get("side"), "line": c.get("line"), "price": c["price"],
             "prob": c["prob"], "ev": c["ev"], "detail": c.get("detail"),
             "pickedAt": datetime.now(timezone.utc).isoformat(),
+            "openLine": was.get("openLine", was.get("line")) if was else c.get("line"),
+            "openPrice": was.get("openPrice", was.get("price")) if was else c["price"],
+            "openAt": (was.get("openAt", was.get("pickedAt")) if was
+                       else datetime.now(timezone.utc).isoformat()),
             "result": None,
         })
+    for p in locked:
+        p.setdefault("openLine", p.get("line"))
+        p.setdefault("openPrice", p.get("price"))
+        p.setdefault("openAt", p.get("pickedAt"))
     ledger["picks"] = others + locked + fresh
 
 
@@ -738,7 +1266,7 @@ def demo_payload(now):
     return demo_games
 
 
-def demo_ledger(payload, now):
+def demo_ledger(payload, now, boards=None):
     """Fake two graded weeks plus the current demo picks, so results.html renders."""
     season = payload["season"]
     samples = [
@@ -765,6 +1293,32 @@ def demo_ledger(payload, now):
              "detail": "", "pickedAt": now.isoformat(), "result": None}
         p["result"] = grade_one(p, hp, ap)
         ledger["picks"].append(p)
+    if boards:
+        # graded value plays off the demo board, posted a point off the close
+        wk = boards["weeks"][week_key(season, "regular", -1)]
+        added = 0
+        for g in wk["games"].values():
+            res = g.get("result") or {}
+            for c in res.get("calls", []):
+                if added >= 5:
+                    break
+                line = c.get("line")
+                ledger["picks"].append({
+                    "season": season, "seasonType": "regular", "week": -1,
+                    "gameId": g["id"], "matchup": f"{g['awayTeam']} @ {g['homeTeam']}",
+                    "homeTeam": g["homeTeam"], "awayTeam": g["awayTeam"],
+                    "startDate": g["startDate"], "type": c["type"], "pick": c["pick"],
+                    "side": c.get("side"), "line": line, "price": c["price"],
+                    "prob": c["prob"], "ev": c["ev"], "detail": "",
+                    "pickedAt": now.isoformat(),
+                    "openLine": (line + 1.0) if isinstance(line, (int, float)) else None,
+                    "openPrice": c["price"], "openAt": now.isoformat(),
+                    "result": {"homeScore": res["homeScore"], "awayScore": res["awayScore"],
+                               "outcome": c["outcome"], "profit": c["profit"]},
+                })
+                added += 1
+            if added >= 5:
+                break
     update_week_picks(ledger, payload["topPicks"], season, "regular", 0, now)
     return ledger
 
@@ -774,7 +1328,18 @@ def demo_boards(payload, now):
     boards = {"weeks": {}}
     record_board(boards, payload["games"], payload["season"], "regular", -1, now)
     finals = [(31, 24), (21, 27), (38, 20), (45, 42), (17, 20), (28, 31), (24, 10), (35, 38)]
-    for (hp, ap), g in zip(finals, boards["weeks"][week_key(payload["season"], "regular", -1)]["games"].values()):
+    games = boards["weeks"][week_key(payload["season"], "regular", -1)]["games"].values()
+    for i, ((hp, ap), g) in enumerate(zip(finals, games)):
+        # fake an opening capture so line movement has something to show
+        close = (g.get("lineHistory") or [None])[-1]
+        if close:
+            drift = 1.5 if i % 3 == 0 else (-1.0 if i % 3 == 1 else 0.0)
+            g["lineHistory"] = [{
+                "at": now.isoformat(),
+                "spread": (close["spread"] + drift) if close.get("spread") is not None else None,
+                "total": (close["total"] - drift) if close.get("total") is not None else None,
+                "mlHome": close.get("mlHome"), "mlAway": close.get("mlAway"),
+            }, close]
         g["result"] = grade_game(g, hp, ap)
     return boards
 
@@ -802,8 +1367,15 @@ def main():
         payload["seasonType"] = "regular"
         payload["games"] = demo_payload(now)
         payload["topPicks"] = top_picks(payload["games"])
-        write_results(demo_ledger(payload, now), now, demo=True)
-        write_lastweek(demo_boards(payload, now), "current", now, demo=True)
+        boards = demo_boards(payload, now)
+        attach_line_history(boards, payload["games"], payload["season"], "regular", -1)
+        ledger = demo_ledger(payload, now, boards)
+        attach_clv(ledger, boards)
+        record = build_model_record(boards, ledger, now, demo=True)
+        RECORD_PATH.write_text(json.dumps(record, indent=1), encoding="utf-8")
+        write_results(ledger, now, demo=True)
+        write_lastweek(boards, "current", now, demo=True,
+                       narrative=build_narrative(boards, ledger, record, now))
     else:
         year = current_season(now)
         weeks = calendar_weeks(year)
@@ -825,21 +1397,31 @@ def main():
         ledger = load_ledger()
         boards = load_boards()
         record_board(boards, evaluated, year, season_type, week, now)
+        attach_line_history(boards, evaluated, year, season_type, week)
         backfill_previous_week(boards, prev_week, year, now,
                                ratings, elo_mean, sp_means, records)
 
         scores = fetch_scores(pending_week_keys(ledger, boards, now))
         graded = grade_picks(ledger, scores, now)
         graded_games = grade_boards(boards, scores, now)
+        regraded = regrade_boards(boards)
         update_week_picks(ledger, payload["topPicks"], year, season_type, week, now)
+        attach_clv(ledger, boards)
+
+        record = build_model_record(boards, ledger, now)
+        narrative = build_narrative(boards, ledger, record, now)
 
         LEDGER_PATH.parent.mkdir(parents=True, exist_ok=True)
         LEDGER_PATH.write_text(json.dumps(ledger, indent=1), encoding="utf-8")
         BOARDS_PATH.write_text(json.dumps(boards, indent=1), encoding="utf-8")
+        RECORD_PATH.write_text(json.dumps(record, indent=1), encoding="utf-8")
         write_results(ledger, now)
-        write_lastweek(boards, week_key(year, season_type, week), now)
+        write_lastweek(boards, week_key(year, season_type, week), now, narrative=narrative)
         print(f"Ledger: {len(ledger['picks'])} picks total, {graded} newly graded; "
-              f"board games graded this run: {graded_games}")
+              f"board games graded this run: {graded_games}, regraded: {regraded}")
+        ov = record["overall"]
+        print(f"Season value record: {ov['wins']}-{ov['losses']}-{ov['pushes']} "
+              f"on {ov['plays']} plays, {ov['profit']:+.2f}")
 
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     OUT_PATH.write_text(json.dumps(payload, indent=1), encoding="utf-8")

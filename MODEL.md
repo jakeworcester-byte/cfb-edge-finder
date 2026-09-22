@@ -71,4 +71,55 @@ per game.
   market knowing something the ratings don't.
 - Assumed −110 pricing understates juice at some books.
 
+## How the model grades itself
+
+Two records are kept, and they answer different questions.
+
+**The published Top 5** (`site/results.html`) is the shortlist, five plays a
+week, graded at a flat $10. It is the honest record of what the site actually
+told you to do, and it is also a small sample: 5 plays a week means a full
+season lands near 70 bets, which is not enough to separate a real edge from
+luck.
+
+**Every value play** (the Season Record tab) grades every bet on every game
+that cleared a threshold, roughly 15-20 a week. Games where nothing cleared
+are recorded as no-plays and never enter the record. Same model, same
+thresholds, three times the sample. This is where a real answer comes from.
+
+Alongside the record, two things worth more than the win rate this early:
+
+- **Calibration.** When the model says a play hits 62%, does it hit 62%? A
+  model that is well calibrated but unprofitable has a pricing problem. One
+  that is poorly calibrated is broken regardless of results.
+- **EV tiers.** Plays grouped by the expected value the model assigned them.
+  The Top 5 is drawn from the highest tier, so if the tiers do not separate,
+  the ranking that picks the Top 5 is not doing anything.
+
+## Line movement
+
+Every run appends the current spread, total, and moneylines to a per-game
+line history. Two measures come out of it:
+
+- **Drift** (Last Week tab) compares the week's opening number to the last
+  one seen before kickoff, in the direction of the model's side. Positive
+  drift means the market ended up moving toward the model. This is computed
+  for every value play on the board.
+- **Closing line value** (Top 5 page) compares the number the site actually
+  published a pick at to the last number seen. A board snapshot refreshes
+  until kickoff, so this only means something for published picks, which
+  remember the line they were first posted at.
+
+Why this matters more than the record right now: a model that consistently
+sits on the right side of line movement has found something real, and that
+shows up in 20 or 30 picks. A win rate takes hundreds. Beating closing
+lines is also a much harder test than beating results, so a good drift
+number with a mediocre record is more encouraging than the reverse.
+
+## Backfilled weeks
+
+A week played before the site started snapshotting gets graded after the
+fact, using ratings that already reflect those results. Those weeks are
+flagged, excluded from the season record, and reported separately. They
+show the format; they are not evidence.
+
 Bet responsibly. This is a decision-support tool, not a money printer.

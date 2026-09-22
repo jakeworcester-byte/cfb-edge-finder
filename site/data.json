@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-20T15:18:21.954965+00:00",
+ "generatedAt": "2026-09-22T01:34:52.535172+00:00",
  "demo": true,
  "season": 2026,
  "week": 0,
@@ -7,7 +7,7 @@
  "games": [
   {
    "id": 1000,
-   "startDate": "2026-09-20T15:18:21.954965+00:00",
+   "startDate": "2026-09-22T01:34:52.535172+00:00",
    "homeTeam": "Georgia",
    "awayTeam": "Alabama",
    "homeConference": "-",
@@ -111,11 +111,27 @@
      "eligible": false,
      "detail": "Model win prob 38% vs implied 42%"
     }
+   ],
+   "lineHistory": [
+    {
+     "at": "2026-09-22T01:34:52.535172+00:00",
+     "spread": -2.0,
+     "total": 51.0,
+     "mlHome": -165,
+     "mlAway": 140
+    },
+    {
+     "at": "2026-09-22T01:34:52.535172+00:00",
+     "spread": -3.5,
+     "total": 52.5,
+     "mlHome": -165,
+     "mlAway": 140
+    }
    ]
   },
   {
    "id": 1001,
-   "startDate": "2026-09-20T15:18:21.954965+00:00",
+   "startDate": "2026-09-22T01:34:52.535172+00:00",
    "homeTeam": "Ohio State",
    "awayTeam": "Penn State",
    "homeConference": "-",
@@ -219,11 +235,27 @@
      "eligible": false,
      "detail": "Model win prob 26% vs implied 34%"
     }
+   ],
+   "lineHistory": [
+    {
+     "at": "2026-09-22T01:34:52.535172+00:00",
+     "spread": -7.5,
+     "total": 49.5,
+     "mlHome": -240,
+     "mlAway": 198
+    },
+    {
+     "at": "2026-09-22T01:34:52.535172+00:00",
+     "spread": -6.5,
+     "total": 48.5,
+     "mlHome": -240,
+     "mlAway": 198
+    }
    ]
   },
   {
    "id": 1002,
-   "startDate": "2026-09-20T15:18:21.954965+00:00",
+   "startDate": "2026-09-22T01:34:52.535172+00:00",
    "homeTeam": "Texas",
    "awayTeam": "Oklahoma",
    "homeConference": "-",
@@ -327,11 +359,27 @@
      "eligible": true,
      "detail": "Model win prob 40% vs implied 32%"
     }
+   ],
+   "lineHistory": [
+    {
+     "at": "2026-09-22T01:34:52.535172+00:00",
+     "spread": -7.0,
+     "total": 56.0,
+     "mlHome": -260,
+     "mlAway": 215
+    },
+    {
+     "at": "2026-09-22T01:34:52.535172+00:00",
+     "spread": -7.0,
+     "total": 56.0,
+     "mlHome": -260,
+     "mlAway": 215
+    }
    ]
   },
   {
    "id": 1003,
-   "startDate": "2026-09-20T15:18:21.954965+00:00",
+   "startDate": "2026-09-22T01:34:52.535172+00:00",
    "homeTeam": "Oregon",
    "awayTeam": "Washington",
    "homeConference": "-",
@@ -435,11 +483,27 @@
      "eligible": false,
      "detail": "Model win prob 35% vs implied 27%"
     }
+   ],
+   "lineHistory": [
+    {
+     "at": "2026-09-22T01:34:52.535172+00:00",
+     "spread": -8.0,
+     "total": 60.0,
+     "mlHome": -340,
+     "mlAway": 270
+    },
+    {
+     "at": "2026-09-22T01:34:52.535172+00:00",
+     "spread": -9.5,
+     "total": 61.5,
+     "mlHome": -340,
+     "mlAway": 270
+    }
    ]
   },
   {
    "id": 1004,
-   "startDate": "2026-09-20T15:18:21.954965+00:00",
+   "startDate": "2026-09-22T01:34:52.535172+00:00",
    "homeTeam": "Kansas State",
    "awayTeam": "Iowa State",
    "homeConference": "-",
@@ -543,11 +607,27 @@
      "eligible": false,
      "detail": "Model win prob 36% vs implied 47%"
     }
+   ],
+   "lineHistory": [
+    {
+     "at": "2026-09-22T01:34:52.535172+00:00",
+     "spread": -3.5,
+     "total": 45.5,
+     "mlHome": -135,
+     "mlAway": 115
+    },
+    {
+     "at": "2026-09-22T01:34:52.535172+00:00",
+     "spread": -2.5,
+     "total": 44.5,
+     "mlHome": -135,
+     "mlAway": 115
+    }
    ]
   },
   {
    "id": 1005,
-   "startDate": "2026-09-20T15:18:21.954965+00:00",
+   "startDate": "2026-09-22T01:34:52.535172+00:00",
    "homeTeam": "Michigan",
    "awayTeam": "USC",
    "homeConference": "-",
@@ -651,11 +731,27 @@
      "eligible": false,
      "detail": "Model win prob 55% vs implied 56%"
     }
+   ],
+   "lineHistory": [
+    {
+     "at": "2026-09-22T01:34:52.535172+00:00",
+     "spread": 1.5,
+     "total": 51.0,
+     "mlHome": 105,
+     "mlAway": -125
+    },
+    {
+     "at": "2026-09-22T01:34:52.535172+00:00",
+     "spread": 1.5,
+     "total": 51.0,
+     "mlHome": 105,
+     "mlAway": -125
+    }
    ]
   },
   {
    "id": 1006,
-   "startDate": "2026-09-20T15:18:21.954965+00:00",
+   "startDate": "2026-09-22T01:34:52.535172+00:00",
    "homeTeam": "Notre Dame",
    "awayTeam": "Clemson",
    "homeConference": "-",
@@ -759,11 +855,27 @@
      "eligible": false,
      "detail": "Model win prob 42% vs implied 38%"
     }
+   ],
+   "lineHistory": [
+    {
+     "at": "2026-09-22T01:34:52.535172+00:00",
+     "spread": -3.0,
+     "total": 46.0,
+     "mlHome": -190,
+     "mlAway": 160
+    },
+    {
+     "at": "2026-09-22T01:34:52.535172+00:00",
+     "spread": -4.5,
+     "total": 47.5,
+     "mlHome": -190,
+     "mlAway": 160
+    }
    ]
   },
   {
    "id": 1007,
-   "startDate": "2026-09-20T15:18:21.954965+00:00",
+   "startDate": "2026-09-22T01:34:52.535172+00:00",
    "homeTeam": "LSU",
    "awayTeam": "Ole Miss",
    "homeConference": "-",
@@ -867,6 +979,22 @@
      "eligible": false,
      "detail": "Model win prob 39% vs implied 50%"
     }
+   ],
+   "lineHistory": [
+    {
+     "at": "2026-09-22T01:34:52.535172+00:00",
+     "spread": -2.5,
+     "total": 64.5,
+     "mlHome": -120,
+     "mlAway": 100
+    },
+    {
+     "at": "2026-09-22T01:34:52.535172+00:00",
+     "spread": -1.5,
+     "total": 63.5,
+     "mlHome": -120,
+     "mlAway": 100
+    }
    ]
   }
  ],
@@ -876,7 +1004,7 @@
    "matchup": "Oklahoma @ Texas",
    "homeTeam": "Texas",
    "awayTeam": "Oklahoma",
-   "startDate": "2026-09-20T15:18:21.954965+00:00",
+   "startDate": "2026-09-22T01:34:52.535172+00:00",
    "type": "moneyline",
    "pick": "Oklahoma ML +215",
    "team": "Oklahoma",
@@ -894,7 +1022,7 @@
    "matchup": "Iowa State @ Kansas State",
    "homeTeam": "Kansas State",
    "awayTeam": "Iowa State",
-   "startDate": "2026-09-20T15:18:21.954965+00:00",
+   "startDate": "2026-09-22T01:34:52.535172+00:00",
    "type": "total",
    "pick": "Under 44.5",
    "team": null,
@@ -912,7 +1040,7 @@
    "matchup": "USC @ Michigan",
    "homeTeam": "Michigan",
    "awayTeam": "USC",
-   "startDate": "2026-09-20T15:18:21.954965+00:00",
+   "startDate": "2026-09-22T01:34:52.535172+00:00",
    "type": "total",
    "pick": "Over 51",
    "team": null,
@@ -930,7 +1058,7 @@
    "matchup": "Washington @ Oregon",
    "homeTeam": "Oregon",
    "awayTeam": "Washington",
-   "startDate": "2026-09-20T15:18:21.954965+00:00",
+   "startDate": "2026-09-22T01:34:52.535172+00:00",
    "type": "spread",
    "pick": "Washington +9.5",
    "team": "Washington",
@@ -948,7 +1076,7 @@
    "matchup": "Penn State @ Ohio State",
    "homeTeam": "Ohio State",
    "awayTeam": "Penn State",
-   "startDate": "2026-09-20T15:18:21.954965+00:00",
+   "startDate": "2026-09-22T01:34:52.535172+00:00",
    "type": "spread",
    "pick": "Ohio State -6.5",
    "team": "Ohio State",

@@ -11,7 +11,7 @@
     --red: #f85149; --gold: #d29922; --blue: #58a6ff;
   }
   * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--text);
+  body { margin: 0; background: var(--bg); color: var(--text); overflow-x: hidden;
     font: 15px/1.5 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
   .wrap { max-width: 1000px; margin: 0 auto; padding: 24px 16px 64px; }
   header { display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px; margin-bottom: 4px; }
@@ -37,7 +37,7 @@
   h2 .wknet { font-size: 13px; font-weight: 500; }
   h2 .running { font-size: 13px; font-weight: 500; color: var(--muted); margin-left: auto; }
   .tablewrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 10px; }
-  table { border-collapse: collapse; width: 100%; min-width: 780px; font-size: 13.5px; }
+  table { border-collapse: collapse; width: 100%; min-width: 900px; font-size: 13.5px; }
   th, td { padding: 8px 10px; text-align: left; white-space: nowrap; }
   thead th { background: var(--panel2); color: var(--muted); font-weight: 600; font-size: 12px;
     text-transform: uppercase; letter-spacing: 0.4px; }
@@ -53,6 +53,43 @@
   footer { margin-top: 36px; color: var(--muted); font-size: 12.5px;
     border-top: 1px solid var(--border); padding-top: 14px; }
   .empty { color: var(--muted); padding: 24px; text-align: center; }
+  .books { color: var(--muted); font-size: 12px; }
+
+  @media (max-width: 760px) {
+    .wrap { padding: 16px 16px 48px; }
+    h1 { font-size: 22px; }
+    .nav { margin-left: 0; width: 100%; }
+    .cards { grid-template-columns: 1fr 1fr; gap: 10px; margin: 16px 0; }
+    .stat { padding: 12px; }
+    .stat .value { font-size: 20px; }
+    h2 { margin: 22px 0 8px; flex-wrap: wrap; gap: 6px 10px; }
+    h2 .running { margin-left: 0; width: 100%; }
+    .tablewrap { overflow-x: visible; border: none; border-radius: 0; }
+    table { min-width: 0; display: block; font-size: 14px; }
+    thead { display: none; }
+    tbody { display: block; }
+    tbody tr {
+      display: flex; flex-direction: column; gap: 2px;
+      border: 1px solid var(--border); border-radius: 10px;
+      padding: 12px 14px; margin-bottom: 10px; background: var(--panel);
+    }
+    td { display: flex; justify-content: space-between; align-items: baseline;
+         gap: 12px; padding: 2px 0; white-space: normal; }
+    td::before {
+      content: attr(data-label); color: var(--muted); font-size: 11.5px;
+      text-transform: uppercase; letter-spacing: 0.4px; flex: 0 0 auto; padding-top: 2px;
+    }
+    td > * { text-align: right; }
+    td.cell-main { order: -2; display: block; font-size: 15.5px; padding-bottom: 4px; }
+    td.cell-main::before { display: none; }
+    td.cell-main > * { text-align: left; }
+    td.cell-time { order: -1; padding-bottom: 6px; border-bottom: 1px solid var(--border);
+                   margin-bottom: 4px; }
+    .empty { padding: 18px 0; }
+  }
+  @media (max-width: 420px) {
+    .cards { grid-template-columns: 1fr; }
+  }
 </style>
 </head>
 <body>
@@ -60,9 +97,10 @@
   <header>
     <h1>Season <span class="accent">Results</span></h1>
     <span class="sub" id="stamp"></span>
-    <span class="nav"><a href="index.html">← This Week's Board</a></span>
+    <span class="nav"><a href="index.html">← This Week's Board</a>
+      &nbsp;·&nbsp; <a href="index.html#record">Every value play →</a></span>
   </header>
-  <div class="sub">Every Top 5 pick, locked at kickoff and graded against the final score. Flat $10 per bet; payouts follow the posted odds.</div>
+  <div class="sub">Every Top 5 pick, locked at kickoff and graded against the final score. Flat $10 per bet; payouts follow the posted odds. This is the published shortlist only — the <a href="index.html#record">full value record</a> covers every play the model flagged on any game.</div>
 
   <div id="demoBanner" class="banner" style="display:none">
     <b>Demo data.</b> Sample history shown until the CFBD_API_KEY secret is configured and real weeks are played.
@@ -78,6 +116,7 @@
   <div id="weeks"><div class="empty">Loading…</div></div>
 
   <footer>
+    <p>"Line value" compares the number when a pick was first published to the last number seen before kickoff. Positive means the market moved toward our side, which is the earliest honest read on whether the model has an edge — it shows up long before a win rate does.</p>
     <p>Picks are snapshotted by the automated Tuesday/Thursday/Saturday runs and lock at kickoff — what you see is the last recorded line before the game, graded against the final score. Pushes return the stake ($0). Past performance does not predict future results; bet responsibly.</p>
   </footer>
 </div>
@@ -87,6 +126,28 @@ const money = v => (v < 0 ? '-$' : '$') + Math.abs(v).toFixed(2);
 const fmtPrice = v => v == null ? '' : (v > 0 ? '+' + v : String(v));
 const fmtTime = iso => iso ? new Date(iso).toLocaleString(undefined,
   { weekday: 'short', month: 'numeric', day: 'numeric', hour: 'numeric', minute: '2-digit' }) : '—';
+
+function clvValue(clv) {
+  if (!clv) return null;
+  return clv.pts != null ? clv.pts : clv.probPts;
+}
+
+function clvCell(clv) {
+  const v = clvValue(clv);
+  if (v == null) return '<span class="books">—</span>';
+  const unit = clv.pts != null ? ' pt' : ' pp';
+  const cls = v > 0 ? 'pos' : (v < 0 ? 'negv' : '');
+  return `<span class="${cls}">${(v > 0 ? '+' : '') + v.toFixed(1) + unit}</span>`;
+}
+
+function closedCell(p) {
+  const clv = p.clv;
+  if (!clv) return '<span class="books">—</span>';
+  if (clv.closeLine != null) {
+    return p.type === 'total' ? String(clv.closeLine) : fmtPrice(clv.closeLine);
+  }
+  return fmtPrice(clv.closePrice);
+}
 
 function badge(outcome) {
   if (!outcome) return '<span class="badge b-pending">Pending</span>';
@@ -133,6 +194,10 @@ async function init() {
   const net = graded.reduce((s, p) => s + p.result.profit, 0);
   const staked = graded.length * data.stake;
   const decided = wins + losses;
+  // did the market move toward the number we posted, or away from it?
+  const moves = graded.map(p => clvValue(p.clv)).filter(v => v != null && v !== 0);
+  const clvMoved = moves.length;
+  const clvBeat = moves.filter(v => v > 0).length;
 
   document.getElementById('stats').innerHTML = `
     <div class="stat"><div class="label">Record</div>
@@ -144,7 +209,12 @@ async function init() {
     <div class="stat"><div class="label">Total staked</div>
       <div class="value">${money(staked)}</div></div>
     <div class="stat"><div class="label">Return on risk</div>
-      <div class="value ${net >= 0 ? 'pos' : 'negv'}">${staked ? (net / staked * 100).toFixed(1) + '%' : '—'}</div></div>`;
+      <div class="value ${net >= 0 ? 'pos' : 'negv'}">${staked ? (net / staked * 100).toFixed(1) + '%' : '—'}</div></div>
+    <div class="stat"><div class="label">Beat the close</div>
+      <div class="value">${clvMoved ? Math.round(clvBeat / clvMoved * 100) + '%' : '—'}</div>
+      <div class="label" style="text-transform:none;letter-spacing:0">${clvMoved
+        ? clvBeat + ' of ' + clvMoved + ' picks that moved'
+        : 'needs a week of line history'}</div></div>`;
 
   // cumulative chart over graded picks in chronological order
   let run = 0;
@@ -181,19 +251,23 @@ async function init() {
     </h2>
     <div class="tablewrap"><table>
       <thead><tr><th>Kickoff</th><th>Matchup</th><th>Pick</th><th>Odds</th>
-        <th>Final</th><th>Result</th><th>$10 Bet</th></tr></thead>
+        <th>Closed at</th><th>Line value</th><th>Final</th><th>Result</th><th>$10 Bet</th></tr></thead>
       <tbody>${rows.map(p => {
         const r = p.result;
         const final = r ? `${p.awayTeam} ${r.awayScore} — ${p.homeTeam} ${r.homeScore}` : '—';
         const profit = r ? `<span class="${r.profit > 0 ? 'pos' : r.profit < 0 ? 'negv' : ''}">${r.profit === 0 ? 'push' : money(r.profit)}</span>` : '—';
+        const posted = (p.openLine != null && p.openLine !== p.line)
+          ? `<div class="books">posted at ${p.openLine > 0 ? '+' + p.openLine : p.openLine}</div>` : '';
         return `<tr>
-          <td>${fmtTime(p.startDate)}</td>
-          <td>${p.matchup}</td>
-          <td><span class="tag">${p.type}</span> <b>${p.pick}</b></td>
-          <td>${fmtPrice(p.price)}</td>
-          <td>${final}</td>
-          <td>${badge(r && r.outcome)}</td>
-          <td>${profit}</td>
+          <td class="cell-time" data-label="Kickoff">${fmtTime(p.startDate)}</td>
+          <td class="cell-main" data-label="Matchup">${p.matchup}</td>
+          <td data-label="Pick"><span class="tag">${p.type}</span> <b>${p.pick}</b>${posted}</td>
+          <td data-label="Odds">${fmtPrice(p.price)}</td>
+          <td data-label="Closed at">${closedCell(p)}</td>
+          <td data-label="Line value">${clvCell(p.clv)}</td>
+          <td data-label="Final">${final}</td>
+          <td data-label="Result">${badge(r && r.outcome)}</td>
+          <td data-label="$10 bet">${profit}</td>
         </tr>`;
       }).join('')}</tbody>
     </table></div>`;

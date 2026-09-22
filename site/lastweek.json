@@ -1,6 +1,32 @@
 {
- "generatedAt": "2026-09-20T15:18:21.954965+00:00",
+ "generatedAt": "2026-09-22T01:34:52.535172+00:00",
  "demo": true,
+ "stake": 10.0,
+ "narrative": {
+  "generatedAt": "2026-09-22T01:34:52.535172+00:00",
+  "season": 2026,
+  "seasonType": "regular",
+  "week": -1,
+  "headline": "3-7 on 10 value plays, -$42.73",
+  "paragraphs": [
+   "8 games finished in Week -1. It found a playable edge in 6 of them and left the other 2 alone. Those plays went 3-7, worth -$42.73 at $10 a play (-42.7% on the $100 at risk).",
+   "By market, spreads went 1-4, totals went 2-0 and moneylines went 0-3. The best of them was Under 44.5 in Iowa State at Kansas State, a 3.5-point disagreement with the market that finished Iowa State 20, Kansas State 17. The one that stung was Oklahoma ML +215, an 8-point gap between the model and the price that finished Texas 38, Oklahoma 20.",
+   "The five plays that actually got published went 1-4 for -$30.91, behind the full board. Ranking by expected value is supposed to concentrate the good ones at the top, and whether it does is something only a season of these will answer.",
+   "Season to date the model has made 10 value plays and gone 3-7, -$42.73 on flat $10 bets (-42.7%). It expected to win 58% of those and won 30%. On line movement, 4 of the 4 published picks whose numbers moved closed worse than the site posted them, so the market came our way 100% of the time. Treat all of it as early. At 10 plays the record is still mostly noise, and the thing worth watching is not the win rate but whether the market keeps moving toward these numbers."
+  ],
+  "week_tally": {
+   "plays": 10,
+   "wins": 3,
+   "losses": 7,
+   "pushes": 0,
+   "profit": -42.73,
+   "staked": 100.0,
+   "winRate": 0.3,
+   "expected": 0.5797,
+   "roi": -0.4273,
+   "units": -4.27
+  }
+ },
  "week": {
   "season": 2026,
   "seasonType": "regular",
@@ -9,7 +35,7 @@
   "games": [
    {
     "id": 1000,
-    "startDate": "2026-09-20T15:18:21.954965+00:00",
+    "startDate": "2026-09-22T01:34:52.535172+00:00",
     "homeTeam": "Georgia",
     "awayTeam": "Alabama",
     "homeConference": "-",
@@ -117,26 +143,29 @@
     "result": {
      "homeScore": 31,
      "awayScore": 24,
-     "calls": {
-      "spread": {
-       "pick": "Georgia -3.5",
-       "outcome": "win"
-      },
-      "total": {
-       "pick": "Over 52.5",
-       "outcome": "win"
-      },
-      "moneyline": {
-       "pick": "Georgia ML -165",
-       "outcome": "win"
-      }
-     }
+     "calls": []
     },
-    "lockedAt": "2026-09-20T15:18:21.954965+00:00"
+    "lockedAt": "2026-09-22T01:34:52.535172+00:00",
+    "lineHistory": [
+     {
+      "at": "2026-09-22T01:34:52.535172+00:00",
+      "spread": -2.0,
+      "total": 51.0,
+      "mlHome": -165,
+      "mlAway": 140
+     },
+     {
+      "at": "2026-09-22T01:34:52.535172+00:00",
+      "spread": -3.5,
+      "total": 52.5,
+      "mlHome": -165,
+      "mlAway": 140
+     }
+    ]
    },
    {
     "id": 1004,
-    "startDate": "2026-09-20T15:18:21.954965+00:00",
+    "startDate": "2026-09-22T01:34:52.535172+00:00",
     "homeTeam": "Kansas State",
     "awayTeam": "Iowa State",
     "homeConference": "-",
@@ -244,26 +273,66 @@
     "result": {
      "homeScore": 17,
      "awayScore": 20,
-     "calls": {
-      "spread": {
+     "calls": [
+      {
+       "type": "spread",
        "pick": "Kansas State -2.5",
-       "outcome": "loss"
+       "side": "home",
+       "line": -2.5,
+       "price": -110,
+       "prob": 0.586,
+       "edgePts": 2.9,
+       "ev": 0.1197,
+       "outcome": "loss",
+       "profit": -10.0
       },
-      "total": {
+      {
+       "type": "total",
        "pick": "Under 44.5",
-       "outcome": "win"
+       "side": "under",
+       "line": 44.5,
+       "price": -110,
+       "prob": 0.602,
+       "edgePts": 3.5,
+       "ev": 0.1498,
+       "outcome": "win",
+       "profit": 9.09
       },
-      "moneyline": {
+      {
+       "type": "moneyline",
        "pick": "Kansas State ML -135",
-       "outcome": "loss"
+       "side": "home",
+       "line": null,
+       "price": -135,
+       "prob": 0.637,
+       "edgePts": 6.3,
+       "ev": 0.1096,
+       "outcome": "loss",
+       "profit": -10.0
       }
-     }
+     ]
     },
-    "lockedAt": "2026-09-20T15:18:21.954965+00:00"
+    "lockedAt": "2026-09-22T01:34:52.535172+00:00",
+    "lineHistory": [
+     {
+      "at": "2026-09-22T01:34:52.535172+00:00",
+      "spread": -3.5,
+      "total": 45.5,
+      "mlHome": -135,
+      "mlAway": 115
+     },
+     {
+      "at": "2026-09-22T01:34:52.535172+00:00",
+      "spread": -2.5,
+      "total": 44.5,
+      "mlHome": -135,
+      "mlAway": 115
+     }
+    ]
    },
    {
     "id": 1007,
-    "startDate": "2026-09-20T15:18:21.954965+00:00",
+    "startDate": "2026-09-22T01:34:52.535172+00:00",
     "homeTeam": "LSU",
     "awayTeam": "Ole Miss",
     "homeConference": "-",
@@ -371,26 +440,54 @@
     "result": {
      "homeScore": 35,
      "awayScore": 38,
-     "calls": {
-      "spread": {
+     "calls": [
+      {
+       "type": "spread",
        "pick": "LSU -1.5",
-       "outcome": "loss"
+       "side": "home",
+       "line": -1.5,
+       "price": -110,
+       "prob": 0.581,
+       "edgePts": 2.7,
+       "ev": 0.1086,
+       "outcome": "loss",
+       "profit": -10.0
       },
-      "total": {
-       "pick": "Over 63.5",
-       "outcome": "win"
-      },
-      "moneyline": {
+      {
+       "type": "moneyline",
        "pick": "LSU ML -120",
-       "outcome": "loss"
+       "side": "home",
+       "line": null,
+       "price": -120,
+       "prob": 0.608,
+       "edgePts": 6.3,
+       "ev": 0.1147,
+       "outcome": "loss",
+       "profit": -10.0
       }
-     }
+     ]
     },
-    "lockedAt": "2026-09-20T15:18:21.954965+00:00"
+    "lockedAt": "2026-09-22T01:34:52.535172+00:00",
+    "lineHistory": [
+     {
+      "at": "2026-09-22T01:34:52.535172+00:00",
+      "spread": -2.5,
+      "total": 64.5,
+      "mlHome": -120,
+      "mlAway": 100
+     },
+     {
+      "at": "2026-09-22T01:34:52.535172+00:00",
+      "spread": -1.5,
+      "total": 63.5,
+      "mlHome": -120,
+      "mlAway": 100
+     }
+    ]
    },
    {
     "id": 1005,
-    "startDate": "2026-09-20T15:18:21.954965+00:00",
+    "startDate": "2026-09-22T01:34:52.535172+00:00",
     "homeTeam": "Michigan",
     "awayTeam": "USC",
     "homeConference": "-",
@@ -498,26 +595,42 @@
     "result": {
      "homeScore": 28,
      "awayScore": 31,
-     "calls": {
-      "spread": {
-       "pick": "USC -1.5",
-       "outcome": "win"
-      },
-      "total": {
+     "calls": [
+      {
+       "type": "total",
        "pick": "Over 51",
-       "outcome": "win"
-      },
-      "moneyline": {
-       "pick": "USC ML -125",
-       "outcome": "win"
+       "side": "over",
+       "line": 51.0,
+       "price": -110,
+       "prob": 0.602,
+       "edgePts": 3.5,
+       "ev": 0.1498,
+       "outcome": "win",
+       "profit": 9.09
       }
-     }
+     ]
     },
-    "lockedAt": "2026-09-20T15:18:21.954965+00:00"
+    "lockedAt": "2026-09-22T01:34:52.535172+00:00",
+    "lineHistory": [
+     {
+      "at": "2026-09-22T01:34:52.535172+00:00",
+      "spread": 1.5,
+      "total": 51.0,
+      "mlHome": 105,
+      "mlAway": -125
+     },
+     {
+      "at": "2026-09-22T01:34:52.535172+00:00",
+      "spread": 1.5,
+      "total": 51.0,
+      "mlHome": 105,
+      "mlAway": -125
+     }
+    ]
    },
    {
     "id": 1006,
-    "startDate": "2026-09-20T15:18:21.954965+00:00",
+    "startDate": "2026-09-22T01:34:52.535172+00:00",
     "homeTeam": "Notre Dame",
     "awayTeam": "Clemson",
     "homeConference": "-",
@@ -625,26 +738,29 @@
     "result": {
      "homeScore": 24,
      "awayScore": 10,
-     "calls": {
-      "spread": {
-       "pick": "Clemson +4.5",
-       "outcome": "loss"
-      },
-      "total": {
-       "pick": "Under 47.5",
-       "outcome": "win"
-      },
-      "moneyline": {
-       "pick": "Notre Dame ML -190",
-       "outcome": "win"
-      }
-     }
+     "calls": []
     },
-    "lockedAt": "2026-09-20T15:18:21.954965+00:00"
+    "lockedAt": "2026-09-22T01:34:52.535172+00:00",
+    "lineHistory": [
+     {
+      "at": "2026-09-22T01:34:52.535172+00:00",
+      "spread": -3.0,
+      "total": 46.0,
+      "mlHome": -190,
+      "mlAway": 160
+     },
+     {
+      "at": "2026-09-22T01:34:52.535172+00:00",
+      "spread": -4.5,
+      "total": 47.5,
+      "mlHome": -190,
+      "mlAway": 160
+     }
+    ]
    },
    {
     "id": 1001,
-    "startDate": "2026-09-20T15:18:21.954965+00:00",
+    "startDate": "2026-09-22T01:34:52.535172+00:00",
     "homeTeam": "Ohio State",
     "awayTeam": "Penn State",
     "homeConference": "-",
@@ -752,26 +868,42 @@
     "result": {
      "homeScore": 21,
      "awayScore": 27,
-     "calls": {
-      "spread": {
+     "calls": [
+      {
+       "type": "spread",
        "pick": "Ohio State -6.5",
-       "outcome": "loss"
-      },
-      "total": {
-       "pick": "Under 48.5",
-       "outcome": "win"
-      },
-      "moneyline": {
-       "pick": "Ohio State ML -240",
-       "outcome": "loss"
+       "side": "home",
+       "line": -6.5,
+       "price": -110,
+       "prob": 0.595,
+       "edgePts": 3.2,
+       "ev": 0.1361,
+       "outcome": "loss",
+       "profit": -10.0
       }
-     }
+     ]
     },
-    "lockedAt": "2026-09-20T15:18:21.954965+00:00"
+    "lockedAt": "2026-09-22T01:34:52.535172+00:00",
+    "lineHistory": [
+     {
+      "at": "2026-09-22T01:34:52.535172+00:00",
+      "spread": -7.5,
+      "total": 49.5,
+      "mlHome": -240,
+      "mlAway": 198
+     },
+     {
+      "at": "2026-09-22T01:34:52.535172+00:00",
+      "spread": -6.5,
+      "total": 48.5,
+      "mlHome": -240,
+      "mlAway": 198
+     }
+    ]
    },
    {
     "id": 1003,
-    "startDate": "2026-09-20T15:18:21.954965+00:00",
+    "startDate": "2026-09-22T01:34:52.535172+00:00",
     "homeTeam": "Oregon",
     "awayTeam": "Washington",
     "homeConference": "-",
@@ -879,26 +1011,42 @@
     "result": {
      "homeScore": 45,
      "awayScore": 42,
-     "calls": {
-      "spread": {
+     "calls": [
+      {
+       "type": "spread",
        "pick": "Washington +9.5",
-       "outcome": "win"
-      },
-      "total": {
-       "pick": "Over 61.5",
-       "outcome": "win"
-      },
-      "moneyline": {
-       "pick": "Oregon ML -340",
-       "outcome": "win"
+       "side": "away",
+       "line": 9.5,
+       "price": -110,
+       "prob": 0.598,
+       "edgePts": 3.4,
+       "ev": 0.1416,
+       "outcome": "win",
+       "profit": 9.09
       }
-     }
+     ]
     },
-    "lockedAt": "2026-09-20T15:18:21.954965+00:00"
+    "lockedAt": "2026-09-22T01:34:52.535172+00:00",
+    "lineHistory": [
+     {
+      "at": "2026-09-22T01:34:52.535172+00:00",
+      "spread": -8.0,
+      "total": 60.0,
+      "mlHome": -340,
+      "mlAway": 270
+     },
+     {
+      "at": "2026-09-22T01:34:52.535172+00:00",
+      "spread": -9.5,
+      "total": 61.5,
+      "mlHome": -340,
+      "mlAway": 270
+     }
+    ]
    },
    {
     "id": 1002,
-    "startDate": "2026-09-20T15:18:21.954965+00:00",
+    "startDate": "2026-09-22T01:34:52.535172+00:00",
     "homeTeam": "Texas",
     "awayTeam": "Oklahoma",
     "homeConference": "-",
@@ -1006,22 +1154,50 @@
     "result": {
      "homeScore": 38,
      "awayScore": 20,
-     "calls": {
-      "spread": {
+     "calls": [
+      {
+       "type": "spread",
        "pick": "Oklahoma +7",
-       "outcome": "loss"
+       "side": "away",
+       "line": 7.0,
+       "price": -110,
+       "prob": 0.589,
+       "edgePts": 3.1,
+       "ev": 0.1252,
+       "outcome": "loss",
+       "profit": -10.0
       },
-      "total": {
-       "pick": "Over 56",
-       "outcome": "win"
-      },
-      "moneyline": {
-       "pick": "Texas ML -260",
-       "outcome": "win"
+      {
+       "type": "moneyline",
+       "pick": "Oklahoma ML +215",
+       "side": "away",
+       "line": null,
+       "price": 215,
+       "prob": 0.399,
+       "edgePts": 8.2,
+       "ev": 0.2582,
+       "outcome": "loss",
+       "profit": -10.0
       }
-     }
+     ]
     },
-    "lockedAt": "2026-09-20T15:18:21.954965+00:00"
+    "lockedAt": "2026-09-22T01:34:52.535172+00:00",
+    "lineHistory": [
+     {
+      "at": "2026-09-22T01:34:52.535172+00:00",
+      "spread": -7.0,
+      "total": 56.0,
+      "mlHome": -260,
+      "mlAway": 215
+     },
+     {
+      "at": "2026-09-22T01:34:52.535172+00:00",
+      "spread": -7.0,
+      "total": 56.0,
+      "mlHome": -260,
+      "mlAway": 215
+     }
+    ]
    }
   ]
  }

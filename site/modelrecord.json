@@ -1,0 +1,249 @@
+{
+ "generatedAt": "2026-09-22T01:34:52.535172+00:00",
+ "demo": true,
+ "stake": 10.0,
+ "thresholds": {
+  "spread": 2.0,
+  "total": 3.5,
+  "moneylineProb": 0.05
+ },
+ "overall": {
+  "plays": 10,
+  "wins": 3,
+  "losses": 7,
+  "pushes": 0,
+  "profit": -42.73,
+  "staked": 100.0,
+  "winRate": 0.3,
+  "expected": 0.5797,
+  "roi": -0.4273,
+  "units": -4.27
+ },
+ "hindsight": {
+  "plays": 0,
+  "wins": 0,
+  "losses": 0,
+  "pushes": 0,
+  "profit": 0.0,
+  "staked": 0.0,
+  "winRate": null,
+  "expected": null,
+  "roi": null,
+  "units": 0.0
+ },
+ "byType": [
+  {
+   "plays": 5,
+   "wins": 1,
+   "losses": 4,
+   "pushes": 0,
+   "profit": -30.91,
+   "staked": 50.0,
+   "label": "spread",
+   "winRate": 0.2,
+   "expected": 0.5898,
+   "roi": -0.6182,
+   "units": -3.09
+  },
+  {
+   "plays": 2,
+   "wins": 2,
+   "losses": 0,
+   "pushes": 0,
+   "profit": 18.18,
+   "staked": 20.0,
+   "label": "total",
+   "winRate": 1.0,
+   "expected": 0.602,
+   "roi": 0.909,
+   "units": 1.82
+  },
+  {
+   "plays": 3,
+   "wins": 0,
+   "losses": 3,
+   "pushes": 0,
+   "profit": -30.0,
+   "staked": 30.0,
+   "label": "moneyline",
+   "winRate": 0.0,
+   "expected": 0.548,
+   "roi": -1.0,
+   "units": -3.0
+  }
+ ],
+ "byEv": [
+  {
+   "plays": 1,
+   "wins": 0,
+   "losses": 1,
+   "pushes": 0,
+   "profit": -10.0,
+   "staked": 10.0,
+   "label": "20%+",
+   "winRate": 0.0,
+   "expected": 0.399,
+   "roi": -1.0,
+   "units": -1.0
+  },
+  {
+   "plays": 9,
+   "wins": 3,
+   "losses": 6,
+   "pushes": 0,
+   "profit": -32.73,
+   "staked": 90.0,
+   "label": "10-20%",
+   "winRate": 0.3333,
+   "expected": 0.5998,
+   "roi": -0.3637,
+   "units": -3.27
+  },
+  {
+   "plays": 0,
+   "wins": 0,
+   "losses": 0,
+   "pushes": 0,
+   "profit": 0.0,
+   "staked": 0.0,
+   "label": "5-10%",
+   "winRate": null,
+   "expected": null,
+   "roi": null,
+   "units": 0.0
+  },
+  {
+   "plays": 0,
+   "wins": 0,
+   "losses": 0,
+   "pushes": 0,
+   "profit": 0.0,
+   "staked": 0.0,
+   "label": "0-5%",
+   "winRate": null,
+   "expected": null,
+   "roi": null,
+   "units": 0.0
+  }
+ ],
+ "calibration": [
+  {
+   "plays": 0,
+   "wins": 0,
+   "losses": 0,
+   "pushes": 0,
+   "profit": 0.0,
+   "staked": 0.0,
+   "label": "70%+",
+   "winRate": null,
+   "expected": null,
+   "roi": null,
+   "units": 0.0
+  },
+  {
+   "plays": 0,
+   "wins": 0,
+   "losses": 0,
+   "pushes": 0,
+   "profit": 0.0,
+   "staked": 0.0,
+   "label": "65-70%",
+   "winRate": null,
+   "expected": null,
+   "roi": null,
+   "units": 0.0
+  },
+  {
+   "plays": 4,
+   "wins": 2,
+   "losses": 2,
+   "pushes": 0,
+   "profit": -1.82,
+   "staked": 40.0,
+   "label": "60-65%",
+   "winRate": 0.5,
+   "expected": 0.6122,
+   "roi": -0.0455,
+   "units": -0.18
+  },
+  {
+   "plays": 5,
+   "wins": 1,
+   "losses": 4,
+   "pushes": 0,
+   "profit": -30.91,
+   "staked": 50.0,
+   "label": "55-60%",
+   "winRate": 0.2,
+   "expected": 0.5898,
+   "roi": -0.6182,
+   "units": -3.09
+  },
+  {
+   "plays": 0,
+   "wins": 0,
+   "losses": 0,
+   "pushes": 0,
+   "profit": 0.0,
+   "staked": 0.0,
+   "label": "50-55%",
+   "winRate": null,
+   "expected": null,
+   "roi": null,
+   "units": 0.0
+  },
+  {
+   "plays": 1,
+   "wins": 0,
+   "losses": 1,
+   "pushes": 0,
+   "profit": -10.0,
+   "staked": 10.0,
+   "label": "Under 50%",
+   "winRate": 0.0,
+   "expected": 0.399,
+   "roi": -1.0,
+   "units": -1.0
+  }
+ ],
+ "byWeek": [
+  {
+   "season": 2026,
+   "seasonType": "regular",
+   "week": -1,
+   "backfilled": false,
+   "gamesGraded": 8,
+   "gamesWithPlay": 6,
+   "noPlay": 2,
+   "plays": 10,
+   "wins": 3,
+   "losses": 7,
+   "pushes": 0,
+   "profit": -42.73,
+   "staked": 100.0,
+   "winRate": 0.3,
+   "expected": 0.5797,
+   "roi": -0.4273,
+   "units": -4.27
+  }
+ ],
+ "topFive": {
+  "plays": 5,
+  "wins": 1,
+  "losses": 4,
+  "pushes": 0,
+  "profit": -30.91,
+  "staked": 50.0,
+  "winRate": 0.2,
+  "expected": 0.5534,
+  "roi": -0.6182,
+  "units": -3.09
+ },
+ "clv": {
+  "n": 5,
+  "moved": 4,
+  "beat": 4,
+  "beatRate": 1.0,
+  "avgPts": 0.8
+ }
+}

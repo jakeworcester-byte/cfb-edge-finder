@@ -14,6 +14,7 @@
   body {
     margin: 0; background: var(--bg); color: var(--text);
     font: 15px/1.5 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%; overflow-x: hidden;
   }
   .wrap { max-width: 1180px; margin: 0 auto; padding: 24px 16px 64px; }
   header { display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px; margin-bottom: 4px; }
@@ -32,9 +33,7 @@
     border: 1px solid var(--border); border-radius: 10px; padding: 14px 14px 12px;
     position: relative;
   }
-  .card .rank {
-    position: absolute; top: 10px; right: 12px; font-size: 12px; color: var(--muted);
-  }
+  .card .rank { position: absolute; top: 10px; right: 12px; font-size: 12px; color: var(--muted); }
   .card .pick { font-size: 17px; font-weight: 700; color: var(--green); margin: 2px 0 4px; }
   .card .matchup { font-size: 13px; color: var(--muted); }
   .card .meta { font-size: 12.5px; color: var(--text); margin-top: 8px; }
@@ -47,7 +46,7 @@
   .controls { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0 10px; align-items: center; }
   .controls input, .controls select {
     background: var(--panel); color: var(--text); border: 1px solid var(--border);
-    border-radius: 8px; padding: 7px 10px; font-size: 14px;
+    border-radius: 8px; padding: 8px 10px; font-size: 14px;
   }
   .controls label { font-size: 13px; color: var(--muted); display: flex; gap: 6px; align-items: center; }
   .tablewrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 10px; }
@@ -55,7 +54,7 @@
   th, td { padding: 8px 10px; text-align: left; white-space: nowrap; }
   thead th {
     background: var(--panel2); color: var(--muted); font-weight: 600; font-size: 12px;
-    text-transform: uppercase; letter-spacing: 0.4px; position: sticky; top: 0; cursor: pointer;
+    text-transform: uppercase; letter-spacing: 0.4px; position: sticky; top: 0; cursor: default;
   }
   tbody tr { border-top: 1px solid var(--border); }
   tbody tr:hover { background: #1a2130; }
@@ -65,16 +64,21 @@
   .edge-md { color: var(--gold); font-weight: 600; }
   .edge-lo { color: var(--muted); }
   .neg { color: var(--red); }
+  .pos { color: var(--green); }
   .value-row { box-shadow: inset 3px 0 0 var(--green); }
   .lowconf { opacity: 0.55; }
+  .noplay { opacity: 0.5; }
   .books { color: var(--muted); font-size: 12px; }
   footer { margin-top: 36px; color: var(--muted); font-size: 12.5px; border-top: 1px solid var(--border); padding-top: 14px; }
   a { color: var(--blue); text-decoration: none; }
   .empty { color: var(--muted); padding: 24px; text-align: center; }
-  .tabs { display: flex; gap: 4px; margin: 18px 0 4px; border-bottom: 1px solid var(--border); }
+  .tabs {
+    display: flex; gap: 4px; margin: 18px 0 4px; border-bottom: 1px solid var(--border);
+    overflow-x: auto; -webkit-overflow-scrolling: touch;
+  }
   .tab { background: none; border: none; color: var(--muted); font: inherit; font-size: 14.5px;
-    font-weight: 600; padding: 8px 14px; cursor: pointer; border-bottom: 2px solid transparent;
-    margin-bottom: -1px; }
+    font-weight: 600; padding: 10px 14px; cursor: pointer; border-bottom: 2px solid transparent;
+    margin-bottom: -1px; white-space: nowrap; }
   .tab:hover { color: var(--text); }
   .tab.active { color: var(--green); border-bottom-color: var(--green); }
   .stat { background: linear-gradient(160deg, var(--panel2), var(--panel));
@@ -88,6 +92,66 @@
   .ind-push { color: var(--muted); background: #2b3442; }
   .ind-none { color: var(--muted); }
   .final { font-weight: 650; }
+
+  /* the Sunday write-up */
+  .recap {
+    background: linear-gradient(160deg, var(--panel2), var(--panel));
+    border: 1px solid var(--border); border-left: 3px solid var(--green);
+    border-radius: 10px; padding: 16px 18px; margin: 14px 0 18px;
+  }
+  .recap .kicker {
+    font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.6px;
+    color: var(--muted); margin-bottom: 2px;
+  }
+  .recap .headline { font-size: 19px; font-weight: 750; letter-spacing: -0.3px; margin-bottom: 8px; }
+  .recap p { margin: 0 0 10px; font-size: 14.5px; line-height: 1.62; max-width: 72ch; }
+  .recap p:last-child { margin-bottom: 0; }
+
+  /* phones: tables become stacked cards */
+  @media (max-width: 760px) {
+    .wrap { padding: 16px 16px 48px; }
+    h1 { font-size: 22px; }
+    .stamp { margin-left: 0; width: 100%; }
+    h2 { margin: 22px 0 10px; }
+    .cards { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .card .pick { font-size: 15.5px; }
+    .stat .value { font-size: 19px; }
+    .controls { flex-direction: column; align-items: stretch; gap: 8px; }
+    .controls input, .controls select { width: 100%; }
+    .controls label { width: 100%; padding: 4px 0; justify-content: flex-start; }
+    .tab { padding: 10px 11px; font-size: 14px; }
+    .tablewrap { overflow-x: visible; border: none; border-radius: 0; }
+    table { min-width: 0; display: block; font-size: 14px; }
+    thead { display: none; }
+    tbody { display: block; }
+    tbody tr {
+      display: flex; flex-direction: column; gap: 2px;
+      border: 1px solid var(--border); border-radius: 10px;
+      padding: 12px 14px; margin-bottom: 10px; background: var(--panel);
+    }
+    tbody tr:hover { background: var(--panel); }
+    td { display: flex; justify-content: space-between; align-items: baseline;
+         gap: 12px; padding: 2px 0; white-space: normal; }
+    td::before {
+      content: attr(data-label); color: var(--muted); font-size: 11.5px;
+      text-transform: uppercase; letter-spacing: 0.4px; flex: 0 0 auto; padding-top: 2px;
+    }
+    td > * { text-align: right; }
+    /* the matchup rides to the top as the card's title */
+    td.cell-main { order: -2; display: block; font-size: 15.5px; padding-bottom: 4px; }
+    td.cell-main::before { display: none; }
+    td.cell-main > * { text-align: left; }
+    td.cell-time { order: -1; padding-bottom: 6px; border-bottom: 1px solid var(--border);
+                   margin-bottom: 4px; }
+    td.cell-hide { display: none; }
+    .recap { padding: 14px 15px; }
+    .recap .headline { font-size: 17px; }
+    .recap p { font-size: 14px; }
+    .empty { padding: 18px 0; }
+  }
+  @media (max-width: 420px) {
+    .cards { grid-template-columns: 1fr; }
+  }
 </style>
 </head>
 <body>
@@ -96,7 +160,7 @@
     <h1>CFB <span class="accent">Edge</span> Finder</h1>
     <span class="sub" id="weekLabel">Loading…</span>
     <span class="stamp" id="stamp"></span>
-    <span class="stamp" style="margin-left:0"><a href="results.html">Season Results &amp; P/L →</a></span>
+    <span class="stamp" style="margin-left:0"><a href="results.html">Top 5 P/L &rarr;</a></span>
   </header>
   <div class="sub">Every FBS game this week, market lines vs. a four-model ensemble (SP+ · FPI · Elo · SRS). Green rows are where the model disagrees with Vegas the most.</div>
 
@@ -106,8 +170,9 @@
   </div>
 
   <div class="tabs">
-    <button class="tab active" data-tab="board">This Week's Board</button>
-    <button class="tab" data-tab="last">Last Week's Results</button>
+    <button class="tab active" data-tab="board">This Week</button>
+    <button class="tab" data-tab="last">Last Week</button>
+    <button class="tab" data-tab="record">Season Record</button>
   </div>
 
   <div id="tabBoard">
@@ -128,7 +193,7 @@
   <div class="tablewrap">
     <table id="board">
       <thead><tr>
-        <th>Kickoff</th><th>Matchup</th><th>Market Spread</th><th>Model Spread</th>
+        <th>Kickoff</th><th>Matchup</th><th>Market Spread</th><th>Move</th><th>Model Spread</th>
         <th>Spread Edge</th><th>Market O/U</th><th>Model Total</th><th>Total Edge</th>
         <th>Model Score</th><th>Win Prob</th><th>Best Bet</th>
       </tr></thead>
@@ -138,34 +203,79 @@
   </div>
 
   <div id="tabLast" hidden>
-    <h2 id="lastTitle">Last Week's Results</h2>
-    <div class="sub" id="lastSub"></div>
-    <div id="backfillNote" class="banner" style="display:none">
-      <b>Backfilled week.</b> This week was played before the site started snapshotting every game, so these model numbers were computed after the fact with ratings that already include these results. Treat it as a preview; from the next week on, every game's call is locked at kickoff.
+    <h2 id="lastTitle">Last Week</h2>
+    <div id="recap" class="recap" style="display:none">
+      <div class="kicker" id="recapKicker">The Sunday read</div>
+      <div class="headline" id="recapHeadline"></div>
+      <div id="recapBody"></div>
     </div>
     <div class="cards" id="lastStats"></div>
+    <div class="controls">
+      <label><input type="checkbox" id="showNoPlay"> Show games the model passed on</label>
+    </div>
     <div class="tablewrap">
       <table id="lastBoard">
         <thead><tr>
           <th>Kickoff</th><th>Matchup</th><th>Final</th>
-          <th>Market Spread</th><th>Model Side</th><th>ATS</th>
-          <th>Market O/U</th><th>Model Side</th><th>O/U</th>
-          <th>Model Winner</th><th>SU</th>
+          <th>Value play</th><th>Edge</th><th>Model prob</th>
+          <th>Line move</th><th>Drift</th><th>Result</th><th>P/L</th>
         </tr></thead>
         <tbody id="lastRows"></tbody>
       </table>
     </div>
-    <p class="sub" style="margin-top:12px">ATS = the model's preferred side against the spread. SU = straight-up winner. The five Top Value plays and their $10 payouts are graded on the <a href="results.html">Season Results</a> page.</p>
+    <p class="sub" style="margin-top:12px">One row per play the model actually flagged. Most games clear no threshold and are a no-play, which is the point. "Drift" is how far the market moved toward the model's side between the week's opening number and the last one seen before kickoff. A positive drift means the market ended up agreeing, which is the earliest honest signal the model is onto something. True closing line value on the published picks is on the <a href="results.html">Top 5 page</a>.</p>
+  </div>
+
+  <div id="tabRecord" hidden>
+    <h2 id="recordTitle">Every Value Play This Season</h2>
+    <div class="sub" id="recordSub"></div>
+    <div id="hindsightNote" class="banner" style="display:none"></div>
+    <div class="cards" id="recordStats" style="margin-top:14px"></div>
+
+    <h2>By market</h2>
+    <div class="tablewrap">
+      <table id="byTypeTable">
+        <thead><tr><th>Market</th><th>Plays</th><th>Record</th><th>Win rate</th><th>P/L</th><th>ROI</th></tr></thead>
+        <tbody id="byTypeRows"></tbody>
+      </table>
+    </div>
+
+    <h2>Is the model calibrated?</h2>
+    <div class="sub">When the model says a play hits 62% of the time, does it? Predicted against actual, on every value play.</div>
+    <div class="tablewrap" style="margin-top:10px">
+      <table id="calTable">
+        <thead><tr><th>Model said</th><th>Plays</th><th>Predicted</th><th>Actual</th><th>Gap</th></tr></thead>
+        <tbody id="calRows"></tbody>
+      </table>
+    </div>
+
+    <h2>Does a bigger edge win more?</h2>
+    <div class="sub">Plays grouped by the expected value the model assigned them. The Top 5 is drawn from the highest tier, so this is the test of whether that ranking means anything.</div>
+    <div class="tablewrap" style="margin-top:10px">
+      <table id="evTable">
+        <thead><tr><th>Modeled EV</th><th>Plays</th><th>Record</th><th>Win rate</th><th>P/L</th><th>ROI</th></tr></thead>
+        <tbody id="evRows"></tbody>
+      </table>
+    </div>
+
+    <h2>Week by week</h2>
+    <div class="tablewrap">
+      <table id="weekTable">
+        <thead><tr><th>Week</th><th>Games</th><th>Played</th><th>Passed</th><th>Record</th><th>Win rate</th><th>P/L</th></tr></thead>
+        <tbody id="weekRows"></tbody>
+      </table>
+    </div>
+    <p class="sub" style="margin-top:12px">The published Top 5 and its running P/L live on the <a href="results.html">Season Results</a> page. This tab is the wider sample: every play that cleared the thresholds on any game, roughly three times as many bets.</p>
   </div>
 
   <footer>
-    <p><b>How to read this:</b> "Edge" is how many points the model disagrees with the market line. Edges under ~2 points are noise. The Top 5 ranks bets by expected value per unit staked, assuming -110 pricing on spreads/totals and best available moneyline prices. Model methodology is in <a href="https://github.com/" id="repoLink">MODEL.md</a>.</p>
+    <p><b>How to read this:</b> "Edge" is how many points the model disagrees with the market line. Edges under ~2 points are noise. The Top 5 ranks bets by expected value per unit staked, assuming -110 pricing on spreads/totals and best available moneyline prices. Model methodology is in <a href="https://github.com/jakeworcester-byte/cfb-edge-finder/blob/main/MODEL.md">MODEL.md</a>.</p>
     <p>Data: <a href="https://collegefootballdata.com" target="_blank" rel="noopener">CollegeFootballData.com</a>. Ratings: SP+ (Bill Connelly/ESPN), FPI (ESPN), Elo, SRS. Lines shown are for reference only and move constantly — always confirm at the book. No model beats closing lines consistently; bet responsibly and only what you can afford to lose.</p>
   </footer>
 </div>
 
 <script>
-let DATA = null;
+let DATA = null, LW = null, REC = null;
 
 const fmt = {
   spread(v) { return v == null ? '—' : (v > 0 ? '+' + v : String(v)); },
@@ -174,8 +284,18 @@ const fmt = {
     const d = new Date(iso);
     return d.toLocaleString(undefined, { weekday: 'short', month: 'numeric', day: 'numeric', hour: 'numeric', minute: '2-digit' });
   },
-  pct(p) { return p == null ? '—' : Math.round(p * 100) + '%'; },
+  pct(p, places) { return p == null ? '—' : (p * 100).toFixed(places || 0) + '%'; },
   price(v) { return v == null ? '' : (v > 0 ? '+' + v : String(v)); },
+  money(v) {
+    if (v == null) return '—';
+    const s = v > 0 ? '+' : (v < 0 ? '-' : '');
+    return s + '$' + Math.abs(v).toFixed(2);
+  },
+  signed(v, places) {
+    if (v == null) return '—';
+    return (v > 0 ? '+' : '') + v.toFixed(places == null ? 1 : places);
+  },
+  rec(t) { return t ? `${t.wins}-${t.losses}` + (t.pushes ? `-${t.pushes}` : '') : '—'; },
 };
 
 function edgeClass(e) {
@@ -184,21 +304,75 @@ function edgeClass(e) {
   if (e >= 2) return 'edge-md';
   return 'edge-lo';
 }
+function signClass(v) { return v == null ? '' : (v > 0 ? 'pos' : (v < 0 ? 'neg' : '')); }
 
 function bestBet(g) {
   const eligible = (g.bets || []).filter(b => b.eligible && b.ev > 0);
   if (!eligible.length) return null;
   return eligible.sort((a, b) => b.ev - a.ev)[0];
 }
+function betOf(g, type) { return (g.bets || []).find(b => b.type === type); }
+function spreadEdge(g) { const s = betOf(g, 'spread'); return s ? s.edgePts : null; }
+function totalEdge(g) { const t = betOf(g, 'total'); return t ? t.edgePts : null; }
 
-function spreadEdge(g) {
-  const s = g.bets && g.bets.find(b => b.type === 'spread');
-  return s ? s.edgePts : null;
+/* --- line movement ------------------------------------------------------- */
+
+function lineMove(g) {
+  const h = g.lineHistory || [];
+  if (h.length < 2) return null;
+  const open = h[0], close = h[h.length - 1];
+  if (open.spread == null || close.spread == null || open.spread === close.spread) return null;
+  return { open: open.spread, close: close.spread, delta: +(close.spread - open.spread).toFixed(1) };
 }
-function totalEdge(g) {
-  const t = g.bets && g.bets.find(b => b.type === 'total');
-  return t ? t.edgePts : null;
+
+/* Did the market drift toward the model's side between the week opening and
+   kickoff? A board snapshot locks on the LAST line seen, so comparing the
+   pick to the close would always read zero. Comparing the week's opening
+   number to the close is the measure that actually says something. */
+const impliedProb = o => o > 0 ? 100 / (o + 100) : -o / (-o + 100);
+
+function drift(call, g) {
+  const h = g.lineHistory || [];
+  if (h.length < 2) return null;
+  const o = h[0], c = h[h.length - 1];
+  if (call.type === 'spread') {
+    if (o.spread == null || c.spread == null) return null;
+    const from = call.side === 'home' ? o.spread : -o.spread;
+    const to = call.side === 'home' ? c.spread : -c.spread;
+    return { pts: +(from - to).toFixed(1), from, to, fmt: 'spread' };
+  }
+  if (call.type === 'total') {
+    if (o.total == null || c.total == null) return null;
+    const pts = call.side === 'over' ? c.total - o.total : o.total - c.total;
+    return { pts: +pts.toFixed(1), from: o.total, to: c.total, fmt: 'total' };
+  }
+  if (call.type === 'moneyline') {
+    const from = call.side === 'home' ? o.mlHome : o.mlAway;
+    const to = call.side === 'home' ? c.mlHome : c.mlAway;
+    if (from == null || to == null) return null;
+    return { probPts: +((impliedProb(to) - impliedProb(from)) * 100).toFixed(1),
+             from, to, fmt: 'price' };
+  }
+  return null;
 }
+
+function driftPts(d) { return d ? (d.pts != null ? d.pts : d.probPts) : null; }
+
+function driftCell(d) {
+  const v = driftPts(d);
+  if (v == null) return '<span class="books">—</span>';
+  if (v === 0) return '<span class="books">no move</span>';
+  return `<span class="${signClass(v)}">${fmt.signed(v)}${d.pts != null ? ' pt' : ' pp'}</span>`;
+}
+
+function moveCell(d) {
+  if (!d) return '<span class="books">—</span>';
+  const show = v => d.fmt === 'total' ? String(v) : (d.fmt === 'price' ? fmt.price(v) : fmt.spread(v));
+  if (d.from === d.to) return `<span class="books">${show(d.from)}</span>`;
+  return `<span class="books">${show(d.from)} → ${show(d.to)}</span>`;
+}
+
+/* --- this week's board --------------------------------------------------- */
 
 function renderTop() {
   const el = document.getElementById('topPicks');
@@ -244,7 +418,7 @@ function renderBoard() {
 
   const tbody = document.getElementById('rows');
   if (!games.length) {
-    tbody.innerHTML = '<tr><td colspan="11" class="empty">No games match the filters.</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="12" class="empty">No games match the filters.</td></tr>';
     return;
   }
   tbody.innerHTML = games.map(g => {
@@ -253,24 +427,30 @@ function renderBoard() {
     const sEdge = spreadEdge(g), tEdge = totalEdge(g);
     const rowCls = [bb ? 'value-row' : '', m.lowConfidence ? 'lowconf' : ''].join(' ');
     const books = (ln.books || []).slice(0, 3).map(b => b.provider).join(', ');
+    const mv = lineMove(g);
     return `<tr class="${rowCls}">
-      <td>${fmt.time(g.startDate)}</td>
-      <td class="teams"><b>${g.awayTeam}</b> <span class="rec">${g.awayRecord || ''}</span><br>
+      <td class="cell-time" data-label="Kickoff">${fmt.time(g.startDate)}</td>
+      <td class="cell-main teams" data-label="Matchup"><b>${g.awayTeam}</b> <span class="rec">${g.awayRecord || ''}</span><br>
           at <b>${g.homeTeam}</b> <span class="rec">${g.homeRecord || ''}</span>
           ${g.neutralSite ? '<span class="tag">N</span>' : ''}</td>
-      <td>${ln.spread != null ? g.homeTeam + ' ' + fmt.spread(ln.spread) : '—'}
+      <td data-label="Market spread">${ln.spread != null ? g.homeTeam + ' ' + fmt.spread(ln.spread) : '—'}
           <div class="books">${books}</div></td>
-      <td>${fmt.spread(m.spread)}</td>
-      <td class="${edgeClass(sEdge)}">${sEdge != null ? sEdge.toFixed(1) : '—'}</td>
-      <td>${ln.total != null ? ln.total : '—'}</td>
-      <td>${m.total}</td>
-      <td class="${edgeClass(tEdge)}">${tEdge != null ? tEdge.toFixed(1) : '—'}</td>
-      <td>${m.awayScore} — ${m.homeScore}</td>
-      <td>${g.homeTeam} ${fmt.pct(m.pHomeWin)}</td>
-      <td>${bb ? `<span class="edge-hi">${bb.pick}</span> <span class="books">EV ${(bb.ev * 100).toFixed(1)}%</span>` : '<span class="books">—</span>'}</td>
+      <td data-label="Move">${mv
+            ? `<span class="books">${fmt.spread(mv.open)} → ${fmt.spread(mv.close)}</span>`
+            : '<span class="books">—</span>'}</td>
+      <td data-label="Model spread">${fmt.spread(m.spread)}</td>
+      <td data-label="Spread edge" class="${edgeClass(sEdge)}">${sEdge != null ? sEdge.toFixed(1) : '—'}</td>
+      <td data-label="Market O/U">${ln.total != null ? ln.total : '—'}</td>
+      <td data-label="Model total">${m.total}</td>
+      <td data-label="Total edge" class="${edgeClass(tEdge)}">${tEdge != null ? tEdge.toFixed(1) : '—'}</td>
+      <td data-label="Model score">${m.awayScore} — ${m.homeScore}</td>
+      <td data-label="Win prob">${g.homeTeam} ${fmt.pct(m.pHomeWin)}</td>
+      <td data-label="Best bet">${bb ? `<span class="edge-hi">${bb.pick}</span> <span class="books">EV ${(bb.ev * 100).toFixed(1)}%</span>` : '<span class="books">no play</span>'}</td>
     </tr>`;
   }).join('');
 }
+
+/* --- last week ----------------------------------------------------------- */
 
 function ind(outcome) {
   if (!outcome) return '<span class="ind ind-none">—</span>';
@@ -278,96 +458,241 @@ function ind(outcome) {
   return `<span class="ind ind-${outcome}" title="${outcome}">${sym}</span>`;
 }
 
-function renderLastWeek(LW) {
+function renderRecap(nar) {
+  const box = document.getElementById('recap');
+  if (!nar || !(nar.paragraphs || []).length) { box.style.display = 'none'; return; }
+  box.style.display = 'block';
+  document.getElementById('recapHeadline').textContent = nar.headline || '';
+  document.getElementById('recapBody').innerHTML =
+    nar.paragraphs.map(p => `<p>${p}</p>`).join('');
+}
+
+function renderLastWeek() {
   const title = document.getElementById('lastTitle');
   const rows = document.getElementById('lastRows');
   const stats = document.getElementById('lastStats');
   if (!LW || !LW.week) {
-    title.textContent = 'Last Week\'s Results';
-    document.getElementById('lastSub').textContent = '';
+    title.textContent = 'Last Week';
     stats.innerHTML = '';
-    rows.innerHTML = '<tr><td colspan="11" class="empty">No completed week on record yet. Results post the morning after games.</td></tr>';
+    renderRecap(null);
+    rows.innerHTML = '<tr><td colspan="10" class="empty">No completed week on record yet. Results post the morning after games.</td></tr>';
     return;
   }
   const wk = LW.week;
   const label = wk.seasonType === 'postseason' ? 'Bowls/Playoff' : 'Week ' + wk.week;
-  title.textContent = `${wk.season} ${label} — Model vs. Results`;
-  document.getElementById('backfillNote').style.display = wk.backfilled ? 'block' : 'none';
+  title.textContent = `${wk.season} ${label}`;
+  renderRecap(LW.narrative);
 
-  const tally = { spread: [0, 0, 0], total: [0, 0, 0], moneyline: [0, 0, 0] };
   const games = wk.games.slice().sort((a, b) => (a.startDate || '').localeCompare(b.startDate || ''));
-  let gradedCount = 0;
+  const graded = games.filter(g => g.result);
+  const plays = [];
+  for (const g of graded) for (const c of (g.result.calls || [])) plays.push({ c, g });
+
+  const t = { plays: plays.length, wins: 0, losses: 0, pushes: 0, profit: 0, staked: 0, prob: 0 };
+  let clvBeat = 0, clvMoved = 0;
+  for (const { c, g } of plays) {
+    if (c.outcome === 'win') t.wins++; else if (c.outcome === 'loss') t.losses++; else t.pushes++;
+    t.profit += c.profit || 0;
+    t.staked += (LW.stake || 10);
+    t.prob += c.prob || 0;
+    const pts = driftPts(drift(c, g));
+    if (pts) { clvMoved++; if (pts > 0) clvBeat++; }
+  }
+  const decided = t.wins + t.losses;
+  const winRate = decided ? t.wins / decided : null;
+  const expected = t.plays ? t.prob / t.plays : null;
+  const playedGames = new Set(plays.map(p => p.g.id)).size;
+
+  stats.innerHTML = `
+    <div class="stat"><div class="label">Value plays</div>
+      <div class="value">${fmt.rec(t)}</div>
+      <div class="note">${t.plays} ${t.plays === 1 ? 'play' : 'plays'} on ${playedGames} of ${graded.length} games</div></div>
+    <div class="stat"><div class="label">Win rate</div>
+      <div class="value">${fmt.pct(winRate)}</div>
+      <div class="note">model expected ${fmt.pct(expected)}</div></div>
+    <div class="stat"><div class="label">P/L at $${(LW.stake || 10).toFixed(0)}/play</div>
+      <div class="value ${signClass(t.profit)}">${fmt.money(t.profit)}</div>
+      <div class="note">${t.staked ? fmt.pct(t.profit / t.staked, 1) + ' on $' + t.staked.toFixed(0) + ' risked' : '—'}</div></div>
+    <div class="stat"><div class="label">Market drifted our way</div>
+      <div class="value">${clvMoved ? clvBeat + ' of ' + clvMoved : '—'}</div>
+      <div class="note">${clvMoved ? 'plays whose line moved after the week opened' : 'needs two line captures in a week'}</div></div>`;
+
+  const showNoPlay = document.getElementById('showNoPlay').checked;
+  const out = [];
   for (const g of games) {
-    if (!g.result) continue;
-    gradedCount++;
-    for (const [type, call] of Object.entries(g.result.calls || {})) {
-      const i = { win: 0, loss: 1, push: 2 }[call.outcome];
-      if (i != null) tally[type][i]++;
+    const r = g.result;
+    const final = r
+      ? `<span class="final">${g.awayTeam} ${r.awayScore} — ${g.homeTeam} ${r.homeScore}</span>`
+      : '<span class="books">not final</span>';
+    const matchup = `<td class="cell-main teams" data-label="Matchup"><b>${g.awayTeam}</b><br>at <b>${g.homeTeam}</b>${g.neutralSite ? ' <span class="tag">N</span>' : ''}</td>`;
+    const calls = (r && r.calls) || [];
+    if (!calls.length) {
+      if (!showNoPlay) continue;
+      out.push(`<tr class="noplay">
+        <td class="cell-time" data-label="Kickoff">${fmt.time(g.startDate)}</td>
+        ${matchup}
+        <td data-label="Final">${final}</td>
+        <td data-label="Value play"><span class="books">no play</span></td>
+        <td class="cell-hide" data-label="Edge">—</td>
+        <td class="cell-hide" data-label="Model prob">—</td>
+        <td class="cell-hide" data-label="Line move">—</td>
+        <td class="cell-hide" data-label="Drift">—</td>
+        <td data-label="Result"><span class="ind ind-none">—</span></td>
+        <td class="cell-hide" data-label="P/L">—</td>
+      </tr>`);
+      continue;
+    }
+    for (const c of calls) {
+      const d = drift(c, g);
+      const edge = c.type === 'moneyline'
+        ? fmt.signed(c.edgePts, 0) + ' pp'
+        : (c.edgePts != null ? c.edgePts.toFixed(1) : '—');
+      out.push(`<tr class="value-row">
+        <td class="cell-time" data-label="Kickoff">${fmt.time(g.startDate)}</td>
+        ${matchup}
+        <td data-label="Final">${final}</td>
+        <td data-label="Value play"><b>${c.pick}</b> <span class="books">${c.type}</span></td>
+        <td data-label="Edge" class="${edgeClass(Math.abs(c.edgePts || 0))}">${edge}</td>
+        <td data-label="Model prob">${fmt.pct(c.prob)}</td>
+        <td data-label="Line move">${moveCell(d)}</td>
+        <td data-label="Drift">${driftCell(d)}</td>
+        <td data-label="Result">${ind(c.outcome)}</td>
+        <td data-label="P/L" class="${signClass(c.profit)}">${fmt.money(c.profit)}</td>
+      </tr>`);
     }
   }
-  const rec = t => `${t[0]}–${t[1]}${t[2] ? '–' + t[2] : ''}`;
-  const pct = t => (t[0] + t[1]) ? Math.round(t[0] / (t[0] + t[1]) * 100) + '%' : '—';
-  document.getElementById('lastSub').textContent =
-    `${gradedCount} of ${games.length} games final. ` + (wk.backfilled
-      ? 'Model leans for this week were reconstructed after the games (see note below).'
-      : 'Every game\'s model lean was locked at kickoff and graded against the final score.');
-  stats.innerHTML = `
-    <div class="stat"><div class="label">Against the spread</div><div class="value">${rec(tally.spread)}</div><div class="note">${pct(tally.spread)} of model sides covered</div></div>
-    <div class="stat"><div class="label">Over / Under</div><div class="value">${rec(tally.total)}</div><div class="note">${pct(tally.total)} of model totals hit</div></div>
-    <div class="stat"><div class="label">Straight-up winners</div><div class="value">${rec(tally.moneyline)}</div><div class="note">${pct(tally.moneyline)} of favored teams won</div></div>
-    <div class="stat"><div class="label">Top 5 value plays</div><div class="value"><a href="results.html">See P/L →</a></div><div class="note">$10 flat bets, graded by odds</div></div>`;
-
-  rows.innerHTML = games.map(g => {
-    const m = g.model, ln = g.lines || {}, r = g.result, calls = (r && r.calls) || {};
-    const final = r ? `<span class="final">${g.awayTeam} ${r.awayScore} — ${g.homeTeam} ${r.homeScore}</span>` : '<span class="books">not final</span>';
-    const sp = calls.spread, tt = calls.total, ml = calls.moneyline;
-    const spreadBet = (g.bets || []).find(b => b.type === 'spread');
-    const totalBet = (g.bets || []).find(b => b.type === 'total');
-    const mlBet = (g.bets || []).find(b => b.type === 'moneyline' && b.prob >= 0.5);
-    return `<tr class="${m.lowConfidence ? 'lowconf' : ''}">
-      <td>${fmt.time(g.startDate)}</td>
-      <td class="teams"><b>${g.awayTeam}</b><br>at <b>${g.homeTeam}</b>${g.neutralSite ? ' <span class="tag">N</span>' : ''}</td>
-      <td>${final}</td>
-      <td>${ln.spread != null ? g.homeTeam + ' ' + fmt.spread(ln.spread) : '—'}</td>
-      <td>${spreadBet ? spreadBet.pick : '—'}</td>
-      <td>${ind(sp && sp.outcome)}</td>
-      <td>${ln.total != null ? ln.total : '—'}</td>
-      <td>${totalBet ? totalBet.pick : '—'}</td>
-      <td>${ind(tt && tt.outcome)}</td>
-      <td>${mlBet ? mlBet.team : (m.pHomeWin >= 0.5 ? g.homeTeam : g.awayTeam)}</td>
-      <td>${ind(ml && ml.outcome)}</td>
-    </tr>`;
-  }).join('');
+  rows.innerHTML = out.length ? out.join('')
+    : '<tr><td colspan="10" class="empty">The model found no playable edge in this week\'s games.</td></tr>';
 }
 
+/* --- season record ------------------------------------------------------- */
+
+function tallyRow(t, label, cols) {
+  const cells = {
+    plays: `<td data-label="Plays">${t.plays}</td>`,
+    record: `<td data-label="Record">${t.plays ? fmt.rec(t) : '—'}</td>`,
+    winRate: `<td data-label="Win rate">${fmt.pct(t.winRate, 1)}</td>`,
+    profit: `<td data-label="P/L" class="${signClass(t.profit)}">${t.plays ? fmt.money(t.profit) : '—'}</td>`,
+    roi: `<td data-label="ROI" class="${signClass(t.roi)}">${t.roi == null ? '—' : fmt.pct(t.roi, 1)}</td>`,
+  };
+  return `<tr><td class="cell-main" data-label="">${label}</td>${cols.map(c => cells[c]).join('')}</tr>`;
+}
+
+function renderRecord() {
+  if (!REC) return;
+  const ov = REC.overall, hs = REC.hindsight || { plays: 0 };
+  const stake = REC.stake || 10;
+  const sub = document.getElementById('recordSub');
+  const note = document.getElementById('hindsightNote');
+
+  sub.textContent = ov.plays
+    ? `Every play that cleared the model's thresholds, graded at $${stake.toFixed(0)} flat. `
+      + `Spreads need ${REC.thresholds.spread}+ points of disagreement, totals ${REC.thresholds.total}+, `
+      + `moneylines a ${(REC.thresholds.moneylineProb * 100).toFixed(0)}-point probability gap. Everything else is a no-play.`
+    : 'No week has been graded on a locked pre-kickoff call yet.';
+
+  if (!ov.plays && hs.plays) {
+    note.style.display = 'block';
+    note.innerHTML = `<b>Nothing here yet.</b> The one graded week was backfilled, meaning it was scored `
+      + `with ratings that already knew the results (${fmt.rec(hs)} on ${hs.plays} plays, which is why it `
+      + `does not count). The real record starts with the first week the model calls before kickoff.`;
+  } else if (hs.plays) {
+    note.style.display = 'block';
+    note.innerHTML = `<b>Excluded from these numbers:</b> one backfilled week graded in hindsight `
+      + `(${fmt.rec(hs)}, ${fmt.money(hs.profit)}). It is on the week-by-week table, marked, but it is not a fair test.`;
+  } else {
+    note.style.display = 'none';
+  }
+
+  const clv = REC.clv || {};
+  document.getElementById('recordStats').innerHTML = `
+    <div class="stat"><div class="label">Season record</div>
+      <div class="value">${ov.plays ? fmt.rec(ov) : '—'}</div>
+      <div class="note">${ov.plays} value ${ov.plays === 1 ? 'play' : 'plays'}</div></div>
+    <div class="stat"><div class="label">Win rate</div>
+      <div class="value">${fmt.pct(ov.winRate, 1)}</div>
+      <div class="note">model expected ${fmt.pct(ov.expected, 1)}</div></div>
+    <div class="stat"><div class="label">P/L at $${stake.toFixed(0)}/play</div>
+      <div class="value ${signClass(ov.profit)}">${ov.plays ? fmt.money(ov.profit) : '—'}</div>
+      <div class="note">${ov.roi == null ? '—' : fmt.pct(ov.roi, 1) + ' on $' + ov.staked.toFixed(0) + ' risked'}</div></div>
+    <div class="stat"><div class="label">Top 5 subset</div>
+      <div class="value">${REC.topFive.plays ? fmt.rec(REC.topFive) : '—'}</div>
+      <div class="note">${REC.topFive.plays ? fmt.money(REC.topFive.profit) + ' · published picks' : 'the published picks'}</div></div>
+    <div class="stat"><div class="label">Beat the close</div>
+      <div class="value">${clv.moved ? fmt.pct(clv.beatRate) : '—'}</div>
+      <div class="note">${clv.moved ? clv.beat + ' of ' + clv.moved + ' picks that moved' : 'starts once a full week of lines is on file'}</div></div>`;
+
+  document.getElementById('byTypeRows').innerHTML = REC.byType.map(t =>
+    tallyRow(t, t.label.charAt(0).toUpperCase() + t.label.slice(1),
+             ['plays', 'record', 'winRate', 'profit', 'roi'])).join('')
+    || '<tr><td colspan="6" class="empty">Nothing graded yet.</td></tr>';
+
+  document.getElementById('calRows').innerHTML = REC.calibration.map(t => {
+    const gap = (t.winRate != null && t.expected != null) ? t.winRate - t.expected : null;
+    return `<tr><td class="cell-main" data-label="">${t.label}</td>
+      <td data-label="Plays">${t.plays}</td>
+      <td data-label="Predicted">${fmt.pct(t.expected, 1)}</td>
+      <td data-label="Actual">${fmt.pct(t.winRate, 1)}</td>
+      <td data-label="Gap" class="${signClass(gap)}">${gap == null ? '—' : fmt.signed(gap * 100, 1) + ' pp'}</td></tr>`;
+  }).join('');
+
+  document.getElementById('evRows').innerHTML = REC.byEv.map(t =>
+    tallyRow(t, t.label, ['plays', 'record', 'winRate', 'profit', 'roi'])).join('');
+
+  document.getElementById('weekRows').innerHTML = REC.byWeek.length
+    ? REC.byWeek.slice().reverse().map(w => {
+        const label = (w.seasonType === 'postseason' ? 'Bowls' : 'Week ' + w.week)
+          + (w.backfilled ? ' <span class="tag">hindsight</span>' : '');
+        return `<tr class="${w.backfilled ? 'noplay' : ''}">
+          <td class="cell-main" data-label="">${label}</td>
+          <td data-label="Games">${w.gamesGraded}</td>
+          <td data-label="Played">${w.gamesWithPlay}</td>
+          <td data-label="Passed">${w.noPlay}</td>
+          <td data-label="Record">${fmt.rec(w)}</td>
+          <td data-label="Win rate">${fmt.pct(w.winRate, 1)}</td>
+          <td data-label="P/L" class="${signClass(w.profit)}">${fmt.money(w.profit)}</td></tr>`;
+      }).join('')
+    : '<tr><td colspan="7" class="empty">No graded weeks yet.</td></tr>';
+}
+
+/* --- shell --------------------------------------------------------------- */
+
+const TABS = { board: 'tabBoard', last: 'tabLast', record: 'tabRecord' };
+
 function showTab(name) {
+  if (!TABS[name]) name = 'board';
   document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.tab === name));
-  document.getElementById('tabBoard').hidden = name !== 'board';
-  document.getElementById('tabLast').hidden = name !== 'last';
-  if (name === 'last') history.replaceState(null, '', '#last'); else history.replaceState(null, '', location.pathname);
+  for (const [key, id] of Object.entries(TABS)) document.getElementById(id).hidden = key !== name;
+  history.replaceState(null, '', name === 'board' ? location.pathname : '#' + name);
 }
 
 async function init() {
   document.querySelectorAll('.tab').forEach(t => t.addEventListener('click', () => showTab(t.dataset.tab)));
-  if (location.hash === '#last') showTab('last');
+  document.getElementById('showNoPlay').addEventListener('change', renderLastWeek);
+
   try {
-    const resp = await fetch('data.json?t=' + Date.now());
-    DATA = await resp.json();
+    DATA = await (await fetch('data.json?t=' + Date.now())).json();
   } catch (e) {
     document.getElementById('weekLabel').textContent = 'Could not load data.json';
     return;
   }
-  fetch('lastweek.json?t=' + Date.now()).then(r => r.json()).then(renderLastWeek)
-    .catch(() => renderLastWeek(null));
   const st = DATA.seasonType === 'postseason' ? 'Bowls/Playoff' : 'Week ' + DATA.week;
   document.getElementById('weekLabel').textContent = `${DATA.season} · ${st}`;
-  document.getElementById('stamp').textContent =
-    'Updated ' + new Date(DATA.generatedAt).toLocaleString();
+  document.getElementById('stamp').textContent = 'Updated ' + new Date(DATA.generatedAt).toLocaleString();
   if (DATA.demo) document.getElementById('demoBanner').style.display = 'block';
   renderTop();
   renderBoard();
   ['search', 'valueOnly', 'hideLowConf', 'sortBy'].forEach(id =>
     document.getElementById(id).addEventListener('input', renderBoard));
+
+  fetch('lastweek.json?t=' + Date.now()).then(r => r.json())
+    .then(d => { LW = d; renderLastWeek(); })
+    .catch(() => { LW = null; renderLastWeek(); });
+  fetch('modelrecord.json?t=' + Date.now()).then(r => r.json())
+    .then(d => { REC = d; renderRecord(); })
+    .catch(() => {});
+
+  showTab((location.hash || '').replace('#', '') || 'board');
 }
 init();
 </script>
