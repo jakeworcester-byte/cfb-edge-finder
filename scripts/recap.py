@@ -84,6 +84,15 @@ SCHEMA = {
     },
 }
 
+LAST_ERROR = None            # why the most recent attempt fell back, for the store
+
+def _fail(reason):
+    global LAST_ERROR
+    LAST_ERROR = reason
+    print(f"recap: builtin ({reason})", file=sys.stderr)
+    return None
+
+
 NUM_RE = re.compile(r"-?\d+(?:,\d{3})*(?:\.\d+)?")
 DASHES = re.compile(r"\s*[—–]\s*")
 
@@ -160,14 +169,14 @@ def _prompt(facts, recent):
 
 def write_recap(facts, recent=None):
     """Returns {"headline", "paragraphs", "source"} or None."""
+    global LAST_ERROR
+    LAST_ERROR = None
     if not os.environ.get("ANTHROPIC_API_KEY", "").strip():
-        print("recap: builtin (no ANTHROPIC_API_KEY)", file=sys.stderr)
-        return None
+        return _fail("no ANTHROPIC_API_KEY")
     try:
         import anthropic
     except ImportError:
-        print("recap: builtin (anthropic package not installed)", file=sys.stderr)
-        return None
+        return _fail("anthropic package not installed")
 
     try:
         client = anthropic.Anthropic()
@@ -179,15 +188,12 @@ def write_recap(facts, recent=None):
             messages=[{"role": "user", "content": _prompt(facts, recent)}],
         )
     except Exception as e:                      # noqa: BLE001 - never fail the build
-        print(f"recap: builtin ({type(e).__name__}: {e})", file=sys.stderr)
-        return None
+        return _fail(f"{type(e).__name__}: {e}")
 
     if response.stop_reason == "max_tokens":
-        print("recap: builtin (hit max_tokens)", file=sys.stderr)
-        return None
+        return _fail("hit max_tokens")
     if response.stop_reason == "refusal":
-        print("recap: builtin (refused)", file=sys.stderr)
-        return None
+        return _fail("refused")
 
     try:
         text = next(b.text for b in response.content if b.type == "text")
@@ -195,12 +201,10 @@ def write_recap(facts, recent=None):
         headline = str(out["headline"]).strip()
         paragraphs = [str(p).strip() for p in out["paragraphs"] if str(p).strip()]
     except (StopIteration, KeyError, TypeError, ValueError) as e:
-        print(f"recap: builtin (unreadable output: {e})", file=sys.stderr)
-        return None
+        return _fail(f"unreadable output: {e}")
 
     if not headline or not paragraphs:
-        print("recap: builtin (empty output)", file=sys.stderr)
-        return None
+        return _fail("empty output")
     paragraphs = paragraphs[:MAX_PARAGRAPHS]
 
     # commas instead of dashes, belt and braces over the instruction
@@ -211,8 +215,7 @@ def write_recap(facts, recent=None):
     for chunk in [headline] + paragraphs:
         bad = first_bad_number(chunk, allowed)
         if bad:
-            print(f"recap: builtin (invented the number {bad})", file=sys.stderr)
-            return None
+            return _fail(f"invented the number {bad}")
 
     usage = getattr(response, "usage", None)
     if usage:

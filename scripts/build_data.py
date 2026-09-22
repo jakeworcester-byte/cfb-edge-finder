@@ -1340,12 +1340,14 @@ def compose_narrative(boards, ledger, record, now):
                 "source": store.get("source", "claude"),
                 "writtenAt": store.get("generatedAt")}
 
-    written = None
+    written, why = None, None
     try:
         import recap
         written = recap.write_recap(facts, store.get("recent"))
+        why = None if written else recap.LAST_ERROR
     except Exception as e:                      # noqa: BLE001 - never fail the build
-        print(f"recap: builtin ({type(e).__name__}: {e})", file=sys.stderr)
+        why = f"{type(e).__name__}: {e}"
+        print(f"recap: builtin ({why})", file=sys.stderr)
 
     chosen = {**builtin, **written} if written else builtin
 
@@ -1358,6 +1360,8 @@ def compose_narrative(boards, ledger, record, now):
         # only pin the hash on a real write, so a transient failure retries
         "factsHash": fhash if written else None,
         "source": chosen["source"],
+        # committed by the workflow, so a failure is readable without the log
+        "lastError": why,
         "generatedAt": now.isoformat(),
         "headline": chosen["headline"],
         "paragraphs": chosen["paragraphs"],
@@ -1625,7 +1629,13 @@ def main():
         attach_clv(ledger, boards)
 
         record = build_model_record(boards, ledger, now)
-        narrative = compose_narrative(boards, ledger, record, now)
+        try:
+            narrative = compose_narrative(boards, ledger, record, now)
+        except Exception as e:                  # noqa: BLE001 - prose is optional
+            import traceback
+            traceback.print_exc()
+            print(f"recap: builtin (compose crashed: {type(e).__name__}: {e})", file=sys.stderr)
+            narrative = build_narrative(boards, ledger, record, now)
 
         LEDGER_PATH.parent.mkdir(parents=True, exist_ok=True)
         LEDGER_PATH.write_text(json.dumps(ledger, indent=1), encoding="utf-8")
