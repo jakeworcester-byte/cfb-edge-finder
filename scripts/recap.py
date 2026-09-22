@@ -73,7 +73,9 @@ SCHEMA = {
             "paragraphs": {
                 "type": "array",
                 "items": {"type": "string"},
-                "minItems": 2,
+                # structured outputs only accept minItems 0 or 1, so the
+                # two-paragraph floor lives in the prompt, not the schema
+                "minItems": 1,
                 "maxItems": MAX_PARAGRAPHS,
             },
         },
