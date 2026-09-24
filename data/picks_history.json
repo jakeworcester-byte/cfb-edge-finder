@@ -167,7 +167,7 @@
    "prob": 0.408,
    "ev": 0.5915,
    "detail": "Model win prob 41% vs implied 26%",
-   "pickedAt": "2026-09-22T18:26:17.814358+00:00",
+   "pickedAt": "2026-09-24T18:46:01.766973+00:00",
    "openLine": null,
    "openPrice": 290,
    "openAt": "2026-09-22T01:39:56.667075+00:00",
@@ -175,7 +175,35 @@
    "clv": {
     "probPts": 0.0,
     "closePrice": 290,
-    "at": "2026-09-22T18:26:16.266848+00:00"
+    "at": "2026-09-24T18:45:58.634948+00:00"
+   }
+  },
+  {
+   "season": 2026,
+   "seasonType": "regular",
+   "week": 4,
+   "gameId": 401864511,
+   "matchup": "Northern Illinois @ Georgia State",
+   "homeTeam": "Georgia State",
+   "awayTeam": "Northern Illinois",
+   "startDate": "2026-09-26T18:00:00.000Z",
+   "type": "moneyline",
+   "pick": "Northern Illinois ML +300",
+   "side": "away",
+   "line": null,
+   "price": 300,
+   "prob": 0.36,
+   "ev": 0.4409,
+   "detail": "Model win prob 36% vs implied 25%",
+   "pickedAt": "2026-09-24T18:46:01.766986+00:00",
+   "openLine": null,
+   "openPrice": 295,
+   "openAt": "2026-09-22T01:39:56.667090+00:00",
+   "result": null,
+   "clv": {
+    "probPts": -0.3,
+    "closePrice": 300,
+    "at": "2026-09-24T18:45:58.634948+00:00"
    }
   },
   {
@@ -195,7 +223,7 @@
    "prob": 0.377,
    "ev": 0.4331,
    "detail": "Model win prob 38% vs implied 26%",
-   "pickedAt": "2026-09-22T18:26:17.814368+00:00",
+   "pickedAt": "2026-09-24T18:46:01.766992+00:00",
    "openLine": null,
    "openPrice": 285,
    "openAt": "2026-09-20T15:21:33.874364+00:00",
@@ -203,34 +231,6 @@
    "clv": {
     "probPts": 0.3,
     "closePrice": 280,
-    "at": "2026-09-22T01:39:55.147688+00:00"
-   }
-  },
-  {
-   "season": 2026,
-   "seasonType": "regular",
-   "week": 4,
-   "gameId": 401864511,
-   "matchup": "Northern Illinois @ Georgia State",
-   "homeTeam": "Georgia State",
-   "awayTeam": "Northern Illinois",
-   "startDate": "2026-09-26T18:00:00.000Z",
-   "type": "moneyline",
-   "pick": "Northern Illinois ML +295",
-   "side": "away",
-   "line": null,
-   "price": 295,
-   "prob": 0.36,
-   "ev": 0.4229,
-   "detail": "Model win prob 36% vs implied 25%",
-   "pickedAt": "2026-09-22T18:26:17.814374+00:00",
-   "openLine": null,
-   "openPrice": 295,
-   "openAt": "2026-09-22T01:39:56.667090+00:00",
-   "result": null,
-   "clv": {
-    "probPts": 0.0,
-    "closePrice": 295,
     "at": "2026-09-22T01:39:55.147688+00:00"
    }
   },
@@ -251,7 +251,7 @@
    "prob": 0.734,
    "ev": 0.4019,
    "detail": "Model total 56.5 vs market 48",
-   "pickedAt": "2026-09-22T18:26:17.814378+00:00",
+   "pickedAt": "2026-09-24T18:46:01.766997+00:00",
    "openLine": 48.0,
    "openPrice": -110,
    "openAt": "2026-09-22T01:39:56.667095+00:00",
@@ -259,7 +259,7 @@
    "clv": {
     "pts": 0.0,
     "closeLine": 48.0,
-    "at": "2026-09-22T01:39:55.147688+00:00"
+    "at": "2026-09-24T18:45:58.634948+00:00"
    }
   },
   {
@@ -279,7 +279,7 @@
    "prob": 0.519,
    "ev": 0.4,
    "detail": "Model win prob 52% vs implied 37%",
-   "pickedAt": "2026-09-22T18:26:17.814381+00:00",
+   "pickedAt": "2026-09-24T18:46:01.767002+00:00",
    "openLine": null,
    "openPrice": 170,
    "openAt": "2026-09-22T01:39:56.667100+00:00",
@@ -287,7 +287,7 @@
    "clv": {
     "probPts": 0.0,
     "closePrice": 170,
-    "at": "2026-09-22T18:26:16.266848+00:00"
+    "at": "2026-09-24T18:45:58.634948+00:00"
    }
   }
  ]
