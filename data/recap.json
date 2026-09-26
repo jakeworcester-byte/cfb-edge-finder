@@ -1,14 +1,15 @@
 {
- "weekKey": "2026-regular-3",
- "factsHash": "27f7a3b9d5c4f1c1",
- "source": "claude",
- "lastError": null,
- "generatedAt": "2026-09-22T02:29:17.326034+00:00",
- "headline": "The Model Cleaned Up After The Games Were Already Over",
+ "weekKey": "2026-regular-4",
+ "factsHash": null,
+ "source": "builtin",
+ "lastError": "invented the number 82",
+ "generatedAt": "2026-09-26T16:12:54.691162+00:00",
+ "headline": "5-2 on 7 value plays, +$24.96",
  "paragraphs": [
-  "Fair warning before anyone frames the number: Week 3 was graded in hindsight, which means the model got to fill out its card with the box scores sitting right there. It went 40-25-1 on 66 plays for +110.47 and a 16.7 percent ROI. Impressive in the way that shooting free throws in an empty gym is impressive. The real ledger still reads zero weeks graded, zero plays, zero dollars.",
-  "Inside the retrospective fantasy, the spread was doing the heavy lifting: 26-13-1 across 40 plays, +106.34, a 26.6 percent ROI. Totals went 8-8 for a loss of 7.28, which is a lot of typing for nothing, and the ten moneylines came back 6-4 and +11.41. Best call was Northern Illinois plus 34.5 at a 9.6 point edge, cashed by a mile in a 42-17 game. The model's favorite loser was Florida International at plus 225, a 12.4 point edge that finished 16-10 the wrong way.",
-  "The part that actually happened in public is the part that hurt. The published top five went 2-3 for minus 11.82 and a negative 23.6 percent ROI, off an expected win rate of 68.1 percent. So the model hit 61.5 percent on the 66 games nobody was watching and 40 percent on the five it stood behind. Overall win rate matched the expectation exactly, which is either calibration or the universe's driest joke."
+  "The model looked at 6 games in Week 4. It found a playable edge in 4 of them and left the other 2 alone. Those plays went 5-2, worth +$24.96 at $10 a play (35.7% on the $70 at risk).",
+  "By market, spreads went 2-0, totals went 1-2 and moneylines went 2-0. The best of them was Over 50 in Liberty at Coastal Carolina, a 5.5-point disagreement with the market that finished Liberty 34, Coastal Carolina 17. The one that stung was Over 48 in Army at Temple, a 8.5-point disagreement with the market that finished Army 21, Temple 17.",
+  "The five plays that actually got published went 0-1 for -$10.00, behind the full board. Ranking by expected value is supposed to concentrate the good ones at the top, and whether it does is something only a season of these will answer.",
+  "Season to date the model has made 7 value plays and gone 5-2, +$24.96 on flat $10 bets (35.7%). It expected to win 64% of those and won 71%. Treat all of it as early. At 7 plays the record is still mostly noise, and the thing worth watching is not the win rate but whether the market keeps moving toward these numbers."
  ],
  "recent": [
   {
@@ -16,6 +17,12 @@
    "label": "Week 3",
    "headline": "The Model Cleaned Up After The Games Were Already Over",
    "opening": "Fair warning before anyone frames the number: Week 3 was graded in hindsight, which means the model got to fill out its card with the box scores sitting right t"
+  },
+  {
+   "weekKey": "2026-regular-4",
+   "label": "Week 4",
+   "headline": "5-2 on 7 value plays, +$24.96",
+   "opening": "The model looked at 6 games in Week 4. It found a playable edge in 4 of them and left the other 2 alone. Those plays went 5-2, worth +$24.96 at $10 a play (35.7"
   }
  ]
 }
