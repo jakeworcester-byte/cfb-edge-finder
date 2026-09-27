@@ -1,15 +1,15 @@
 {
  "weekKey": "2026-regular-4",
- "factsHash": null,
- "source": "builtin",
- "lastError": "invented the number 82",
- "generatedAt": "2026-09-26T16:12:54.691162+00:00",
- "headline": "5-2 on 7 value plays, +$24.96",
+ "factsHash": "738bb5b883601614",
+ "source": "claude",
+ "lastError": null,
+ "generatedAt": "2026-09-27T13:46:05.784736+00:00",
+ "headline": "Eighty-One Plays, One Hundred Eighty-Three Dollars, Zero Excuses",
  "paragraphs": [
-  "The model looked at 6 games in Week 4. It found a playable edge in 4 of them and left the other 2 alone. Those plays went 5-2, worth +$24.96 at $10 a play (35.7% on the $70 at risk).",
-  "By market, spreads went 2-0, totals went 1-2 and moneylines went 2-0. The best of them was Over 50 in Liberty at Coastal Carolina, a 5.5-point disagreement with the market that finished Liberty 34, Coastal Carolina 17. The one that stung was Over 48 in Army at Temple, a 8.5-point disagreement with the market that finished Army 21, Temple 17.",
-  "The five plays that actually got published went 0-1 for -$10.00, behind the full board. Ranking by expected value is supposed to concentrate the good ones at the top, and whether it does is something only a season of these will answer.",
-  "Season to date the model has made 7 value plays and gone 5-2, +$24.96 on flat $10 bets (35.7%). It expected to win 64% of those and won 71%. Treat all of it as early. At 7 plays the record is still mostly noise, and the thing worth watching is not the win rate but whether the market keeps moving toward these numbers."
+  "Week 4 got graded in real time, no box scores peeking over the model's shoulder, and the result was a bloodbath. It looked at 71 games, found something it liked in 46 of them, passed on 25, and fired off 81 plays at $10 each. Final tally: 31-48-2 for a loss of $183.21, an ROI of minus 22.6 percent. The model expected to win 59.5 percent of these. It won 39.2 percent.",
+  "The moneyline is where the wheels detached and rolled into a ditch. Twenty plays, 5-15, minus $89.55, an ROI of minus 44.8 percent, and the model walked in expecting 51 percent. Spreads went 18-21-1 for minus $46.38 and totals went 8-12-1 for minus $47.28, so nothing was healthy, but the moneylines were the ones actively setting money on fire. Texas A&M at +290 was the loudest, 15.2 points of claimed edge, final score LSU 35, Texas A&M 6.",
+  "There were two nights of genuine brilliance in there. Iowa 20, Michigan 19 paid off three ways, including Over 38.5 at a 7.6 point edge and Iowa moneyline at +180 for a tidy $18. Cincinnati moneyline at +200 returned $20 out of a 31-26 win. The published top five, the plays actually put in front of readers, went 1-4 for minus $30.91 and an ROI of minus 61.8 percent. That one stings differently.",
+  "For context on how little the market agreed: 51 plays saw their line move, and only 20 of them, 39.2 percent, moved toward the model. One week graded for real, one season record of 31-48-2, minus $183.21 on $810 staked. The hindsight week sitting in the archive at 40-25-1 and plus $110.47 can stay there looking pretty. It never had to guess."
  ],
  "recent": [
   {
@@ -21,8 +21,8 @@
   {
    "weekKey": "2026-regular-4",
    "label": "Week 4",
-   "headline": "5-2 on 7 value plays, +$24.96",
-   "opening": "The model looked at 6 games in Week 4. It found a playable edge in 4 of them and left the other 2 alone. Those plays went 5-2, worth +$24.96 at $10 a play (35.7"
+   "headline": "Eighty-One Plays, One Hundred Eighty-Three Dollars, Zero Excuses",
+   "opening": "Week 4 got graded in real time, no box scores peeking over the model's shoulder, and the result was a bloodbath. It looked at 71 games, found something it liked"
   }
  ]
 }

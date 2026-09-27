@@ -204,7 +204,12 @@
    "openLine": null,
    "openPrice": 290,
    "openAt": "2026-09-22T01:39:56.667075+00:00",
-   "result": null,
+   "result": {
+    "homeScore": 35,
+    "awayScore": 6,
+    "outcome": "loss",
+    "profit": -10.0
+   },
    "clv": {
     "probPts": 0.0,
     "closePrice": 290,
@@ -232,7 +237,12 @@
    "openLine": null,
    "openPrice": 170,
    "openAt": "2026-09-22T01:39:56.667100+00:00",
-   "result": null,
+   "result": {
+    "homeScore": 24,
+    "awayScore": 21,
+    "outcome": "loss",
+    "profit": -10.0
+   },
    "clv": {
     "probPts": 0.0,
     "closePrice": 170,
@@ -260,7 +270,12 @@
    "openLine": null,
    "openPrice": 195,
    "openAt": "2026-09-26T16:12:56.247784+00:00",
-   "result": null,
+   "result": {
+    "homeScore": 33,
+    "awayScore": 36,
+    "outcome": "loss",
+    "profit": -10.0
+   },
    "clv": {
     "probPts": 0.0,
     "closePrice": 195,
@@ -288,11 +303,156 @@
    "openLine": 38.5,
    "openPrice": -110,
    "openAt": "2026-09-26T16:12:56.247790+00:00",
-   "result": null,
+   "result": {
+    "homeScore": 19,
+    "awayScore": 20,
+    "outcome": "win",
+    "profit": 9.09
+   },
    "clv": {
     "pts": 0.0,
     "closeLine": 38.5,
     "at": "2026-09-26T16:12:54.691162+00:00"
+   }
+  },
+  {
+   "season": 2026,
+   "seasonType": "regular",
+   "week": 5,
+   "gameId": 401858245,
+   "matchup": "Pittsburgh @ Virginia Tech",
+   "homeTeam": "Virginia Tech",
+   "awayTeam": "Pittsburgh",
+   "startDate": "2026-10-02T23:00:00.000Z",
+   "type": "moneyline",
+   "pick": "Pittsburgh ML +180",
+   "side": "away",
+   "line": null,
+   "price": 180,
+   "prob": 0.503,
+   "ev": 0.408,
+   "detail": "Model win prob 50% vs implied 36%",
+   "pickedAt": "2026-09-27T13:46:08.048274+00:00",
+   "openLine": null,
+   "openPrice": 180,
+   "openAt": "2026-09-27T13:46:08.048285+00:00",
+   "result": null,
+   "clv": {
+    "probPts": 0.0,
+    "closePrice": 180,
+    "at": "2026-09-27T13:46:05.784736+00:00"
+   }
+  },
+  {
+   "season": 2026,
+   "seasonType": "regular",
+   "week": 5,
+   "gameId": 401858479,
+   "matchup": "Michigan State @ Wisconsin",
+   "homeTeam": "Wisconsin",
+   "awayTeam": "Michigan State",
+   "startDate": "2026-10-03T16:30:00.000Z",
+   "type": "moneyline",
+   "pick": "Michigan State ML +285",
+   "side": "away",
+   "line": null,
+   "price": 285,
+   "prob": 0.358,
+   "ev": 0.3781,
+   "detail": "Model win prob 36% vs implied 26%",
+   "pickedAt": "2026-09-27T13:46:08.048292+00:00",
+   "openLine": null,
+   "openPrice": 285,
+   "openAt": "2026-09-27T13:46:08.048295+00:00",
+   "result": null,
+   "clv": {
+    "probPts": 0.0,
+    "closePrice": 285,
+    "at": "2026-09-27T13:46:05.784736+00:00"
+   }
+  },
+  {
+   "season": 2026,
+   "seasonType": "regular",
+   "week": 5,
+   "gameId": 401856820,
+   "matchup": "Cincinnati @ Arizona",
+   "homeTeam": "Arizona",
+   "awayTeam": "Cincinnati",
+   "startDate": "2026-10-04T03:00:00.000Z",
+   "type": "moneyline",
+   "pick": "Cincinnati ML +230",
+   "side": "away",
+   "line": null,
+   "price": 230,
+   "prob": 0.408,
+   "ev": 0.345,
+   "detail": "Model win prob 41% vs implied 30%",
+   "pickedAt": "2026-09-27T13:46:08.048299+00:00",
+   "openLine": null,
+   "openPrice": 230,
+   "openAt": "2026-09-27T13:46:08.048301+00:00",
+   "result": null,
+   "clv": {
+    "probPts": 0.0,
+    "closePrice": 230,
+    "at": "2026-09-27T13:46:05.784736+00:00"
+   }
+  },
+  {
+   "season": 2026,
+   "seasonType": "regular",
+   "week": 5,
+   "gameId": 401856708,
+   "matchup": "Florida @ Missouri",
+   "homeTeam": "Missouri",
+   "awayTeam": "Florida",
+   "startDate": "2026-10-03T19:30:00.000Z",
+   "type": "total",
+   "pick": "Under 56.5",
+   "side": "under",
+   "line": 56.5,
+   "price": -110,
+   "prob": 0.697,
+   "ev": 0.33,
+   "detail": "Model total 49.5 vs market 56.5",
+   "pickedAt": "2026-09-27T13:46:08.048305+00:00",
+   "openLine": 56.5,
+   "openPrice": -110,
+   "openAt": "2026-09-27T13:46:08.048307+00:00",
+   "result": null,
+   "clv": {
+    "pts": 0.0,
+    "closeLine": 56.5,
+    "at": "2026-09-27T13:46:05.784736+00:00"
+   }
+  },
+  {
+   "season": 2026,
+   "seasonType": "regular",
+   "week": 5,
+   "gameId": 401856707,
+   "matchup": "Alabama @ Mississippi State",
+   "homeTeam": "Mississippi State",
+   "awayTeam": "Alabama",
+   "startDate": "2026-10-03T16:00:00.000Z",
+   "type": "total",
+   "pick": "Under 59.5",
+   "side": "under",
+   "line": 59.5,
+   "price": -110,
+   "prob": 0.651,
+   "ev": 0.2434,
+   "detail": "Model total 54.2 vs market 59.5",
+   "pickedAt": "2026-09-27T13:46:08.048314+00:00",
+   "openLine": 59.5,
+   "openPrice": -110,
+   "openAt": "2026-09-27T13:46:08.048316+00:00",
+   "result": null,
+   "clv": {
+    "pts": 0.0,
+    "closeLine": 59.5,
+    "at": "2026-09-27T13:46:05.784736+00:00"
    }
   }
  ]

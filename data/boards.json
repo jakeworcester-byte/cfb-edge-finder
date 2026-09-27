@@ -975,7 +975,11 @@
        "detail": "Model win prob 82% vs implied 85%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 10,
+      "awayScore": 38,
+      "calls": []
+     },
      "lockedAt": "2026-09-24T18:45:58.634948+00:00",
      "lineHistory": [
       {
@@ -1107,7 +1111,11 @@
        "detail": "Model win prob 25% vs implied 25%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 23,
+      "awayScore": 13,
+      "calls": []
+     },
      "lockedAt": "2026-09-24T18:45:58.634948+00:00",
      "lineHistory": [
       {
@@ -1239,7 +1247,36 @@
        "detail": "Model win prob 78% vs implied 86%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 14,
+      "awayScore": 21,
+      "calls": [
+       {
+        "type": "spread",
+        "pick": "Boston College +14",
+        "side": "home",
+        "line": 14.0,
+        "price": -110,
+        "prob": 0.562,
+        "edgePts": 2.1,
+        "ev": 0.073,
+        "outcome": "win",
+        "profit": 9.09
+       },
+       {
+        "type": "total",
+        "pick": "Over 47.5",
+        "side": "over",
+        "line": 47.5,
+        "price": -110,
+        "prob": 0.655,
+        "edgePts": 5.4,
+        "ev": 0.2513,
+        "outcome": "loss",
+        "profit": -10.0
+       }
+      ]
+     },
      "lockedAt": "2026-09-24T18:45:58.634948+00:00",
      "lineHistory": [
       {
@@ -1378,7 +1415,36 @@
        "detail": "Model win prob 48% vs implied 42%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 26,
+      "awayScore": 13,
+      "calls": [
+       {
+        "type": "spread",
+        "pick": "Ball State +3",
+        "side": "away",
+        "line": 3.0,
+        "price": -110,
+        "prob": 0.562,
+        "edgePts": 2.1,
+        "ev": 0.0721,
+        "outcome": "loss",
+        "profit": -10.0
+       },
+       {
+        "type": "moneyline",
+        "pick": "Ball State ML +140",
+        "side": "away",
+        "line": null,
+        "price": 140,
+        "prob": 0.477,
+        "edgePts": 6.0,
+        "ev": 0.144,
+        "outcome": "loss",
+        "profit": -10.0
+       }
+      ]
+     },
      "lockedAt": "2026-09-24T18:45:58.634948+00:00",
      "lineHistory": [
       {
@@ -1510,7 +1576,36 @@
        "detail": "Model win prob 24% vs implied 20%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 27,
+      "awayScore": 30,
+      "calls": [
+       {
+        "type": "spread",
+        "pick": "Wake Forest +14",
+        "side": "away",
+        "line": 14.0,
+        "price": -110,
+        "prob": 0.587,
+        "edgePts": 3.0,
+        "ev": 0.1204,
+        "outcome": "win",
+        "profit": 9.09
+       },
+       {
+        "type": "total",
+        "pick": "Under 57",
+        "side": "under",
+        "line": 57.0,
+        "price": -110,
+        "prob": 0.629,
+        "edgePts": 4.5,
+        "ev": 0.2011,
+        "outcome": "push",
+        "profit": 0.0
+       }
+      ]
+     },
      "lockedAt": "2026-09-24T18:45:58.634948+00:00",
      "lineHistory": [
       {
@@ -1642,7 +1737,24 @@
        "detail": "Model win prob 8% vs implied 6%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 42,
+      "awayScore": 19,
+      "calls": [
+       {
+        "type": "spread",
+        "pick": "Illinois +27",
+        "side": "away",
+        "line": 27.0,
+        "price": -110,
+        "prob": 0.657,
+        "edgePts": 5.5,
+        "ev": 0.255,
+        "outcome": "win",
+        "profit": 9.09
+       }
+      ]
+     },
      "lockedAt": "2026-09-24T18:45:58.634948+00:00",
      "lineHistory": [
       {
@@ -1711,7 +1823,11 @@
       "mlAway": null
      },
      "bets": [],
-     "result": null,
+     "result": {
+      "homeScore": 59,
+      "awayScore": 0,
+      "calls": []
+     },
      "lockedAt": "2026-09-24T18:45:58.634948+00:00",
      "lineHistory": [
       {
@@ -1836,7 +1952,11 @@
        "detail": "Model win prob 60% vs implied 64%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 17,
+      "awayScore": 20,
+      "calls": []
+     },
      "lockedAt": "2026-09-24T18:45:58.634948+00:00",
      "lineHistory": [
       {
@@ -1949,7 +2069,24 @@
        "detail": "Model total 52.8 vs market 56"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 49,
+      "awayScore": 14,
+      "calls": [
+       {
+        "type": "spread",
+        "pick": "Sam Houston +34.5",
+        "side": "away",
+        "line": 34.5,
+        "price": -110,
+        "prob": 0.599,
+        "edgePts": 3.4,
+        "ev": 0.1431,
+        "outcome": "loss",
+        "profit": -10.0
+       }
+      ]
+     },
      "lockedAt": "2026-09-24T18:45:58.634948+00:00",
      "lineHistory": [
       {
@@ -2088,7 +2225,11 @@
        "detail": "Model win prob 44% vs implied 45%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 41,
+      "awayScore": 16,
+      "calls": []
+     },
      "lockedAt": "2026-09-24T18:45:58.634948+00:00",
      "lineHistory": [
       {
@@ -2227,7 +2368,36 @@
        "detail": "Model win prob 31% vs implied 20%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 59,
+      "awayScore": 45,
+      "calls": [
+       {
+        "type": "spread",
+        "pick": "Colorado State +13.5",
+        "side": "away",
+        "line": 13.5,
+        "price": -110,
+        "prob": 0.671,
+        "edgePts": 6.0,
+        "ev": 0.2813,
+        "outcome": "loss",
+        "profit": -10.0
+       },
+       {
+        "type": "total",
+        "pick": "Under 58.5",
+        "side": "under",
+        "line": 58.5,
+        "price": -110,
+        "prob": 0.619,
+        "edgePts": 4.1,
+        "ev": 0.1823,
+        "outcome": "loss",
+        "profit": -10.0
+       }
+      ]
+     },
      "lockedAt": "2026-09-24T18:45:58.634948+00:00",
      "lineHistory": [
       {
@@ -2359,7 +2529,24 @@
        "detail": "Model win prob 14% vs implied 10%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 45,
+      "awayScore": 21,
+      "calls": [
+       {
+        "type": "spread",
+        "pick": "South Alabama +20.5",
+        "side": "away",
+        "line": 20.5,
+        "price": -110,
+        "prob": 0.617,
+        "edgePts": 4.0,
+        "ev": 0.1785,
+        "outcome": "loss",
+        "profit": -10.0
+       }
+      ]
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -2443,7 +2630,11 @@
       "mlAway": 1200
      },
      "bets": [],
-     "result": null,
+     "result": {
+      "homeScore": 29,
+      "awayScore": 3,
+      "calls": []
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -2575,7 +2766,36 @@
        "detail": "Model win prob 48% vs implied 56%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 3,
+      "awayScore": 54,
+      "calls": [
+       {
+        "type": "spread",
+        "pick": "Maryland +2.5",
+        "side": "home",
+        "line": 2.5,
+        "price": -110,
+        "prob": 0.6,
+        "edgePts": 3.4,
+        "ev": 0.1459,
+        "outcome": "loss",
+        "profit": -10.0
+       },
+       {
+        "type": "moneyline",
+        "pick": "Maryland ML +120",
+        "side": "home",
+        "line": null,
+        "price": 120,
+        "prob": 0.524,
+        "edgePts": 6.9,
+        "ev": 0.1526,
+        "outcome": "loss",
+        "profit": -10.0
+       }
+      ]
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -2721,7 +2941,24 @@
        "detail": "Model win prob 36% vs implied 24%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 35,
+      "awayScore": 14,
+      "calls": [
+       {
+        "type": "spread",
+        "pick": "Northern Illinois +10",
+        "side": "away",
+        "line": 10.0,
+        "price": -110,
+        "prob": 0.629,
+        "edgePts": 4.5,
+        "ev": 0.2013,
+        "outcome": "loss",
+        "profit": -10.0
+       }
+      ]
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -2860,7 +3097,11 @@
        "detail": "Model win prob 95% vs implied 98%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 10,
+      "awayScore": 49,
+      "calls": []
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -2944,7 +3185,11 @@
       "mlAway": null
      },
      "bets": [],
-     "result": null,
+     "result": {
+      "homeScore": 34,
+      "awayScore": 7,
+      "calls": []
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -3076,7 +3321,48 @@
        "detail": "Model win prob 66% vs implied 57%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 27,
+      "awayScore": 10,
+      "calls": [
+       {
+        "type": "spread",
+        "pick": "Hawai'i -2",
+        "side": "away",
+        "line": -2.0,
+        "price": -110,
+        "prob": 0.624,
+        "edgePts": 4.3,
+        "ev": 0.191,
+        "outcome": "loss",
+        "profit": -10.0
+       },
+       {
+        "type": "total",
+        "pick": "Over 43.5",
+        "side": "over",
+        "line": 43.5,
+        "price": -110,
+        "prob": 0.619,
+        "edgePts": 4.1,
+        "ev": 0.1823,
+        "outcome": "loss",
+        "profit": -10.0
+       },
+       {
+        "type": "moneyline",
+        "pick": "Hawai'i ML -130",
+        "side": "away",
+        "line": null,
+        "price": -130,
+        "prob": 0.657,
+        "edgePts": 9.2,
+        "ev": 0.1622,
+        "outcome": "loss",
+        "profit": -10.0
+       }
+      ]
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -3167,7 +3453,11 @@
       "mlAway": 1400
      },
      "bets": [],
-     "result": null,
+     "result": {
+      "homeScore": 31,
+      "awayScore": 28,
+      "calls": []
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -3244,7 +3534,11 @@
       "mlAway": null
      },
      "bets": [],
-     "result": null,
+     "result": {
+      "homeScore": 62,
+      "awayScore": 7,
+      "calls": []
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -3376,7 +3670,48 @@
        "detail": "Model win prob 47% vs implied 41%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 52,
+      "awayScore": 28,
+      "calls": [
+       {
+        "type": "spread",
+        "pick": "Ole Miss +4",
+        "side": "away",
+        "line": 4.0,
+        "price": -110,
+        "prob": 0.584,
+        "edgePts": 2.9,
+        "ev": 0.1153,
+        "outcome": "loss",
+        "profit": -10.0
+       },
+       {
+        "type": "total",
+        "pick": "Under 59",
+        "side": "under",
+        "line": 59.0,
+        "price": -110,
+        "prob": 0.635,
+        "edgePts": 4.7,
+        "ev": 0.2118,
+        "outcome": "loss",
+        "profit": -10.0
+       },
+       {
+        "type": "moneyline",
+        "pick": "Ole Miss ML +142",
+        "side": "away",
+        "line": null,
+        "price": 142,
+        "prob": 0.471,
+        "edgePts": 5.8,
+        "ev": 0.1397,
+        "outcome": "loss",
+        "profit": -10.0
+       }
+      ]
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -3522,7 +3857,24 @@
        "detail": "Model win prob 22% vs implied 18%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 41,
+      "awayScore": 13,
+      "calls": [
+       {
+        "type": "total",
+        "pick": "Over 44",
+        "side": "over",
+        "line": 44.0,
+        "price": -110,
+        "prob": 0.625,
+        "edgePts": 4.3,
+        "ev": 0.1931,
+        "outcome": "win",
+        "profit": 9.09
+       }
+      ]
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -3668,7 +4020,11 @@
        "detail": "Model win prob 71% vs implied 76%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 17,
+      "awayScore": 31,
+      "calls": []
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -3759,7 +4115,11 @@
       "mlAway": 1100
      },
      "bets": [],
-     "result": null,
+     "result": {
+      "homeScore": 36,
+      "awayScore": 35,
+      "calls": []
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -3891,7 +4251,36 @@
        "detail": "Model win prob 52% vs implied 37%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 24,
+      "awayScore": 21,
+      "calls": [
+       {
+        "type": "spread",
+        "pick": "UConn +3",
+        "side": "away",
+        "line": 3.0,
+        "price": -110,
+        "prob": 0.609,
+        "edgePts": 3.7,
+        "ev": 0.1617,
+        "outcome": "push",
+        "profit": 0.0
+       },
+       {
+        "type": "moneyline",
+        "pick": "UConn ML +170",
+        "side": "away",
+        "line": null,
+        "price": 170,
+        "prob": 0.519,
+        "edgePts": 14.8,
+        "ev": 0.4,
+        "outcome": "loss",
+        "profit": -10.0
+       }
+      ]
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -4037,7 +4426,48 @@
        "detail": "Model win prob 46% vs implied 36%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 19,
+      "awayScore": 20,
+      "calls": [
+       {
+        "type": "spread",
+        "pick": "Iowa +5",
+        "side": "away",
+        "line": 5.0,
+        "price": -110,
+        "prob": 0.603,
+        "edgePts": 3.5,
+        "ev": 0.1504,
+        "outcome": "win",
+        "profit": 9.09
+       },
+       {
+        "type": "total",
+        "pick": "Over 38.5",
+        "side": "over",
+        "line": 38.5,
+        "price": -110,
+        "prob": 0.715,
+        "edgePts": 7.6,
+        "ev": 0.3641,
+        "outcome": "win",
+        "profit": 9.09
+       },
+       {
+        "type": "moneyline",
+        "pick": "Iowa ML +180",
+        "side": "away",
+        "line": null,
+        "price": 180,
+        "prob": 0.462,
+        "edgePts": 10.5,
+        "ev": 0.2928,
+        "outcome": "win",
+        "profit": 18.0
+       }
+      ]
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -4169,7 +4599,24 @@
        "detail": "Model win prob 83% vs implied 82%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 18,
+      "awayScore": 42,
+      "calls": [
+       {
+        "type": "spread",
+        "pick": "New Mexico -11",
+        "side": "away",
+        "line": -11.0,
+        "price": -110,
+        "prob": 0.611,
+        "edgePts": 3.8,
+        "ev": 0.1664,
+        "outcome": "win",
+        "profit": 9.09
+       }
+      ]
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -4253,7 +4700,11 @@
       "mlAway": 1800
      },
      "bets": [],
-     "result": null,
+     "result": {
+      "homeScore": 35,
+      "awayScore": 7,
+      "calls": []
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -4385,7 +4836,11 @@
        "detail": "Model win prob 55% vs implied 62%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 21,
+      "awayScore": 13,
+      "calls": []
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -4524,7 +4979,36 @@
        "detail": "Model win prob 63% vs implied 74%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 7,
+      "awayScore": 32,
+      "calls": [
+       {
+        "type": "spread",
+        "pick": "Western Michigan +7.5",
+        "side": "home",
+        "line": 7.5,
+        "price": -110,
+        "prob": 0.567,
+        "edgePts": 2.3,
+        "ev": 0.0826,
+        "outcome": "loss",
+        "profit": -10.0
+       },
+       {
+        "type": "moneyline",
+        "pick": "Western Michigan ML +230",
+        "side": "home",
+        "line": null,
+        "price": 230,
+        "prob": 0.368,
+        "edgePts": 6.5,
+        "ev": 0.2149,
+        "outcome": "loss",
+        "profit": -10.0
+       }
+      ]
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -4615,7 +5099,11 @@
       "mlAway": 1700
      },
      "bets": [],
-     "result": null,
+     "result": {
+      "homeScore": 42,
+      "awayScore": 9,
+      "calls": []
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -4747,7 +5235,24 @@
        "detail": "Model win prob 80% vs implied 90%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 28,
+      "awayScore": 42,
+      "calls": [
+       {
+        "type": "spread",
+        "pick": "Georgia Southern +17",
+        "side": "home",
+        "line": 17.0,
+        "price": -110,
+        "prob": 0.61,
+        "edgePts": 3.8,
+        "ev": 0.1653,
+        "outcome": "win",
+        "profit": 9.09
+       }
+      ]
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -4886,7 +5391,36 @@
        "detail": "Model win prob 38% vs implied 24%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 21,
+      "awayScore": 15,
+      "calls": [
+       {
+        "type": "spread",
+        "pick": "Vanderbilt +10",
+        "side": "away",
+        "line": 10.0,
+        "price": -110,
+        "prob": 0.649,
+        "edgePts": 5.1,
+        "ev": 0.2381,
+        "outcome": "win",
+        "profit": 9.09
+       },
+       {
+        "type": "total",
+        "pick": "Under 56",
+        "side": "under",
+        "line": 56.0,
+        "price": -110,
+        "prob": 0.609,
+        "edgePts": 3.8,
+        "ev": 0.1634,
+        "outcome": "win",
+        "profit": 9.09
+       }
+      ]
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -5018,7 +5552,24 @@
        "detail": "Model win prob 91% vs implied 91%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 6,
+      "awayScore": 14,
+      "calls": [
+       {
+        "type": "spread",
+        "pick": "South Florida -18",
+        "side": "away",
+        "line": -18.0,
+        "price": -110,
+        "prob": 0.577,
+        "edgePts": 2.6,
+        "ev": 0.1016,
+        "outcome": "loss",
+        "profit": -10.0
+       }
+      ]
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -5164,7 +5715,11 @@
        "detail": "Model win prob 69% vs implied 69%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 13,
+      "awayScore": 31,
+      "calls": []
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -5303,7 +5858,24 @@
        "detail": "Model win prob 15% vs implied 25%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 20,
+      "awayScore": 24,
+      "calls": [
+       {
+        "type": "spread",
+        "pick": "Penn State -10",
+        "side": "home",
+        "line": -10.0,
+        "price": -110,
+        "prob": 0.665,
+        "edgePts": 5.8,
+        "ev": 0.2695,
+        "outcome": "loss",
+        "profit": -10.0
+       }
+      ]
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -5394,7 +5966,11 @@
       "mlAway": 1700
      },
      "bets": [],
-     "result": null,
+     "result": {
+      "homeScore": 20,
+      "awayScore": 3,
+      "calls": []
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -5526,7 +6102,48 @@
        "detail": "Model win prob 76% vs implied 68%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 20,
+      "awayScore": 46,
+      "calls": [
+       {
+        "type": "spread",
+        "pick": "James Madison -7",
+        "side": "away",
+        "line": -7.0,
+        "price": -110,
+        "prob": 0.614,
+        "edgePts": 3.9,
+        "ev": 0.173,
+        "outcome": "win",
+        "profit": 9.09
+       },
+       {
+        "type": "total",
+        "pick": "Over 42.5",
+        "side": "over",
+        "line": 42.5,
+        "price": -110,
+        "prob": 0.655,
+        "edgePts": 5.4,
+        "ev": 0.2513,
+        "outcome": "win",
+        "profit": 9.09
+       },
+       {
+        "type": "moneyline",
+        "pick": "James Madison ML -210",
+        "side": "away",
+        "line": null,
+        "price": -210,
+        "prob": 0.76,
+        "edgePts": 8.2,
+        "ev": 0.1213,
+        "outcome": "win",
+        "profit": 4.76
+       }
+      ]
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -5610,7 +6227,11 @@
       "mlAway": 1300
      },
      "bets": [],
-     "result": null,
+     "result": {
+      "homeScore": 63,
+      "awayScore": 10,
+      "calls": []
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -5742,7 +6363,24 @@
        "detail": "Model win prob 15% vs implied 11%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 42,
+      "awayScore": 3,
+      "calls": [
+       {
+        "type": "spread",
+        "pick": "Delaware +20",
+        "side": "away",
+        "line": 20.0,
+        "price": -110,
+        "prob": 0.609,
+        "edgePts": 3.7,
+        "ev": 0.1621,
+        "outcome": "loss",
+        "profit": -10.0
+       }
+      ]
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -5874,7 +6512,24 @@
        "detail": "Model win prob 74% vs implied 80%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 7,
+      "awayScore": 34,
+      "calls": [
+       {
+        "type": "total",
+        "pick": "Over 49.5",
+        "side": "over",
+        "line": 49.5,
+        "price": -110,
+        "prob": 0.678,
+        "edgePts": 6.2,
+        "ev": 0.2949,
+        "outcome": "loss",
+        "profit": -10.0
+       }
+      ]
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -5987,7 +6642,36 @@
        "detail": "Model total 47.6 vs market 53.5"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 52,
+      "awayScore": 3,
+      "calls": [
+       {
+        "type": "spread",
+        "pick": "Central Michigan +41",
+        "side": "away",
+        "line": 41.0,
+        "price": -110,
+        "prob": 0.611,
+        "edgePts": 3.8,
+        "ev": 0.1668,
+        "outcome": "loss",
+        "profit": -10.0
+       },
+       {
+        "type": "total",
+        "pick": "Under 53.5",
+        "side": "under",
+        "line": 53.5,
+        "price": -110,
+        "prob": 0.669,
+        "edgePts": 5.9,
+        "ev": 0.2771,
+        "outcome": "loss",
+        "profit": -10.0
+       }
+      ]
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -6126,7 +6810,36 @@
        "detail": "Model win prob 26% vs implied 20%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 49,
+      "awayScore": 18,
+      "calls": [
+       {
+        "type": "spread",
+        "pick": "South Carolina +12.5",
+        "side": "away",
+        "line": 12.5,
+        "price": -110,
+        "prob": 0.579,
+        "edgePts": 2.7,
+        "ev": 0.1049,
+        "outcome": "loss",
+        "profit": -10.0
+       },
+       {
+        "type": "total",
+        "pick": "Under 54",
+        "side": "under",
+        "line": 54.0,
+        "price": -110,
+        "prob": 0.614,
+        "edgePts": 3.9,
+        "ev": 0.1715,
+        "outcome": "loss",
+        "profit": -10.0
+       }
+      ]
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -6265,7 +6978,36 @@
        "detail": "Model win prob 40% vs implied 34%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 17,
+      "awayScore": 14,
+      "calls": [
+       {
+        "type": "spread",
+        "pick": "Kennesaw State +6.5",
+        "side": "away",
+        "line": 6.5,
+        "price": -110,
+        "prob": 0.571,
+        "edgePts": 2.4,
+        "ev": 0.0899,
+        "outcome": "win",
+        "profit": 9.09
+       },
+       {
+        "type": "moneyline",
+        "pick": "Kennesaw State ML +195",
+        "side": "away",
+        "line": null,
+        "price": 195,
+        "prob": 0.396,
+        "edgePts": 5.7,
+        "ev": 0.1682,
+        "outcome": "loss",
+        "profit": -10.0
+       }
+      ]
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -6411,7 +7153,36 @@
        "detail": "Model win prob 60% vs implied 69%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 31,
+      "awayScore": 26,
+      "calls": [
+       {
+        "type": "spread",
+        "pick": "Cincinnati +6",
+        "side": "home",
+        "line": 6.0,
+        "price": -110,
+        "prob": 0.567,
+        "edgePts": 2.3,
+        "ev": 0.0821,
+        "outcome": "win",
+        "profit": 9.09
+       },
+       {
+        "type": "moneyline",
+        "pick": "Cincinnati ML +200",
+        "side": "home",
+        "line": null,
+        "price": 200,
+        "prob": 0.405,
+        "edgePts": 7.2,
+        "ev": 0.2149,
+        "outcome": "win",
+        "profit": 20.0
+       }
+      ]
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -6543,7 +7314,36 @@
        "detail": "Model win prob 23% vs implied 27%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 23,
+      "awayScore": 13,
+      "calls": [
+       {
+        "type": "spread",
+        "pick": "Jacksonville State -7.5",
+        "side": "home",
+        "line": -7.5,
+        "price": -110,
+        "prob": 0.613,
+        "edgePts": 3.9,
+        "ev": 0.1704,
+        "outcome": "win",
+        "profit": 9.09
+       },
+       {
+        "type": "total",
+        "pick": "Over 51.5",
+        "side": "over",
+        "line": 51.5,
+        "price": -110,
+        "prob": 0.602,
+        "edgePts": 3.5,
+        "ev": 0.1498,
+        "outcome": "loss",
+        "profit": -10.0
+       }
+      ]
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -6689,7 +7489,24 @@
        "detail": "Model win prob 17% vs implied 12%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 24,
+      "awayScore": 21,
+      "calls": [
+       {
+        "type": "spread",
+        "pick": "Southern Miss +17.5",
+        "side": "away",
+        "line": 17.5,
+        "price": -110,
+        "prob": 0.576,
+        "edgePts": 2.6,
+        "ev": 0.1005,
+        "outcome": "win",
+        "profit": 9.09
+       }
+      ]
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -6842,7 +7659,24 @@
        "detail": "Model win prob 45% vs implied 49%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 24,
+      "awayScore": 41,
+      "calls": [
+       {
+        "type": "total",
+        "pick": "Under 61",
+        "side": "under",
+        "line": 61.0,
+        "price": -110,
+        "prob": 0.704,
+        "edgePts": 7.2,
+        "ev": 0.3447,
+        "outcome": "loss",
+        "profit": -10.0
+       }
+      ]
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -6933,7 +7767,11 @@
       "mlAway": null
      },
      "bets": [],
-     "result": null,
+     "result": {
+      "homeScore": 52,
+      "awayScore": 7,
+      "calls": []
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -7065,7 +7903,36 @@
        "detail": "Model win prob 41% vs implied 26%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 35,
+      "awayScore": 6,
+      "calls": [
+       {
+        "type": "spread",
+        "pick": "Texas A&M +8",
+        "side": "away",
+        "line": 8.0,
+        "price": -110,
+        "prob": 0.628,
+        "edgePts": 4.4,
+        "ev": 0.1983,
+        "outcome": "loss",
+        "profit": -10.0
+       },
+       {
+        "type": "moneyline",
+        "pick": "Texas A&M ML +290",
+        "side": "away",
+        "line": null,
+        "price": 290,
+        "prob": 0.408,
+        "edgePts": 15.2,
+        "ev": 0.5915,
+        "outcome": "loss",
+        "profit": -10.0
+       }
+      ]
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -7211,7 +8078,24 @@
        "detail": "Model win prob 24% vs implied 20%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 41,
+      "awayScore": 31,
+      "calls": [
+       {
+        "type": "spread",
+        "pick": "App State +13.5",
+        "side": "away",
+        "line": 13.5,
+        "price": -110,
+        "prob": 0.574,
+        "edgePts": 2.5,
+        "ev": 0.0952,
+        "outcome": "win",
+        "profit": 9.09
+       }
+      ]
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -7288,7 +8172,11 @@
       "mlAway": 5000
      },
      "bets": [],
-     "result": null,
+     "result": {
+      "homeScore": 63,
+      "awayScore": 14,
+      "calls": []
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -7420,7 +8308,36 @@
        "detail": "Model win prob 51% vs implied 58%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 27,
+      "awayScore": 41,
+      "calls": [
+       {
+        "type": "spread",
+        "pick": "USC +3.5",
+        "side": "home",
+        "line": 3.5,
+        "price": -110,
+        "prob": 0.592,
+        "edgePts": 3.1,
+        "ev": 0.1301,
+        "outcome": "loss",
+        "profit": -10.0
+       },
+       {
+        "type": "moneyline",
+        "pick": "USC ML +150",
+        "side": "home",
+        "line": null,
+        "price": 150,
+        "prob": 0.491,
+        "edgePts": 9.1,
+        "ev": 0.2268,
+        "outcome": "loss",
+        "profit": -10.0
+       }
+      ]
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -7559,7 +8476,36 @@
        "detail": "Model win prob 51% vs implied 45%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 21,
+      "awayScore": 10,
+      "calls": [
+       {
+        "type": "spread",
+        "pick": "Troy +3",
+        "side": "away",
+        "line": 3.0,
+        "price": -110,
+        "prob": 0.604,
+        "edgePts": 3.6,
+        "ev": 0.1533,
+        "outcome": "loss",
+        "profit": -10.0
+       },
+       {
+        "type": "moneyline",
+        "pick": "Troy ML +124",
+        "side": "away",
+        "line": null,
+        "price": 124,
+        "prob": 0.515,
+        "edgePts": 6.8,
+        "ev": 0.1525,
+        "outcome": "loss",
+        "profit": -10.0
+       }
+      ]
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -7698,7 +8644,11 @@
        "detail": "Model win prob 73% vs implied 80%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 24,
+      "awayScore": 34,
+      "calls": []
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -7844,7 +8794,48 @@
        "detail": "Model win prob 45% vs implied 34%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 31,
+      "awayScore": 24,
+      "calls": [
+       {
+        "type": "spread",
+        "pick": "Missouri +5.5",
+        "side": "away",
+        "line": 5.5,
+        "price": -110,
+        "prob": 0.599,
+        "edgePts": 3.4,
+        "ev": 0.1443,
+        "outcome": "loss",
+        "profit": -10.0
+       },
+       {
+        "type": "total",
+        "pick": "Under 58.5",
+        "side": "under",
+        "line": 58.5,
+        "price": -110,
+        "prob": 0.64,
+        "edgePts": 4.9,
+        "ev": 0.2224,
+        "outcome": "win",
+        "profit": 9.09
+       },
+       {
+        "type": "moneyline",
+        "pick": "Missouri ML +190",
+        "side": "away",
+        "line": null,
+        "price": 190,
+        "prob": 0.446,
+        "edgePts": 10.1,
+        "ev": 0.2936,
+        "outcome": "loss",
+        "profit": -10.0
+       }
+      ]
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -7983,7 +8974,48 @@
        "detail": "Model win prob 40% vs implied 31%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 34,
+      "awayScore": 6,
+      "calls": [
+       {
+        "type": "spread",
+        "pick": "Tulsa +7",
+        "side": "away",
+        "line": 7.0,
+        "price": -110,
+        "prob": 0.586,
+        "edgePts": 2.9,
+        "ev": 0.1188,
+        "outcome": "loss",
+        "profit": -10.0
+       },
+       {
+        "type": "total",
+        "pick": "Over 50.5",
+        "side": "over",
+        "line": 50.5,
+        "price": -110,
+        "prob": 0.681,
+        "edgePts": 6.4,
+        "ev": 0.3,
+        "outcome": "loss",
+        "profit": -10.0
+       },
+       {
+        "type": "moneyline",
+        "pick": "Tulsa ML +225",
+        "side": "away",
+        "line": null,
+        "price": 225,
+        "prob": 0.397,
+        "edgePts": 8.9,
+        "ev": 0.2887,
+        "outcome": "loss",
+        "profit": -10.0
+       }
+      ]
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -8129,7 +9161,11 @@
        "detail": "Model win prob 78% vs implied 83%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 17,
+      "awayScore": 45,
+      "calls": []
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -8268,7 +9304,36 @@
        "detail": "Model win prob 4% vs implied 4%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 34,
+      "awayScore": 24,
+      "calls": [
+       {
+        "type": "spread",
+        "pick": "Missouri State +33",
+        "side": "away",
+        "line": 33.0,
+        "price": -110,
+        "prob": 0.671,
+        "edgePts": 6.0,
+        "ev": 0.2808,
+        "outcome": "win",
+        "profit": 9.09
+       },
+       {
+        "type": "total",
+        "pick": "Under 60",
+        "side": "under",
+        "line": 60.0,
+        "price": -110,
+        "prob": 0.676,
+        "edgePts": 6.2,
+        "ev": 0.2899,
+        "outcome": "win",
+        "profit": 9.09
+       }
+      ]
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -8414,7 +9479,36 @@
        "detail": "Model win prob 52% vs implied 66%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 6,
+      "awayScore": 35,
+      "calls": [
+       {
+        "type": "spread",
+        "pick": "Sacramento State +4.5",
+        "side": "home",
+        "line": 4.5,
+        "price": -110,
+        "prob": 0.606,
+        "edgePts": 3.6,
+        "ev": 0.1577,
+        "outcome": "loss",
+        "profit": -10.0
+       },
+       {
+        "type": "moneyline",
+        "pick": "Sacramento State ML +185",
+        "side": "home",
+        "line": null,
+        "price": 185,
+        "prob": 0.478,
+        "edgePts": 12.7,
+        "ev": 0.3623,
+        "outcome": "loss",
+        "profit": -10.0
+       }
+      ]
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -8560,7 +9654,24 @@
        "detail": "Model win prob 77% vs implied 81%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 7,
+      "awayScore": 33,
+      "calls": [
+       {
+        "type": "total",
+        "pick": "Under 56",
+        "side": "under",
+        "line": 56.0,
+        "price": -110,
+        "prob": 0.657,
+        "edgePts": 5.5,
+        "ev": 0.2539,
+        "outcome": "win",
+        "profit": 9.09
+       }
+      ]
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -8706,7 +9817,24 @@
        "detail": "Model win prob 14% vs implied 19%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 38,
+      "awayScore": 24,
+      "calls": [
+       {
+        "type": "spread",
+        "pick": "Fresno State -13",
+        "side": "home",
+        "line": -13.0,
+        "price": -110,
+        "prob": 0.605,
+        "edgePts": 3.6,
+        "ev": 0.1558,
+        "outcome": "win",
+        "profit": 9.09
+       }
+      ]
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -8845,7 +9973,36 @@
        "detail": "Model win prob 53% vs implied 65%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 33,
+      "awayScore": 36,
+      "calls": [
+       {
+        "type": "spread",
+        "pick": "Nevada +5.5",
+        "side": "home",
+        "line": 5.5,
+        "price": -110,
+        "prob": 0.623,
+        "edgePts": 4.2,
+        "ev": 0.1899,
+        "outcome": "win",
+        "profit": 9.09
+       },
+       {
+        "type": "moneyline",
+        "pick": "Nevada ML +195",
+        "side": "home",
+        "line": null,
+        "price": 195,
+        "prob": 0.468,
+        "edgePts": 12.9,
+        "ev": 0.3794,
+        "outcome": "loss",
+        "profit": -10.0
+       }
+      ]
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -8984,7 +10141,36 @@
        "detail": "Model win prob 69% vs implied 61%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 34,
+      "awayScore": 27,
+      "calls": [
+       {
+        "type": "spread",
+        "pick": "Georgia Tech -3",
+        "side": "away",
+        "line": -3.0,
+        "price": -110,
+        "prob": 0.636,
+        "edgePts": 4.7,
+        "ev": 0.2151,
+        "outcome": "loss",
+        "profit": -10.0
+       },
+       {
+        "type": "moneyline",
+        "pick": "Georgia Tech ML -155",
+        "side": "away",
+        "line": null,
+        "price": -155,
+        "prob": 0.691,
+        "edgePts": 8.3,
+        "ev": 0.1361,
+        "outcome": "loss",
+        "profit": -10.0
+       }
+      ]
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -9116,7 +10302,11 @@
        "detail": "Model win prob 28% vs implied 24%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 24,
+      "awayScore": 27,
+      "calls": []
+     },
      "lockedAt": "2026-09-26T16:12:54.691162+00:00",
      "lineHistory": [
       {
@@ -18486,6 +19676,3795 @@
       ]
      },
      "lockedAt": "2026-09-20T15:19:19.466842+00:00"
+    }
+   }
+  },
+  "2026-regular-5": {
+   "season": 2026,
+   "seasonType": "regular",
+   "week": 5,
+   "backfilled": false,
+   "games": {
+    "401871049": {
+     "id": 401871049,
+     "startDate": "2026-10-02T00:00:00.000Z",
+     "homeTeam": "New Mexico State",
+     "awayTeam": "Western Kentucky",
+     "homeConference": "Conference USA",
+     "awayConference": "Conference USA",
+     "homeRecord": "1-3",
+     "awayRecord": "1-3",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Aggie Memorial Stadium",
+     "model": {
+      "homeRating": -14.2,
+      "awayRating": -13.8,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": 1.9,
+      "spread": -1.9,
+      "total": 54.3,
+      "homeScore": 28.1,
+      "awayScore": 26.2,
+      "pHomeWin": 0.55,
+      "lowConfidence": false
+     },
+     "lines": null,
+     "bets": [],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": []
+    },
+    "401862786": {
+     "id": 401862786,
+     "startDate": "2026-10-02T01:00:00.000Z",
+     "homeTeam": "Tulsa",
+     "awayTeam": "North Texas",
+     "homeConference": "American Athletic",
+     "awayConference": "American Athletic",
+     "homeRecord": "3-1",
+     "awayRecord": "2-2",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Chapman Stadium",
+     "model": {
+      "homeRating": -4.6,
+      "awayRating": -2.4,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": 0.1,
+      "spread": -0.1,
+      "total": 56.7,
+      "homeScore": 28.4,
+      "awayScore": 28.3,
+      "pHomeWin": 0.502,
+      "lowConfidence": false
+     },
+     "lines": null,
+     "bets": [],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": []
+    },
+    "401871050": {
+     "id": 401871050,
+     "startDate": "2026-10-02T23:00:00.000Z",
+     "homeTeam": "Delaware",
+     "awayTeam": "Liberty",
+     "homeConference": "Conference USA",
+     "awayConference": "Conference USA",
+     "homeRecord": "2-2",
+     "awayRecord": "3-1",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Delaware Stadium",
+     "model": {
+      "homeRating": -7.9,
+      "awayRating": -0.1,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": -5.5,
+      "spread": 5.5,
+      "total": 55.9,
+      "homeScore": 25.2,
+      "awayScore": 30.7,
+      "pHomeWin": 0.36,
+      "lowConfidence": false
+     },
+     "lines": null,
+     "bets": [],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": []
+    },
+    "401858245": {
+     "id": 401858245,
+     "startDate": "2026-10-02T23:00:00.000Z",
+     "homeTeam": "Virginia Tech",
+     "awayTeam": "Pittsburgh",
+     "homeConference": "ACC",
+     "awayConference": "ACC",
+     "homeRecord": "4-0",
+     "awayRecord": "4-0",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Lane Stadium",
+     "model": {
+      "homeRating": 8.2,
+      "awayRating": 10.6,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": -0.1,
+      "spread": 0.1,
+      "total": 53.3,
+      "homeScore": 26.6,
+      "awayScore": 26.7,
+      "pHomeWin": 0.497,
+      "lowConfidence": false
+     },
+     "lines": {
+      "books": [
+       {
+        "provider": "DraftKings",
+        "spread": -6,
+        "overUnder": 53.5,
+        "homeMoneyline": -218,
+        "awayMoneyline": 180,
+        "formattedSpread": "Virginia Tech -6"
+       }
+      ],
+      "spread": -6.0,
+      "total": 53.5,
+      "mlHome": -218,
+      "mlAway": 180
+     },
+     "bets": [
+      {
+       "type": "spread",
+       "pick": "Pittsburgh +6",
+       "team": "Pittsburgh",
+       "side": "away",
+       "line": 6.0,
+       "edgePts": 6.1,
+       "prob": 0.675,
+       "price": -110,
+       "ev": 0.2879,
+       "eligible": true,
+       "detail": "Model line: Virginia Tech +0.1 vs market -6.0"
+      },
+      {
+       "type": "total",
+       "pick": "Under 53.5",
+       "team": null,
+       "side": "under",
+       "line": 53.5,
+       "edgePts": 0.2,
+       "prob": 0.504,
+       "price": -110,
+       "ev": -0.037,
+       "eligible": false,
+       "detail": "Model total 53.3 vs market 53.5"
+      },
+      {
+       "type": "moneyline",
+       "pick": "Virginia Tech ML -218",
+       "team": "Virginia Tech",
+       "side": "home",
+       "line": null,
+       "edgePts": -18.8,
+       "prob": 0.497,
+       "price": -218,
+       "ev": -0.2748,
+       "eligible": false,
+       "detail": "Model win prob 50% vs implied 69%"
+      },
+      {
+       "type": "moneyline",
+       "pick": "Pittsburgh ML +180",
+       "team": "Pittsburgh",
+       "side": "away",
+       "line": null,
+       "edgePts": 14.6,
+       "prob": 0.503,
+       "price": 180,
+       "ev": 0.408,
+       "eligible": true,
+       "detail": "Model win prob 50% vs implied 36%"
+      }
+     ],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": [
+      {
+       "at": "2026-09-27T13:46:05.784736+00:00",
+       "spread": -6.0,
+       "total": 53.5,
+       "mlHome": -218,
+       "mlAway": 180
+      }
+     ]
+    },
+    "401858476": {
+     "id": 401858476,
+     "startDate": "2026-10-03T00:00:00.000Z",
+     "homeTeam": "Northwestern",
+     "awayTeam": "Penn State",
+     "homeConference": "Big Ten",
+     "awayConference": "Big Ten",
+     "homeRecord": "2-1",
+     "awayRecord": "3-1",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Ryan Field",
+     "model": {
+      "homeRating": 8.3,
+      "awayRating": 16.8,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": -6.2,
+      "spread": 6.2,
+      "total": 49.4,
+      "homeScore": 21.6,
+      "awayScore": 27.8,
+      "pHomeWin": 0.345,
+      "lowConfidence": false
+     },
+     "lines": {
+      "books": [
+       {
+        "provider": "DraftKings",
+        "spread": 4.5,
+        "overUnder": 48.5,
+        "homeMoneyline": 154,
+        "awayMoneyline": -185,
+        "formattedSpread": "Penn State -4.5"
+       }
+      ],
+      "spread": 4.5,
+      "total": 48.5,
+      "mlHome": 154,
+      "mlAway": -185
+     },
+     "bets": [
+      {
+       "type": "spread",
+       "pick": "Penn State -4.5",
+       "team": "Penn State",
+       "side": "away",
+       "line": -4.5,
+       "edgePts": 1.7,
+       "prob": 0.55,
+       "price": -110,
+       "ev": 0.0493,
+       "eligible": false,
+       "detail": "Model line: Northwestern +6.2 vs market +4.5"
+      },
+      {
+       "type": "total",
+       "pick": "Over 48.5",
+       "team": null,
+       "side": "over",
+       "line": 48.5,
+       "edgePts": 0.9,
+       "prob": 0.527,
+       "price": -110,
+       "ev": 0.0053,
+       "eligible": false,
+       "detail": "Model total 49.4 vs market 48.5"
+      },
+      {
+       "type": "moneyline",
+       "pick": "Northwestern ML +154",
+       "team": "Northwestern",
+       "side": "home",
+       "line": null,
+       "edgePts": -4.9,
+       "prob": 0.345,
+       "price": 154,
+       "ev": -0.1238,
+       "eligible": false,
+       "detail": "Model win prob 34% vs implied 39%"
+      },
+      {
+       "type": "moneyline",
+       "pick": "Penn State ML -185",
+       "team": "Penn State",
+       "side": "away",
+       "line": null,
+       "edgePts": 0.6,
+       "prob": 0.655,
+       "price": -185,
+       "ev": 0.0091,
+       "eligible": false,
+       "detail": "Model win prob 66% vs implied 65%"
+      }
+     ],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": [
+      {
+       "at": "2026-09-27T13:46:05.784736+00:00",
+       "spread": 4.5,
+       "total": 48.5,
+       "mlHome": 154,
+       "mlAway": -185
+      }
+     ]
+    },
+    "401862791": {
+     "id": 401862791,
+     "startDate": "2026-10-03T16:00:00.000Z",
+     "homeTeam": "Air Force",
+     "awayTeam": "Navy",
+     "homeConference": "Mountain West",
+     "awayConference": "American Athletic",
+     "homeRecord": "2-1",
+     "awayRecord": "1-2",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Falcon Stadium",
+     "model": {
+      "homeRating": -3.6,
+      "awayRating": -3.4,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": 2.1,
+      "spread": -2.1,
+      "total": 54.8,
+      "homeScore": 28.4,
+      "awayScore": 26.3,
+      "pHomeWin": 0.553,
+      "lowConfidence": false
+     },
+     "lines": null,
+     "bets": [],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": []
+    },
+    "401856819": {
+     "id": 401856819,
+     "startDate": "2026-10-03T16:00:00.000Z",
+     "homeTeam": "Houston",
+     "awayTeam": "UCF",
+     "homeConference": "Big 12",
+     "awayConference": "Big 12",
+     "homeRecord": "3-1",
+     "awayRecord": "3-1",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "TDECU Stadium",
+     "model": {
+      "homeRating": 8.8,
+      "awayRating": 4.5,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": 6.6,
+      "spread": -6.6,
+      "total": 50.9,
+      "homeScore": 28.8,
+      "awayScore": 22.2,
+      "pHomeWin": 0.664,
+      "lowConfidence": false
+     },
+     "lines": null,
+     "bets": [],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": []
+    },
+    "401856822": {
+     "id": 401856822,
+     "startDate": "2026-10-03T16:00:00.000Z",
+     "homeTeam": "Iowa State",
+     "awayTeam": "West Virginia",
+     "homeConference": "Big 12",
+     "awayConference": "Big 12",
+     "homeRecord": "2-2",
+     "awayRecord": "3-1",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Jack Trice Stadium",
+     "model": {
+      "homeRating": 5.1,
+      "awayRating": 1.3,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": 6.2,
+      "spread": -6.2,
+      "total": 50.0,
+      "homeScore": 28.1,
+      "awayScore": 21.9,
+      "pHomeWin": 0.655,
+      "lowConfidence": false
+     },
+     "lines": null,
+     "bets": [],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": []
+    },
+    "401856807": {
+     "id": 401856807,
+     "startDate": "2026-10-03T16:00:00.000Z",
+     "homeTeam": "Kansas",
+     "awayTeam": "Middle Tennessee",
+     "homeConference": "Big 12",
+     "awayConference": "Conference USA",
+     "homeRecord": "1-2",
+     "awayRecord": "2-2",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Memorial Stadium",
+     "model": {
+      "homeRating": 0.9,
+      "awayRating": -14.5,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": 17.7,
+      "spread": -17.7,
+      "total": 52.8,
+      "homeScore": 35.3,
+      "awayScore": 17.5,
+      "pHomeWin": 0.873,
+      "lowConfidence": false
+     },
+     "lines": null,
+     "bets": [],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": []
+    },
+    "401858474": {
+     "id": 401858474,
+     "startDate": "2026-10-03T16:00:00.000Z",
+     "homeTeam": "Minnesota",
+     "awayTeam": "Michigan",
+     "homeConference": "Big Ten",
+     "awayConference": "Big Ten",
+     "homeRecord": "3-1",
+     "awayRecord": "3-1",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Huntington Bank Stadium",
+     "model": {
+      "homeRating": 3.1,
+      "awayRating": 12.9,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": -7.5,
+      "spread": 7.5,
+      "total": 46.5,
+      "homeScore": 19.5,
+      "awayScore": 27.0,
+      "pHomeWin": 0.314,
+      "lowConfidence": false
+     },
+     "lines": {
+      "books": [
+       {
+        "provider": "DraftKings",
+        "spread": 7.5,
+        "overUnder": 42.5,
+        "homeMoneyline": 240,
+        "awayMoneyline": -298,
+        "formattedSpread": "Michigan -7.5"
+       }
+      ],
+      "spread": 7.5,
+      "total": 42.5,
+      "mlHome": 240,
+      "mlAway": -298
+     },
+     "bets": [
+      {
+       "type": "spread",
+       "pick": "Michigan -7.5",
+       "team": "Michigan",
+       "side": "away",
+       "line": -7.5,
+       "edgePts": 0.0,
+       "prob": 0.5,
+       "price": -110,
+       "ev": -0.0454,
+       "eligible": false,
+       "detail": "Model line: Minnesota +7.5 vs market +7.5"
+      },
+      {
+       "type": "total",
+       "pick": "Over 42.5",
+       "team": null,
+       "side": "over",
+       "line": 42.5,
+       "edgePts": 4.0,
+       "prob": 0.616,
+       "price": -110,
+       "ev": 0.177,
+       "eligible": true,
+       "detail": "Model total 46.5 vs market 42.5"
+      },
+      {
+       "type": "moneyline",
+       "pick": "Minnesota ML +240",
+       "team": "Minnesota",
+       "side": "home",
+       "line": null,
+       "edgePts": 2.0,
+       "prob": 0.314,
+       "price": 240,
+       "ev": 0.0683,
+       "eligible": false,
+       "detail": "Model win prob 31% vs implied 29%"
+      },
+      {
+       "type": "moneyline",
+       "pick": "Michigan ML -298",
+       "team": "Michigan",
+       "side": "away",
+       "line": null,
+       "edgePts": -6.3,
+       "prob": 0.686,
+       "price": -298,
+       "ev": -0.0841,
+       "eligible": false,
+       "detail": "Model win prob 69% vs implied 75%"
+      }
+     ],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": [
+      {
+       "at": "2026-09-27T13:46:05.784736+00:00",
+       "spread": 7.5,
+       "total": 42.5,
+       "mlHome": 240,
+       "mlAway": -298
+      }
+     ]
+    },
+    "401856707": {
+     "id": 401856707,
+     "startDate": "2026-10-03T16:00:00.000Z",
+     "homeTeam": "Mississippi State",
+     "awayTeam": "Alabama",
+     "homeConference": "SEC",
+     "awayConference": "SEC",
+     "homeRecord": "4-0",
+     "awayRecord": "4-0",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Davis Wade Stadium",
+     "model": {
+      "homeRating": 11.4,
+      "awayRating": 20.4,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": -6.6,
+      "spread": 6.6,
+      "total": 54.2,
+      "homeScore": 23.8,
+      "awayScore": 30.4,
+      "pHomeWin": 0.334,
+      "lowConfidence": false
+     },
+     "lines": {
+      "books": [
+       {
+        "provider": "DraftKings",
+        "spread": 4.5,
+        "overUnder": 59.5,
+        "homeMoneyline": 150,
+        "awayMoneyline": -180,
+        "formattedSpread": "Alabama -4.5"
+       }
+      ],
+      "spread": 4.5,
+      "total": 59.5,
+      "mlHome": 150,
+      "mlAway": -180
+     },
+     "bets": [
+      {
+       "type": "spread",
+       "pick": "Alabama -4.5",
+       "team": "Alabama",
+       "side": "away",
+       "line": -4.5,
+       "edgePts": 2.1,
+       "prob": 0.563,
+       "price": -110,
+       "ev": 0.0742,
+       "eligible": true,
+       "detail": "Model line: Mississippi State +6.6 vs market +4.5"
+      },
+      {
+       "type": "total",
+       "pick": "Under 59.5",
+       "team": null,
+       "side": "under",
+       "line": 59.5,
+       "edgePts": 5.3,
+       "prob": 0.651,
+       "price": -110,
+       "ev": 0.2434,
+       "eligible": true,
+       "detail": "Model total 54.2 vs market 59.5"
+      },
+      {
+       "type": "moneyline",
+       "pick": "Mississippi State ML +150",
+       "team": "Mississippi State",
+       "side": "home",
+       "line": null,
+       "edgePts": -6.6,
+       "prob": 0.334,
+       "price": 150,
+       "ev": -0.164,
+       "eligible": false,
+       "detail": "Model win prob 33% vs implied 40%"
+      },
+      {
+       "type": "moneyline",
+       "pick": "Alabama ML -180",
+       "team": "Alabama",
+       "side": "away",
+       "line": null,
+       "edgePts": 2.3,
+       "prob": 0.666,
+       "price": -180,
+       "ev": 0.0353,
+       "eligible": false,
+       "detail": "Model win prob 67% vs implied 64%"
+      }
+     ],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": [
+      {
+       "at": "2026-09-27T13:46:05.784736+00:00",
+       "spread": 4.5,
+       "total": 59.5,
+       "mlHome": 150,
+       "mlAway": -180
+      }
+     ]
+    },
+    "401858250": {
+     "id": 401858250,
+     "startDate": "2026-10-03T16:00:00.000Z",
+     "homeTeam": "North Carolina",
+     "awayTeam": "Notre Dame",
+     "homeConference": "ACC",
+     "awayConference": "FBS Independents",
+     "homeRecord": "2-1",
+     "awayRecord": "4-0",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Kenan Stadium",
+     "model": {
+      "homeRating": 2.9,
+      "awayRating": 25.7,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": -20.6,
+      "spread": 20.6,
+      "total": 49.8,
+      "homeScore": 14.6,
+      "awayScore": 35.2,
+      "pHomeWin": 0.092,
+      "lowConfidence": false
+     },
+     "lines": {
+      "books": [
+       {
+        "provider": "DraftKings",
+        "spread": 21.5,
+        "overUnder": 50.5,
+        "homeMoneyline": 1100,
+        "awayMoneyline": -2100,
+        "formattedSpread": "Notre Dame -21.5"
+       }
+      ],
+      "spread": 21.5,
+      "total": 50.5,
+      "mlHome": 1100,
+      "mlAway": -2100
+     },
+     "bets": [
+      {
+       "type": "spread",
+       "pick": "North Carolina +21.5",
+       "team": "North Carolina",
+       "side": "home",
+       "line": 21.5,
+       "edgePts": 0.9,
+       "prob": 0.527,
+       "price": -110,
+       "ev": 0.0064,
+       "eligible": false,
+       "detail": "Model line: North Carolina +20.6 vs market +21.5"
+      },
+      {
+       "type": "total",
+       "pick": "Under 50.5",
+       "team": null,
+       "side": "under",
+       "line": 50.5,
+       "edgePts": 0.7,
+       "prob": 0.519,
+       "price": -110,
+       "ev": -0.0088,
+       "eligible": false,
+       "detail": "Model total 49.8 vs market 50.5"
+      },
+      {
+       "type": "moneyline",
+       "pick": "North Carolina ML +1100",
+       "team": "North Carolina",
+       "side": "home",
+       "line": null,
+       "edgePts": 0.9,
+       "prob": 0.092,
+       "price": 1100,
+       "ev": 0.1057,
+       "eligible": false,
+       "detail": "Model win prob 9% vs implied 8%"
+      },
+      {
+       "type": "moneyline",
+       "pick": "Notre Dame ML -2100",
+       "team": "Notre Dame",
+       "side": "away",
+       "line": null,
+       "edgePts": -4.7,
+       "prob": 0.908,
+       "price": -2100,
+       "ev": -0.0489,
+       "eligible": false,
+       "detail": "Model win prob 91% vs implied 95%"
+      }
+     ],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": [
+      {
+       "at": "2026-09-27T13:46:05.784736+00:00",
+       "spread": 21.5,
+       "total": 50.5,
+       "mlHome": 1100,
+       "mlAway": -2100
+      }
+     ]
+    },
+    "401858246": {
+     "id": 401858246,
+     "startDate": "2026-10-03T16:00:00.000Z",
+     "homeTeam": "SMU",
+     "awayTeam": "Boston College",
+     "homeConference": "ACC",
+     "awayConference": "ACC",
+     "homeRecord": "3-1",
+     "awayRecord": "2-2",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Gerald J. Ford Stadium",
+     "model": {
+      "homeRating": 9.8,
+      "awayRating": -4.8,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": 16.9,
+      "spread": -16.9,
+      "total": 53.1,
+      "homeScore": 35.0,
+      "awayScore": 18.1,
+      "pHomeWin": 0.862,
+      "lowConfidence": false
+     },
+     "lines": null,
+     "bets": [],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": []
+    },
+    "401858252": {
+     "id": 401858252,
+     "startDate": "2026-10-03T16:00:00.000Z",
+     "homeTeam": "UConn",
+     "awayTeam": "Syracuse",
+     "homeConference": "FBS Independents",
+     "awayConference": "ACC",
+     "homeRecord": "2-2",
+     "awayRecord": "1-2",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Pratt & Whitney Stadium",
+     "model": {
+      "homeRating": -4.9,
+      "awayRating": -1.6,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": -1.0,
+      "spread": 1.0,
+      "total": 50.6,
+      "homeScore": 24.8,
+      "awayScore": 25.8,
+      "pHomeWin": 0.475,
+      "lowConfidence": false
+     },
+     "lines": null,
+     "bets": [],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": []
+    },
+    "401858251": {
+     "id": 401858251,
+     "startDate": "2026-10-03T16:00:00.000Z",
+     "homeTeam": "Wake Forest",
+     "awayTeam": "Stanford",
+     "homeConference": "ACC",
+     "awayConference": "ACC",
+     "homeRecord": "3-1",
+     "awayRecord": "2-2",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Allegacy Federal Credit Union Stadium",
+     "model": {
+      "homeRating": 3.9,
+      "awayRating": -6.5,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": 12.6,
+      "spread": -12.6,
+      "total": 48.9,
+      "homeScore": 30.8,
+      "awayScore": 18.1,
+      "pHomeWin": 0.792,
+      "lowConfidence": false
+     },
+     "lines": null,
+     "bets": [],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": []
+    },
+    "401858479": {
+     "id": 401858479,
+     "startDate": "2026-10-03T16:30:00.000Z",
+     "homeTeam": "Wisconsin",
+     "awayTeam": "Michigan State",
+     "homeConference": "Big Ten",
+     "awayConference": "Big Ten",
+     "homeRecord": "3-1",
+     "awayRecord": "2-2",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Camp Randall Stadium",
+     "model": {
+      "homeRating": 5.7,
+      "awayRating": 2.3,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": 5.6,
+      "spread": -5.6,
+      "total": 46.6,
+      "homeScore": 26.1,
+      "awayScore": 20.5,
+      "pHomeWin": 0.642,
+      "lowConfidence": false
+     },
+     "lines": {
+      "books": [
+       {
+        "provider": "DraftKings",
+        "spread": -10,
+        "overUnder": 44.5,
+        "homeMoneyline": -360,
+        "awayMoneyline": 285,
+        "formattedSpread": "Wisconsin -10"
+       }
+      ],
+      "spread": -10.0,
+      "total": 44.5,
+      "mlHome": -360,
+      "mlAway": 285
+     },
+     "bets": [
+      {
+       "type": "spread",
+       "pick": "Michigan State +10",
+       "team": "Michigan State",
+       "side": "away",
+       "line": 10.0,
+       "edgePts": 4.4,
+       "prob": 0.627,
+       "price": -110,
+       "ev": 0.1962,
+       "eligible": true,
+       "detail": "Model line: Wisconsin -5.6 vs market -10.0"
+      },
+      {
+       "type": "total",
+       "pick": "Over 44.5",
+       "team": null,
+       "side": "over",
+       "line": 44.5,
+       "edgePts": 2.1,
+       "prob": 0.562,
+       "price": -110,
+       "ev": 0.0725,
+       "eligible": false,
+       "detail": "Model total 46.6 vs market 44.5"
+      },
+      {
+       "type": "moneyline",
+       "pick": "Wisconsin ML -360",
+       "team": "Wisconsin",
+       "side": "home",
+       "line": null,
+       "edgePts": -14.1,
+       "prob": 0.642,
+       "price": -360,
+       "ev": -0.1796,
+       "eligible": false,
+       "detail": "Model win prob 64% vs implied 78%"
+      },
+      {
+       "type": "moneyline",
+       "pick": "Michigan State ML +285",
+       "team": "Michigan State",
+       "side": "away",
+       "line": null,
+       "edgePts": 9.8,
+       "prob": 0.358,
+       "price": 285,
+       "ev": 0.3781,
+       "eligible": true,
+       "detail": "Model win prob 36% vs implied 26%"
+      }
+     ],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": [
+      {
+       "at": "2026-09-27T13:46:05.784736+00:00",
+       "spread": -10.0,
+       "total": 44.5,
+       "mlHome": -360,
+       "mlAway": 285
+      }
+     ]
+    },
+    "401856705": {
+     "id": 401856705,
+     "startDate": "2026-10-03T16:45:00.000Z",
+     "homeTeam": "Georgia",
+     "awayTeam": "Vanderbilt",
+     "homeConference": "SEC",
+     "awayConference": "SEC",
+     "homeRecord": "4-0",
+     "awayRecord": "3-1",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Sanford Stadium",
+     "model": {
+      "homeRating": 26.0,
+      "awayRating": 7.9,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": 20.4,
+      "spread": -20.4,
+      "total": 55.4,
+      "homeScore": 37.9,
+      "awayScore": 17.5,
+      "pHomeWin": 0.906,
+      "lowConfidence": false
+     },
+     "lines": {
+      "books": [
+       {
+        "provider": "DraftKings",
+        "spread": -24.5,
+        "overUnder": 55.5,
+        "homeMoneyline": -3600,
+        "awayMoneyline": 1500,
+        "formattedSpread": "Georgia -24.5"
+       }
+      ],
+      "spread": -24.5,
+      "total": 55.5,
+      "mlHome": -3600,
+      "mlAway": 1500
+     },
+     "bets": [
+      {
+       "type": "spread",
+       "pick": "Vanderbilt +24.5",
+       "team": "Vanderbilt",
+       "side": "away",
+       "line": 24.5,
+       "edgePts": 4.1,
+       "prob": 0.619,
+       "price": -110,
+       "ev": 0.1821,
+       "eligible": true,
+       "detail": "Model line: Georgia -20.4 vs market -24.5"
+      },
+      {
+       "type": "total",
+       "pick": "Under 55.5",
+       "team": null,
+       "side": "under",
+       "line": 55.5,
+       "edgePts": 0.1,
+       "prob": 0.501,
+       "price": -110,
+       "ev": -0.0426,
+       "eligible": false,
+       "detail": "Model total 55.4 vs market 55.5"
+      },
+      {
+       "type": "moneyline",
+       "pick": "Georgia ML -3600",
+       "team": "Georgia",
+       "side": "home",
+       "line": null,
+       "edgePts": -6.7,
+       "prob": 0.906,
+       "price": -3600,
+       "ev": -0.0689,
+       "eligible": false,
+       "detail": "Model win prob 91% vs implied 97%"
+      },
+      {
+       "type": "moneyline",
+       "pick": "Vanderbilt ML +1500",
+       "team": "Vanderbilt",
+       "side": "away",
+       "line": null,
+       "edgePts": 3.2,
+       "prob": 0.094,
+       "price": 1500,
+       "ev": 0.5043,
+       "eligible": false,
+       "detail": "Model win prob 9% vs implied 6%"
+      }
+     ],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": [
+      {
+       "at": "2026-09-27T13:46:05.784736+00:00",
+       "spread": -24.5,
+       "total": 55.5,
+       "mlHome": -3600,
+       "mlAway": 1500
+      }
+     ]
+    },
+    "401866432": {
+     "id": 401866432,
+     "startDate": "2026-10-03T17:00:00.000Z",
+     "homeTeam": "Buffalo",
+     "awayTeam": "Western Michigan",
+     "homeConference": "Mid-American",
+     "awayConference": "Mid-American",
+     "homeRecord": "2-2",
+     "awayRecord": "2-2",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "UB Stadium",
+     "model": {
+      "homeRating": -15.2,
+      "awayRating": -2.4,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": -10.5,
+      "spread": 10.5,
+      "total": 45.0,
+      "homeScore": 17.2,
+      "awayScore": 27.8,
+      "pHomeWin": 0.248,
+      "lowConfidence": false
+     },
+     "lines": null,
+     "bets": [],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": []
+    },
+    "401866431": {
+     "id": 401866431,
+     "startDate": "2026-10-03T18:00:00.000Z",
+     "homeTeam": "Ball State",
+     "awayTeam": "Toledo",
+     "homeConference": "Mid-American",
+     "awayConference": "Mid-American",
+     "homeRecord": "1-3",
+     "awayRecord": "3-1",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Scheumann Stadium",
+     "model": {
+      "homeRating": -22.0,
+      "awayRating": -0.9,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": -18.8,
+      "spread": 18.8,
+      "total": 49.8,
+      "homeScore": 15.5,
+      "awayScore": 34.3,
+      "pHomeWin": 0.113,
+      "lowConfidence": false
+     },
+     "lines": null,
+     "bets": [],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": []
+    },
+    "401866430": {
+     "id": 401866430,
+     "startDate": "2026-10-03T19:30:00.000Z",
+     "homeTeam": "Central Michigan",
+     "awayTeam": "Akron",
+     "homeConference": "Mid-American",
+     "awayConference": "Mid-American",
+     "homeRecord": "2-2",
+     "awayRecord": "1-3",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Kelly/Shorts Stadium",
+     "model": {
+      "homeRating": -14.2,
+      "awayRating": -21.1,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": 9.2,
+      "spread": -9.2,
+      "total": 45.8,
+      "homeScore": 27.5,
+      "awayScore": 18.3,
+      "pHomeWin": 0.723,
+      "lowConfidence": false
+     },
+     "lines": null,
+     "bets": [],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": []
+    },
+    "401862787": {
+     "id": 401862787,
+     "startDate": "2026-10-03T19:30:00.000Z",
+     "homeTeam": "Charlotte",
+     "awayTeam": "Memphis",
+     "homeConference": "American Athletic",
+     "awayConference": "American Athletic",
+     "homeRecord": "0-4",
+     "awayRecord": "3-1",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Jerry Richardson Stadium",
+     "model": {
+      "homeRating": -19.8,
+      "awayRating": 1.8,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": -19.3,
+      "spread": 19.3,
+      "total": 58.4,
+      "homeScore": 19.6,
+      "awayScore": 38.8,
+      "pHomeWin": 0.107,
+      "lowConfidence": false
+     },
+     "lines": null,
+     "bets": [],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": []
+    },
+    "401858253": {
+     "id": 401858253,
+     "startDate": "2026-10-03T19:30:00.000Z",
+     "homeTeam": "Florida State",
+     "awayTeam": "Virginia",
+     "homeConference": "ACC",
+     "awayConference": "ACC",
+     "homeRecord": "2-2",
+     "awayRecord": "3-1",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Doak Campbell Stadium",
+     "model": {
+      "homeRating": 5.0,
+      "awayRating": 10.2,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": -2.9,
+      "spread": 2.9,
+      "total": 51.4,
+      "homeScore": 24.3,
+      "awayScore": 27.2,
+      "pHomeWin": 0.426,
+      "lowConfidence": false
+     },
+     "lines": {
+      "books": [
+       {
+        "provider": "DraftKings",
+        "spread": 3,
+        "overUnder": 51.5,
+        "homeMoneyline": 124,
+        "awayMoneyline": -148,
+        "formattedSpread": "Virginia -3"
+       }
+      ],
+      "spread": 3.0,
+      "total": 51.5,
+      "mlHome": 124,
+      "mlAway": -148
+     },
+     "bets": [
+      {
+       "type": "spread",
+       "pick": "Florida State +3",
+       "team": "Florida State",
+       "side": "home",
+       "line": 3.0,
+       "edgePts": 0.1,
+       "prob": 0.503,
+       "price": -110,
+       "ev": -0.0394,
+       "eligible": false,
+       "detail": "Model line: Florida State +2.9 vs market +3.0"
+      },
+      {
+       "type": "total",
+       "pick": "Under 51.5",
+       "team": null,
+       "side": "under",
+       "line": 51.5,
+       "edgePts": 0.1,
+       "prob": 0.501,
+       "price": -110,
+       "ev": -0.0426,
+       "eligible": false,
+       "detail": "Model total 51.4 vs market 51.5"
+      },
+      {
+       "type": "moneyline",
+       "pick": "Florida State ML +124",
+       "team": "Florida State",
+       "side": "home",
+       "line": null,
+       "edgePts": -2.0,
+       "prob": 0.426,
+       "price": 124,
+       "ev": -0.0458,
+       "eligible": false,
+       "detail": "Model win prob 43% vs implied 45%"
+      },
+      {
+       "type": "moneyline",
+       "pick": "Virginia ML -148",
+       "team": "Virginia",
+       "side": "away",
+       "line": null,
+       "edgePts": -2.3,
+       "prob": 0.574,
+       "price": -148,
+       "ev": -0.0381,
+       "eligible": false,
+       "detail": "Model win prob 57% vs implied 60%"
+      }
+     ],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": [
+      {
+       "at": "2026-09-27T13:46:05.784736+00:00",
+       "spread": 3.0,
+       "total": 51.5,
+       "mlHome": 124,
+       "mlAway": -148
+      }
+     ]
+    },
+    "401869956": {
+     "id": 401869956,
+     "startDate": "2026-10-03T19:30:00.000Z",
+     "homeTeam": "Georgia State",
+     "awayTeam": "Old Dominion",
+     "homeConference": "Sun Belt",
+     "awayConference": "Sun Belt",
+     "homeRecord": "3-1",
+     "awayRecord": "1-3",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Center Parc Stadium",
+     "model": {
+      "homeRating": -12.2,
+      "awayRating": -8.2,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": -1.6,
+      "spread": 1.6,
+      "total": 52.0,
+      "homeScore": 25.2,
+      "awayScore": 26.8,
+      "pHomeWin": 0.458,
+      "lowConfidence": false
+     },
+     "lines": null,
+     "bets": [],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": []
+    },
+    "401858473": {
+     "id": 401858473,
+     "startDate": "2026-10-03T19:30:00.000Z",
+     "homeTeam": "Iowa",
+     "awayTeam": "Ohio State",
+     "homeConference": "Big Ten",
+     "awayConference": "Big Ten",
+     "homeRecord": "4-0",
+     "awayRecord": "3-1",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Kinnick Stadium",
+     "model": {
+      "homeRating": 14.5,
+      "awayRating": 26.8,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": -10.0,
+      "spread": 10.0,
+      "total": 48.3,
+      "homeScore": 19.2,
+      "awayScore": 29.1,
+      "pHomeWin": 0.26,
+      "lowConfidence": false
+     },
+     "lines": {
+      "books": [
+       {
+        "provider": "DraftKings",
+        "spread": 14,
+        "overUnder": 44.5,
+        "homeMoneyline": 470,
+        "awayMoneyline": -650,
+        "formattedSpread": "Ohio State -14"
+       }
+      ],
+      "spread": 14.0,
+      "total": 44.5,
+      "mlHome": 470,
+      "mlAway": -650
+     },
+     "bets": [
+      {
+       "type": "spread",
+       "pick": "Iowa +14",
+       "team": "Iowa",
+       "side": "home",
+       "line": 14.0,
+       "edgePts": 4.0,
+       "prob": 0.617,
+       "price": -110,
+       "ev": 0.1781,
+       "eligible": true,
+       "detail": "Model line: Iowa +10.0 vs market +14.0"
+      },
+      {
+       "type": "total",
+       "pick": "Over 44.5",
+       "team": null,
+       "side": "over",
+       "line": 44.5,
+       "edgePts": 3.8,
+       "prob": 0.611,
+       "price": -110,
+       "ev": 0.1661,
+       "eligible": true,
+       "detail": "Model total 48.3 vs market 44.5"
+      },
+      {
+       "type": "moneyline",
+       "pick": "Iowa ML +470",
+       "team": "Iowa",
+       "side": "home",
+       "line": null,
+       "edgePts": 8.4,
+       "prob": 0.26,
+       "price": 470,
+       "ev": 0.4812,
+       "eligible": false,
+       "detail": "Model win prob 26% vs implied 18%"
+      },
+      {
+       "type": "moneyline",
+       "pick": "Ohio State ML -650",
+       "team": "Ohio State",
+       "side": "away",
+       "line": null,
+       "edgePts": -12.7,
+       "prob": 0.74,
+       "price": -650,
+       "ev": -0.146,
+       "eligible": false,
+       "detail": "Model win prob 74% vs implied 87%"
+      }
+     ],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": [
+      {
+       "at": "2026-09-27T13:46:05.784736+00:00",
+       "spread": 14.0,
+       "total": 44.5,
+       "mlHome": 470,
+       "mlAway": -650
+      }
+     ]
+    },
+    "401866434": {
+     "id": 401866434,
+     "startDate": "2026-10-03T19:30:00.000Z",
+     "homeTeam": "Kent State",
+     "awayTeam": "Ohio",
+     "homeConference": "Mid-American",
+     "awayConference": "Mid-American",
+     "homeRecord": "2-2",
+     "awayRecord": "2-2",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Dix Stadium",
+     "model": {
+      "homeRating": -21.7,
+      "awayRating": -10.3,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": -9.1,
+      "spread": 9.1,
+      "total": 48.8,
+      "homeScore": 19.9,
+      "awayScore": 29.0,
+      "pHomeWin": 0.278,
+      "lowConfidence": false
+     },
+     "lines": null,
+     "bets": [],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": []
+    },
+    "401866433": {
+     "id": 401866433,
+     "startDate": "2026-10-03T19:30:00.000Z",
+     "homeTeam": "Massachusetts",
+     "awayTeam": "Eastern Michigan",
+     "homeConference": "Mid-American",
+     "awayConference": "Mid-American",
+     "homeRecord": "4-0",
+     "awayRecord": "2-3",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Warren McGuirk Alumni Stadium",
+     "model": {
+      "homeRating": -13.7,
+      "awayRating": -17.0,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": 5.6,
+      "spread": -5.6,
+      "total": 49.8,
+      "homeScore": 27.7,
+      "awayScore": 22.1,
+      "pHomeWin": 0.641,
+      "lowConfidence": false
+     },
+     "lines": null,
+     "bets": [],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": []
+    },
+    "401866477": {
+     "id": 401866477,
+     "startDate": "2026-10-03T19:30:00.000Z",
+     "homeTeam": "Miami (OH)",
+     "awayTeam": "Bowling Green",
+     "homeConference": "Mid-American",
+     "awayConference": "Mid-American",
+     "homeRecord": "2-2",
+     "awayRecord": "0-4",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Yager Stadium",
+     "model": {
+      "homeRating": -7.1,
+      "awayRating": -19.7,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": 14.8,
+      "spread": -14.8,
+      "total": 47.2,
+      "homeScore": 31.0,
+      "awayScore": 16.2,
+      "pHomeWin": 0.831,
+      "lowConfidence": false
+     },
+     "lines": null,
+     "bets": [],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": []
+    },
+    "401856708": {
+     "id": 401856708,
+     "startDate": "2026-10-03T19:30:00.000Z",
+     "homeTeam": "Missouri",
+     "awayTeam": "Florida",
+     "homeConference": "SEC",
+     "awayConference": "SEC",
+     "homeRecord": "3-1",
+     "awayRecord": "4-0",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Memorial Stadium",
+     "model": {
+      "homeRating": 11.1,
+      "awayRating": 16.1,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": -2.7,
+      "spread": 2.7,
+      "total": 49.5,
+      "homeScore": 23.4,
+      "awayScore": 26.1,
+      "pHomeWin": 0.43,
+      "lowConfidence": false
+     },
+     "lines": {
+      "books": [
+       {
+        "provider": "DraftKings",
+        "spread": 5.5,
+        "overUnder": 56.5,
+        "homeMoneyline": 180,
+        "awayMoneyline": -218,
+        "formattedSpread": "Florida -5.5"
+       }
+      ],
+      "spread": 5.5,
+      "total": 56.5,
+      "mlHome": 180,
+      "mlAway": -218
+     },
+     "bets": [
+      {
+       "type": "spread",
+       "pick": "Missouri +5.5",
+       "team": "Missouri",
+       "side": "home",
+       "line": 5.5,
+       "edgePts": 2.8,
+       "prob": 0.581,
+       "price": -110,
+       "ev": 0.1099,
+       "eligible": true,
+       "detail": "Model line: Missouri +2.7 vs market +5.5"
+      },
+      {
+       "type": "total",
+       "pick": "Under 56.5",
+       "team": null,
+       "side": "under",
+       "line": 56.5,
+       "edgePts": 7.0,
+       "prob": 0.697,
+       "price": -110,
+       "ev": 0.33,
+       "eligible": true,
+       "detail": "Model total 49.5 vs market 56.5"
+      },
+      {
+       "type": "moneyline",
+       "pick": "Missouri ML +180",
+       "team": "Missouri",
+       "side": "home",
+       "line": null,
+       "edgePts": 7.3,
+       "prob": 0.43,
+       "price": 180,
+       "ev": 0.2044,
+       "eligible": true,
+       "detail": "Model win prob 43% vs implied 36%"
+      },
+      {
+       "type": "moneyline",
+       "pick": "Florida ML -218",
+       "team": "Florida",
+       "side": "away",
+       "line": null,
+       "edgePts": -11.6,
+       "prob": 0.57,
+       "price": -218,
+       "ev": -0.1688,
+       "eligible": false,
+       "detail": "Model win prob 57% vs implied 69%"
+      }
+     ],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": [
+      {
+       "at": "2026-09-27T13:46:05.784736+00:00",
+       "spread": 5.5,
+       "total": 56.5,
+       "mlHome": 180,
+       "mlAway": -218
+      }
+     ]
+    },
+    "401858248": {
+     "id": 401858248,
+     "startDate": "2026-10-03T19:30:00.000Z",
+     "homeTeam": "NC State",
+     "awayTeam": "Louisville",
+     "homeConference": "ACC",
+     "awayConference": "ACC",
+     "homeRecord": "2-2",
+     "awayRecord": "2-2",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Carter-Finley Stadium",
+     "model": {
+      "homeRating": 3.2,
+      "awayRating": 10.8,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": -5.3,
+      "spread": 5.3,
+      "total": 56.2,
+      "homeScore": 25.4,
+      "awayScore": 30.8,
+      "pHomeWin": 0.366,
+      "lowConfidence": false
+     },
+     "lines": {
+      "books": [
+       {
+        "provider": "DraftKings",
+        "spread": 6.5,
+        "overUnder": 59.5,
+        "homeMoneyline": 190,
+        "awayMoneyline": -230,
+        "formattedSpread": "Louisville -6.5"
+       }
+      ],
+      "spread": 6.5,
+      "total": 59.5,
+      "mlHome": 190,
+      "mlAway": -230
+     },
+     "bets": [
+      {
+       "type": "spread",
+       "pick": "NC State +6.5",
+       "team": "NC State",
+       "side": "home",
+       "line": 6.5,
+       "edgePts": 1.2,
+       "prob": 0.535,
+       "price": -110,
+       "ev": 0.0219,
+       "eligible": false,
+       "detail": "Model line: NC State +5.3 vs market +6.5"
+      },
+      {
+       "type": "total",
+       "pick": "Under 59.5",
+       "team": null,
+       "side": "under",
+       "line": 59.5,
+       "edgePts": 3.3,
+       "prob": 0.597,
+       "price": -110,
+       "ev": 0.1389,
+       "eligible": false,
+       "detail": "Model total 56.2 vs market 59.5"
+      },
+      {
+       "type": "moneyline",
+       "pick": "NC State ML +190",
+       "team": "NC State",
+       "side": "home",
+       "line": null,
+       "edgePts": 2.1,
+       "prob": 0.366,
+       "price": 190,
+       "ev": 0.0616,
+       "eligible": false,
+       "detail": "Model win prob 37% vs implied 34%"
+      },
+      {
+       "type": "moneyline",
+       "pick": "Louisville ML -230",
+       "team": "Louisville",
+       "side": "away",
+       "line": null,
+       "edgePts": -6.3,
+       "prob": 0.634,
+       "price": -230,
+       "ev": -0.0905,
+       "eligible": false,
+       "detail": "Model win prob 63% vs implied 70%"
+      }
+     ],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": [
+      {
+       "at": "2026-09-27T13:46:05.784736+00:00",
+       "spread": 6.5,
+       "total": 59.5,
+       "mlHome": 190,
+       "mlAway": -230
+      }
+     ]
+    },
+    "401864515": {
+     "id": 401864515,
+     "startDate": "2026-10-03T19:30:00.000Z",
+     "homeTeam": "North Dakota State",
+     "awayTeam": "Wyoming",
+     "homeConference": "Mountain West",
+     "awayConference": "Mountain West",
+     "homeRecord": "4-0",
+     "awayRecord": "2-2",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Fargodome",
+     "model": {
+      "homeRating": 5.0,
+      "awayRating": -13.3,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": 20.7,
+      "spread": -20.7,
+      "total": 45.4,
+      "homeScore": 33.1,
+      "awayScore": 12.4,
+      "pHomeWin": 0.909,
+      "lowConfidence": false
+     },
+     "lines": null,
+     "bets": [],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": []
+    },
+    "401856710": {
+     "id": 401856710,
+     "startDate": "2026-10-03T19:30:00.000Z",
+     "homeTeam": "Tennessee",
+     "awayTeam": "Auburn",
+     "homeConference": "SEC",
+     "awayConference": "SEC",
+     "homeRecord": "3-1",
+     "awayRecord": "3-1",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Neyland Stadium",
+     "model": {
+      "homeRating": 17.1,
+      "awayRating": 10.9,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": 8.5,
+      "spread": -8.5,
+      "total": 54.3,
+      "homeScore": 31.4,
+      "awayScore": 22.9,
+      "pHomeWin": 0.708,
+      "lowConfidence": false
+     },
+     "lines": {
+      "books": [
+       {
+        "provider": "DraftKings",
+        "spread": -7.5,
+        "overUnder": 56.5,
+        "homeMoneyline": -285,
+        "awayMoneyline": 230,
+        "formattedSpread": "Tennessee -7.5"
+       }
+      ],
+      "spread": -7.5,
+      "total": 56.5,
+      "mlHome": -285,
+      "mlAway": 230
+     },
+     "bets": [
+      {
+       "type": "spread",
+       "pick": "Tennessee -7.5",
+       "team": "Tennessee",
+       "side": "home",
+       "line": -7.5,
+       "edgePts": 1.0,
+       "prob": 0.529,
+       "price": -110,
+       "ev": 0.0098,
+       "eligible": false,
+       "detail": "Model line: Tennessee -8.5 vs market -7.5"
+      },
+      {
+       "type": "total",
+       "pick": "Under 56.5",
+       "team": null,
+       "side": "under",
+       "line": 56.5,
+       "edgePts": 2.2,
+       "prob": 0.565,
+       "price": -110,
+       "ev": 0.0781,
+       "eligible": false,
+       "detail": "Model total 54.3 vs market 56.5"
+      },
+      {
+       "type": "moneyline",
+       "pick": "Tennessee ML -285",
+       "team": "Tennessee",
+       "side": "home",
+       "line": null,
+       "edgePts": -3.2,
+       "prob": 0.708,
+       "price": -285,
+       "ev": -0.0438,
+       "eligible": false,
+       "detail": "Model win prob 71% vs implied 74%"
+      },
+      {
+       "type": "moneyline",
+       "pick": "Auburn ML +230",
+       "team": "Auburn",
+       "side": "away",
+       "line": null,
+       "edgePts": -1.1,
+       "prob": 0.292,
+       "price": 230,
+       "ev": -0.0359,
+       "eligible": false,
+       "detail": "Model win prob 29% vs implied 30%"
+      }
+     ],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": [
+      {
+       "at": "2026-09-27T13:46:05.784736+00:00",
+       "spread": -7.5,
+       "total": 56.5,
+       "mlHome": -285,
+       "mlAway": 230
+      }
+     ]
+    },
+    "401862793": {
+     "id": 401862793,
+     "startDate": "2026-10-03T19:30:00.000Z",
+     "homeTeam": "UAB",
+     "awayTeam": "Samford",
+     "homeConference": "American Athletic",
+     "awayConference": "Southern",
+     "homeRecord": "2-2",
+     "awayRecord": "1-3",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Protective Stadium",
+     "model": {
+      "homeRating": -12.5,
+      "awayRating": -24.0,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "fcs-default"
+       ]
+      },
+      "margin": 13.8,
+      "spread": -13.8,
+      "total": 52.3,
+      "homeScore": 33.1,
+      "awayScore": 19.3,
+      "pHomeWin": 0.813,
+      "lowConfidence": true
+     },
+     "lines": null,
+     "bets": [],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": []
+    },
+    "401858247": {
+     "id": 401858247,
+     "startDate": "2026-10-03T19:30:00.000Z",
+     "homeTeam": "UNLV",
+     "awayTeam": "California",
+     "homeConference": "Mountain West",
+     "awayConference": "ACC",
+     "homeRecord": "2-2",
+     "awayRecord": "2-2",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Allegiant Stadium",
+     "model": {
+      "homeRating": -2.2,
+      "awayRating": -1.8,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": 1.9,
+      "spread": -1.9,
+      "total": 55.2,
+      "homeScore": 28.6,
+      "awayScore": 26.6,
+      "pHomeWin": 0.549,
+      "lowConfidence": false
+     },
+     "lines": null,
+     "bets": [],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": []
+    },
+    "401869962": {
+     "id": 401869962,
+     "startDate": "2026-10-03T19:45:00.000Z",
+     "homeTeam": "James Madison",
+     "awayTeam": "Marshall",
+     "homeConference": "Sun Belt",
+     "awayConference": "Sun Belt",
+     "homeRecord": "4-0",
+     "awayRecord": "3-1",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Bridgeforth Stadium",
+     "model": {
+      "homeRating": 7.1,
+      "awayRating": -10.0,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": 19.4,
+      "spread": -19.4,
+      "total": 56.8,
+      "homeScore": 38.1,
+      "awayScore": 18.7,
+      "pHomeWin": 0.895,
+      "lowConfidence": false
+     },
+     "lines": null,
+     "bets": [],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": []
+    },
+    "401858475": {
+     "id": 401858475,
+     "startDate": "2026-10-03T20:00:00.000Z",
+     "homeTeam": "Nebraska",
+     "awayTeam": "Maryland",
+     "homeConference": "Big Ten",
+     "awayConference": "Big Ten",
+     "homeRecord": "4-0",
+     "awayRecord": "2-2",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Memorial Stadium (Lincoln, NE)",
+     "model": {
+      "homeRating": 13.6,
+      "awayRating": 1.1,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": 14.7,
+      "spread": -14.7,
+      "total": 52.0,
+      "homeScore": 33.4,
+      "awayScore": 18.6,
+      "pHomeWin": 0.829,
+      "lowConfidence": false
+     },
+     "lines": null,
+     "bets": [],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": []
+    },
+    "401864514": {
+     "id": 401864514,
+     "startDate": "2026-10-03T20:00:00.000Z",
+     "homeTeam": "New Mexico",
+     "awayTeam": "UTEP",
+     "homeConference": "Mountain West",
+     "awayConference": "Mountain West",
+     "homeRecord": "3-1",
+     "awayRecord": "1-3",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "University Stadium (NM)",
+     "model": {
+      "homeRating": 4.4,
+      "awayRating": -18.9,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": 25.6,
+      "spread": -25.6,
+      "total": 50.4,
+      "homeScore": 38.0,
+      "awayScore": 12.4,
+      "pHomeWin": 0.95,
+      "lowConfidence": false
+     },
+     "lines": null,
+     "bets": [],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": []
+    },
+    "401858472": {
+     "id": 401858472,
+     "startDate": "2026-10-03T20:15:00.000Z",
+     "homeTeam": "Illinois",
+     "awayTeam": "Purdue",
+     "homeConference": "Big Ten",
+     "awayConference": "Big Ten",
+     "homeRecord": "2-2",
+     "awayRecord": "1-3",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Memorial Stadium (Champaign, IL)",
+     "model": {
+      "homeRating": 7.5,
+      "awayRating": -3.7,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": 13.5,
+      "spread": -13.5,
+      "total": 57.0,
+      "homeScore": 35.3,
+      "awayScore": 21.8,
+      "pHomeWin": 0.808,
+      "lowConfidence": false
+     },
+     "lines": null,
+     "bets": [],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": []
+    },
+    "401856709": {
+     "id": 401856709,
+     "startDate": "2026-10-03T20:15:00.000Z",
+     "homeTeam": "South Carolina",
+     "awayTeam": "Kentucky",
+     "homeConference": "SEC",
+     "awayConference": "SEC",
+     "homeRecord": "2-2",
+     "awayRecord": "3-1",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Williams-Brice Stadium",
+     "model": {
+      "homeRating": 10.1,
+      "awayRating": 6.5,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": 5.9,
+      "spread": -5.9,
+      "total": 50.4,
+      "homeScore": 28.2,
+      "awayScore": 22.3,
+      "pHomeWin": 0.649,
+      "lowConfidence": false
+     },
+     "lines": {
+      "books": [
+       {
+        "provider": "DraftKings",
+        "spread": -3.5,
+        "overUnder": 51.5,
+        "homeMoneyline": -192,
+        "awayMoneyline": 160,
+        "formattedSpread": "South Carolina -3.5"
+       }
+      ],
+      "spread": -3.5,
+      "total": 51.5,
+      "mlHome": -192,
+      "mlAway": 160
+     },
+     "bets": [
+      {
+       "type": "spread",
+       "pick": "South Carolina -3.5",
+       "team": "South Carolina",
+       "side": "home",
+       "line": -3.5,
+       "edgePts": 2.4,
+       "prob": 0.572,
+       "price": -110,
+       "ev": 0.0916,
+       "eligible": true,
+       "detail": "Model line: South Carolina -5.9 vs market -3.5"
+      },
+      {
+       "type": "total",
+       "pick": "Under 51.5",
+       "team": null,
+       "side": "under",
+       "line": 51.5,
+       "edgePts": 1.1,
+       "prob": 0.531,
+       "price": -110,
+       "ev": 0.0137,
+       "eligible": false,
+       "detail": "Model total 50.4 vs market 51.5"
+      },
+      {
+       "type": "moneyline",
+       "pick": "South Carolina ML -192",
+       "team": "South Carolina",
+       "side": "home",
+       "line": null,
+       "edgePts": -0.8,
+       "prob": 0.649,
+       "price": -192,
+       "ev": -0.0125,
+       "eligible": false,
+       "detail": "Model win prob 65% vs implied 66%"
+      },
+      {
+       "type": "moneyline",
+       "pick": "Kentucky ML +160",
+       "team": "Kentucky",
+       "side": "away",
+       "line": null,
+       "edgePts": -3.4,
+       "prob": 0.351,
+       "price": 160,
+       "ev": -0.0882,
+       "eligible": false,
+       "detail": "Model win prob 35% vs implied 38%"
+      }
+     ],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": [
+      {
+       "at": "2026-09-27T13:46:05.784736+00:00",
+       "spread": -3.5,
+       "total": 51.5,
+       "mlHome": -192,
+       "mlAway": 160
+      }
+     ]
+    },
+    "401860899": {
+     "id": 401860899,
+     "startDate": "2026-10-03T22:00:00.000Z",
+     "homeTeam": "Colorado State",
+     "awayTeam": "Oregon State",
+     "homeConference": "Pac-12",
+     "awayConference": "Pac-12",
+     "homeRecord": "2-2",
+     "awayRecord": "2-2",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Canvas Stadium",
+     "model": {
+      "homeRating": -6.6,
+      "awayRating": -2.4,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": -1.9,
+      "spread": 1.9,
+      "total": 49.6,
+      "homeScore": 23.9,
+      "awayScore": 25.8,
+      "pHomeWin": 0.452,
+      "lowConfidence": false
+     },
+     "lines": null,
+     "bets": [],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": []
+    },
+    "401862790": {
+     "id": 401862790,
+     "startDate": "2026-10-03T22:00:00.000Z",
+     "homeTeam": "Florida Atlantic",
+     "awayTeam": "Texas Southern",
+     "homeConference": "American Athletic",
+     "awayConference": "SWAC",
+     "homeRecord": "3-1",
+     "awayRecord": "1-3",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "FAU Stadium",
+     "model": {
+      "homeRating": -7.5,
+      "awayRating": -24.0,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "fcs-default"
+       ]
+      },
+      "margin": 18.8,
+      "spread": -18.8,
+      "total": 52.3,
+      "homeScore": 35.6,
+      "awayScore": 16.8,
+      "pHomeWin": 0.887,
+      "lowConfidence": true
+     },
+     "lines": null,
+     "bets": [],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": []
+    },
+    "401869942": {
+     "id": 401869942,
+     "startDate": "2026-10-03T23:00:00.000Z",
+     "homeTeam": "Coastal Carolina",
+     "awayTeam": "Georgia Southern",
+     "homeConference": "Sun Belt",
+     "awayConference": "Sun Belt",
+     "homeRecord": "1-3",
+     "awayRecord": "1-3",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Brooks Stadium (SC)",
+     "model": {
+      "homeRating": -10.3,
+      "awayRating": -7.1,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": -0.9,
+      "spread": 0.9,
+      "total": 54.5,
+      "homeScore": 26.8,
+      "awayScore": 27.7,
+      "pHomeWin": 0.477,
+      "lowConfidence": false
+     },
+     "lines": null,
+     "bets": [],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": []
+    },
+    "401862788": {
+     "id": 401862788,
+     "startDate": "2026-10-03T23:00:00.000Z",
+     "homeTeam": "Rice",
+     "awayTeam": "UTSA",
+     "homeConference": "American Athletic",
+     "awayConference": "American Athletic",
+     "homeRecord": "1-3",
+     "awayRecord": "3-1",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Rice Stadium",
+     "model": {
+      "homeRating": -13.8,
+      "awayRating": -0.5,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": -11.1,
+      "spread": 11.1,
+      "total": 53.9,
+      "homeScore": 21.4,
+      "awayScore": 32.5,
+      "pHomeWin": 0.238,
+      "lowConfidence": false
+     },
+     "lines": null,
+     "bets": [],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": []
+    },
+    "401871089": {
+     "id": 401871089,
+     "startDate": "2026-10-03T23:00:00.000Z",
+     "homeTeam": "South Alabama",
+     "awayTeam": "UL Monroe",
+     "homeConference": "Sun Belt",
+     "awayConference": "Sun Belt",
+     "homeRecord": "2-2",
+     "awayRecord": "0-4",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Hancock Whitney Stadium",
+     "model": {
+      "homeRating": -9.4,
+      "awayRating": -24.3,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": 17.2,
+      "spread": -17.2,
+      "total": 56.7,
+      "homeScore": 37.0,
+      "awayScore": 19.8,
+      "pHomeWin": 0.867,
+      "lowConfidence": false
+     },
+     "lines": null,
+     "bets": [],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": []
+    },
+    "401856818": {
+     "id": 401856818,
+     "startDate": "2026-10-03T23:00:00.000Z",
+     "homeTeam": "TCU",
+     "awayTeam": "BYU",
+     "homeConference": "Big 12",
+     "awayConference": "Big 12",
+     "homeRecord": "2-2",
+     "awayRecord": "3-0",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Amon G. Carter Stadium",
+     "model": {
+      "homeRating": 7.8,
+      "awayRating": 14.1,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": -4.0,
+      "spread": 4.0,
+      "total": 52.1,
+      "homeScore": 24.0,
+      "awayScore": 28.1,
+      "pHomeWin": 0.398,
+      "lowConfidence": false
+     },
+     "lines": {
+      "books": [
+       {
+        "provider": "DraftKings",
+        "spread": 6.5,
+        "overUnder": 52.5,
+        "homeMoneyline": 185,
+        "awayMoneyline": -225,
+        "formattedSpread": "BYU -6.5"
+       }
+      ],
+      "spread": 6.5,
+      "total": 52.5,
+      "mlHome": 185,
+      "mlAway": -225
+     },
+     "bets": [
+      {
+       "type": "spread",
+       "pick": "TCU +6.5",
+       "team": "TCU",
+       "side": "home",
+       "line": 6.5,
+       "edgePts": 2.5,
+       "prob": 0.573,
+       "price": -110,
+       "ev": 0.094,
+       "eligible": true,
+       "detail": "Model line: TCU +4.0 vs market +6.5"
+      },
+      {
+       "type": "total",
+       "pick": "Under 52.5",
+       "team": null,
+       "side": "under",
+       "line": 52.5,
+       "edgePts": 0.4,
+       "prob": 0.512,
+       "price": -110,
+       "ev": -0.0229,
+       "eligible": false,
+       "detail": "Model total 52.1 vs market 52.5"
+      },
+      {
+       "type": "moneyline",
+       "pick": "TCU ML +185",
+       "team": "TCU",
+       "side": "home",
+       "line": null,
+       "edgePts": 4.7,
+       "prob": 0.398,
+       "price": 185,
+       "ev": 0.1338,
+       "eligible": false,
+       "detail": "Model win prob 40% vs implied 35%"
+      },
+      {
+       "type": "moneyline",
+       "pick": "BYU ML -225",
+       "team": "BYU",
+       "side": "away",
+       "line": null,
+       "edgePts": -9.0,
+       "prob": 0.602,
+       "price": -225,
+       "ev": -0.1302,
+       "eligible": false,
+       "detail": "Model win prob 60% vs implied 69%"
+      }
+     ],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": [
+      {
+       "at": "2026-09-27T13:46:05.784736+00:00",
+       "spread": 6.5,
+       "total": 52.5,
+       "mlHome": 185,
+       "mlAway": -225
+      }
+     ]
+    },
+    "401856711": {
+     "id": 401856711,
+     "startDate": "2026-10-03T23:00:00.000Z",
+     "homeTeam": "Texas A&M",
+     "awayTeam": "Arkansas",
+     "homeConference": "SEC",
+     "awayConference": "SEC",
+     "homeRecord": "2-2",
+     "awayRecord": "2-2",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Kyle Field",
+     "model": {
+      "homeRating": 14.9,
+      "awayRating": 0.8,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": 16.4,
+      "spread": -16.4,
+      "total": 58.0,
+      "homeScore": 37.2,
+      "awayScore": 20.8,
+      "pHomeWin": 0.854,
+      "lowConfidence": false
+     },
+     "lines": null,
+     "bets": [],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": []
+    },
+    "401860898": {
+     "id": 401860898,
+     "startDate": "2026-10-03T23:30:00.000Z",
+     "homeTeam": "Boise State",
+     "awayTeam": "Utah State",
+     "homeConference": "Pac-12",
+     "awayConference": "Pac-12",
+     "homeRecord": "3-1",
+     "awayRecord": "1-3",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Albertsons Stadium",
+     "model": {
+      "homeRating": 8.2,
+      "awayRating": -7.4,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": 17.8,
+      "spread": -17.8,
+      "total": 52.9,
+      "homeScore": 35.4,
+      "awayScore": 17.5,
+      "pHomeWin": 0.875,
+      "lowConfidence": false
+     },
+     "lines": null,
+     "bets": [],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": []
+    },
+    "401858249": {
+     "id": 401858249,
+     "startDate": "2026-10-03T23:30:00.000Z",
+     "homeTeam": "Clemson",
+     "awayTeam": "Miami",
+     "homeConference": "ACC",
+     "awayConference": "ACC",
+     "homeRecord": "3-1",
+     "awayRecord": "4-0",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Memorial Stadium (Clemson, SC)",
+     "model": {
+      "homeRating": 6.2,
+      "awayRating": 22.5,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": -14.1,
+      "spread": 14.1,
+      "total": 48.3,
+      "homeScore": 17.1,
+      "awayScore": 31.2,
+      "pHomeWin": 0.182,
+      "lowConfidence": false
+     },
+     "lines": {
+      "books": [
+       {
+        "provider": "DraftKings",
+        "spread": 18.5,
+        "overUnder": 51.5,
+        "homeMoneyline": 800,
+        "awayMoneyline": -1350,
+        "formattedSpread": "Miami -18.5"
+       }
+      ],
+      "spread": 18.5,
+      "total": 51.5,
+      "mlHome": 800,
+      "mlAway": -1350
+     },
+     "bets": [
+      {
+       "type": "spread",
+       "pick": "Clemson +18.5",
+       "team": "Clemson",
+       "side": "home",
+       "line": 18.5,
+       "edgePts": 4.4,
+       "prob": 0.629,
+       "price": -110,
+       "ev": 0.2006,
+       "eligible": true,
+       "detail": "Model line: Clemson +14.1 vs market +18.5"
+      },
+      {
+       "type": "total",
+       "pick": "Under 51.5",
+       "team": null,
+       "side": "under",
+       "line": 51.5,
+       "edgePts": 3.2,
+       "prob": 0.592,
+       "price": -110,
+       "ev": 0.1307,
+       "eligible": false,
+       "detail": "Model total 48.3 vs market 51.5"
+      },
+      {
+       "type": "moneyline",
+       "pick": "Clemson ML +800",
+       "team": "Clemson",
+       "side": "home",
+       "line": null,
+       "edgePts": 7.1,
+       "prob": 0.182,
+       "price": 800,
+       "ev": 0.6396,
+       "eligible": false,
+       "detail": "Model win prob 18% vs implied 11%"
+      },
+      {
+       "type": "moneyline",
+       "pick": "Miami ML -1350",
+       "team": "Miami",
+       "side": "away",
+       "line": null,
+       "edgePts": -11.3,
+       "prob": 0.818,
+       "price": -1350,
+       "ev": -0.1216,
+       "eligible": false,
+       "detail": "Model win prob 82% vs implied 93%"
+      }
+     ],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": [
+      {
+       "at": "2026-09-27T13:46:05.784736+00:00",
+       "spread": 18.5,
+       "total": 51.5,
+       "mlHome": 800,
+       "mlAway": -1350
+      }
+     ]
+    },
+    "401856821": {
+     "id": 401856821,
+     "startDate": "2026-10-03T23:30:00.000Z",
+     "homeTeam": "Colorado",
+     "awayTeam": "Texas Tech",
+     "homeConference": "Big 12",
+     "awayConference": "Big 12",
+     "homeRecord": "2-2",
+     "awayRecord": "4-0",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Folsom Field",
+     "model": {
+      "homeRating": -2.2,
+      "awayRating": 16.6,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": -16.5,
+      "spread": 16.5,
+      "total": 51.8,
+      "homeScore": 17.6,
+      "awayScore": 34.2,
+      "pHomeWin": 0.143,
+      "lowConfidence": false
+     },
+     "lines": null,
+     "bets": [],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": []
+    },
+    "401869842": {
+     "id": 401869842,
+     "startDate": "2026-10-03T23:30:00.000Z",
+     "homeTeam": "Louisiana Tech",
+     "awayTeam": "Army",
+     "homeConference": "Sun Belt",
+     "awayConference": "American Athletic",
+     "homeRecord": "1-2",
+     "awayRecord": "2-1",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Joe Aillet Stadium",
+     "model": {
+      "homeRating": -6.8,
+      "awayRating": -0.5,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": -4.0,
+      "spread": 4.0,
+      "total": 52.7,
+      "homeScore": 24.4,
+      "awayScore": 28.3,
+      "pHomeWin": 0.399,
+      "lowConfidence": false
+     },
+     "lines": null,
+     "bets": [],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": []
+    },
+    "401862792": {
+     "id": 401862792,
+     "startDate": "2026-10-03T23:30:00.000Z",
+     "homeTeam": "South Florida",
+     "awayTeam": "Temple",
+     "homeConference": "American Athletic",
+     "awayConference": "American Athletic",
+     "homeRecord": "4-0",
+     "awayRecord": "1-3",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Raymond James Stadium",
+     "model": {
+      "homeRating": 1.7,
+      "awayRating": -5.9,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": 9.9,
+      "spread": -9.9,
+      "total": 59.2,
+      "homeScore": 34.5,
+      "awayScore": 24.6,
+      "pHomeWin": 0.738,
+      "lowConfidence": false
+     },
+     "lines": null,
+     "bets": [],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": []
+    },
+    "401858478": {
+     "id": 401858478,
+     "startDate": "2026-10-03T23:30:00.000Z",
+     "homeTeam": "USC",
+     "awayTeam": "Washington",
+     "homeConference": "Big Ten",
+     "awayConference": "Big Ten",
+     "homeRecord": "4-1",
+     "awayRecord": "3-1",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Los Angeles Memorial Coliseum",
+     "model": {
+      "homeRating": 16.5,
+      "awayRating": 8.8,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": 10.0,
+      "spread": -10.0,
+      "total": 55.7,
+      "homeScore": 32.9,
+      "awayScore": 22.8,
+      "pHomeWin": 0.741,
+      "lowConfidence": false
+     },
+     "lines": {
+      "books": [
+       {
+        "provider": "DraftKings",
+        "spread": -10,
+        "overUnder": 57.5,
+        "homeMoneyline": -375,
+        "awayMoneyline": 295,
+        "formattedSpread": "USC -10"
+       }
+      ],
+      "spread": -10.0,
+      "total": 57.5,
+      "mlHome": -375,
+      "mlAway": 295
+     },
+     "bets": [
+      {
+       "type": "spread",
+       "pick": "USC -10",
+       "team": "USC",
+       "side": "home",
+       "line": -10.0,
+       "edgePts": 0.0,
+       "prob": 0.501,
+       "price": -110,
+       "ev": -0.0443,
+       "eligible": false,
+       "detail": "Model line: USC -10.0 vs market -10.0"
+      },
+      {
+       "type": "total",
+       "pick": "Under 57.5",
+       "team": null,
+       "side": "under",
+       "line": 57.5,
+       "edgePts": 1.8,
+       "prob": 0.553,
+       "price": -110,
+       "ev": 0.0558,
+       "eligible": false,
+       "detail": "Model total 55.7 vs market 57.5"
+      },
+      {
+       "type": "moneyline",
+       "pick": "USC ML -375",
+       "team": "USC",
+       "side": "home",
+       "line": null,
+       "edgePts": -4.8,
+       "prob": 0.741,
+       "price": -375,
+       "ev": -0.0614,
+       "eligible": false,
+       "detail": "Model win prob 74% vs implied 79%"
+      },
+      {
+       "type": "moneyline",
+       "pick": "Washington ML +295",
+       "team": "Washington",
+       "side": "away",
+       "line": null,
+       "edgePts": 0.6,
+       "prob": 0.259,
+       "price": 295,
+       "ev": 0.0231,
+       "eligible": false,
+       "detail": "Model win prob 26% vs implied 25%"
+      }
+     ],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": [
+      {
+       "at": "2026-09-27T13:46:05.784736+00:00",
+       "spread": -10.0,
+       "total": 57.5,
+       "mlHome": -375,
+       "mlAway": 295
+      }
+     ]
+    },
+    "401856706": {
+     "id": 401856706,
+     "startDate": "2026-10-03T23:45:00.000Z",
+     "homeTeam": "LSU",
+     "awayTeam": "McNeese",
+     "homeConference": "SEC",
+     "awayConference": "Southland",
+     "homeRecord": "3-1",
+     "awayRecord": "2-3",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Tiger Stadium (LA)",
+     "model": {
+      "homeRating": 19.3,
+      "awayRating": -24.0,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "fcs-default"
+       ]
+      },
+      "margin": 45.6,
+      "spread": -45.6,
+      "total": 52.3,
+      "homeScore": 49.0,
+      "awayScore": 3.4,
+      "pHomeWin": 0.998,
+      "lowConfidence": true
+     },
+     "lines": null,
+     "bets": [],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": []
+    },
+    "401869932": {
+     "id": 401869932,
+     "startDate": "2026-10-04T00:00:00.000Z",
+     "homeTeam": "Louisiana",
+     "awayTeam": "Arkansas State",
+     "homeConference": "Sun Belt",
+     "awayConference": "Sun Belt",
+     "homeRecord": "3-1",
+     "awayRecord": "2-2",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Cajun Field",
+     "model": {
+      "homeRating": -4.4,
+      "awayRating": -8.9,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": 6.9,
+      "spread": -6.9,
+      "total": 57.4,
+      "homeScore": 32.1,
+      "awayScore": 25.3,
+      "pHomeWin": 0.671,
+      "lowConfidence": false
+     },
+     "lines": null,
+     "bets": [],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": []
+    },
+    "401858477": {
+     "id": 401858477,
+     "startDate": "2026-10-04T00:00:00.000Z",
+     "homeTeam": "Rutgers",
+     "awayTeam": "Indiana",
+     "homeConference": "Big Ten",
+     "awayConference": "Big Ten",
+     "homeRecord": "1-3",
+     "awayRecord": "4-0",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "SHI Stadium",
+     "model": {
+      "homeRating": -3.3,
+      "awayRating": 24.4,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": -25.4,
+      "spread": 25.4,
+      "total": 56.0,
+      "homeScore": 15.3,
+      "awayScore": 40.7,
+      "pHomeWin": 0.051,
+      "lowConfidence": false
+     },
+     "lines": {
+      "books": [
+       {
+        "provider": "DraftKings",
+        "spread": 23.5,
+        "overUnder": 54.5,
+        "homeMoneyline": 1300,
+        "awayMoneyline": -2800,
+        "formattedSpread": "Indiana -23.5"
+       }
+      ],
+      "spread": 23.5,
+      "total": 54.5,
+      "mlHome": 1300,
+      "mlAway": -2800
+     },
+     "bets": [
+      {
+       "type": "spread",
+       "pick": "Indiana -23.5",
+       "team": "Indiana",
+       "side": "away",
+       "line": -23.5,
+       "edgePts": 1.9,
+       "prob": 0.557,
+       "price": -110,
+       "ev": 0.0624,
+       "eligible": false,
+       "detail": "Model line: Rutgers +25.4 vs market +23.5"
+      },
+      {
+       "type": "total",
+       "pick": "Over 54.5",
+       "team": null,
+       "side": "over",
+       "line": 54.5,
+       "edgePts": 1.5,
+       "prob": 0.546,
+       "price": -110,
+       "ev": 0.0418,
+       "eligible": false,
+       "detail": "Model total 56.0 vs market 54.5"
+      },
+      {
+       "type": "moneyline",
+       "pick": "Rutgers ML +1300",
+       "team": "Rutgers",
+       "side": "home",
+       "line": null,
+       "edgePts": -2.1,
+       "prob": 0.051,
+       "price": 1300,
+       "ev": -0.2928,
+       "eligible": false,
+       "detail": "Model win prob 5% vs implied 7%"
+      },
+      {
+       "type": "moneyline",
+       "pick": "Indiana ML -2800",
+       "team": "Indiana",
+       "side": "away",
+       "line": null,
+       "edgePts": -1.6,
+       "prob": 0.949,
+       "price": -2800,
+       "ev": -0.0166,
+       "eligible": false,
+       "detail": "Model win prob 95% vs implied 97%"
+      }
+     ],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": [
+      {
+       "at": "2026-09-27T13:46:05.784736+00:00",
+       "spread": 23.5,
+       "total": 54.5,
+       "mlHome": 1300,
+       "mlAway": -2800
+      }
+     ]
+    },
+    "401860921": {
+     "id": 401860921,
+     "startDate": "2026-10-04T01:30:00.000Z",
+     "homeTeam": "Washington State",
+     "awayTeam": "Fresno State",
+     "homeConference": "Pac-12",
+     "awayConference": "Pac-12",
+     "homeRecord": "1-3",
+     "awayRecord": "3-1",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Gesa Field",
+     "model": {
+      "homeRating": -4.8,
+      "awayRating": 0.4,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": -2.9,
+      "spread": 2.9,
+      "total": 44.3,
+      "homeScore": 20.7,
+      "awayScore": 23.6,
+      "pHomeWin": 0.426,
+      "lowConfidence": false
+     },
+     "lines": null,
+     "bets": [],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": []
+    },
+    "401856817": {
+     "id": 401856817,
+     "startDate": "2026-10-04T02:30:00.000Z",
+     "homeTeam": "Arizona State",
+     "awayTeam": "Baylor",
+     "homeConference": "Big 12",
+     "awayConference": "Big 12",
+     "homeRecord": "2-1",
+     "awayRecord": "3-1",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Mountain America Stadium",
+     "model": {
+      "homeRating": 3.6,
+      "awayRating": 5.8,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": 0.0,
+      "spread": -0.0,
+      "total": 53.1,
+      "homeScore": 26.6,
+      "awayScore": 26.6,
+      "pHomeWin": 0.5,
+      "lowConfidence": false
+     },
+     "lines": null,
+     "bets": [],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": []
+    },
+    "401860900": {
+     "id": 401860900,
+     "startDate": "2026-10-04T02:30:00.000Z",
+     "homeTeam": "San Diego State",
+     "awayTeam": "Texas State",
+     "homeConference": "Pac-12",
+     "awayConference": "Pac-12",
+     "homeRecord": "1-3",
+     "awayRecord": "2-2",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Snapdragon Stadium",
+     "model": {
+      "homeRating": -3.7,
+      "awayRating": -3.3,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": 1.9,
+      "spread": -1.9,
+      "total": 58.6,
+      "homeScore": 30.3,
+      "awayScore": 28.4,
+      "pHomeWin": 0.55,
+      "lowConfidence": false
+     },
+     "lines": null,
+     "bets": [],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": []
+    },
+    "401856820": {
+     "id": 401856820,
+     "startDate": "2026-10-04T03:00:00.000Z",
+     "homeTeam": "Arizona",
+     "awayTeam": "Cincinnati",
+     "homeConference": "Big 12",
+     "awayConference": "Big 12",
+     "homeRecord": "3-1",
+     "awayRecord": "4-0",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Arizona Stadium",
+     "model": {
+      "homeRating": 7.3,
+      "awayRating": 6.0,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": 3.6,
+      "spread": -3.6,
+      "total": 55.1,
+      "homeScore": 29.4,
+      "awayScore": 25.7,
+      "pHomeWin": 0.592,
+      "lowConfidence": false
+     },
+     "lines": {
+      "books": [
+       {
+        "provider": "DraftKings",
+        "spread": -8.5,
+        "overUnder": 54.5,
+        "homeMoneyline": -285,
+        "awayMoneyline": 230,
+        "formattedSpread": "Arizona -8.5"
+       }
+      ],
+      "spread": -8.5,
+      "total": 54.5,
+      "mlHome": -285,
+      "mlAway": 230
+     },
+     "bets": [
+      {
+       "type": "spread",
+       "pick": "Cincinnati +8.5",
+       "team": "Cincinnati",
+       "side": "away",
+       "line": 8.5,
+       "edgePts": 4.9,
+       "prob": 0.641,
+       "price": -110,
+       "ev": 0.2238,
+       "eligible": true,
+       "detail": "Model line: Arizona -3.6 vs market -8.5"
+      },
+      {
+       "type": "total",
+       "pick": "Over 54.5",
+       "team": null,
+       "side": "over",
+       "line": 54.5,
+       "edgePts": 0.6,
+       "prob": 0.518,
+       "price": -110,
+       "ev": -0.0116,
+       "eligible": false,
+       "detail": "Model total 55.1 vs market 54.5"
+      },
+      {
+       "type": "moneyline",
+       "pick": "Arizona ML -285",
+       "team": "Arizona",
+       "side": "home",
+       "line": null,
+       "edgePts": -14.8,
+       "prob": 0.592,
+       "price": -285,
+       "ev": -0.1997,
+       "eligible": false,
+       "detail": "Model win prob 59% vs implied 74%"
+      },
+      {
+       "type": "moneyline",
+       "pick": "Cincinnati ML +230",
+       "team": "Cincinnati",
+       "side": "away",
+       "line": null,
+       "edgePts": 10.5,
+       "prob": 0.408,
+       "price": 230,
+       "ev": 0.345,
+       "eligible": true,
+       "detail": "Model win prob 41% vs implied 30%"
+      }
+     ],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": [
+      {
+       "at": "2026-09-27T13:46:05.784736+00:00",
+       "spread": -8.5,
+       "total": 54.5,
+       "mlHome": -285,
+       "mlAway": 230
+      }
+     ]
+    },
+    "401864513": {
+     "id": 401864513,
+     "startDate": "2026-10-04T03:59:00.000Z",
+     "homeTeam": "Hawai'i",
+     "awayTeam": "San Jos\u00e9 State",
+     "homeConference": "Mountain West",
+     "awayConference": "Mountain West",
+     "homeRecord": "1-3",
+     "awayRecord": "2-2",
+     "neutralSite": false,
+     "tv": null,
+     "venue": "Clarence T.C. Ching Athletics Complex",
+     "model": {
+      "homeRating": -7.9,
+      "awayRating": -11.3,
+      "sources": {
+       "home": [
+        "sp",
+        "fpi",
+        "elo"
+       ],
+       "away": [
+        "sp",
+        "fpi",
+        "elo"
+       ]
+      },
+      "margin": 5.7,
+      "spread": -5.7,
+      "total": 50.9,
+      "homeScore": 28.3,
+      "awayScore": 22.6,
+      "pHomeWin": 0.644,
+      "lowConfidence": false
+     },
+     "lines": null,
+     "bets": [],
+     "result": null,
+     "lockedAt": "2026-09-27T13:46:05.784736+00:00",
+     "lineHistory": []
     }
    }
   }
