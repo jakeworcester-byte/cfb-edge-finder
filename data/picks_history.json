@@ -336,7 +336,12 @@
    "openLine": null,
    "openPrice": 180,
    "openAt": "2026-09-27T13:46:08.048285+00:00",
-   "result": null,
+   "result": {
+    "homeScore": 33,
+    "awayScore": 35,
+    "outcome": "win",
+    "profit": 16.0
+   },
    "clv": {
     "probPts": 2.7,
     "closePrice": 160,
@@ -403,6 +408,34 @@
    "season": 2026,
    "seasonType": "regular",
    "week": 5,
+   "gameId": 401860900,
+   "matchup": "Texas State @ San Diego State",
+   "homeTeam": "San Diego State",
+   "awayTeam": "Texas State",
+   "startDate": "2026-10-04T02:30:00.000Z",
+   "type": "moneyline",
+   "pick": "San Diego State ML +295",
+   "side": "home",
+   "line": null,
+   "price": 295,
+   "prob": 0.412,
+   "ev": 0.6264,
+   "detail": "Model win prob 41% vs implied 25%",
+   "pickedAt": "2026-10-03T16:06:08.659445+00:00",
+   "openLine": null,
+   "openPrice": 245,
+   "openAt": "2026-10-01T20:01:45.315937+00:00",
+   "result": null,
+   "clv": {
+    "probPts": -3.7,
+    "closePrice": 295,
+    "at": "2026-10-03T16:05:05.620759+00:00"
+   }
+  },
+  {
+   "season": 2026,
+   "seasonType": "regular",
+   "week": 5,
    "gameId": 401856820,
    "matchup": "Cincinnati @ Arizona",
    "homeTeam": "Arizona",
@@ -416,7 +449,7 @@
    "prob": 0.425,
    "ev": 0.4454,
    "detail": "Model win prob 43% vs implied 29%",
-   "pickedAt": "2026-10-01T20:01:45.315931+00:00",
+   "pickedAt": "2026-10-03T16:06:08.659469+00:00",
    "openLine": null,
    "openPrice": 230,
    "openAt": "2026-09-27T13:46:08.048301+00:00",
@@ -424,35 +457,7 @@
    "clv": {
     "probPts": -0.9,
     "closePrice": 240,
-    "at": "2026-10-01T20:01:08.193273+00:00"
-   }
-  },
-  {
-   "season": 2026,
-   "seasonType": "regular",
-   "week": 5,
-   "gameId": 401860900,
-   "matchup": "Texas State @ San Diego State",
-   "homeTeam": "San Diego State",
-   "awayTeam": "Texas State",
-   "startDate": "2026-10-04T02:30:00.000Z",
-   "type": "moneyline",
-   "pick": "San Diego State ML +245",
-   "side": "home",
-   "line": null,
-   "price": 245,
-   "prob": 0.412,
-   "ev": 0.4205,
-   "detail": "Model win prob 41% vs implied 29%",
-   "pickedAt": "2026-10-01T20:01:45.315935+00:00",
-   "openLine": null,
-   "openPrice": 245,
-   "openAt": "2026-10-01T20:01:45.315937+00:00",
-   "result": null,
-   "clv": {
-    "probPts": 0.0,
-    "closePrice": 245,
-    "at": "2026-10-01T20:01:08.193273+00:00"
+    "at": "2026-10-03T16:05:05.620759+00:00"
    }
   }
  ]
