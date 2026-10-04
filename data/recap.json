@@ -1,15 +1,14 @@
 {
  "weekKey": "2026-regular-5",
- "factsHash": null,
- "source": "builtin",
- "lastError": "invented the number 68",
- "generatedAt": "2026-10-03T16:05:05.620759+00:00",
- "headline": "5-1 on 6 value plays, +$43.77",
+ "factsHash": "93b15197a9324e34",
+ "source": "claude",
+ "lastError": null,
+ "generatedAt": "2026-10-04T13:51:37.035481+00:00",
+ "headline": "Moneylines Carried The Week While The Totals Set Money On Fire",
  "paragraphs": [
-  "5 games finished in Week 5. It found a playable edge in 4 of them and left the other 1 alone. Those plays went 5-1, worth +$43.77 at $10 a play (73.0% on the $60 at risk).",
-  "By market, spreads went 2-0, totals went 1-1 and moneylines went 2-0. The best of them was Pittsburgh ML +160, a 20-point gap between the model and the price that finished Pittsburgh 35, Virginia Tech 33. The one that stung was Under 55 in Pittsburgh at Virginia Tech, a 3.5-point disagreement with the market that finished Pittsburgh 35, Virginia Tech 33.",
-  "The five plays that actually got published went 1-0 for +$16.00, ahead of the full board. Ranking by expected value is supposed to concentrate the good ones at the top, and whether it does is something only a season of these will answer.",
-  "Season to date the model has made 87 value plays and gone 36-49-2, -$139.44 on flat $10 bets (-16.0%). It expected to win 59% of those and won 42%. On line movement, 1 of the 1 published picks whose numbers moved closed worse than the site posted them, so the market came our way 100% of the time. Sample is getting real enough to argue with, though a model that beats closing lines is rarer than one that beats a few hundred results."
+  "Fifty nine games got graded for real this week, no hindsight, no peeking. The model found something it liked in 37 of them, passed on 22, and fired 56 plays at $10 apiece. The card came back 28-27-1 for a profit of $28.92, a 5.2 percent return. It expected to hit 61.7 percent of these and hit 50.9 percent instead, which is the sound of a model being rescued by its prices rather than its opinions.",
+  "The rescue came entirely from the moneyline, where 14 plays went 8-6 and printed $57.12 at a 40.8 percent ROI. San Diego State at +295 was the week's masterpiece, a 41 percent underdog in the model's eyes that won 31 to 29 and paid $29.50. Totals, meanwhile, went 4-8 and torched $43.64, a negative 36.4 percent return on a market the model claimed 66.2 percent confidence in. Those two facts are in the same column of the same spreadsheet.",
+  "The worst beat was UConn ML at +215, a 16.4 point edge that lost by one point in a 42-41 game, which is the universe charging full price for a rounding error. The market moved on 43 of these plays and came toward the model on 13 of them, 30.2 percent, so no, the closing line is not validating anything here. Season to date: 137 plays, 59-75-3, down $154.29, negative 11.3 percent. Strip the hindsight week and it is 40-25-1 and plus $110.47, which tells you exactly how much that week was worth."
  ],
  "recent": [
   {
@@ -27,8 +26,8 @@
   {
    "weekKey": "2026-regular-5",
    "label": "Week 5",
-   "headline": "5-1 on 6 value plays, +$43.77",
-   "opening": "5 games finished in Week 5. It found a playable edge in 4 of them and left the other 1 alone. Those plays went 5-1, worth +$43.77 at $10 a play (73.0% on the $6"
+   "headline": "Moneylines Carried The Week While The Totals Set Money On Fire",
+   "opening": "Fifty nine games got graded for real this week, no hindsight, no peeking. The model found something it liked in 37 of them, passed on 22, and fired 56 plays at "
   }
  ]
 }

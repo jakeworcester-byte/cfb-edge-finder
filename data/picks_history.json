@@ -369,7 +369,12 @@
    "openLine": null,
    "openPrice": 200,
    "openAt": "2026-09-29T19:43:45.477545+00:00",
-   "result": null,
+   "result": {
+    "homeScore": 41,
+    "awayScore": 42,
+    "outcome": "loss",
+    "profit": -10.0
+   },
    "clv": {
     "probPts": -1.6,
     "closePrice": 215,
@@ -397,7 +402,12 @@
    "openLine": 46.0,
    "openPrice": -110,
    "openAt": "2026-09-29T19:43:45.477534+00:00",
-   "result": null,
+   "result": {
+    "homeScore": 14,
+    "awayScore": 9,
+    "outcome": "loss",
+    "profit": -10.0
+   },
    "clv": {
     "pts": 0.0,
     "closeLine": 46.0,
@@ -425,7 +435,12 @@
    "openLine": null,
    "openPrice": 245,
    "openAt": "2026-10-01T20:01:45.315937+00:00",
-   "result": null,
+   "result": {
+    "homeScore": 31,
+    "awayScore": 29,
+    "outcome": "win",
+    "profit": 29.5
+   },
    "clv": {
     "probPts": -3.7,
     "closePrice": 295,
@@ -453,11 +468,156 @@
    "openLine": null,
    "openPrice": 230,
    "openAt": "2026-09-27T13:46:08.048301+00:00",
-   "result": null,
+   "result": {
+    "homeScore": 34,
+    "awayScore": 7,
+    "outcome": "loss",
+    "profit": -10.0
+   },
    "clv": {
     "probPts": -0.9,
     "closePrice": 240,
     "at": "2026-10-03T16:05:05.620759+00:00"
+   }
+  },
+  {
+   "season": 2026,
+   "seasonType": "regular",
+   "week": 6,
+   "gameId": 401856714,
+   "matchup": "South Carolina @ Florida",
+   "homeTeam": "Florida",
+   "awayTeam": "South Carolina",
+   "startDate": "2026-10-10T16:45:00.000Z",
+   "type": "spread",
+   "pick": "South Carolina +14.5",
+   "side": "away",
+   "line": 14.5,
+   "price": -110,
+   "prob": 0.639,
+   "ev": 0.2198,
+   "detail": "Model line: Florida -9.7 vs market -14.5",
+   "pickedAt": "2026-10-04T13:51:39.010283+00:00",
+   "openLine": 14.5,
+   "openPrice": -110,
+   "openAt": "2026-10-04T13:51:39.010297+00:00",
+   "result": null,
+   "clv": {
+    "pts": 0.0,
+    "closeLine": 14.5,
+    "at": "2026-10-04T13:51:37.035481+00:00"
+   }
+  },
+  {
+   "season": 2026,
+   "seasonType": "regular",
+   "week": 6,
+   "gameId": 401858487,
+   "matchup": "Iowa @ Washington",
+   "homeTeam": "Washington",
+   "awayTeam": "Iowa",
+   "startDate": "2026-10-10T01:00:00.000Z",
+   "type": "spread",
+   "pick": "Iowa +1.5",
+   "side": "away",
+   "line": 1.5,
+   "price": -110,
+   "prob": 0.636,
+   "ev": 0.2139,
+   "detail": "Model line: Washington +3.2 vs market -1.5",
+   "pickedAt": "2026-10-04T13:51:39.010305+00:00",
+   "openLine": 1.5,
+   "openPrice": -110,
+   "openAt": "2026-10-04T13:51:39.010307+00:00",
+   "result": null,
+   "clv": {
+    "pts": 0.0,
+    "closeLine": 1.5,
+    "at": "2026-10-04T13:51:37.035481+00:00"
+   }
+  },
+  {
+   "season": 2026,
+   "seasonType": "regular",
+   "week": 6,
+   "gameId": 401871051,
+   "matchup": "Jacksonville State @ Kennesaw State",
+   "homeTeam": "Kennesaw State",
+   "awayTeam": "Jacksonville State",
+   "startDate": "2026-10-07T23:00:00.000Z",
+   "type": "total",
+   "pick": "Over 48.5",
+   "side": "over",
+   "line": 48.5,
+   "price": -110,
+   "prob": 0.633,
+   "ev": 0.2091,
+   "detail": "Model total 53.1 vs market 48.5",
+   "pickedAt": "2026-10-04T13:51:39.010312+00:00",
+   "openLine": 48.5,
+   "openPrice": -110,
+   "openAt": "2026-10-04T13:51:39.010314+00:00",
+   "result": null,
+   "clv": {
+    "pts": 0.0,
+    "closeLine": 48.5,
+    "at": "2026-10-04T13:51:37.035481+00:00"
+   }
+  },
+  {
+   "season": 2026,
+   "seasonType": "regular",
+   "week": 6,
+   "gameId": 401856712,
+   "matchup": "Georgia @ Alabama",
+   "homeTeam": "Alabama",
+   "awayTeam": "Georgia",
+   "startDate": "2026-10-10T23:30:00.000Z",
+   "type": "spread",
+   "pick": "Alabama +2.5",
+   "side": "home",
+   "line": 2.5,
+   "price": -110,
+   "prob": 0.593,
+   "ev": 0.1323,
+   "detail": "Model line: Alabama -0.7 vs market +2.5",
+   "pickedAt": "2026-10-04T13:51:39.010321+00:00",
+   "openLine": 2.5,
+   "openPrice": -110,
+   "openAt": "2026-10-04T13:51:39.010322+00:00",
+   "result": null,
+   "clv": {
+    "pts": 0.0,
+    "closeLine": 2.5,
+    "at": "2026-10-04T13:51:37.035481+00:00"
+   }
+  },
+  {
+   "season": 2026,
+   "seasonType": "regular",
+   "week": 6,
+   "gameId": 401856826,
+   "matchup": "Iowa State @ BYU",
+   "homeTeam": "BYU",
+   "awayTeam": "Iowa State",
+   "startDate": "2026-10-10T02:15:00.000Z",
+   "type": "spread",
+   "pick": "Iowa State +14.5",
+   "side": "away",
+   "line": 14.5,
+   "price": -110,
+   "prob": 0.587,
+   "ev": 0.1204,
+   "detail": "Model line: BYU -11.5 vs market -14.5",
+   "pickedAt": "2026-10-04T13:51:39.010326+00:00",
+   "openLine": 14.5,
+   "openPrice": -110,
+   "openAt": "2026-10-04T13:51:39.010328+00:00",
+   "result": null,
+   "clv": {
+    "pts": 0.0,
+    "closeLine": 14.5,
+    "at": "2026-10-04T13:51:37.035481+00:00"
    }
   }
  ]
