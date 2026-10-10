@@ -1,14 +1,14 @@
 {
  "weekKey": "2026-regular-6",
- "factsHash": "274a8f2b0de14f43",
+ "factsHash": "a71ea16790bb8429",
  "source": "claude",
  "lastError": null,
- "generatedAt": "2026-10-08T20:24:59.390536+00:00",
- "headline": "One Play, One Win, Nine Dollars, Undefeated Forever",
+ "generatedAt": "2026-10-10T17:14:28.493910+00:00",
+ "headline": "Totals Went Perfect, Moneylines Went Looking For Trouble",
  "paragraphs": [
-  "Week 6 was graded for real, and the model looked at three games, shrugged at two of them, and found exactly one thing worth ten dollars. That bet cashed. The week closes at 1-0, a perfect win rate, a 90.9 percent ROI, and a grand total of 9.09 dollars in profit. Somewhere a spreadsheet is describing this as a flawless campaign. The spreadsheet is technically correct and completely insufferable.",
-  "The call was Over 49.5 in Jacksonville State at Kennesaw State, a 3.6 point edge with the model giving itself a 60 percent shot. Final was 27-26, fifty three points, over by three and a half. The one line that moved moved toward the model, which is 100 percent of them, a statistic built on a sample of exactly one. Best call of the week by default, since it was the only call of the week.",
-  "The season is where the comedy stops being cute. Three weeks graded honestly, 138 plays, a 60-75-3 record, a 44.4 percent win rate against a model expectation of 60.4, and 145.20 dollars gone on 1,380 staked for a minus 10.5 percent ROI. The hindsight week, the one the model filled out while staring at finished box scores, went 40-25-1 for 110.47 in profit. It counts for nothing and it knows it."
+  "Twelve games got graded for real, the model passed on five, and the twelve plays it did fire came back 7-5 for a profit of 17.54 on 120 staked. That is a 14.6 percent return, which is the kind of week nobody writes a song about and everybody quietly takes. The three markets, however, did not arrive at that number together.",
+  "Totals went 3-0 for 27.27, a 90.9 percent return, and the best of them was Over 50 in South Alabama's neighborhood, no, in San Antonio, where UTSA beat South Florida 31-24 at a 72 percent model number. The same game also produced the week's dumbest moment: South Florida moneyline at plus 215, advertised with 15.9 probability points of edge while the model itself only gave it a 48 percent chance to win. It bet on something it expected to lose. It lost. Moneylines overall went 1-4 for minus 27.",
+  "The published top five contained two plays, went 1-1, and made three dollars, a feature that is becoming its own running joke. Season to date across three honestly graded weeks: 66-80-3, down 136.75 on 1,490 staked, a negative 9.2 percent return against a model that keeps insisting it should be hitting 60.2 percent. Strip out the hindsight week and it is 40-25-1 and up 110.47, which is exactly the sort of arithmetic a losing operation loves to mention."
  ],
  "recent": [
   {
@@ -26,8 +26,8 @@
   {
    "weekKey": "2026-regular-6",
    "label": "Week 6",
-   "headline": "One Play, One Win, Nine Dollars, Undefeated Forever",
-   "opening": "Week 6 was graded for real, and the model looked at three games, shrugged at two of them, and found exactly one thing worth ten dollars. That bet cashed. The we"
+   "headline": "Totals Went Perfect, Moneylines Went Looking For Trouble",
+   "opening": "Twelve games got graded for real, the model passed on five, and the twelve plays it did fire came back 7-5 for a profit of 17.54 on 120 staked. That is a 14.6 p"
   }
  ]
 }
