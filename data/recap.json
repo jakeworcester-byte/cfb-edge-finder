@@ -1,22 +1,16 @@
 {
- "weekKey": "2026-regular-6",
- "factsHash": "dddddf5c9d795b46",
+ "weekKey": "2026-regular-7",
+ "factsHash": "f6cac7c879c5ff2f",
  "source": "claude",
  "lastError": null,
- "generatedAt": "2026-10-11T14:49:27.762933+00:00",
- "headline": "Spreads And Totals Paid The Bill The Moneylines Ran Up",
+ "generatedAt": "2026-10-15T18:48:00.535198+00:00",
+ "headline": "A Perfect Week, If You Flip The Sign",
  "paragraphs": [
-  "Sixty three plays went out across 58 graded games, 21 of which the model looked at and declined, and the ledger came back 34-28-1 for a profit of 41.95 on 630 staked. That is a 6.7 percent ROI, which is the betting equivalent of finding a twenty in an old coat. Nothing heroic. Nothing embarrassing. Just a slate that mostly behaved.",
-  "Underneath that calm number is a civil war. Spreads went 16-10-1 for 45.44 and totals went 13-7 for 48.17, a 24.1 percent return that did most of the actual work. Then the moneyline book went 5-11 and set 51.66 on fire at negative 32.3 percent ROI. The model expected 52.1 percent there and delivered 31.2. The featured disaster was South Florida at plus 215 with a 15.9 point probability edge, which lost 31-24 while the Over on that same game cashed. One brain, two opinions.",
-  "The published top five went 2-3 for a loss of 7.91 against a 61 percent expectation, so the five picks we actually pointed at were the five that misbehaved. Season sits at 93-103-4 across 200 plays, down 112.34, negative 5.6 percent. Strip out the hindsight week and it is 40-25-1 for a 110.47 profit, which is a very convenient way to tell the story and exactly why nobody should trust hindsight grading. Lines moved on 37 plays and only 8 moved our way."
+  "Four games got graded, the model shrugged at two of them, and the two it actually liked produced three plays that went 0-3. Thirty dollars staked, thirty dollars gone, an ROI of exactly negative 100 percent. There is a strange purity to that number. Most weeks the model has to work to lose money. This one it achieved the theoretical maximum on the first try.",
+  "The centerpiece was Delaware at Middle Tennessee, where the model doubled down with Delaware -1 at 58 percent and Delaware moneyline at minus 115 with a 6.4 point probability edge. Middle Tennessee won 33-30, which means both tickets died in the same three point window. The third play, Sam Houston +1.5 at 56 percent, lost 16-3, so that one was not close enough to hurt in an interesting way.",
+  "Two of the three plays saw their line move, and the market moved toward the model on precisely zero of them, which is the kind of 0.0 percent that feels less like variance and more like a performance review. The season now reads 93-106-4 across 203 plays, down 142.34 at a negative 7 percent ROI, against a model expectation of 60.3 percent. Strip out the hindsight week and the four real weeks are 40-25-1 and up 110.47. Both of those sentences are true, which is the problem."
  ],
  "recent": [
-  {
-   "weekKey": "2026-regular-4",
-   "label": "Week 4",
-   "headline": "Eighty-One Plays, One Hundred Eighty-Three Dollars, Zero Excuses",
-   "opening": "Week 4 got graded in real time, no box scores peeking over the model's shoulder, and the result was a bloodbath. It looked at 71 games, found something it liked"
-  },
   {
    "weekKey": "2026-regular-5",
    "label": "Week 5",
@@ -28,6 +22,12 @@
    "label": "Week 6",
    "headline": "Spreads And Totals Paid The Bill The Moneylines Ran Up",
    "opening": "Sixty three plays went out across 58 graded games, 21 of which the model looked at and declined, and the ledger came back 34-28-1 for a profit of 41.95 on 630 s"
+  },
+  {
+   "weekKey": "2026-regular-7",
+   "label": "Week 7",
+   "headline": "A Perfect Week, If You Flip The Sign",
+   "opening": "Four games got graded, the model shrugged at two of them, and the two it actually liked produced three plays that went 0-3. Thirty dollars staked, thirty dollar"
   }
  ]
 }
