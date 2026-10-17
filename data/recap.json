@@ -1,14 +1,14 @@
 {
  "weekKey": "2026-regular-7",
- "factsHash": "f6cac7c879c5ff2f",
+ "factsHash": "7330d3e0dc762df2",
  "source": "claude",
  "lastError": null,
- "generatedAt": "2026-10-15T18:48:00.535198+00:00",
- "headline": "A Perfect Week, If You Flip The Sign",
+ "generatedAt": "2026-10-17T15:22:37.469505+00:00",
+ "headline": "Ten Plays, Five Wins, And Fifty Six Cents Of Glory",
  "paragraphs": [
-  "Four games got graded, the model shrugged at two of them, and the two it actually liked produced three plays that went 0-3. Thirty dollars staked, thirty dollars gone, an ROI of exactly negative 100 percent. There is a strange purity to that number. Most weeks the model has to work to lose money. This one it achieved the theoretical maximum on the first try.",
-  "The centerpiece was Delaware at Middle Tennessee, where the model doubled down with Delaware -1 at 58 percent and Delaware moneyline at minus 115 with a 6.4 point probability edge. Middle Tennessee won 33-30, which means both tickets died in the same three point window. The third play, Sam Houston +1.5 at 56 percent, lost 16-3, so that one was not close enough to hurt in an interesting way.",
-  "Two of the three plays saw their line move, and the market moved toward the model on precisely zero of them, which is the kind of 0.0 percent that feels less like variance and more like a performance review. The season now reads 93-106-4 across 203 plays, down 142.34 at a negative 7 percent ROI, against a model expectation of 60.3 percent. Strip out the hindsight week and the four real weeks are 40-25-1 and up 110.47. Both of those sentences are true, which is the problem."
+  "Ten games graded for real, four waved off, six deemed worthy of action, and ten plays fired at ten dollars apiece. The ledger came back 5-5 for a profit of 0.56, an ROI of 0.6 percent. That is a week of work, a hundred dollars at risk, and a return that would not cover the tip on a coffee. The model expected 59.6 percent and hit 50.0.",
+  "The Washington trip to Purdue was the whole show. Spread, total and moneyline all cashed off a 38-26 final, with the plus 142 moneyline returning 14.20 and the Over 50.5 landing as the best call of the week at 9.09. Then Texas State 66, Colorado State 27 happened, and the model, 66 percent sure of an Under 70.5, watched the teams clear that number with a quarter to spare. The Colorado State plus 14.5 died in the same wreckage.",
+  "Totals finished 2-1 for 8.18 and moneylines 1-1 for 4.20, while spreads went 2-3 and gave back 11.82. Nine plays saw their line move and exactly zero of those moves went toward the model, which is 0.0 percent, a figure you have to work at. Season now reads 98-108-4 across 210 plays, down 111.78, ROI negative 5.3, with expected 60.3 against an actual 47.6. The one hindsight graded week sits there at 40-25-1 and plus 110.47, scored after the fact, worth precisely nothing."
  ],
  "recent": [
   {
@@ -26,8 +26,8 @@
   {
    "weekKey": "2026-regular-7",
    "label": "Week 7",
-   "headline": "A Perfect Week, If You Flip The Sign",
-   "opening": "Four games got graded, the model shrugged at two of them, and the two it actually liked produced three plays that went 0-3. Thirty dollars staked, thirty dollar"
+   "headline": "Ten Plays, Five Wins, And Fifty Six Cents Of Glory",
+   "opening": "Ten games graded for real, four waved off, six deemed worthy of action, and ten plays fired at ten dollars apiece. The ledger came back 5-5 for a profit of 0.56"
   }
  ]
 }
