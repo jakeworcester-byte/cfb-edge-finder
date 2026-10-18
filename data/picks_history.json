@@ -666,7 +666,12 @@
    "openLine": null,
    "openPrice": 205,
    "openAt": "2026-10-15T18:48:03.874797+00:00",
-   "result": null,
+   "result": {
+    "homeScore": 25,
+    "awayScore": 18,
+    "outcome": "loss",
+    "profit": -10.0
+   },
    "clv": {
     "probPts": -2.5,
     "closePrice": 230,
@@ -694,7 +699,12 @@
    "openLine": null,
    "openPrice": 270,
    "openAt": "2026-10-13T20:27:27.125541+00:00",
-   "result": null,
+   "result": {
+    "homeScore": 23,
+    "awayScore": 13,
+    "outcome": "loss",
+    "profit": -10.0
+   },
    "clv": {
     "probPts": -0.7,
     "closePrice": 280,
@@ -722,7 +732,12 @@
    "openLine": 47.5,
    "openPrice": -110,
    "openAt": "2026-10-13T20:27:27.125557+00:00",
-   "result": null,
+   "result": {
+    "homeScore": 31,
+    "awayScore": 38,
+    "outcome": "win",
+    "profit": 9.09
+   },
    "clv": {
     "pts": -1.5,
     "closeLine": 46.0,
@@ -750,7 +765,12 @@
    "openLine": -6.0,
    "openPrice": -110,
    "openAt": "2026-10-13T20:27:27.125550+00:00",
-   "result": null,
+   "result": {
+    "homeScore": 27,
+    "awayScore": 21,
+    "outcome": "loss",
+    "profit": -10.0
+   },
    "clv": {
     "pts": 0.0,
     "closeLine": -6.0,
@@ -778,11 +798,156 @@
    "openLine": null,
    "openPrice": 185,
    "openAt": "2026-10-17T15:22:40.785024+00:00",
-   "result": null,
+   "result": {
+    "homeScore": 31,
+    "awayScore": 3,
+    "outcome": "loss",
+    "profit": -10.0
+   },
    "clv": {
     "probPts": 0.0,
     "closePrice": 185,
     "at": "2026-10-17T15:22:37.469505+00:00"
+   }
+  },
+  {
+   "season": 2026,
+   "seasonType": "regular",
+   "week": 8,
+   "gameId": 401861965,
+   "matchup": "Massachusetts @ UConn",
+   "homeTeam": "UConn",
+   "awayTeam": "Massachusetts",
+   "startDate": "2026-10-23T23:00:00.000Z",
+   "type": "total",
+   "pick": "Over 47.5",
+   "side": "over",
+   "line": 47.5,
+   "price": -110,
+   "prob": 0.698,
+   "ev": 0.3325,
+   "detail": "Model total 54.5 vs market 47.5",
+   "pickedAt": "2026-10-18T12:32:05.907436+00:00",
+   "openLine": 47.5,
+   "openPrice": -110,
+   "openAt": "2026-10-18T12:32:05.907451+00:00",
+   "result": null,
+   "clv": {
+    "pts": 0.0,
+    "closeLine": 47.5,
+    "at": "2026-10-18T12:32:01.576001+00:00"
+   }
+  },
+  {
+   "season": 2026,
+   "seasonType": "regular",
+   "week": 8,
+   "gameId": 401869845,
+   "matchup": "James Madison @ App State",
+   "homeTeam": "App State",
+   "awayTeam": "James Madison",
+   "startDate": "2026-10-22T23:00:00.000Z",
+   "type": "total",
+   "pick": "Under 57.5",
+   "side": "under",
+   "line": 57.5,
+   "price": -110,
+   "prob": 0.676,
+   "ev": 0.2899,
+   "detail": "Model total 51.3 vs market 57.5",
+   "pickedAt": "2026-10-18T12:32:05.907457+00:00",
+   "openLine": 57.5,
+   "openPrice": -110,
+   "openAt": "2026-10-18T12:32:05.907458+00:00",
+   "result": null,
+   "clv": {
+    "pts": 0.0,
+    "closeLine": 57.5,
+    "at": "2026-10-18T12:32:01.576001+00:00"
+   }
+  },
+  {
+   "season": 2026,
+   "seasonType": "regular",
+   "week": 8,
+   "gameId": 401858274,
+   "matchup": "Pittsburgh @ Miami",
+   "homeTeam": "Miami",
+   "awayTeam": "Pittsburgh",
+   "startDate": "2026-10-24T16:00:00.000Z",
+   "type": "spread",
+   "pick": "Pittsburgh +23.5",
+   "side": "away",
+   "line": 23.5,
+   "price": -110,
+   "prob": 0.655,
+   "ev": 0.2502,
+   "detail": "Model line: Miami -18.1 vs market -23.5",
+   "pickedAt": "2026-10-18T12:32:05.907462+00:00",
+   "openLine": 23.5,
+   "openPrice": -110,
+   "openAt": "2026-10-18T12:32:05.907464+00:00",
+   "result": null,
+   "clv": {
+    "pts": 0.0,
+    "closeLine": 23.5,
+    "at": "2026-10-18T12:32:01.576001+00:00"
+   }
+  },
+  {
+   "season": 2026,
+   "seasonType": "regular",
+   "week": 8,
+   "gameId": 401856729,
+   "matchup": "Vanderbilt @ Kentucky",
+   "homeTeam": "Kentucky",
+   "awayTeam": "Vanderbilt",
+   "startDate": "2026-10-24T23:30:00.000Z",
+   "type": "total",
+   "pick": "Over 51.5",
+   "side": "over",
+   "line": 51.5,
+   "price": -110,
+   "prob": 0.651,
+   "ev": 0.2434,
+   "detail": "Model total 56.8 vs market 51.5",
+   "pickedAt": "2026-10-18T12:32:05.907467+00:00",
+   "openLine": 51.5,
+   "openPrice": -110,
+   "openAt": "2026-10-18T12:32:05.907468+00:00",
+   "result": null,
+   "clv": {
+    "pts": 0.0,
+    "closeLine": 51.5,
+    "at": "2026-10-18T12:32:01.576001+00:00"
+   }
+  },
+  {
+   "season": 2026,
+   "seasonType": "regular",
+   "week": 8,
+   "gameId": 401858497,
+   "matchup": "Iowa @ Minnesota",
+   "homeTeam": "Minnesota",
+   "awayTeam": "Iowa",
+   "startDate": "2026-10-24T04:00:00.000Z",
+   "type": "total",
+   "pick": "Over 41.5",
+   "side": "over",
+   "line": 41.5,
+   "price": -110,
+   "prob": 0.646,
+   "ev": 0.2329,
+   "detail": "Model total 46.5 vs market 41.5",
+   "pickedAt": "2026-10-18T12:32:05.907471+00:00",
+   "openLine": 41.5,
+   "openPrice": -110,
+   "openAt": "2026-10-18T12:32:05.907473+00:00",
+   "result": null,
+   "clv": {
+    "pts": 0.0,
+    "closeLine": 41.5,
+    "at": "2026-10-18T12:32:01.576001+00:00"
    }
   }
  ]
