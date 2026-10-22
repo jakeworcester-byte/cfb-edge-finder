@@ -1,22 +1,16 @@
 {
- "weekKey": "2026-regular-7",
- "factsHash": "f966250a2a5e8709",
+ "weekKey": "2026-regular-8",
+ "factsHash": "9ae669be0b61b134",
  "source": "claude",
  "lastError": null,
- "generatedAt": "2026-10-18T12:32:01.576001+00:00",
- "headline": "Sixty Seven Swings, One Hundred And Nine Dollars Buried",
+ "generatedAt": "2026-10-22T18:59:09.407847+00:00",
+ "headline": "Two Plays, Two Losses, One Perfectly Round Twenty Dollar Hole",
  "paragraphs": [
-  "Sixty two games graded for real, twenty passed on, forty two deemed actionable, and sixty seven plays sent out at ten dollars each. The ledger came back 27-38-2 for a loss of 108.93 on 670 staked, an ROI of negative 16.3 percent. The model expected to win 59 percent of these. It won 41.5 percent. That gap is not variance wearing a disguise, that is a faceplant with timestamps.",
-  "The moneylines were the knife: 5-11, down 38.91, with the model projecting a 49.4 percent clip and delivering 31.2. It loved Massachusetts at +230 by a full 14 probability points, which is the largest edge it claimed all week, and Buffalo won 25-18. It also had Pittsburgh at 82 percent and minus 225 before Boston College won 27-21. Spreads lost 51.83 across 32 tries. Totals were the merciful ones at 9-10.",
-  "Credit where it exists. Charlotte at Temple went over 46 in a 38-31 game the model had flagged by 8.9 points at 74 percent, and the Kentucky moneyline at +215 returned 21.50 in a 21-13 Oklahoma loss. Then the published top five went 1-4 for negative 30.91, an ROI of negative 61.8, which is the five it actually told people about. Four weeks in, the season reads 120-141-6 and minus 221.27."
+  "Four games hit the grader this week. The model looked at two of them, shrugged, and bet the other two for ten dollars each. Both lost. That is a 0-2 week, 20 dollars staked, 20 dollars gone, and an ROI of exactly negative 100 percent, which is the rare number that requires no rounding and no explanation. You cannot get worse than losing everything you put up.",
+  "The picks were Florida International minus 10, which finished Middle Tennessee 26, Florida International 23, and Sam Houston plus 3, which finished New Mexico State 30, Sam Houston 24. The model gave those 56 and 57 percent and found edges of 2.1 and 2.6 points. Both lines moved before kickoff, and both moved away from the model, which is zero percent agreement from a market that apparently reads this column.",
+  "Season to date sits at 120-143-6 across 269 plays, 2,690 staked, down 241.27, an ROI of negative 9.0 percent against a model expectation of 60 percent. There is one week graded in hindsight that came back 40-25-1 for a 110.47 profit, and picking winners after the scores exist is a hobby, not a result. Five weeks were graded for real. Those are the ones on the receipt."
  ],
  "recent": [
-  {
-   "weekKey": "2026-regular-5",
-   "label": "Week 5",
-   "headline": "Moneylines Carried The Week While The Totals Set Money On Fire",
-   "opening": "Fifty nine games got graded for real this week, no hindsight, no peeking. The model found something it liked in 37 of them, passed on 22, and fired 56 plays at "
-  },
   {
    "weekKey": "2026-regular-6",
    "label": "Week 6",
@@ -28,6 +22,12 @@
    "label": "Week 7",
    "headline": "Sixty Seven Swings, One Hundred And Nine Dollars Buried",
    "opening": "Sixty two games graded for real, twenty passed on, forty two deemed actionable, and sixty seven plays sent out at ten dollars each. The ledger came back 27-38-2"
+  },
+  {
+   "weekKey": "2026-regular-8",
+   "label": "Week 8",
+   "headline": "Two Plays, Two Losses, One Perfectly Round Twenty Dollar Hole",
+   "opening": "Four games hit the grader this week. The model looked at two of them, shrugged, and bet the other two for ten dollars each. Both lost. That is a 0-2 week, 20 do"
   }
  ]
 }

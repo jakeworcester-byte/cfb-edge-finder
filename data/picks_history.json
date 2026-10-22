@@ -820,22 +820,50 @@
    "awayTeam": "Miami (OH)",
    "startDate": "2026-10-24T17:00:00.000Z",
    "type": "total",
-   "pick": "Over 40.5",
+   "pick": "Over 40",
    "side": "over",
-   "line": 40.5,
+   "line": 40.0,
    "price": -110,
-   "prob": 0.711,
-   "ev": 0.3569,
-   "detail": "Model total 48.0 vs market 40.5",
-   "pickedAt": "2026-10-20T18:51:22.383353+00:00",
+   "prob": 0.723,
+   "ev": 0.3808,
+   "detail": "Model total 48.0 vs market 40",
+   "pickedAt": "2026-10-22T18:59:12.428912+00:00",
    "openLine": 40.5,
    "openPrice": -110,
    "openAt": "2026-10-20T18:51:22.383359+00:00",
    "result": null,
    "clv": {
-    "pts": 0.0,
-    "closeLine": 40.5,
-    "at": "2026-10-20T18:51:05.966743+00:00"
+    "pts": -0.5,
+    "closeLine": 40.0,
+    "at": "2026-10-22T18:59:09.407847+00:00"
+   }
+  },
+  {
+   "season": 2026,
+   "seasonType": "regular",
+   "week": 8,
+   "gameId": 401856730,
+   "matchup": "Oklahoma @ Mississippi State",
+   "homeTeam": "Mississippi State",
+   "awayTeam": "Oklahoma",
+   "startDate": "2026-10-24T19:30:00.000Z",
+   "type": "moneyline",
+   "pick": "Mississippi State ML +180",
+   "side": "home",
+   "line": null,
+   "price": 180,
+   "prob": 0.486,
+   "ev": 0.3615,
+   "detail": "Model win prob 49% vs implied 36%",
+   "pickedAt": "2026-10-22T18:59:12.428933+00:00",
+   "openLine": null,
+   "openPrice": 160,
+   "openAt": "2026-10-20T18:51:22.383384+00:00",
+   "result": null,
+   "clv": {
+    "probPts": -2.7,
+    "closePrice": 180,
+    "at": "2026-10-22T18:59:09.407847+00:00"
    }
   },
   {
@@ -855,7 +883,7 @@
    "prob": 0.704,
    "ev": 0.3438,
    "detail": "Model line: South Carolina +4.7 vs market -2.5",
-   "pickedAt": "2026-10-20T18:51:22.383366+00:00",
+   "pickedAt": "2026-10-22T18:59:12.428939+00:00",
    "openLine": 2.5,
    "openPrice": -110,
    "openAt": "2026-10-20T18:51:22.383368+00:00",
@@ -863,7 +891,35 @@
    "clv": {
     "pts": 0.0,
     "closeLine": 2.5,
-    "at": "2026-10-20T18:51:05.966743+00:00"
+    "at": "2026-10-22T18:59:09.407847+00:00"
+   }
+  },
+  {
+   "season": 2026,
+   "seasonType": "regular",
+   "week": 8,
+   "gameId": 401858499,
+   "matchup": "Michigan State @ UCLA",
+   "homeTeam": "UCLA",
+   "awayTeam": "Michigan State",
+   "startDate": "2026-10-24T19:30:00.000Z",
+   "type": "total",
+   "pick": "Over 43.5",
+   "side": "over",
+   "line": 43.5,
+   "price": -110,
+   "prob": 0.695,
+   "ev": 0.3275,
+   "detail": "Model total 50.4 vs market 43.5",
+   "pickedAt": "2026-10-22T18:59:12.428944+00:00",
+   "openLine": 44.5,
+   "openPrice": -110,
+   "openAt": "2026-10-20T18:51:22.383379+00:00",
+   "result": null,
+   "clv": {
+    "pts": -1.0,
+    "closeLine": 43.5,
+    "at": "2026-10-22T18:59:09.407847+00:00"
    }
   },
   {
@@ -883,7 +939,7 @@
    "prob": 0.674,
    "ev": 0.2873,
    "detail": "Model total 57.4 vs market 63.5",
-   "pickedAt": "2026-10-20T18:51:22.383372+00:00",
+   "pickedAt": "2026-10-22T18:59:12.428948+00:00",
    "openLine": 63.5,
    "openPrice": -110,
    "openAt": "2026-10-20T18:51:22.383374+00:00",
@@ -891,62 +947,6 @@
    "clv": {
     "pts": 0.0,
     "closeLine": 63.5,
-    "at": "2026-10-20T18:51:05.966743+00:00"
-   }
-  },
-  {
-   "season": 2026,
-   "seasonType": "regular",
-   "week": 8,
-   "gameId": 401858499,
-   "matchup": "Michigan State @ UCLA",
-   "homeTeam": "UCLA",
-   "awayTeam": "Michigan State",
-   "startDate": "2026-10-24T19:30:00.000Z",
-   "type": "total",
-   "pick": "Over 44.5",
-   "side": "over",
-   "line": 44.5,
-   "price": -110,
-   "prob": 0.669,
-   "ev": 0.2771,
-   "detail": "Model total 50.4 vs market 44.5",
-   "pickedAt": "2026-10-20T18:51:22.383377+00:00",
-   "openLine": 44.5,
-   "openPrice": -110,
-   "openAt": "2026-10-20T18:51:22.383379+00:00",
-   "result": null,
-   "clv": {
-    "pts": 0.0,
-    "closeLine": 44.5,
-    "at": "2026-10-20T18:51:05.966743+00:00"
-   }
-  },
-  {
-   "season": 2026,
-   "seasonType": "regular",
-   "week": 8,
-   "gameId": 401856730,
-   "matchup": "Oklahoma @ Mississippi State",
-   "homeTeam": "Mississippi State",
-   "awayTeam": "Oklahoma",
-   "startDate": "2026-10-24T19:30:00.000Z",
-   "type": "moneyline",
-   "pick": "Mississippi State ML +160",
-   "side": "home",
-   "line": null,
-   "price": 160,
-   "prob": 0.486,
-   "ev": 0.2642,
-   "detail": "Model win prob 49% vs implied 38%",
-   "pickedAt": "2026-10-20T18:51:22.383382+00:00",
-   "openLine": null,
-   "openPrice": 160,
-   "openAt": "2026-10-20T18:51:22.383384+00:00",
-   "result": null,
-   "clv": {
-    "probPts": 0.0,
-    "closePrice": 160,
     "at": "2026-10-20T18:51:05.966743+00:00"
    }
   }
