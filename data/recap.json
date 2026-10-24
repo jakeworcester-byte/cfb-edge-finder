@@ -1,14 +1,14 @@
 {
  "weekKey": "2026-regular-8",
- "factsHash": "9ae669be0b61b134",
+ "factsHash": "09ceea12a1009f8d",
  "source": "claude",
  "lastError": null,
- "generatedAt": "2026-10-22T18:59:09.407847+00:00",
- "headline": "Two Plays, Two Losses, One Perfectly Round Twenty Dollar Hole",
+ "generatedAt": "2026-10-24T15:45:35.453329+00:00",
+ "headline": "Army Paid Twice, Everything Else Paid Nothing At All",
  "paragraphs": [
-  "Four games hit the grader this week. The model looked at two of them, shrugged, and bet the other two for ten dollars each. Both lost. That is a 0-2 week, 20 dollars staked, 20 dollars gone, and an ROI of exactly negative 100 percent, which is the rare number that requires no rounding and no explanation. You cannot get worse than losing everything you put up.",
-  "The picks were Florida International minus 10, which finished Middle Tennessee 26, Florida International 23, and Sam Houston plus 3, which finished New Mexico State 30, Sam Houston 24. The model gave those 56 and 57 percent and found edges of 2.1 and 2.6 points. Both lines moved before kickoff, and both moved away from the model, which is zero percent agreement from a market that apparently reads this column.",
-  "Season to date sits at 120-143-6 across 269 plays, 2,690 staked, down 241.27, an ROI of negative 9.0 percent against a model expectation of 60 percent. There is one week graded in hindsight that came back 40-25-1 for a 110.47 profit, and picking winners after the scores exist is a hobby, not a result. Five weeks were graded for real. Those are the ones on the receipt."
+  "Twelve games reached the grader, three got a polite pass, nine drew action, and ten tickets went out at ten dollars apiece. Three came back. The week closed 3-7 for a loss of 41.82 on 100 staked, an ROI of negative 41.8 percent, against a model that walked in expecting to hit 59.5 percent. Confidence and competence filed separate returns this week and only one of them was audited.",
+  "The entire profitable portion of the afternoon lived in Tulsa. Army +2 at a claimed 64 percent and a five point edge cashed for 9.09, and the matching Army ML +100 returned a clean ten after the 38-35 finish. Liberty -9 hiding behind a 34-6 scoreline was the other winner. The worst of it was Over 47.5 in Duke at Virginia, a 62 percent conviction and a 4.3 point edge that watched 19-16 happen in real time.",
+  "Spreads carried the damage at 2-6 and negative 52.3 percent, which is most of a week in one market. Of the ten plays whose lines moved, exactly two moved toward the model, so the market and the ledger agreed about who was wrong. Season now sits at 123-148-6 across 277 plays and five real weeks, down 263.09 at negative 9.5 percent, with an expected 60 percent meeting an actual 45.4. The excluded hindsight week shows 40-25-1 and plus 110.47, which proves only that picking games after they end is easy."
  ],
  "recent": [
   {
@@ -26,8 +26,8 @@
   {
    "weekKey": "2026-regular-8",
    "label": "Week 8",
-   "headline": "Two Plays, Two Losses, One Perfectly Round Twenty Dollar Hole",
-   "opening": "Four games hit the grader this week. The model looked at two of them, shrugged, and bet the other two for ten dollars each. Both lost. That is a 0-2 week, 20 do"
+   "headline": "Army Paid Twice, Everything Else Paid Nothing At All",
+   "opening": "Twelve games reached the grader, three got a polite pass, nine drew action, and ten tickets went out at ten dollars apiece. Three came back. The week closed 3-7"
   }
  ]
 }

@@ -48022,7 +48022,24 @@
        "detail": "Model win prob 84% vs implied 82%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 34,
+      "awayScore": 31,
+      "calls": [
+       {
+        "type": "spread",
+        "pick": "James Madison -12.5",
+        "side": "away",
+        "line": -12.5,
+        "price": -110,
+        "prob": 0.582,
+        "edgePts": 2.8,
+        "ev": 0.1108,
+        "outcome": "loss",
+        "profit": -10.0
+       }
+      ]
+     },
      "lockedAt": "2026-10-22T18:59:09.407847+00:00",
      "lineHistory": [
       {
@@ -48163,7 +48180,24 @@
        "detail": "Model win prob 80% vs implied 79%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 6,
+      "awayScore": 34,
+      "calls": [
+       {
+        "type": "spread",
+        "pick": "Liberty -9",
+        "side": "away",
+        "line": -9.0,
+        "price": -110,
+        "prob": 0.613,
+        "edgePts": 3.9,
+        "ev": 0.1696,
+        "outcome": "win",
+        "profit": 9.09
+       }
+      ]
+     },
      "lockedAt": "2026-10-22T18:59:09.407847+00:00",
      "lineHistory": [
       {
@@ -48304,7 +48338,11 @@
        "detail": "Model win prob 23% vs implied 23%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 41,
+      "awayScore": 34,
+      "calls": []
+     },
      "lockedAt": "2026-10-22T18:59:09.407847+00:00",
      "lineHistory": [
       {
@@ -48445,7 +48483,24 @@
        "detail": "Model win prob 24% vs implied 16%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 35,
+      "awayScore": 16,
+      "calls": [
+       {
+        "type": "spread",
+        "pick": "Massachusetts +14",
+        "side": "away",
+        "line": 14.0,
+        "price": -110,
+        "prob": 0.594,
+        "edgePts": 3.2,
+        "ev": 0.1334,
+        "outcome": "loss",
+        "profit": -10.0
+       }
+      ]
+     },
      "lockedAt": "2026-10-22T18:59:09.407847+00:00",
      "lineHistory": [
       {
@@ -48586,7 +48641,24 @@
        "detail": "Model win prob 48% vs implied 49%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 16,
+      "awayScore": 19,
+      "calls": [
+       {
+        "type": "total",
+        "pick": "Over 47.5",
+        "side": "over",
+        "line": 47.5,
+        "price": -110,
+        "prob": 0.625,
+        "edgePts": 4.3,
+        "ev": 0.1931,
+        "outcome": "loss",
+        "profit": -10.0
+       }
+      ]
+     },
      "lockedAt": "2026-10-22T18:59:09.407847+00:00",
      "lineHistory": [
       {
@@ -48727,7 +48799,36 @@
        "detail": "Model win prob 58% vs implied 50%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 35,
+      "awayScore": 38,
+      "calls": [
+       {
+        "type": "spread",
+        "pick": "Army +2",
+        "side": "away",
+        "line": 2.0,
+        "price": -110,
+        "prob": 0.644,
+        "edgePts": 5.0,
+        "ev": 0.2304,
+        "outcome": "win",
+        "profit": 9.09
+       },
+       {
+        "type": "moneyline",
+        "pick": "Army ML +100",
+        "side": "away",
+        "line": null,
+        "price": 100,
+        "prob": 0.577,
+        "edgePts": 7.7,
+        "ev": 0.1535,
+        "outcome": "win",
+        "profit": 10.0
+       }
+      ]
+     },
      "lockedAt": "2026-10-22T18:59:09.407847+00:00",
      "lineHistory": [
       {
@@ -48868,7 +48969,24 @@
        "detail": "Model win prob 71% vs implied 67%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 28,
+      "awayScore": 14,
+      "calls": [
+       {
+        "type": "spread",
+        "pick": "Air Force -5",
+        "side": "away",
+        "line": -5.0,
+        "price": -110,
+        "prob": 0.608,
+        "edgePts": 3.7,
+        "ev": 0.1603,
+        "outcome": "loss",
+        "profit": -10.0
+       }
+      ]
+     },
      "lockedAt": "2026-10-22T18:59:09.407847+00:00",
      "lineHistory": [
       {
@@ -49002,7 +49120,24 @@
        "detail": "Model win prob 71% vs implied 73%"
       }
      ],
-     "result": null,
+     "result": {
+      "homeScore": 31,
+      "awayScore": 28,
+      "calls": [
+       {
+        "type": "spread",
+        "pick": "NC State -6.5",
+        "side": "away",
+        "line": -6.5,
+        "price": -110,
+        "prob": 0.567,
+        "edgePts": 2.3,
+        "ev": 0.0824,
+        "outcome": "loss",
+        "profit": -10.0
+       }
+      ]
+     },
      "lockedAt": "2026-10-22T18:59:09.407847+00:00",
      "lineHistory": [
       {
@@ -49062,39 +49197,39 @@
       "books": [
        {
         "provider": "DraftKings",
-        "spread": -10,
+        "spread": -11.5,
         "overUnder": 51.5,
-        "homeMoneyline": -325,
-        "awayMoneyline": 260,
-        "formattedSpread": "Arizona -10"
+        "homeMoneyline": -345,
+        "awayMoneyline": 275,
+        "formattedSpread": "Arizona -11.5"
        },
        {
         "provider": "Bovada",
-        "spread": -10,
+        "spread": -11.5,
         "overUnder": 51.5,
         "homeMoneyline": -270,
         "awayMoneyline": 220,
-        "formattedSpread": "Arizona -10.0"
+        "formattedSpread": "Arizona -11.5"
        }
       ],
-      "spread": -10.0,
+      "spread": -11.5,
       "total": 51.5,
       "mlHome": -270,
-      "mlAway": 260
+      "mlAway": 275
      },
      "bets": [
       {
        "type": "spread",
-       "pick": "Arizona -10",
-       "team": "Arizona",
-       "side": "home",
-       "line": -10.0,
-       "edgePts": 0.8,
-       "prob": 0.523,
+       "pick": "Iowa State +11.5",
+       "team": "Iowa State",
+       "side": "away",
+       "line": 11.5,
+       "edgePts": 0.7,
+       "prob": 0.521,
        "price": -110,
-       "ev": -0.0013,
+       "ev": -0.0051,
        "eligible": false,
-       "detail": "Model line: Arizona -10.8 vs market -10.0"
+       "detail": "Model line: Arizona -10.8 vs market -11.5"
       },
       {
        "type": "total",
@@ -49124,20 +49259,20 @@
       },
       {
        "type": "moneyline",
-       "pick": "Iowa State ML +260",
+       "pick": "Iowa State ML +275",
        "team": "Iowa State",
        "side": "away",
        "line": null,
-       "edgePts": -3.4,
+       "edgePts": -2.3,
        "prob": 0.243,
-       "price": 260,
-       "ev": -0.1241,
+       "price": 275,
+       "ev": -0.0876,
        "eligible": false,
-       "detail": "Model win prob 24% vs implied 28%"
+       "detail": "Model win prob 24% vs implied 27%"
       }
      ],
      "result": null,
-     "lockedAt": "2026-10-22T18:59:09.407847+00:00",
+     "lockedAt": "2026-10-24T15:45:35.453329+00:00",
      "lineHistory": [
       {
        "at": "2026-10-18T12:32:01.576001+00:00",
@@ -49159,6 +49294,13 @@
        "total": 51.5,
        "mlHome": -270,
        "mlAway": 260
+      },
+      {
+       "at": "2026-10-24T15:45:35.453329+00:00",
+       "spread": -11.5,
+       "total": 51.5,
+       "mlHome": -270,
+       "mlAway": 275
       }
      ]
     },
@@ -49203,52 +49345,52 @@
       "books": [
        {
         "provider": "DraftKings",
-        "spread": 2.5,
-        "overUnder": 55.5,
-        "homeMoneyline": 110,
-        "awayMoneyline": -130,
-        "formattedSpread": "Kansas State -2.5"
+        "spread": 1.5,
+        "overUnder": 51.5,
+        "homeMoneyline": -108,
+        "awayMoneyline": -112,
+        "formattedSpread": "Kansas State -1.5"
        },
        {
         "provider": "Bovada",
-        "spread": 2.5,
-        "overUnder": 56,
+        "spread": 1,
+        "overUnder": 51.5,
         "homeMoneyline": 145,
         "awayMoneyline": -170,
-        "formattedSpread": "Kansas State -2.5"
+        "formattedSpread": "Kansas State -1.0"
        }
       ],
-      "spread": 2.5,
-      "total": 56.0,
+      "spread": 1.0,
+      "total": 51.5,
       "mlHome": 145,
-      "mlAway": -130
+      "mlAway": -112
      },
      "bets": [
       {
        "type": "spread",
-       "pick": "Kansas State -2.5",
+       "pick": "Kansas State -1",
        "team": "Kansas State",
        "side": "away",
-       "line": -2.5,
-       "edgePts": 4.8,
-       "prob": 0.639,
+       "line": -1.0,
+       "edgePts": 6.3,
+       "prob": 0.679,
        "price": -110,
-       "ev": 0.219,
+       "ev": 0.2967,
        "eligible": true,
-       "detail": "Model line: Arizona State +7.3 vs market +2.5"
+       "detail": "Model line: Arizona State +7.3 vs market +1.0"
       },
       {
        "type": "total",
-       "pick": "Under 56",
+       "pick": "Over 51.5",
        "team": null,
-       "side": "under",
-       "line": 56.0,
-       "edgePts": 1.1,
-       "prob": 0.534,
+       "side": "over",
+       "line": 51.5,
+       "edgePts": 3.4,
+       "prob": 0.598,
        "price": -110,
-       "ev": 0.0193,
+       "ev": 0.1416,
        "eligible": false,
-       "detail": "Model total 54.9 vs market 56"
+       "detail": "Model total 54.9 vs market 51.5"
       },
       {
        "type": "moneyline",
@@ -49265,20 +49407,20 @@
       },
       {
        "type": "moneyline",
-       "pick": "Kansas State ML -130",
+       "pick": "Kansas State ML -112",
        "team": "Kansas State",
        "side": "away",
        "line": null,
-       "edgePts": 11.6,
+       "edgePts": 15.3,
        "prob": 0.681,
-       "price": -130,
-       "ev": 0.2045,
+       "price": -112,
+       "ev": 0.2887,
        "eligible": true,
-       "detail": "Model win prob 68% vs implied 57%"
+       "detail": "Model win prob 68% vs implied 53%"
       }
      ],
      "result": null,
-     "lockedAt": "2026-10-22T18:59:09.407847+00:00",
+     "lockedAt": "2026-10-24T15:45:35.453329+00:00",
      "lineHistory": [
       {
        "at": "2026-10-20T18:51:05.966743+00:00",
@@ -49293,6 +49435,13 @@
        "total": 56.0,
        "mlHome": 145,
        "mlAway": -130
+      },
+      {
+       "at": "2026-10-24T15:45:35.453329+00:00",
+       "spread": 1.0,
+       "total": 51.5,
+       "mlHome": 145,
+       "mlAway": -112
       }
      ]
     },
@@ -49338,62 +49487,62 @@
        {
         "provider": "DraftKings",
         "spread": 10.5,
-        "overUnder": 56.5,
-        "homeMoneyline": 340,
-        "awayMoneyline": -440,
+        "overUnder": 57.5,
+        "homeMoneyline": 330,
+        "awayMoneyline": -425,
         "formattedSpread": "Texas Tech -10.5"
        },
        {
         "provider": "Bovada",
-        "spread": 10.5,
-        "overUnder": 56.5,
+        "spread": 11,
+        "overUnder": 57.5,
         "homeMoneyline": 315,
         "awayMoneyline": -420,
-        "formattedSpread": "Texas Tech -10.5"
+        "formattedSpread": "Texas Tech -11.0"
        }
       ],
-      "spread": 10.5,
-      "total": 56.5,
-      "mlHome": 340,
+      "spread": 11.0,
+      "total": 57.5,
+      "mlHome": 330,
       "mlAway": -420
      },
      "bets": [
       {
        "type": "spread",
-       "pick": "Texas Tech -10.5",
+       "pick": "Texas Tech -11",
        "team": "Texas Tech",
        "side": "away",
-       "line": -10.5,
-       "edgePts": 2.8,
-       "prob": 0.584,
+       "line": -11.0,
+       "edgePts": 2.3,
+       "prob": 0.569,
        "price": -110,
-       "ev": 0.1141,
+       "ev": 0.0864,
        "eligible": true,
-       "detail": "Model line: Cincinnati +13.3 vs market +10.5"
+       "detail": "Model line: Cincinnati +13.3 vs market +11.0"
       },
       {
        "type": "total",
-       "pick": "Over 56.5",
+       "pick": "Over 57.5",
        "team": null,
        "side": "over",
-       "line": 56.5,
-       "edgePts": 1.5,
-       "prob": 0.543,
+       "line": 57.5,
+       "edgePts": 0.5,
+       "prob": 0.513,
        "price": -110,
-       "ev": 0.0362,
+       "ev": -0.0201,
        "eligible": false,
-       "detail": "Model total 58.0 vs market 56.5"
+       "detail": "Model total 58.0 vs market 57.5"
       },
       {
        "type": "moneyline",
-       "pick": "Cincinnati ML +340",
+       "pick": "Cincinnati ML +330",
        "team": "Cincinnati",
        "side": "home",
        "line": null,
-       "edgePts": -3.3,
+       "edgePts": -3.8,
        "prob": 0.195,
-       "price": 340,
-       "ev": -0.144,
+       "price": 330,
+       "ev": -0.1635,
        "eligible": false,
        "detail": "Model win prob 19% vs implied 23%"
       },
@@ -49412,7 +49561,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-10-22T18:59:09.407847+00:00",
+     "lockedAt": "2026-10-24T15:45:35.453329+00:00",
      "lineHistory": [
       {
        "at": "2026-10-18T12:32:01.576001+00:00",
@@ -49426,6 +49575,13 @@
        "spread": 10.5,
        "total": 56.5,
        "mlHome": 340,
+       "mlAway": -420
+      },
+      {
+       "at": "2026-10-24T15:45:35.453329+00:00",
+       "spread": 11.0,
+       "total": 57.5,
+       "mlHome": 330,
        "mlAway": -420
       }
      ]
@@ -49471,65 +49627,65 @@
       "books": [
        {
         "provider": "DraftKings",
-        "spread": -2.5,
-        "overUnder": 49.5,
-        "homeMoneyline": -142,
-        "awayMoneyline": 120,
-        "formattedSpread": "Clemson -2.5"
+        "spread": -3,
+        "overUnder": 50.5,
+        "homeMoneyline": -155,
+        "awayMoneyline": 130,
+        "formattedSpread": "Clemson -3"
        },
        {
         "provider": "Bovada",
-        "spread": -2.5,
-        "overUnder": 49.5,
+        "spread": -3,
+        "overUnder": 50.5,
         "homeMoneyline": -150,
         "awayMoneyline": 130,
-        "formattedSpread": "Clemson -2.5"
+        "formattedSpread": "Clemson -3.0"
        }
       ],
-      "spread": -2.5,
-      "total": 49.5,
-      "mlHome": -142,
+      "spread": -3.0,
+      "total": 50.5,
+      "mlHome": -150,
       "mlAway": 130
      },
      "bets": [
       {
        "type": "spread",
-       "pick": "Virginia Tech +2.5",
+       "pick": "Virginia Tech +3",
        "team": "Virginia Tech",
        "side": "away",
-       "line": 2.5,
-       "edgePts": 1.4,
-       "prob": 0.54,
+       "line": 3.0,
+       "edgePts": 1.9,
+       "prob": 0.555,
        "price": -110,
-       "ev": 0.0318,
+       "ev": 0.0598,
        "eligible": false,
-       "detail": "Model line: Clemson -1.1 vs market -2.5"
+       "detail": "Model line: Clemson -1.1 vs market -3.0"
       },
       {
        "type": "total",
-       "pick": "Under 49.5",
+       "pick": "Under 50.5",
        "team": null,
        "side": "under",
-       "line": 49.5,
-       "edgePts": 0.1,
-       "prob": 0.504,
+       "line": 50.5,
+       "edgePts": 1.1,
+       "prob": 0.534,
        "price": -110,
-       "ev": -0.037,
+       "ev": 0.0193,
        "eligible": false,
-       "detail": "Model total 49.4 vs market 49.5"
+       "detail": "Model total 49.4 vs market 50.5"
       },
       {
        "type": "moneyline",
-       "pick": "Clemson ML -142",
+       "pick": "Clemson ML -150",
        "team": "Clemson",
        "side": "home",
        "line": null,
-       "edgePts": -5.8,
+       "edgePts": -7.1,
        "prob": 0.529,
-       "price": -142,
-       "ev": -0.0985,
+       "price": -150,
+       "ev": -0.1183,
        "eligible": false,
-       "detail": "Model win prob 53% vs implied 59%"
+       "detail": "Model win prob 53% vs implied 60%"
       },
       {
        "type": "moneyline",
@@ -49546,7 +49702,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-10-22T18:59:09.407847+00:00",
+     "lockedAt": "2026-10-24T15:45:35.453329+00:00",
      "lineHistory": [
       {
        "at": "2026-10-18T12:32:01.576001+00:00",
@@ -49567,6 +49723,13 @@
        "spread": -2.5,
        "total": 49.5,
        "mlHome": -142,
+       "mlAway": 130
+      },
+      {
+       "at": "2026-10-24T15:45:35.453329+00:00",
+       "spread": -3.0,
+       "total": 50.5,
+       "mlHome": -150,
        "mlAway": 130
       }
      ]
@@ -49612,52 +49775,52 @@
       "books": [
        {
         "provider": "DraftKings",
-        "spread": 8.5,
+        "spread": 10,
         "overUnder": 49.5,
-        "homeMoneyline": 280,
-        "awayMoneyline": -355,
-        "formattedSpread": "Oregon -8.5"
+        "homeMoneyline": 310,
+        "awayMoneyline": -395,
+        "formattedSpread": "Oregon -10"
        },
        {
         "provider": "Bovada",
-        "spread": 9,
-        "overUnder": 50,
+        "spread": 9.5,
+        "overUnder": 49,
         "homeMoneyline": 315,
         "awayMoneyline": -420,
-        "formattedSpread": "Oregon -9.0"
+        "formattedSpread": "Oregon -9.5"
        }
       ],
-      "spread": 9.0,
-      "total": 50.0,
+      "spread": 10.0,
+      "total": 49.0,
       "mlHome": 315,
-      "mlAway": -355
+      "mlAway": -395
      },
      "bets": [
       {
        "type": "spread",
-       "pick": "Oregon -9",
+       "pick": "Oregon -10",
        "team": "Oregon",
        "side": "away",
-       "line": -9.0,
-       "edgePts": 1.9,
-       "prob": 0.557,
+       "line": -10.0,
+       "edgePts": 0.9,
+       "prob": 0.528,
        "price": -110,
-       "ev": 0.0636,
+       "ev": 0.0075,
        "eligible": false,
-       "detail": "Model line: Illinois +10.9 vs market +9.0"
+       "detail": "Model line: Illinois +10.9 vs market +10.0"
       },
       {
        "type": "total",
-       "pick": "Over 50",
+       "pick": "Over 49",
        "team": null,
        "side": "over",
-       "line": 50.0,
-       "edgePts": 5.9,
-       "prob": 0.669,
+       "line": 49.0,
+       "edgePts": 6.9,
+       "prob": 0.695,
        "price": -110,
-       "ev": 0.2771,
+       "ev": 0.3275,
        "eligible": true,
-       "detail": "Model total 55.9 vs market 50"
+       "detail": "Model total 55.9 vs market 49"
       },
       {
        "type": "moneyline",
@@ -49674,20 +49837,20 @@
       },
       {
        "type": "moneyline",
-       "pick": "Oregon ML -355",
+       "pick": "Oregon ML -395",
        "team": "Oregon",
        "side": "away",
        "line": null,
-       "edgePts": -2.0,
+       "edgePts": -3.8,
        "prob": 0.76,
-       "price": -355,
-       "ev": -0.0261,
+       "price": -395,
+       "ev": -0.0478,
        "eligible": false,
-       "detail": "Model win prob 76% vs implied 78%"
+       "detail": "Model win prob 76% vs implied 80%"
       }
      ],
      "result": null,
-     "lockedAt": "2026-10-22T18:59:09.407847+00:00",
+     "lockedAt": "2026-10-24T15:45:35.453329+00:00",
      "lineHistory": [
       {
        "at": "2026-10-20T18:51:05.966743+00:00",
@@ -49702,6 +49865,13 @@
        "total": 50.0,
        "mlHome": 315,
        "mlAway": -355
+      },
+      {
+       "at": "2026-10-24T15:45:35.453329+00:00",
+       "spread": 10.0,
+       "total": 49.0,
+       "mlHome": 315,
+       "mlAway": -395
       }
      ]
     },
@@ -49746,82 +49916,82 @@
       "books": [
        {
         "provider": "DraftKings",
-        "spread": 2.5,
+        "spread": -1.5,
         "overUnder": 53.5,
-        "homeMoneyline": 120,
-        "awayMoneyline": -142,
-        "formattedSpread": "Baylor -2.5"
+        "homeMoneyline": -108,
+        "awayMoneyline": -112,
+        "formattedSpread": "Kansas -1.5"
        },
        {
         "provider": "Bovada",
-        "spread": 2.5,
-        "overUnder": 53,
+        "spread": -1,
+        "overUnder": 53.5,
         "homeMoneyline": 100,
         "awayMoneyline": -120,
-        "formattedSpread": "Baylor -2.5"
+        "formattedSpread": "Kansas -1.0"
        }
       ],
-      "spread": 2.5,
-      "total": 53.0,
-      "mlHome": 120,
-      "mlAway": -120
+      "spread": -1.0,
+      "total": 53.5,
+      "mlHome": 100,
+      "mlAway": -112
      },
      "bets": [
       {
        "type": "spread",
-       "pick": "Baylor -2.5",
+       "pick": "Baylor +1",
        "team": "Baylor",
        "side": "away",
-       "line": -2.5,
-       "edgePts": 0.4,
-       "prob": 0.511,
+       "line": 1.0,
+       "edgePts": 3.9,
+       "prob": 0.612,
        "price": -110,
-       "ev": -0.0254,
-       "eligible": false,
-       "detail": "Model line: Kansas +2.9 vs market +2.5"
+       "ev": 0.1692,
+       "eligible": true,
+       "detail": "Model line: Kansas +2.9 vs market -1.0"
       },
       {
        "type": "total",
-       "pick": "Under 53",
+       "pick": "Under 53.5",
        "team": null,
        "side": "under",
-       "line": 53.0,
-       "edgePts": 2.8,
-       "prob": 0.584,
+       "line": 53.5,
+       "edgePts": 3.3,
+       "prob": 0.598,
        "price": -110,
-       "ev": 0.1141,
+       "ev": 0.1416,
        "eligible": false,
-       "detail": "Model total 50.2 vs market 53"
+       "detail": "Model total 50.2 vs market 53.5"
       },
       {
        "type": "moneyline",
-       "pick": "Kansas ML +120",
+       "pick": "Kansas ML +100",
        "team": "Kansas",
        "side": "home",
        "line": null,
-       "edgePts": -2.8,
+       "edgePts": -7.3,
        "prob": 0.427,
-       "price": 120,
-       "ev": -0.0608,
+       "price": 100,
+       "ev": -0.1462,
        "eligible": false,
-       "detail": "Model win prob 43% vs implied 45%"
+       "detail": "Model win prob 43% vs implied 50%"
       },
       {
        "type": "moneyline",
-       "pick": "Baylor ML -120",
+       "pick": "Baylor ML -112",
        "team": "Baylor",
        "side": "away",
        "line": null,
-       "edgePts": 2.8,
+       "edgePts": 4.5,
        "prob": 0.573,
-       "price": -120,
-       "ev": 0.0507,
+       "price": -112,
+       "ev": 0.0848,
        "eligible": false,
-       "detail": "Model win prob 57% vs implied 55%"
+       "detail": "Model win prob 57% vs implied 53%"
       }
      ],
      "result": null,
-     "lockedAt": "2026-10-22T18:59:09.407847+00:00",
+     "lockedAt": "2026-10-24T15:45:35.453329+00:00",
      "lineHistory": [
       {
        "at": "2026-10-20T18:51:05.966743+00:00",
@@ -49836,6 +50006,13 @@
        "total": 53.0,
        "mlHome": 120,
        "mlAway": -120
+      },
+      {
+       "at": "2026-10-24T15:45:35.453329+00:00",
+       "spread": -1.0,
+       "total": 53.5,
+       "mlHome": 100,
+       "mlAway": -112
       }
      ]
     },
@@ -49880,39 +50057,39 @@
       "books": [
        {
         "provider": "DraftKings",
-        "spread": 7,
+        "spread": 7.5,
         "overUnder": 40.5,
-        "homeMoneyline": 210,
-        "awayMoneyline": -258,
-        "formattedSpread": "Iowa -7"
+        "homeMoneyline": 235,
+        "awayMoneyline": -290,
+        "formattedSpread": "Iowa -7.5"
        },
        {
         "provider": "Bovada",
-        "spread": 7,
+        "spread": 7.5,
         "overUnder": 40.5,
         "homeMoneyline": 220,
         "awayMoneyline": -270,
-        "formattedSpread": "Iowa -7.0"
+        "formattedSpread": "Iowa -7.5"
        }
       ],
-      "spread": 7.0,
+      "spread": 7.5,
       "total": 40.5,
-      "mlHome": 220,
-      "mlAway": -258
+      "mlHome": 235,
+      "mlAway": -270
      },
      "bets": [
       {
        "type": "spread",
-       "pick": "Iowa -7",
+       "pick": "Iowa -7.5",
        "team": "Iowa",
        "side": "away",
-       "line": -7.0,
-       "edgePts": 3.4,
-       "prob": 0.6,
+       "line": -7.5,
+       "edgePts": 2.9,
+       "prob": 0.586,
        "price": -110,
-       "ev": 0.1464,
+       "ev": 0.119,
        "eligible": true,
-       "detail": "Model line: Minnesota +10.4 vs market +7.0"
+       "detail": "Model line: Minnesota +10.4 vs market +7.5"
       },
       {
        "type": "total",
@@ -49929,33 +50106,33 @@
       },
       {
        "type": "moneyline",
-       "pick": "Minnesota ML +220",
+       "pick": "Minnesota ML +235",
        "team": "Minnesota",
        "side": "home",
        "line": null,
-       "edgePts": -6.2,
+       "edgePts": -4.8,
        "prob": 0.25,
-       "price": 220,
-       "ev": -0.1989,
+       "price": 235,
+       "ev": -0.1613,
        "eligible": false,
-       "detail": "Model win prob 25% vs implied 31%"
+       "detail": "Model win prob 25% vs implied 30%"
       },
       {
        "type": "moneyline",
-       "pick": "Iowa ML -258",
+       "pick": "Iowa ML -270",
        "team": "Iowa",
        "side": "away",
        "line": null,
-       "edgePts": 2.9,
+       "edgePts": 2.0,
        "prob": 0.75,
-       "price": -258,
-       "ev": 0.0402,
+       "price": -270,
+       "ev": 0.0273,
        "eligible": false,
-       "detail": "Model win prob 75% vs implied 72%"
+       "detail": "Model win prob 75% vs implied 73%"
       }
      ],
      "result": null,
-     "lockedAt": "2026-10-22T18:59:09.407847+00:00",
+     "lockedAt": "2026-10-24T15:45:35.453329+00:00",
      "lineHistory": [
       {
        "at": "2026-10-18T12:32:01.576001+00:00",
@@ -49977,6 +50154,13 @@
        "total": 40.5,
        "mlHome": 220,
        "mlAway": -258
+      },
+      {
+       "at": "2026-10-24T15:45:35.453329+00:00",
+       "spread": 7.5,
+       "total": 40.5,
+       "mlHome": 235,
+       "mlAway": -270
       }
      ]
     },
@@ -50022,51 +50206,51 @@
        {
         "provider": "DraftKings",
         "spread": -13.5,
-        "overUnder": 56.5,
+        "overUnder": 54.5,
         "homeMoneyline": -550,
         "awayMoneyline": 410,
         "formattedSpread": "Oklahoma State -13.5"
        },
        {
         "provider": "Bovada",
-        "spread": -14,
-        "overUnder": 56,
+        "spread": -13.5,
+        "overUnder": 55,
         "homeMoneyline": -575,
         "awayMoneyline": 400,
-        "formattedSpread": "Oklahoma State -14.0"
+        "formattedSpread": "Oklahoma State -13.5"
        }
       ],
-      "spread": -14.0,
-      "total": 56.0,
+      "spread": -13.5,
+      "total": 55.0,
       "mlHome": -550,
       "mlAway": 410
      },
      "bets": [
       {
        "type": "spread",
-       "pick": "Colorado +14",
+       "pick": "Colorado +13.5",
        "team": "Colorado",
        "side": "away",
-       "line": 14.0,
-       "edgePts": 2.3,
-       "prob": 0.568,
+       "line": 13.5,
+       "edgePts": 1.8,
+       "prob": 0.553,
        "price": -110,
-       "ev": 0.0835,
-       "eligible": true,
-       "detail": "Model line: Oklahoma State -11.7 vs market -14.0"
+       "ev": 0.0556,
+       "eligible": false,
+       "detail": "Model line: Oklahoma State -11.7 vs market -13.5"
       },
       {
        "type": "total",
-       "pick": "Under 56",
+       "pick": "Under 55",
        "team": null,
        "side": "under",
-       "line": 56.0,
-       "edgePts": 3.4,
-       "prob": 0.599,
+       "line": 55.0,
+       "edgePts": 2.4,
+       "prob": 0.571,
        "price": -110,
-       "ev": 0.1444,
+       "ev": 0.0892,
        "eligible": false,
-       "detail": "Model total 52.6 vs market 56"
+       "detail": "Model total 52.6 vs market 55"
       },
       {
        "type": "moneyline",
@@ -50096,7 +50280,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-10-22T18:59:09.407847+00:00",
+     "lockedAt": "2026-10-24T15:45:35.453329+00:00",
      "lineHistory": [
       {
        "at": "2026-10-20T18:51:05.966743+00:00",
@@ -50109,6 +50293,13 @@
        "at": "2026-10-22T18:59:09.407847+00:00",
        "spread": -14.0,
        "total": 56.0,
+       "mlHome": -550,
+       "mlAway": 410
+      },
+      {
+       "at": "2026-10-24T15:45:35.453329+00:00",
+       "spread": -13.5,
+       "total": 55.0,
        "mlHome": -550,
        "mlAway": 410
       }
@@ -50155,39 +50346,39 @@
       "books": [
        {
         "provider": "DraftKings",
-        "spread": 6.5,
+        "spread": 7,
         "overUnder": 43.5,
-        "homeMoneyline": 210,
-        "awayMoneyline": -258,
-        "formattedSpread": "BYU -6.5"
+        "homeMoneyline": 235,
+        "awayMoneyline": -290,
+        "formattedSpread": "BYU -7"
        },
        {
         "provider": "Bovada",
-        "spread": 6.5,
+        "spread": 7,
         "overUnder": 43.5,
         "homeMoneyline": 205,
         "awayMoneyline": -245,
-        "formattedSpread": "BYU -6.5"
+        "formattedSpread": "BYU -7.0"
        }
       ],
-      "spread": 6.5,
+      "spread": 7.0,
       "total": 43.5,
-      "mlHome": 210,
+      "mlHome": 235,
       "mlAway": -245
      },
      "bets": [
       {
        "type": "spread",
-       "pick": "BYU -6.5",
+       "pick": "BYU -7",
        "team": "BYU",
        "side": "away",
-       "line": -6.5,
-       "edgePts": 4.0,
-       "prob": 0.616,
+       "line": -7.0,
+       "edgePts": 3.5,
+       "prob": 0.602,
        "price": -110,
-       "ev": 0.1768,
+       "ev": 0.1496,
        "eligible": true,
-       "detail": "Model line: UCF +10.5 vs market +6.5"
+       "detail": "Model line: UCF +10.5 vs market +7.0"
       },
       {
        "type": "total",
@@ -50204,16 +50395,16 @@
       },
       {
        "type": "moneyline",
-       "pick": "UCF ML +210",
+       "pick": "UCF ML +235",
        "team": "UCF",
        "side": "home",
        "line": null,
-       "edgePts": -7.3,
+       "edgePts": -4.9,
        "prob": 0.249,
-       "price": 210,
-       "ev": -0.2277,
+       "price": 235,
+       "ev": -0.1654,
        "eligible": false,
-       "detail": "Model win prob 25% vs implied 32%"
+       "detail": "Model win prob 25% vs implied 30%"
       },
       {
        "type": "moneyline",
@@ -50230,7 +50421,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-10-22T18:59:09.407847+00:00",
+     "lockedAt": "2026-10-24T15:45:35.453329+00:00",
      "lineHistory": [
       {
        "at": "2026-10-18T12:32:01.576001+00:00",
@@ -50251,6 +50442,13 @@
        "spread": 6.5,
        "total": 43.5,
        "mlHome": 210,
+       "mlAway": -245
+      },
+      {
+       "at": "2026-10-24T15:45:35.453329+00:00",
+       "spread": 7.0,
+       "total": 43.5,
+       "mlHome": 235,
        "mlAway": -245
       }
      ]
@@ -50296,52 +50494,52 @@
       "books": [
        {
         "provider": "DraftKings",
-        "spread": -14.5,
+        "spread": -16.5,
         "overUnder": 43.5,
-        "homeMoneyline": -700,
-        "awayMoneyline": 500,
-        "formattedSpread": "UCLA -14.5"
+        "homeMoneyline": -800,
+        "awayMoneyline": 550,
+        "formattedSpread": "UCLA -16.5"
        },
        {
         "provider": "Bovada",
-        "spread": -15,
-        "overUnder": 43.5,
+        "spread": -16.5,
+        "overUnder": 42.5,
         "homeMoneyline": -650,
         "awayMoneyline": 450,
-        "formattedSpread": "UCLA -15.0"
+        "formattedSpread": "UCLA -16.5"
        }
       ],
-      "spread": -15.0,
-      "total": 43.5,
+      "spread": -16.5,
+      "total": 43.0,
       "mlHome": -650,
-      "mlAway": 500
+      "mlAway": 550
      },
      "bets": [
       {
        "type": "spread",
-       "pick": "Michigan State +15",
+       "pick": "Michigan State +16.5",
        "team": "Michigan State",
        "side": "away",
-       "line": 15.0,
-       "edgePts": 0.7,
-       "prob": 0.519,
+       "line": 16.5,
+       "edgePts": 2.2,
+       "prob": 0.564,
        "price": -110,
-       "ev": -0.0083,
-       "eligible": false,
-       "detail": "Model line: UCLA -14.3 vs market -15.0"
+       "ev": 0.0759,
+       "eligible": true,
+       "detail": "Model line: UCLA -14.3 vs market -16.5"
       },
       {
        "type": "total",
-       "pick": "Over 43.5",
+       "pick": "Over 43",
        "team": null,
        "side": "over",
-       "line": 43.5,
-       "edgePts": 6.9,
-       "prob": 0.695,
+       "line": 43.0,
+       "edgePts": 7.4,
+       "prob": 0.708,
        "price": -110,
-       "ev": 0.3275,
+       "ev": 0.352,
        "eligible": true,
-       "detail": "Model total 50.4 vs market 43.5"
+       "detail": "Model total 50.4 vs market 43"
       },
       {
        "type": "moneyline",
@@ -50358,20 +50556,20 @@
       },
       {
        "type": "moneyline",
-       "pick": "Michigan State ML +500",
+       "pick": "Michigan State ML +550",
        "team": "Michigan State",
        "side": "away",
        "line": null,
-       "edgePts": 1.1,
+       "edgePts": 2.4,
        "prob": 0.177,
-       "price": 500,
-       "ev": 0.0646,
+       "price": 550,
+       "ev": 0.1533,
        "eligible": false,
-       "detail": "Model win prob 18% vs implied 17%"
+       "detail": "Model win prob 18% vs implied 15%"
       }
      ],
      "result": null,
-     "lockedAt": "2026-10-22T18:59:09.407847+00:00",
+     "lockedAt": "2026-10-24T15:45:35.453329+00:00",
      "lineHistory": [
       {
        "at": "2026-10-18T12:32:01.576001+00:00",
@@ -50393,6 +50591,13 @@
        "total": 43.5,
        "mlHome": -650,
        "mlAway": 500
+      },
+      {
+       "at": "2026-10-24T15:45:35.453329+00:00",
+       "spread": -16.5,
+       "total": 43.0,
+       "mlHome": -650,
+       "mlAway": 550
       }
      ]
     },
@@ -50438,51 +50643,51 @@
        {
         "provider": "DraftKings",
         "spread": -6.5,
-        "overUnder": 56.5,
+        "overUnder": 57.5,
         "homeMoneyline": -250,
         "awayMoneyline": 205,
         "formattedSpread": "Utah -6.5"
        },
        {
         "provider": "Bovada",
-        "spread": -7,
-        "overUnder": 56.5,
+        "spread": -6.5,
+        "overUnder": 57.5,
         "homeMoneyline": -240,
         "awayMoneyline": 200,
-        "formattedSpread": "Utah -7.0"
+        "formattedSpread": "Utah -6.5"
        }
       ],
-      "spread": -7.0,
-      "total": 56.5,
+      "spread": -6.5,
+      "total": 57.5,
       "mlHome": -240,
       "mlAway": 205
      },
      "bets": [
       {
        "type": "spread",
-       "pick": "Utah -7",
+       "pick": "Utah -6.5",
        "team": "Utah",
        "side": "home",
-       "line": -7.0,
-       "edgePts": 0.1,
-       "prob": 0.503,
+       "line": -6.5,
+       "edgePts": 0.6,
+       "prob": 0.518,
        "price": -110,
-       "ev": -0.0401,
+       "ev": -0.0119,
        "eligible": false,
-       "detail": "Model line: Utah -7.1 vs market -7.0"
+       "detail": "Model line: Utah -7.1 vs market -6.5"
       },
       {
        "type": "total",
-       "pick": "Over 56.5",
+       "pick": "Over 57.5",
        "team": null,
        "side": "over",
-       "line": 56.5,
-       "edgePts": 1.6,
-       "prob": 0.547,
+       "line": 57.5,
+       "edgePts": 0.6,
+       "prob": 0.518,
        "price": -110,
-       "ev": 0.0446,
+       "ev": -0.0116,
        "eligible": false,
-       "detail": "Model total 58.1 vs market 56.5"
+       "detail": "Model total 58.1 vs market 57.5"
       },
       {
        "type": "moneyline",
@@ -50512,7 +50717,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-10-22T18:59:09.407847+00:00",
+     "lockedAt": "2026-10-24T15:45:35.453329+00:00",
      "lineHistory": [
       {
        "at": "2026-10-18T12:32:01.576001+00:00",
@@ -50534,6 +50739,13 @@
        "total": 56.5,
        "mlHome": -240,
        "mlAway": 205
+      },
+      {
+       "at": "2026-10-24T15:45:35.453329+00:00",
+       "spread": -6.5,
+       "total": 57.5,
+       "mlHome": -240,
+       "mlAway": 205
       }
      ]
     },
@@ -50550,7 +50762,7 @@
      "tv": null,
      "venue": "Jordan-Hare Stadium",
      "model": {
-      "homeRating": 10.2,
+      "homeRating": 10.1,
       "awayRating": 21.5,
       "sources": {
        "home": [
@@ -50579,7 +50791,7 @@
        {
         "provider": "DraftKings",
         "spread": 7,
-        "overUnder": 50.5,
+        "overUnder": 52.5,
         "homeMoneyline": 230,
         "awayMoneyline": -285,
         "formattedSpread": "LSU -7"
@@ -50587,14 +50799,14 @@
        {
         "provider": "Bovada",
         "spread": 7,
-        "overUnder": 51,
+        "overUnder": 52.5,
         "homeMoneyline": 235,
         "awayMoneyline": -285,
         "formattedSpread": "LSU -7.0"
        }
       ],
       "spread": 7.0,
-      "total": 51.0,
+      "total": 52.5,
       "mlHome": 235,
       "mlAway": -285
      },
@@ -50614,16 +50826,16 @@
       },
       {
        "type": "total",
-       "pick": "Under 51",
+       "pick": "Under 52.5",
        "team": null,
        "side": "under",
-       "line": 51.0,
-       "edgePts": 2.3,
-       "prob": 0.569,
+       "line": 52.5,
+       "edgePts": 3.8,
+       "prob": 0.612,
        "price": -110,
-       "ev": 0.0865,
-       "eligible": false,
-       "detail": "Model total 48.7 vs market 51"
+       "ev": 0.1688,
+       "eligible": true,
+       "detail": "Model total 48.7 vs market 52.5"
       },
       {
        "type": "moneyline",
@@ -50653,7 +50865,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-10-22T18:59:09.407847+00:00",
+     "lockedAt": "2026-10-24T15:45:35.453329+00:00",
      "lineHistory": [
       {
        "at": "2026-10-18T12:32:01.576001+00:00",
@@ -50673,6 +50885,13 @@
        "at": "2026-10-22T18:59:09.407847+00:00",
        "spread": 7.0,
        "total": 51.0,
+       "mlHome": 235,
+       "mlAway": -285
+      },
+      {
+       "at": "2026-10-24T15:45:35.453329+00:00",
+       "spread": 7.0,
+       "total": 52.5,
        "mlHome": 235,
        "mlAway": -285
       }
@@ -50719,65 +50938,65 @@
       "books": [
        {
         "provider": "DraftKings",
-        "spread": -8.5,
-        "overUnder": 51.5,
-        "homeMoneyline": -340,
-        "awayMoneyline": 270,
-        "formattedSpread": "Florida Atlantic -8.5"
+        "spread": -10,
+        "overUnder": 54.5,
+        "homeMoneyline": -355,
+        "awayMoneyline": 280,
+        "formattedSpread": "Florida Atlantic -10"
        },
        {
         "provider": "Bovada",
-        "spread": -9,
-        "overUnder": 52,
+        "spread": -9.5,
+        "overUnder": 55,
         "homeMoneyline": -400,
         "awayMoneyline": 300,
-        "formattedSpread": "Florida Atlantic -9.0"
+        "formattedSpread": "Florida Atlantic -9.5"
        }
       ],
-      "spread": -9.0,
-      "total": 52.0,
-      "mlHome": -340,
+      "spread": -10.0,
+      "total": 55.0,
+      "mlHome": -355,
       "mlAway": 300
      },
      "bets": [
       {
        "type": "spread",
-       "pick": "Florida Atlantic -9",
-       "team": "Florida Atlantic",
-       "side": "home",
-       "line": -9.0,
+       "pick": "Rice +10",
+       "team": "Rice",
+       "side": "away",
+       "line": 10.0,
        "edgePts": 0.5,
-       "prob": 0.514,
+       "prob": 0.515,
        "price": -110,
-       "ev": -0.0183,
+       "ev": -0.0163,
        "eligible": false,
-       "detail": "Model line: Florida Atlantic -9.5 vs market -9.0"
+       "detail": "Model line: Florida Atlantic -9.5 vs market -10.0"
       },
       {
        "type": "total",
-       "pick": "Over 52",
+       "pick": "Under 55",
        "team": null,
-       "side": "over",
-       "line": 52.0,
-       "edgePts": 2.4,
-       "prob": 0.569,
+       "side": "under",
+       "line": 55.0,
+       "edgePts": 0.6,
+       "prob": 0.519,
        "price": -110,
-       "ev": 0.0865,
+       "ev": -0.0088,
        "eligible": false,
-       "detail": "Model total 54.4 vs market 52"
+       "detail": "Model total 54.4 vs market 55"
       },
       {
        "type": "moneyline",
-       "pick": "Florida Atlantic ML -340",
+       "pick": "Florida Atlantic ML -355",
        "team": "Florida Atlantic",
        "side": "home",
        "line": null,
-       "edgePts": -4.3,
+       "edgePts": -5.1,
        "prob": 0.73,
-       "price": -340,
-       "ev": -0.0557,
+       "price": -355,
+       "ev": -0.0648,
        "eligible": false,
-       "detail": "Model win prob 73% vs implied 77%"
+       "detail": "Model win prob 73% vs implied 78%"
       },
       {
        "type": "moneyline",
@@ -50794,7 +51013,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-10-22T18:59:09.407847+00:00",
+     "lockedAt": "2026-10-24T15:45:35.453329+00:00",
      "lineHistory": [
       {
        "at": "2026-10-20T18:51:05.966743+00:00",
@@ -50808,6 +51027,13 @@
        "spread": -9.0,
        "total": 52.0,
        "mlHome": -340,
+       "mlAway": 300
+      },
+      {
+       "at": "2026-10-24T15:45:35.453329+00:00",
+       "spread": -10.0,
+       "total": 55.0,
+       "mlHome": -355,
        "mlAway": 300
       }
      ]
@@ -50853,82 +51079,82 @@
       "books": [
        {
         "provider": "DraftKings",
-        "spread": -19.5,
-        "overUnder": 48.5,
-        "homeMoneyline": -1650,
-        "awayMoneyline": 950,
-        "formattedSpread": "Miami -19.5"
+        "spread": -20.5,
+        "overUnder": 50.5,
+        "homeMoneyline": -1800,
+        "awayMoneyline": 1000,
+        "formattedSpread": "Miami -20.5"
        },
        {
         "provider": "Bovada",
-        "spread": -19.5,
-        "overUnder": 48,
+        "spread": -20.5,
+        "overUnder": 51,
         "homeMoneyline": -2000,
         "awayMoneyline": 950,
-        "formattedSpread": "Miami -19.5"
+        "formattedSpread": "Miami -20.5"
        }
       ],
-      "spread": -19.5,
-      "total": 48.0,
-      "mlHome": -1650,
-      "mlAway": 950
+      "spread": -20.5,
+      "total": 51.0,
+      "mlHome": -1800,
+      "mlAway": 1000
      },
      "bets": [
       {
        "type": "spread",
-       "pick": "Pittsburgh +19.5",
+       "pick": "Pittsburgh +20.5",
        "team": "Pittsburgh",
        "side": "away",
-       "line": 19.5,
-       "edgePts": 1.9,
-       "prob": 0.555,
+       "line": 20.5,
+       "edgePts": 2.9,
+       "prob": 0.584,
        "price": -110,
-       "ev": 0.0597,
-       "eligible": false,
-       "detail": "Model line: Miami -17.6 vs market -19.5"
+       "ev": 0.1153,
+       "eligible": true,
+       "detail": "Model line: Miami -17.6 vs market -20.5"
       },
       {
        "type": "total",
-       "pick": "Over 48",
+       "pick": "Over 51",
        "team": null,
        "side": "over",
-       "line": 48.0,
-       "edgePts": 4.2,
-       "prob": 0.622,
+       "line": 51.0,
+       "edgePts": 1.2,
+       "prob": 0.535,
        "price": -110,
-       "ev": 0.1877,
-       "eligible": true,
-       "detail": "Model total 52.2 vs market 48"
+       "ev": 0.0222,
+       "eligible": false,
+       "detail": "Model total 52.2 vs market 51"
       },
       {
        "type": "moneyline",
-       "pick": "Miami ML -1650",
+       "pick": "Miami ML -1800",
        "team": "Miami",
        "side": "home",
        "line": null,
-       "edgePts": -7.1,
+       "edgePts": -7.5,
        "prob": 0.872,
-       "price": -1650,
-       "ev": -0.0748,
+       "price": -1800,
+       "ev": -0.0792,
        "eligible": false,
-       "detail": "Model win prob 87% vs implied 94%"
+       "detail": "Model win prob 87% vs implied 95%"
       },
       {
        "type": "moneyline",
-       "pick": "Pittsburgh ML +950",
+       "pick": "Pittsburgh ML +1000",
        "team": "Pittsburgh",
        "side": "away",
        "line": null,
-       "edgePts": 3.2,
+       "edgePts": 3.7,
        "prob": 0.128,
-       "price": 950,
-       "ev": 0.3407,
+       "price": 1000,
+       "ev": 0.4045,
        "eligible": false,
-       "detail": "Model win prob 13% vs implied 10%"
+       "detail": "Model win prob 13% vs implied 9%"
       }
      ],
      "result": null,
-     "lockedAt": "2026-10-22T18:59:09.407847+00:00",
+     "lockedAt": "2026-10-24T15:45:35.453329+00:00",
      "lineHistory": [
       {
        "at": "2026-10-18T12:32:01.576001+00:00",
@@ -50950,6 +51176,13 @@
        "total": 48.0,
        "mlHome": -1650,
        "mlAway": 950
+      },
+      {
+       "at": "2026-10-24T15:45:35.453329+00:00",
+       "spread": -20.5,
+       "total": 51.0,
+       "mlHome": -1800,
+       "mlAway": 1000
       }
      ]
     },
@@ -50995,23 +51228,23 @@
        {
         "provider": "DraftKings",
         "spread": 7.5,
-        "overUnder": 41.5,
-        "homeMoneyline": 235,
-        "awayMoneyline": -290,
+        "overUnder": 43.5,
+        "homeMoneyline": 240,
+        "awayMoneyline": -298,
         "formattedSpread": "Indiana -7.5"
        },
        {
         "provider": "Bovada",
         "spread": 7.5,
-        "overUnder": 42,
+        "overUnder": 43,
         "homeMoneyline": 225,
         "awayMoneyline": -275,
         "formattedSpread": "Indiana -7.5"
        }
       ],
       "spread": 7.5,
-      "total": 42.0,
-      "mlHome": 235,
+      "total": 43.0,
+      "mlHome": 240,
       "mlAway": -275
      },
      "bets": [
@@ -51030,29 +51263,29 @@
       },
       {
        "type": "total",
-       "pick": "Over 42",
+       "pick": "Over 43",
        "team": null,
        "side": "over",
-       "line": 42.0,
-       "edgePts": 2.6,
-       "prob": 0.576,
+       "line": 43.0,
+       "edgePts": 1.6,
+       "prob": 0.547,
        "price": -110,
-       "ev": 0.1003,
+       "ev": 0.0446,
        "eligible": false,
-       "detail": "Model total 44.6 vs market 42"
+       "detail": "Model total 44.6 vs market 43"
       },
       {
        "type": "moneyline",
-       "pick": "Michigan ML +235",
+       "pick": "Michigan ML +240",
        "team": "Michigan",
        "side": "home",
        "line": null,
-       "edgePts": -5.7,
+       "edgePts": -5.3,
        "prob": 0.241,
-       "price": 235,
-       "ev": -0.1916,
+       "price": 240,
+       "ev": -0.1795,
        "eligible": false,
-       "detail": "Model win prob 24% vs implied 30%"
+       "detail": "Model win prob 24% vs implied 29%"
       },
       {
        "type": "moneyline",
@@ -51069,7 +51302,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-10-22T18:59:09.407847+00:00",
+     "lockedAt": "2026-10-24T15:45:35.453329+00:00",
      "lineHistory": [
       {
        "at": "2026-10-18T12:32:01.576001+00:00",
@@ -51090,6 +51323,13 @@
        "spread": 7.5,
        "total": 42.0,
        "mlHome": 235,
+       "mlAway": -275
+      },
+      {
+       "at": "2026-10-24T15:45:35.453329+00:00",
+       "spread": 7.5,
+       "total": 43.0,
+       "mlHome": 240,
        "mlAway": -275
       }
      ]
@@ -51135,65 +51375,65 @@
       "books": [
        {
         "provider": "DraftKings",
-        "spread": -16.5,
-        "overUnder": 58.5,
-        "homeMoneyline": -800,
-        "awayMoneyline": 550,
-        "formattedSpread": "Northwestern -16.5"
+        "spread": -14.5,
+        "overUnder": 59.5,
+        "homeMoneyline": -750,
+        "awayMoneyline": 525,
+        "formattedSpread": "Northwestern -14.5"
        },
        {
         "provider": "Bovada",
-        "spread": -16.5,
-        "overUnder": 58.5,
+        "spread": -15.5,
+        "overUnder": 59,
         "homeMoneyline": -850,
         "awayMoneyline": 550,
-        "formattedSpread": "Northwestern -16.5"
+        "formattedSpread": "Northwestern -15.5"
        }
       ],
-      "spread": -16.5,
-      "total": 58.5,
-      "mlHome": -800,
+      "spread": -15.0,
+      "total": 59.0,
+      "mlHome": -750,
       "mlAway": 550
      },
      "bets": [
       {
        "type": "spread",
-       "pick": "Northwestern -16.5",
+       "pick": "Northwestern -15",
        "team": "Northwestern",
        "side": "home",
-       "line": -16.5,
-       "edgePts": 2.0,
-       "prob": 0.558,
+       "line": -15.0,
+       "edgePts": 3.5,
+       "prob": 0.601,
        "price": -110,
-       "ev": 0.065,
-       "eligible": false,
-       "detail": "Model line: Northwestern -18.5 vs market -16.5"
+       "ev": 0.1479,
+       "eligible": true,
+       "detail": "Model line: Northwestern -18.5 vs market -15.0"
       },
       {
        "type": "total",
-       "pick": "Over 58.5",
+       "pick": "Under 59",
        "team": null,
-       "side": "over",
-       "line": 58.5,
-       "edgePts": 0.4,
-       "prob": 0.51,
+       "side": "under",
+       "line": 59.0,
+       "edgePts": 0.1,
+       "prob": 0.504,
        "price": -110,
-       "ev": -0.0257,
+       "ev": -0.037,
        "eligible": false,
-       "detail": "Model total 58.9 vs market 58.5"
+       "detail": "Model total 58.9 vs market 59"
       },
       {
        "type": "moneyline",
-       "pick": "Northwestern ML -800",
+       "pick": "Northwestern ML -750",
        "team": "Northwestern",
        "side": "home",
        "line": null,
-       "edgePts": -0.6,
+       "edgePts": 0.1,
        "prob": 0.883,
-       "price": -800,
-       "ev": -0.0064,
+       "price": -750,
+       "ev": 0.001,
        "eligible": false,
-       "detail": "Model win prob 88% vs implied 89%"
+       "detail": "Model win prob 88% vs implied 88%"
       },
       {
        "type": "moneyline",
@@ -51210,7 +51450,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-10-22T18:59:09.407847+00:00",
+     "lockedAt": "2026-10-24T15:45:35.453329+00:00",
      "lineHistory": [
       {
        "at": "2026-10-18T12:32:01.576001+00:00",
@@ -51231,6 +51471,13 @@
        "spread": -16.5,
        "total": 58.5,
        "mlHome": -800,
+       "mlAway": 550
+      },
+      {
+       "at": "2026-10-24T15:45:35.453329+00:00",
+       "spread": -15.0,
+       "total": 59.0,
+       "mlHome": -750,
        "mlAway": 550
       }
      ]
@@ -51276,65 +51523,65 @@
       "books": [
        {
         "provider": "DraftKings",
-        "spread": -19.5,
+        "spread": -18.5,
         "overUnder": 55.5,
-        "homeMoneyline": -1100,
-        "awayMoneyline": 700,
-        "formattedSpread": "SMU -19.5"
+        "homeMoneyline": -1050,
+        "awayMoneyline": 675,
+        "formattedSpread": "SMU -18.5"
        },
        {
         "provider": "Bovada",
-        "spread": -19,
-        "overUnder": 55.5,
+        "spread": -18.5,
+        "overUnder": 55,
         "homeMoneyline": -1200,
         "awayMoneyline": 700,
-        "formattedSpread": "SMU -19.0"
+        "formattedSpread": "SMU -18.5"
        }
       ],
-      "spread": -19.0,
-      "total": 55.5,
-      "mlHome": -1100,
+      "spread": -18.5,
+      "total": 55.0,
+      "mlHome": -1050,
       "mlAway": 700
      },
      "bets": [
       {
        "type": "spread",
-       "pick": "California +19",
+       "pick": "California +18.5",
        "team": "California",
        "side": "away",
-       "line": 19.0,
-       "edgePts": 1.5,
-       "prob": 0.543,
+       "line": 18.5,
+       "edgePts": 1.0,
+       "prob": 0.528,
        "price": -110,
-       "ev": 0.0363,
+       "ev": 0.0082,
        "eligible": false,
-       "detail": "Model line: SMU -17.5 vs market -19.0"
+       "detail": "Model line: SMU -17.5 vs market -18.5"
       },
       {
        "type": "total",
-       "pick": "Under 55.5",
+       "pick": "Under 55",
        "team": null,
        "side": "under",
-       "line": 55.5,
-       "edgePts": 3.8,
-       "prob": 0.609,
+       "line": 55.0,
+       "edgePts": 3.2,
+       "prob": 0.595,
        "price": -110,
-       "ev": 0.1634,
-       "eligible": true,
-       "detail": "Model total 51.8 vs market 55.5"
+       "ev": 0.1361,
+       "eligible": false,
+       "detail": "Model total 51.8 vs market 55"
       },
       {
        "type": "moneyline",
-       "pick": "SMU ML -1100",
+       "pick": "SMU ML -1050",
        "team": "SMU",
        "side": "home",
        "line": null,
-       "edgePts": -4.5,
+       "edgePts": -4.2,
        "prob": 0.871,
-       "price": -1100,
-       "ev": -0.0496,
+       "price": -1050,
+       "ev": -0.0458,
        "eligible": false,
-       "detail": "Model win prob 87% vs implied 92%"
+       "detail": "Model win prob 87% vs implied 91%"
       },
       {
        "type": "moneyline",
@@ -51351,7 +51598,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-10-22T18:59:09.407847+00:00",
+     "lockedAt": "2026-10-24T15:45:35.453329+00:00",
      "lineHistory": [
       {
        "at": "2026-10-20T18:51:05.966743+00:00",
@@ -51365,6 +51612,13 @@
        "spread": -19.0,
        "total": 55.5,
        "mlHome": -1100,
+       "mlAway": 700
+      },
+      {
+       "at": "2026-10-24T15:45:35.453329+00:00",
+       "spread": -18.5,
+       "total": 55.0,
+       "mlHome": -1050,
        "mlAway": 700
       }
      ]
@@ -51411,51 +51665,51 @@
        {
         "provider": "DraftKings",
         "spread": -10.5,
-        "overUnder": 56.5,
-        "homeMoneyline": -395,
-        "awayMoneyline": 310,
+        "overUnder": 58.5,
+        "homeMoneyline": -360,
+        "awayMoneyline": 285,
         "formattedSpread": "TCU -10.5"
        },
        {
         "provider": "Bovada",
-        "spread": -11,
-        "overUnder": 56.5,
+        "spread": -10,
+        "overUnder": 58.5,
         "homeMoneyline": -300,
         "awayMoneyline": 250,
-        "formattedSpread": "TCU -11.0"
+        "formattedSpread": "TCU -10.0"
        }
       ],
-      "spread": -11.0,
-      "total": 56.5,
+      "spread": -10.0,
+      "total": 58.5,
       "mlHome": -300,
-      "mlAway": 310
+      "mlAway": 285
      },
      "bets": [
       {
        "type": "spread",
-       "pick": "TCU -11",
+       "pick": "TCU -10",
        "team": "TCU",
        "side": "home",
-       "line": -11.0,
-       "edgePts": 1.0,
-       "prob": 0.53,
+       "line": -10.0,
+       "edgePts": 2.0,
+       "prob": 0.559,
        "price": -110,
-       "ev": 0.0112,
-       "eligible": false,
-       "detail": "Model line: TCU -12.0 vs market -11.0"
+       "ev": 0.0672,
+       "eligible": true,
+       "detail": "Model line: TCU -12.0 vs market -10.0"
       },
       {
        "type": "total",
-       "pick": "Under 56.5",
+       "pick": "Under 58.5",
        "team": null,
        "side": "under",
-       "line": 56.5,
-       "edgePts": 1.0,
-       "prob": 0.53,
+       "line": 58.5,
+       "edgePts": 3.0,
+       "prob": 0.588,
        "price": -110,
-       "ev": 0.0109,
+       "ev": 0.1224,
        "eligible": false,
-       "detail": "Model total 55.5 vs market 56.5"
+       "detail": "Model total 55.5 vs market 58.5"
       },
       {
        "type": "moneyline",
@@ -51472,20 +51726,20 @@
       },
       {
        "type": "moneyline",
-       "pick": "West Virginia ML +310",
+       "pick": "West Virginia ML +285",
        "team": "West Virginia",
        "side": "away",
        "line": null,
-       "edgePts": -2.5,
+       "edgePts": -4.0,
        "prob": 0.219,
-       "price": 310,
-       "ev": -0.1008,
+       "price": 285,
+       "ev": -0.1556,
        "eligible": false,
-       "detail": "Model win prob 22% vs implied 24%"
+       "detail": "Model win prob 22% vs implied 26%"
       }
      ],
      "result": null,
-     "lockedAt": "2026-10-22T18:59:09.407847+00:00",
+     "lockedAt": "2026-10-24T15:45:35.453329+00:00",
      "lineHistory": [
       {
        "at": "2026-10-20T18:51:05.966743+00:00",
@@ -51500,6 +51754,13 @@
        "total": 56.5,
        "mlHome": -300,
        "mlAway": 310
+      },
+      {
+       "at": "2026-10-24T15:45:35.453329+00:00",
+       "spread": -10.0,
+       "total": 58.5,
+       "mlHome": -300,
+       "mlAway": 285
       }
      ]
     },
@@ -51544,65 +51805,65 @@
       "books": [
        {
         "provider": "DraftKings",
-        "spread": -3,
-        "overUnder": 46.5,
-        "homeMoneyline": -170,
-        "awayMoneyline": 142,
-        "formattedSpread": "Toledo -3"
+        "spread": -2.5,
+        "overUnder": 48.5,
+        "homeMoneyline": -142,
+        "awayMoneyline": 120,
+        "formattedSpread": "Toledo -2.5"
        },
        {
         "provider": "Bovada",
-        "spread": -3.5,
-        "overUnder": 46,
+        "spread": -2.5,
+        "overUnder": 48,
         "homeMoneyline": -175,
         "awayMoneyline": 150,
-        "formattedSpread": "Toledo -3.5"
+        "formattedSpread": "Toledo -2.5"
        }
       ],
-      "spread": -3.0,
-      "total": 46.0,
-      "mlHome": -170,
+      "spread": -2.5,
+      "total": 48.0,
+      "mlHome": -142,
       "mlAway": 150
      },
      "bets": [
       {
        "type": "spread",
-       "pick": "Toledo -3",
+       "pick": "Toledo -2.5",
        "team": "Toledo",
        "side": "home",
-       "line": -3.0,
-       "edgePts": 0.7,
-       "prob": 0.522,
+       "line": -2.5,
+       "edgePts": 1.2,
+       "prob": 0.537,
        "price": -110,
-       "ev": -0.0038,
+       "ev": 0.0243,
        "eligible": false,
-       "detail": "Model line: Toledo -3.7 vs market -3.0"
+       "detail": "Model line: Toledo -3.7 vs market -2.5"
       },
       {
        "type": "total",
-       "pick": "Over 46",
+       "pick": "Under 48",
        "team": null,
-       "side": "over",
-       "line": 46.0,
-       "edgePts": 1.6,
-       "prob": 0.549,
+       "side": "under",
+       "line": 48.0,
+       "edgePts": 0.4,
+       "prob": 0.51,
        "price": -110,
-       "ev": 0.0474,
+       "ev": -0.0257,
        "eligible": false,
-       "detail": "Model total 47.6 vs market 46"
+       "detail": "Model total 47.6 vs market 48"
       },
       {
        "type": "moneyline",
-       "pick": "Toledo ML -170",
+       "pick": "Toledo ML -142",
        "team": "Toledo",
        "side": "home",
        "line": null,
-       "edgePts": -3.4,
+       "edgePts": 0.9,
        "prob": 0.595,
-       "price": -170,
-       "ev": -0.0545,
+       "price": -142,
+       "ev": 0.0145,
        "eligible": false,
-       "detail": "Model win prob 60% vs implied 63%"
+       "detail": "Model win prob 60% vs implied 59%"
       },
       {
        "type": "moneyline",
@@ -51619,7 +51880,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-10-22T18:59:09.407847+00:00",
+     "lockedAt": "2026-10-24T15:45:35.453329+00:00",
      "lineHistory": [
       {
        "at": "2026-10-20T18:51:05.966743+00:00",
@@ -51633,6 +51894,13 @@
        "spread": -3.0,
        "total": 46.0,
        "mlHome": -170,
+       "mlAway": 150
+      },
+      {
+       "at": "2026-10-24T15:45:35.453329+00:00",
+       "spread": -2.5,
+       "total": 48.0,
+       "mlHome": -142,
        "mlAway": 150
       }
      ]
@@ -51678,65 +51946,65 @@
       "books": [
        {
         "provider": "DraftKings",
-        "spread": 3,
-        "overUnder": 39.5,
-        "homeMoneyline": 124,
-        "awayMoneyline": -148,
-        "formattedSpread": "Miami (OH) -3"
+        "spread": 3.5,
+        "overUnder": 40.5,
+        "homeMoneyline": 145,
+        "awayMoneyline": -175,
+        "formattedSpread": "Miami (OH) -3.5"
        },
        {
         "provider": "Bovada",
-        "spread": 3,
+        "spread": 4,
         "overUnder": 40.5,
         "homeMoneyline": 100,
         "awayMoneyline": -120,
-        "formattedSpread": "Miami (OH) -3.0"
+        "formattedSpread": "Miami (OH) -4.0"
        }
       ],
-      "spread": 3.0,
-      "total": 40.0,
-      "mlHome": 124,
+      "spread": 4.0,
+      "total": 40.5,
+      "mlHome": 145,
       "mlAway": -120
      },
      "bets": [
       {
        "type": "spread",
-       "pick": "Miami (OH) -3",
+       "pick": "Miami (OH) -4",
        "team": "Miami (OH)",
        "side": "away",
-       "line": -3.0,
-       "edgePts": 1.2,
-       "prob": 0.536,
+       "line": -4.0,
+       "edgePts": 0.2,
+       "prob": 0.506,
        "price": -110,
-       "ev": 0.0224,
+       "ev": -0.0339,
        "eligible": false,
-       "detail": "Model line: Central Michigan +4.2 vs market +3.0"
+       "detail": "Model line: Central Michigan +4.2 vs market +4.0"
       },
       {
        "type": "total",
-       "pick": "Over 40",
+       "pick": "Over 40.5",
        "team": null,
        "side": "over",
-       "line": 40.0,
-       "edgePts": 8.0,
-       "prob": 0.723,
+       "line": 40.5,
+       "edgePts": 7.5,
+       "prob": 0.711,
        "price": -110,
-       "ev": 0.3808,
+       "ev": 0.3569,
        "eligible": true,
-       "detail": "Model total 48.0 vs market 40"
+       "detail": "Model total 48.0 vs market 40.5"
       },
       {
        "type": "moneyline",
-       "pick": "Central Michigan ML +124",
+       "pick": "Central Michigan ML +145",
        "team": "Central Michigan",
        "side": "home",
        "line": null,
-       "edgePts": -5.3,
+       "edgePts": -1.5,
        "prob": 0.393,
-       "price": 124,
-       "ev": -0.1195,
+       "price": 145,
+       "ev": -0.0369,
        "eligible": false,
-       "detail": "Model win prob 39% vs implied 45%"
+       "detail": "Model win prob 39% vs implied 41%"
       },
       {
        "type": "moneyline",
@@ -51753,7 +52021,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-10-22T18:59:09.407847+00:00",
+     "lockedAt": "2026-10-24T15:45:35.453329+00:00",
      "lineHistory": [
       {
        "at": "2026-10-20T18:51:05.966743+00:00",
@@ -51767,6 +52035,13 @@
        "spread": 3.0,
        "total": 40.0,
        "mlHome": 124,
+       "mlAway": -120
+      },
+      {
+       "at": "2026-10-24T15:45:35.453329+00:00",
+       "spread": 4.0,
+       "total": 40.5,
+       "mlHome": 145,
        "mlAway": -120
       }
      ]
@@ -51813,22 +52088,22 @@
        {
         "provider": "DraftKings",
         "spread": -3,
-        "overUnder": 46.5,
+        "overUnder": 47.5,
         "homeMoneyline": -148,
         "awayMoneyline": 124,
         "formattedSpread": "Kent State -3"
        },
        {
         "provider": "Bovada",
-        "spread": -3,
-        "overUnder": 47,
+        "spread": -2.5,
+        "overUnder": 47.5,
         "homeMoneyline": -150,
         "awayMoneyline": 130,
-        "formattedSpread": "Kent State -3.0"
+        "formattedSpread": "Kent State -2.5"
        }
       ],
       "spread": -3.0,
-      "total": 47.0,
+      "total": 47.5,
       "mlHome": -148,
       "mlAway": 130
      },
@@ -51848,16 +52123,16 @@
       },
       {
        "type": "total",
-       "pick": "Over 47",
+       "pick": "Over 47.5",
        "team": null,
        "side": "over",
-       "line": 47.0,
-       "edgePts": 1.2,
-       "prob": 0.535,
+       "line": 47.5,
+       "edgePts": 0.7,
+       "prob": 0.521,
        "price": -110,
-       "ev": 0.0222,
+       "ev": -0.006,
        "eligible": false,
-       "detail": "Model total 48.2 vs market 47"
+       "detail": "Model total 48.2 vs market 47.5"
       },
       {
        "type": "moneyline",
@@ -51887,7 +52162,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-10-22T18:59:09.407847+00:00",
+     "lockedAt": "2026-10-24T15:45:35.453329+00:00",
      "lineHistory": [
       {
        "at": "2026-10-20T18:51:05.966743+00:00",
@@ -51900,6 +52175,13 @@
        "at": "2026-10-22T18:59:09.407847+00:00",
        "spread": -3.0,
        "total": 47.0,
+       "mlHome": -148,
+       "mlAway": 130
+      },
+      {
+       "at": "2026-10-24T15:45:35.453329+00:00",
+       "spread": -3.0,
+       "total": 47.5,
        "mlHome": -148,
        "mlAway": 130
       }
@@ -51947,7 +52229,7 @@
        {
         "provider": "DraftKings",
         "spread": -13.5,
-        "overUnder": 50.5,
+        "overUnder": 49.5,
         "homeMoneyline": -575,
         "awayMoneyline": 425,
         "formattedSpread": "Alabama -13.5"
@@ -51955,14 +52237,14 @@
        {
         "provider": "Bovada",
         "spread": -13.5,
-        "overUnder": 50.5,
+        "overUnder": 50,
         "homeMoneyline": -675,
         "awayMoneyline": 460,
         "formattedSpread": "Alabama -13.5"
        }
       ],
       "spread": -13.5,
-      "total": 50.5,
+      "total": 50.0,
       "mlHome": -575,
       "mlAway": 460
      },
@@ -51982,16 +52264,16 @@
       },
       {
        "type": "total",
-       "pick": "Over 50.5",
+       "pick": "Over 50",
        "team": null,
        "side": "over",
-       "line": 50.5,
-       "edgePts": 2.1,
-       "prob": 0.563,
+       "line": 50.0,
+       "edgePts": 2.6,
+       "prob": 0.578,
        "price": -110,
-       "ev": 0.0753,
+       "ev": 0.1031,
        "eligible": false,
-       "detail": "Model total 52.6 vs market 50.5"
+       "detail": "Model total 52.6 vs market 50"
       },
       {
        "type": "moneyline",
@@ -52021,7 +52303,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-10-22T18:59:09.407847+00:00",
+     "lockedAt": "2026-10-24T15:45:35.453329+00:00",
      "lineHistory": [
       {
        "at": "2026-10-18T12:32:01.576001+00:00",
@@ -52041,6 +52323,13 @@
        "at": "2026-10-22T18:59:09.407847+00:00",
        "spread": -13.5,
        "total": 50.5,
+       "mlHome": -575,
+       "mlAway": 460
+      },
+      {
+       "at": "2026-10-24T15:45:35.453329+00:00",
+       "spread": -13.5,
+       "total": 50.0,
        "mlHome": -575,
        "mlAway": 460
       }
@@ -52162,7 +52451,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-10-22T18:59:09.407847+00:00",
+     "lockedAt": "2026-10-24T15:45:35.453329+00:00",
      "lineHistory": [
       {
        "at": "2026-10-20T18:51:05.966743+00:00",
@@ -52223,22 +52512,22 @@
         "provider": "DraftKings",
         "spread": -3,
         "overUnder": 44.5,
-        "homeMoneyline": -162,
-        "awayMoneyline": 136,
+        "homeMoneyline": -155,
+        "awayMoneyline": 130,
         "formattedSpread": "Buffalo -3"
        },
        {
         "provider": "Bovada",
         "spread": -3,
-        "overUnder": 45,
+        "overUnder": 44.5,
         "homeMoneyline": -200,
         "awayMoneyline": 170,
         "formattedSpread": "Buffalo -3.0"
        }
       ],
       "spread": -3.0,
-      "total": 45.0,
-      "mlHome": -162,
+      "total": 44.5,
+      "mlHome": -155,
       "mlAway": 170
      },
      "bets": [
@@ -52257,29 +52546,29 @@
       },
       {
        "type": "total",
-       "pick": "Under 45",
+       "pick": "Over 44.5",
        "team": null,
-       "side": "under",
-       "line": 45.0,
-       "edgePts": 0.1,
-       "prob": 0.504,
+       "side": "over",
+       "line": 44.5,
+       "edgePts": 0.4,
+       "prob": 0.51,
        "price": -110,
-       "ev": -0.037,
+       "ev": -0.0257,
        "eligible": false,
-       "detail": "Model total 44.9 vs market 45"
+       "detail": "Model total 44.9 vs market 44.5"
       },
       {
        "type": "moneyline",
-       "pick": "Buffalo ML -162",
+       "pick": "Buffalo ML -155",
        "team": "Buffalo",
        "side": "home",
        "line": null,
-       "edgePts": 4.5,
+       "edgePts": 5.6,
        "prob": 0.663,
-       "price": -162,
-       "ev": 0.073,
-       "eligible": false,
-       "detail": "Model win prob 66% vs implied 62%"
+       "price": -155,
+       "ev": 0.0915,
+       "eligible": true,
+       "detail": "Model win prob 66% vs implied 61%"
       },
       {
        "type": "moneyline",
@@ -52296,7 +52585,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-10-22T18:59:09.407847+00:00",
+     "lockedAt": "2026-10-24T15:45:35.453329+00:00",
      "lineHistory": [
       {
        "at": "2026-10-20T18:51:05.966743+00:00",
@@ -52310,6 +52599,13 @@
        "spread": -3.0,
        "total": 45.0,
        "mlHome": -162,
+       "mlAway": 170
+      },
+      {
+       "at": "2026-10-24T15:45:35.453329+00:00",
+       "spread": -3.0,
+       "total": 44.5,
+       "mlHome": -155,
        "mlAway": 170
       }
      ]
@@ -52355,52 +52651,52 @@
       "books": [
        {
         "provider": "DraftKings",
-        "spread": -5.5,
+        "spread": -6,
         "overUnder": 50.5,
-        "homeMoneyline": -218,
-        "awayMoneyline": 180,
-        "formattedSpread": "Georgia Tech -5.5"
+        "homeMoneyline": -238,
+        "awayMoneyline": 195,
+        "formattedSpread": "Georgia Tech -6"
        },
        {
         "provider": "Bovada",
-        "spread": -5,
-        "overUnder": 50.5,
+        "spread": -6,
+        "overUnder": 50,
         "homeMoneyline": -210,
         "awayMoneyline": 175,
-        "formattedSpread": "Georgia Tech -5.0"
+        "formattedSpread": "Georgia Tech -6.0"
        }
       ],
-      "spread": -5.0,
-      "total": 50.5,
+      "spread": -6.0,
+      "total": 50.0,
       "mlHome": -210,
-      "mlAway": 180
+      "mlAway": 195
      },
      "bets": [
       {
        "type": "spread",
-       "pick": "Georgia Tech -5",
+       "pick": "Georgia Tech -6",
        "team": "Georgia Tech",
        "side": "home",
-       "line": -5.0,
-       "edgePts": 1.5,
-       "prob": 0.544,
+       "line": -6.0,
+       "edgePts": 0.5,
+       "prob": 0.514,
        "price": -110,
-       "ev": 0.0383,
+       "ev": -0.0179,
        "eligible": false,
-       "detail": "Model line: Georgia Tech -6.5 vs market -5.0"
+       "detail": "Model line: Georgia Tech -6.5 vs market -6.0"
       },
       {
        "type": "total",
-       "pick": "Over 50.5",
+       "pick": "Over 50",
        "team": null,
        "side": "over",
-       "line": 50.5,
-       "edgePts": 0.3,
-       "prob": 0.509,
+       "line": 50.0,
+       "edgePts": 0.8,
+       "prob": 0.524,
        "price": -110,
-       "ev": -0.0285,
+       "ev": -0.0003,
        "eligible": false,
-       "detail": "Model total 50.8 vs market 50.5"
+       "detail": "Model total 50.8 vs market 50"
       },
       {
        "type": "moneyline",
@@ -52417,20 +52713,20 @@
       },
       {
        "type": "moneyline",
-       "pick": "Boston College ML +180",
+       "pick": "Boston College ML +195",
        "team": "Boston College",
        "side": "away",
        "line": null,
-       "edgePts": -1.9,
+       "edgePts": -0.1,
        "prob": 0.338,
-       "price": 180,
-       "ev": -0.0543,
+       "price": 195,
+       "ev": -0.0036,
        "eligible": false,
-       "detail": "Model win prob 34% vs implied 36%"
+       "detail": "Model win prob 34% vs implied 34%"
       }
      ],
      "result": null,
-     "lockedAt": "2026-10-22T18:59:09.407847+00:00",
+     "lockedAt": "2026-10-24T15:45:35.453329+00:00",
      "lineHistory": [
       {
        "at": "2026-10-20T18:51:05.966743+00:00",
@@ -52445,6 +52741,13 @@
        "total": 50.5,
        "mlHome": -210,
        "mlAway": 180
+      },
+      {
+       "at": "2026-10-24T15:45:35.453329+00:00",
+       "spread": -6.0,
+       "total": 50.0,
+       "mlHome": -210,
+       "mlAway": 195
       }
      ]
     },
@@ -52489,82 +52792,82 @@
       "books": [
        {
         "provider": "DraftKings",
-        "spread": 5.5,
-        "overUnder": 44.5,
-        "homeMoneyline": 180,
-        "awayMoneyline": -218,
-        "formattedSpread": "Oklahoma -5.5"
+        "spread": 1.5,
+        "overUnder": 48.5,
+        "homeMoneyline": 102,
+        "awayMoneyline": -122,
+        "formattedSpread": "Oklahoma -1.5"
        },
        {
         "provider": "Bovada",
-        "spread": 6,
-        "overUnder": 45,
+        "spread": 1.5,
+        "overUnder": 48.5,
         "homeMoneyline": 115,
         "awayMoneyline": -135,
-        "formattedSpread": "Oklahoma -6.0"
+        "formattedSpread": "Oklahoma -1.5"
        }
       ],
-      "spread": 6.0,
-      "total": 45.0,
-      "mlHome": 180,
-      "mlAway": -135
+      "spread": 1.5,
+      "total": 48.5,
+      "mlHome": 115,
+      "mlAway": -122
      },
      "bets": [
       {
        "type": "spread",
-       "pick": "Mississippi State +6",
+       "pick": "Mississippi State +1.5",
        "team": "Mississippi State",
        "side": "home",
-       "line": 6.0,
-       "edgePts": 5.5,
-       "prob": 0.657,
+       "line": 1.5,
+       "edgePts": 1.0,
+       "prob": 0.528,
        "price": -110,
-       "ev": 0.2546,
-       "eligible": true,
-       "detail": "Model line: Mississippi State +0.5 vs market +6.0"
+       "ev": 0.0089,
+       "eligible": false,
+       "detail": "Model line: Mississippi State +0.5 vs market +1.5"
       },
       {
        "type": "total",
-       "pick": "Over 45",
+       "pick": "Over 48.5",
        "team": null,
        "side": "over",
-       "line": 45.0,
-       "edgePts": 4.2,
-       "prob": 0.622,
+       "line": 48.5,
+       "edgePts": 0.7,
+       "prob": 0.521,
        "price": -110,
-       "ev": 0.1877,
-       "eligible": true,
-       "detail": "Model total 49.2 vs market 45"
+       "ev": -0.006,
+       "eligible": false,
+       "detail": "Model total 49.2 vs market 48.5"
       },
       {
        "type": "moneyline",
-       "pick": "Mississippi State ML +180",
+       "pick": "Mississippi State ML +115",
        "team": "Mississippi State",
        "side": "home",
        "line": null,
-       "edgePts": 12.9,
+       "edgePts": 2.1,
        "prob": 0.486,
-       "price": 180,
-       "ev": 0.3615,
-       "eligible": true,
-       "detail": "Model win prob 49% vs implied 36%"
+       "price": 115,
+       "ev": 0.0454,
+       "eligible": false,
+       "detail": "Model win prob 49% vs implied 47%"
       },
       {
        "type": "moneyline",
-       "pick": "Oklahoma ML -135",
+       "pick": "Oklahoma ML -122",
        "team": "Oklahoma",
        "side": "away",
        "line": null,
-       "edgePts": -6.1,
+       "edgePts": -3.6,
        "prob": 0.514,
-       "price": -135,
-       "ev": -0.1057,
+       "price": -122,
+       "ev": -0.0651,
        "eligible": false,
-       "detail": "Model win prob 51% vs implied 57%"
+       "detail": "Model win prob 51% vs implied 55%"
       }
      ],
      "result": null,
-     "lockedAt": "2026-10-22T18:59:09.407847+00:00",
+     "lockedAt": "2026-10-24T15:45:35.453329+00:00",
      "lineHistory": [
       {
        "at": "2026-10-20T18:51:05.966743+00:00",
@@ -52579,6 +52882,13 @@
        "total": 45.0,
        "mlHome": 180,
        "mlAway": -135
+      },
+      {
+       "at": "2026-10-24T15:45:35.453329+00:00",
+       "spread": 1.5,
+       "total": 48.5,
+       "mlHome": 115,
+       "mlAway": -122
       }
      ]
     },
@@ -52623,65 +52933,65 @@
       "books": [
        {
         "provider": "DraftKings",
-        "spread": 2.5,
-        "overUnder": 63.5,
-        "homeMoneyline": 114,
-        "awayMoneyline": -135,
-        "formattedSpread": "North Texas -2.5"
+        "spread": 3,
+        "overUnder": 60.5,
+        "homeMoneyline": 130,
+        "awayMoneyline": -155,
+        "formattedSpread": "North Texas -3"
        },
        {
         "provider": "Bovada",
-        "spread": 2.5,
-        "overUnder": 64,
+        "spread": 3.5,
+        "overUnder": 61,
         "homeMoneyline": 105,
         "awayMoneyline": -125,
-        "formattedSpread": "North Texas -2.5"
+        "formattedSpread": "North Texas -3.5"
        }
       ],
-      "spread": 2.5,
-      "total": 64.0,
-      "mlHome": 114,
+      "spread": 3.0,
+      "total": 61.0,
+      "mlHome": 130,
       "mlAway": -125
      },
      "bets": [
       {
        "type": "spread",
-       "pick": "North Texas -2.5",
-       "team": "North Texas",
-       "side": "away",
-       "line": -2.5,
-       "edgePts": 0.4,
-       "prob": 0.511,
+       "pick": "Navy +3",
+       "team": "Navy",
+       "side": "home",
+       "line": 3.0,
+       "edgePts": 0.1,
+       "prob": 0.503,
        "price": -110,
-       "ev": -0.0236,
+       "ev": -0.0391,
        "eligible": false,
-       "detail": "Model line: Navy +2.9 vs market +2.5"
+       "detail": "Model line: Navy +2.9 vs market +3.0"
       },
       {
        "type": "total",
-       "pick": "Under 64",
+       "pick": "Under 61",
        "team": null,
        "side": "under",
-       "line": 64.0,
-       "edgePts": 3.4,
-       "prob": 0.601,
+       "line": 61.0,
+       "edgePts": 0.4,
+       "prob": 0.513,
        "price": -110,
-       "ev": 0.1471,
+       "ev": -0.0201,
        "eligible": false,
-       "detail": "Model total 60.6 vs market 64"
+       "detail": "Model total 60.6 vs market 61"
       },
       {
        "type": "moneyline",
-       "pick": "Navy ML +114",
+       "pick": "Navy ML +130",
        "team": "Navy",
        "side": "home",
        "line": null,
-       "edgePts": -4.1,
+       "edgePts": -0.9,
        "prob": 0.426,
-       "price": 114,
-       "ev": -0.0881,
+       "price": 130,
+       "ev": -0.02,
        "eligible": false,
-       "detail": "Model win prob 43% vs implied 47%"
+       "detail": "Model win prob 43% vs implied 43%"
       },
       {
        "type": "moneyline",
@@ -52698,7 +53008,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-10-22T18:59:09.407847+00:00",
+     "lockedAt": "2026-10-24T15:45:35.453329+00:00",
      "lineHistory": [
       {
        "at": "2026-10-20T18:51:05.966743+00:00",
@@ -52712,6 +53022,13 @@
        "spread": 2.5,
        "total": 64.0,
        "mlHome": 114,
+       "mlAway": -125
+      },
+      {
+       "at": "2026-10-24T15:45:35.453329+00:00",
+       "spread": 3.0,
+       "total": 61.0,
+       "mlHome": 130,
        "mlAway": -125
       }
      ]
@@ -52757,52 +53074,52 @@
       "books": [
        {
         "provider": "DraftKings",
-        "spread": 4.5,
-        "overUnder": 47.5,
-        "homeMoneyline": 164,
-        "awayMoneyline": -198,
-        "formattedSpread": "Hawai'i -4.5"
+        "spread": 3.5,
+        "overUnder": 48.5,
+        "homeMoneyline": 145,
+        "awayMoneyline": -175,
+        "formattedSpread": "Hawai'i -3.5"
        },
        {
         "provider": "Bovada",
-        "spread": 4,
-        "overUnder": 47.5,
+        "spread": 3.5,
+        "overUnder": 48,
         "homeMoneyline": 175,
         "awayMoneyline": -210,
-        "formattedSpread": "Hawai'i -4.0"
+        "formattedSpread": "Hawai'i -3.5"
        }
       ],
-      "spread": 4.0,
-      "total": 47.5,
+      "spread": 3.5,
+      "total": 48.0,
       "mlHome": 175,
-      "mlAway": -198
+      "mlAway": -175
      },
      "bets": [
       {
        "type": "spread",
-       "pick": "Hawai'i -4",
+       "pick": "Hawai'i -3.5",
        "team": "Hawai'i",
        "side": "away",
-       "line": -4.0,
-       "edgePts": 2.3,
-       "prob": 0.567,
+       "line": -3.5,
+       "edgePts": 2.8,
+       "prob": 0.582,
        "price": -110,
-       "ev": 0.0826,
+       "ev": 0.1104,
        "eligible": true,
-       "detail": "Model line: Northern Illinois +6.3 vs market +4.0"
+       "detail": "Model line: Northern Illinois +6.3 vs market +3.5"
       },
       {
        "type": "total",
-       "pick": "Over 47.5",
+       "pick": "Over 48",
        "team": null,
        "side": "over",
-       "line": 47.5,
-       "edgePts": 1.2,
-       "prob": 0.534,
+       "line": 48.0,
+       "edgePts": 0.7,
+       "prob": 0.519,
        "price": -110,
-       "ev": 0.0193,
+       "ev": -0.0088,
        "eligible": false,
-       "detail": "Model total 48.7 vs market 47.5"
+       "detail": "Model total 48.7 vs market 48"
       },
       {
        "type": "moneyline",
@@ -52819,20 +53136,20 @@
       },
       {
        "type": "moneyline",
-       "pick": "Hawai'i ML -198",
+       "pick": "Hawai'i ML -175",
        "team": "Hawai'i",
        "side": "away",
        "line": null,
-       "edgePts": -0.7,
+       "edgePts": 2.1,
        "prob": 0.657,
-       "price": -198,
-       "ev": -0.0106,
+       "price": -175,
+       "ev": 0.033,
        "eligible": false,
-       "detail": "Model win prob 66% vs implied 66%"
+       "detail": "Model win prob 66% vs implied 64%"
       }
      ],
      "result": null,
-     "lockedAt": "2026-10-22T18:59:09.407847+00:00",
+     "lockedAt": "2026-10-24T15:45:35.453329+00:00",
      "lineHistory": [
       {
        "at": "2026-10-20T18:51:05.966743+00:00",
@@ -52847,6 +53164,13 @@
        "total": 47.5,
        "mlHome": 175,
        "mlAway": -198
+      },
+      {
+       "at": "2026-10-24T15:45:35.453329+00:00",
+       "spread": 3.5,
+       "total": 48.0,
+       "mlHome": 175,
+       "mlAway": -175
       }
      ]
     },
@@ -52900,14 +53224,14 @@
        {
         "provider": "Bovada",
         "spread": -2.5,
-        "overUnder": 50,
+        "overUnder": 50.5,
         "homeMoneyline": -105,
         "awayMoneyline": -115,
         "formattedSpread": "South Carolina -2.5"
        }
       ],
       "spread": -2.5,
-      "total": 50.0,
+      "total": 50.5,
       "mlHome": -105,
       "mlAway": 114
      },
@@ -52927,16 +53251,16 @@
       },
       {
        "type": "total",
-       "pick": "Over 50",
+       "pick": "Over 50.5",
        "team": null,
        "side": "over",
-       "line": 50.0,
-       "edgePts": 3.6,
-       "prob": 0.605,
+       "line": 50.5,
+       "edgePts": 3.1,
+       "prob": 0.591,
        "price": -110,
-       "ev": 0.1553,
-       "eligible": true,
-       "detail": "Model total 53.6 vs market 50"
+       "ev": 0.1279,
+       "eligible": false,
+       "detail": "Model total 53.6 vs market 50.5"
       },
       {
        "type": "moneyline",
@@ -52966,7 +53290,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-10-22T18:59:09.407847+00:00",
+     "lockedAt": "2026-10-24T15:45:35.453329+00:00",
      "lineHistory": [
       {
        "at": "2026-10-18T12:32:01.576001+00:00",
@@ -52986,6 +53310,13 @@
        "at": "2026-10-22T18:59:09.407847+00:00",
        "spread": -2.5,
        "total": 50.0,
+       "mlHome": -105,
+       "mlAway": 114
+      },
+      {
+       "at": "2026-10-24T15:45:35.453329+00:00",
+       "spread": -2.5,
+       "total": 50.5,
        "mlHome": -105,
        "mlAway": 114
       }
@@ -53032,39 +53363,39 @@
       "books": [
        {
         "provider": "DraftKings",
-        "spread": -11.5,
+        "spread": -9.5,
         "overUnder": 48.5,
-        "homeMoneyline": -470,
-        "awayMoneyline": 360,
-        "formattedSpread": "Ohio -11.5"
+        "homeMoneyline": -395,
+        "awayMoneyline": 310,
+        "formattedSpread": "Ohio -9.5"
        },
        {
         "provider": "Bovada",
-        "spread": -11.5,
+        "spread": -10,
         "overUnder": 48.5,
         "homeMoneyline": -450,
         "awayMoneyline": 335,
-        "formattedSpread": "Ohio -11.5"
+        "formattedSpread": "Ohio -10.0"
        }
       ],
-      "spread": -11.5,
+      "spread": -10.0,
       "total": 48.5,
-      "mlHome": -450,
-      "mlAway": 360
+      "mlHome": -395,
+      "mlAway": 335
      },
      "bets": [
       {
        "type": "spread",
-       "pick": "Ohio -11.5",
+       "pick": "Ohio -10",
        "team": "Ohio",
        "side": "home",
-       "line": -11.5,
-       "edgePts": 1.0,
-       "prob": 0.529,
+       "line": -10.0,
+       "edgePts": 2.5,
+       "prob": 0.573,
        "price": -110,
-       "ev": 0.0106,
-       "eligible": false,
-       "detail": "Model line: Ohio -12.5 vs market -11.5"
+       "ev": 0.0945,
+       "eligible": true,
+       "detail": "Model line: Ohio -12.5 vs market -10.0"
       },
       {
        "type": "total",
@@ -53081,33 +53412,33 @@
       },
       {
        "type": "moneyline",
-       "pick": "Ohio ML -450",
+       "pick": "Ohio ML -395",
        "team": "Ohio",
        "side": "home",
        "line": null,
-       "edgePts": -2.8,
+       "edgePts": -0.8,
        "prob": 0.79,
-       "price": -450,
-       "ev": -0.0346,
+       "price": -395,
+       "ev": -0.0101,
        "eligible": false,
-       "detail": "Model win prob 79% vs implied 82%"
+       "detail": "Model win prob 79% vs implied 80%"
       },
       {
        "type": "moneyline",
-       "pick": "Eastern Michigan ML +360",
+       "pick": "Eastern Michigan ML +335",
        "team": "Eastern Michigan",
        "side": "away",
        "line": null,
-       "edgePts": -0.7,
+       "edgePts": -2.0,
        "prob": 0.21,
-       "price": 360,
-       "ev": -0.0336,
+       "price": 335,
+       "ev": -0.0861,
        "eligible": false,
-       "detail": "Model win prob 21% vs implied 22%"
+       "detail": "Model win prob 21% vs implied 23%"
       }
      ],
      "result": null,
-     "lockedAt": "2026-10-22T18:59:09.407847+00:00",
+     "lockedAt": "2026-10-24T15:45:35.453329+00:00",
      "lineHistory": [
       {
        "at": "2026-10-20T18:51:05.966743+00:00",
@@ -53122,6 +53453,13 @@
        "total": 48.5,
        "mlHome": -450,
        "mlAway": 360
+      },
+      {
+       "at": "2026-10-24T15:45:35.453329+00:00",
+       "spread": -10.0,
+       "total": 48.5,
+       "mlHome": -395,
+       "mlAway": 335
       }
      ]
     },
@@ -53166,65 +53504,65 @@
       "books": [
        {
         "provider": "DraftKings",
-        "spread": -13.5,
+        "spread": -12.5,
         "overUnder": 50.5,
-        "homeMoneyline": -650,
-        "awayMoneyline": 470,
-        "formattedSpread": "Troy -13.5"
+        "homeMoneyline": -625,
+        "awayMoneyline": 455,
+        "formattedSpread": "Troy -12.5"
        },
        {
         "provider": "Bovada",
-        "spread": -13.5,
-        "overUnder": 50.5,
+        "spread": -12.5,
+        "overUnder": 50,
         "homeMoneyline": -950,
         "awayMoneyline": 600,
-        "formattedSpread": "Troy -13.5"
+        "formattedSpread": "Troy -12.5"
        }
       ],
-      "spread": -13.5,
-      "total": 50.5,
-      "mlHome": -650,
+      "spread": -12.5,
+      "total": 50.0,
+      "mlHome": -625,
       "mlAway": 600
      },
      "bets": [
       {
        "type": "spread",
-       "pick": "Troy -13.5",
+       "pick": "Troy -12.5",
        "team": "Troy",
        "side": "home",
-       "line": -13.5,
-       "edgePts": 4.5,
-       "prob": 0.632,
+       "line": -12.5,
+       "edgePts": 5.5,
+       "prob": 0.659,
        "price": -110,
-       "ev": 0.2063,
+       "ev": 0.2589,
        "eligible": true,
-       "detail": "Model line: Troy -18.0 vs market -13.5"
+       "detail": "Model line: Troy -18.0 vs market -12.5"
       },
       {
        "type": "total",
-       "pick": "Over 50.5",
+       "pick": "Over 50",
        "team": null,
        "side": "over",
-       "line": 50.5,
-       "edgePts": 3.2,
-       "prob": 0.592,
+       "line": 50.0,
+       "edgePts": 3.7,
+       "prob": 0.607,
        "price": -110,
-       "ev": 0.1307,
-       "eligible": false,
-       "detail": "Model total 53.7 vs market 50.5"
+       "ev": 0.158,
+       "eligible": true,
+       "detail": "Model total 53.7 vs market 50"
       },
       {
        "type": "moneyline",
-       "pick": "Troy ML -650",
+       "pick": "Troy ML -625",
        "team": "Troy",
        "side": "home",
        "line": null,
-       "edgePts": 1.1,
+       "edgePts": 1.6,
        "prob": 0.878,
-       "price": -650,
-       "ev": 0.0129,
+       "price": -625,
+       "ev": 0.0183,
        "eligible": false,
-       "detail": "Model win prob 88% vs implied 87%"
+       "detail": "Model win prob 88% vs implied 86%"
       },
       {
        "type": "moneyline",
@@ -53241,7 +53579,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-10-22T18:59:09.407847+00:00",
+     "lockedAt": "2026-10-24T15:45:35.453329+00:00",
      "lineHistory": [
       {
        "at": "2026-10-20T18:51:05.966743+00:00",
@@ -53255,6 +53593,13 @@
        "spread": -13.5,
        "total": 50.5,
        "mlHome": -650,
+       "mlAway": 600
+      },
+      {
+       "at": "2026-10-24T15:45:35.453329+00:00",
+       "spread": -12.5,
+       "total": 50.0,
+       "mlHome": -625,
        "mlAway": 600
       }
      ]
@@ -53300,52 +53645,52 @@
       "books": [
        {
         "provider": "DraftKings",
-        "spread": -13.5,
-        "overUnder": 45.5,
-        "homeMoneyline": -535,
-        "awayMoneyline": 400,
-        "formattedSpread": "Louisiana Tech -13.5"
+        "spread": -14,
+        "overUnder": 43.5,
+        "homeMoneyline": -600,
+        "awayMoneyline": 440,
+        "formattedSpread": "Louisiana Tech -14"
        },
        {
         "provider": "Bovada",
-        "spread": -13.5,
-        "overUnder": 45,
+        "spread": -14,
+        "overUnder": 43.5,
         "homeMoneyline": -430,
         "awayMoneyline": 320,
-        "formattedSpread": "Louisiana Tech -13.5"
+        "formattedSpread": "Louisiana Tech -14.0"
        }
       ],
-      "spread": -13.5,
-      "total": 45.0,
+      "spread": -14.0,
+      "total": 43.5,
       "mlHome": -430,
-      "mlAway": 400
+      "mlAway": 440
      },
      "bets": [
       {
        "type": "spread",
-       "pick": "Old Dominion +13.5",
+       "pick": "Old Dominion +14",
        "team": "Old Dominion",
        "side": "away",
-       "line": 13.5,
-       "edgePts": 1.7,
-       "prob": 0.549,
+       "line": 14.0,
+       "edgePts": 2.2,
+       "prob": 0.563,
        "price": -110,
-       "ev": 0.0476,
-       "eligible": false,
-       "detail": "Model line: Louisiana Tech -11.8 vs market -13.5"
+       "ev": 0.0755,
+       "eligible": true,
+       "detail": "Model line: Louisiana Tech -11.8 vs market -14.0"
       },
       {
        "type": "total",
-       "pick": "Over 45",
+       "pick": "Over 43.5",
        "team": null,
        "side": "over",
-       "line": 45.0,
-       "edgePts": 2.5,
-       "prob": 0.575,
+       "line": 43.5,
+       "edgePts": 4.0,
+       "prob": 0.618,
        "price": -110,
-       "ev": 0.0976,
-       "eligible": false,
-       "detail": "Model total 47.5 vs market 45"
+       "ev": 0.1796,
+       "eligible": true,
+       "detail": "Model total 47.5 vs market 43.5"
       },
       {
        "type": "moneyline",
@@ -53362,20 +53707,20 @@
       },
       {
        "type": "moneyline",
-       "pick": "Old Dominion ML +400",
+       "pick": "Old Dominion ML +440",
        "team": "Old Dominion",
        "side": "away",
        "line": null,
-       "edgePts": 2.2,
+       "edgePts": 3.7,
        "prob": 0.222,
-       "price": 400,
-       "ev": 0.1117,
+       "price": 440,
+       "ev": 0.2007,
        "eligible": false,
-       "detail": "Model win prob 22% vs implied 20%"
+       "detail": "Model win prob 22% vs implied 19%"
       }
      ],
      "result": null,
-     "lockedAt": "2026-10-22T18:59:09.407847+00:00",
+     "lockedAt": "2026-10-24T15:45:35.453329+00:00",
      "lineHistory": [
       {
        "at": "2026-10-20T18:51:05.966743+00:00",
@@ -53390,6 +53735,13 @@
        "total": 45.0,
        "mlHome": -430,
        "mlAway": 400
+      },
+      {
+       "at": "2026-10-24T15:45:35.453329+00:00",
+       "spread": -14.0,
+       "total": 43.5,
+       "mlHome": -430,
+       "mlAway": 440
       }
      ]
     },
@@ -53434,39 +53786,39 @@
       "books": [
        {
         "provider": "DraftKings",
-        "spread": -6,
+        "spread": -5.5,
         "overUnder": 46.5,
-        "homeMoneyline": -238,
-        "awayMoneyline": 195,
-        "formattedSpread": "Nevada -6"
+        "homeMoneyline": -218,
+        "awayMoneyline": 180,
+        "formattedSpread": "Nevada -5.5"
        },
        {
         "provider": "Bovada",
-        "spread": -6.5,
+        "spread": -5.5,
         "overUnder": 46.5,
         "homeMoneyline": -210,
         "awayMoneyline": 175,
-        "formattedSpread": "Nevada -6.5"
+        "formattedSpread": "Nevada -5.5"
        }
       ],
-      "spread": -6.0,
+      "spread": -5.5,
       "total": 46.5,
       "mlHome": -210,
-      "mlAway": 195
+      "mlAway": 180
      },
      "bets": [
       {
        "type": "spread",
-       "pick": "Nevada -6",
+       "pick": "Nevada -5.5",
        "team": "Nevada",
        "side": "home",
-       "line": -6.0,
-       "edgePts": 0.2,
-       "prob": 0.505,
+       "line": -5.5,
+       "edgePts": 0.7,
+       "prob": 0.519,
        "price": -110,
-       "ev": -0.0368,
+       "ev": -0.0086,
        "eligible": false,
-       "detail": "Model line: Nevada -6.2 vs market -6.0"
+       "detail": "Model line: Nevada -6.2 vs market -5.5"
       },
       {
        "type": "total",
@@ -53496,20 +53848,20 @@
       },
       {
        "type": "moneyline",
-       "pick": "San Jos\u00e9 State ML +195",
+       "pick": "San Jos\u00e9 State ML +180",
        "team": "San Jos\u00e9 State",
        "side": "away",
        "line": null,
-       "edgePts": 0.7,
+       "edgePts": -1.1,
        "prob": 0.346,
-       "price": 195,
-       "ev": 0.0198,
+       "price": 180,
+       "ev": -0.0321,
        "eligible": false,
-       "detail": "Model win prob 35% vs implied 34%"
+       "detail": "Model win prob 35% vs implied 36%"
       }
      ],
      "result": null,
-     "lockedAt": "2026-10-22T18:59:09.407847+00:00",
+     "lockedAt": "2026-10-24T15:45:35.453329+00:00",
      "lineHistory": [
       {
        "at": "2026-10-20T18:51:05.966743+00:00",
@@ -53524,6 +53876,13 @@
        "total": 46.5,
        "mlHome": -210,
        "mlAway": 195
+      },
+      {
+       "at": "2026-10-24T15:45:35.453329+00:00",
+       "spread": -5.5,
+       "total": 46.5,
+       "mlHome": -210,
+       "mlAway": 180
       }
      ]
     },
@@ -53576,11 +53935,11 @@
        },
        {
         "provider": "Bovada",
-        "spread": 9.5,
+        "spread": 10,
         "overUnder": 52.5,
         "homeMoneyline": 310,
         "awayMoneyline": -415,
-        "formattedSpread": "Louisiana -9.5"
+        "formattedSpread": "Louisiana -10.0"
        }
       ],
       "spread": 10.0,
@@ -53643,7 +54002,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-10-22T18:59:09.407847+00:00",
+     "lockedAt": "2026-10-24T15:45:35.453329+00:00",
      "lineHistory": [
       {
        "at": "2026-10-20T18:51:05.966743+00:00",
@@ -53695,39 +54054,39 @@
       "books": [
        {
         "provider": "DraftKings",
-        "spread": 13.5,
+        "spread": 14.5,
         "overUnder": 52.5,
-        "homeMoneyline": 410,
-        "awayMoneyline": -550,
-        "formattedSpread": "Boise State -13.5"
+        "homeMoneyline": 455,
+        "awayMoneyline": -625,
+        "formattedSpread": "Boise State -14.5"
        },
        {
         "provider": "Bovada",
-        "spread": 13,
+        "spread": 14.5,
         "overUnder": 52.5,
         "homeMoneyline": 370,
         "awayMoneyline": -510,
-        "formattedSpread": "Boise State -13.0"
+        "formattedSpread": "Boise State -14.5"
        }
       ],
-      "spread": 13.0,
+      "spread": 14.5,
       "total": 52.5,
-      "mlHome": 410,
+      "mlHome": 455,
       "mlAway": -510
      },
      "bets": [
       {
        "type": "spread",
-       "pick": "Boise State -13",
+       "pick": "Boise State -14.5",
        "team": "Boise State",
        "side": "away",
-       "line": -13.0,
-       "edgePts": 3.3,
-       "prob": 0.595,
+       "line": -14.5,
+       "edgePts": 1.8,
+       "prob": 0.552,
        "price": -110,
-       "ev": 0.1364,
-       "eligible": true,
-       "detail": "Model line: Washington State +16.3 vs market +13.0"
+       "ev": 0.0533,
+       "eligible": false,
+       "detail": "Model line: Washington State +16.3 vs market +14.5"
       },
       {
        "type": "total",
@@ -53744,16 +54103,16 @@
       },
       {
        "type": "moneyline",
-       "pick": "Washington State ML +410",
+       "pick": "Washington State ML +455",
        "team": "Washington State",
        "side": "home",
        "line": null,
-       "edgePts": -4.9,
+       "edgePts": -3.3,
        "prob": 0.147,
-       "price": 410,
-       "ev": -0.2495,
+       "price": 455,
+       "ev": -0.1833,
        "eligible": false,
-       "detail": "Model win prob 15% vs implied 20%"
+       "detail": "Model win prob 15% vs implied 18%"
       },
       {
        "type": "moneyline",
@@ -53770,7 +54129,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-10-22T18:59:09.407847+00:00",
+     "lockedAt": "2026-10-24T15:45:35.453329+00:00",
      "lineHistory": [
       {
        "at": "2026-10-20T18:51:05.966743+00:00",
@@ -53784,6 +54143,13 @@
        "spread": 13.0,
        "total": 52.5,
        "mlHome": 410,
+       "mlAway": -510
+      },
+      {
+       "at": "2026-10-24T15:45:35.453329+00:00",
+       "spread": 14.5,
+       "total": 52.5,
+       "mlHome": 455,
        "mlAway": -510
       }
      ]
@@ -53802,7 +54168,7 @@
      "venue": "Canvas Stadium",
      "model": {
       "homeRating": -10.7,
-      "awayRating": -8.2,
+      "awayRating": -8.3,
       "sources": {
        "home": [
         "sp",
@@ -53830,7 +54196,7 @@
        {
         "provider": "DraftKings",
         "spread": 1.5,
-        "overUnder": 63.5,
+        "overUnder": 59.5,
         "homeMoneyline": -105,
         "awayMoneyline": -115,
         "formattedSpread": "San Diego State -1.5"
@@ -53838,14 +54204,14 @@
        {
         "provider": "Bovada",
         "spread": 1,
-        "overUnder": 63.5,
+        "overUnder": 59,
         "homeMoneyline": 110,
         "awayMoneyline": -130,
         "formattedSpread": "San Diego State -1.0"
        }
       ],
       "spread": 1.0,
-      "total": 63.5,
+      "total": 59.0,
       "mlHome": 110,
       "mlAway": -115
      },
@@ -53865,16 +54231,16 @@
       },
       {
        "type": "total",
-       "pick": "Under 63.5",
+       "pick": "Under 59",
        "team": null,
        "side": "under",
-       "line": 63.5,
-       "edgePts": 6.1,
-       "prob": 0.674,
+       "line": 59.0,
+       "edgePts": 1.6,
+       "prob": 0.547,
        "price": -110,
-       "ev": 0.2873,
-       "eligible": true,
-       "detail": "Model total 57.4 vs market 63.5"
+       "ev": 0.0446,
+       "eligible": false,
+       "detail": "Model total 57.4 vs market 59"
       },
       {
        "type": "moneyline",
@@ -53904,12 +54270,19 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-10-22T18:59:09.407847+00:00",
+     "lockedAt": "2026-10-24T15:45:35.453329+00:00",
      "lineHistory": [
       {
        "at": "2026-10-20T18:51:05.966743+00:00",
        "spread": 1.0,
        "total": 63.5,
+       "mlHome": 110,
+       "mlAway": -115
+      },
+      {
+       "at": "2026-10-24T15:45:35.453329+00:00",
+       "spread": 1.0,
+       "total": 59.0,
        "mlHome": 110,
        "mlAway": -115
       }
@@ -53958,37 +54331,37 @@
         "provider": "DraftKings",
         "spread": 2.5,
         "overUnder": 58.5,
-        "homeMoneyline": 105,
-        "awayMoneyline": -125,
+        "homeMoneyline": 114,
+        "awayMoneyline": -135,
         "formattedSpread": "Georgia State -2.5"
        },
        {
         "provider": "Bovada",
-        "spread": 2,
+        "spread": 2.5,
         "overUnder": 58.5,
         "homeMoneyline": 110,
         "awayMoneyline": -130,
-        "formattedSpread": "Georgia State -2.0"
+        "formattedSpread": "Georgia State -2.5"
        }
       ],
-      "spread": 2.0,
+      "spread": 2.5,
       "total": 58.5,
-      "mlHome": 110,
-      "mlAway": -125
+      "mlHome": 114,
+      "mlAway": -130
      },
      "bets": [
       {
        "type": "spread",
-       "pick": "Arkansas State +2",
+       "pick": "Arkansas State +2.5",
        "team": "Arkansas State",
        "side": "home",
-       "line": 2.0,
-       "edgePts": 2.2,
-       "prob": 0.564,
+       "line": 2.5,
+       "edgePts": 2.7,
+       "prob": 0.579,
        "price": -110,
-       "ev": 0.0768,
+       "ev": 0.1046,
        "eligible": true,
-       "detail": "Model line: Arkansas State -0.2 vs market +2.0"
+       "detail": "Model line: Arkansas State -0.2 vs market +2.5"
       },
       {
        "type": "total",
@@ -54005,33 +54378,33 @@
       },
       {
        "type": "moneyline",
-       "pick": "Arkansas State ML +110",
+       "pick": "Arkansas State ML +114",
        "team": "Arkansas State",
        "side": "home",
        "line": null,
-       "edgePts": 2.8,
+       "edgePts": 3.7,
        "prob": 0.505,
-       "price": 110,
-       "ev": 0.0596,
+       "price": 114,
+       "ev": 0.0797,
        "eligible": false,
-       "detail": "Model win prob 50% vs implied 48%"
+       "detail": "Model win prob 50% vs implied 47%"
       },
       {
        "type": "moneyline",
-       "pick": "Georgia State ML -125",
+       "pick": "Georgia State ML -130",
        "team": "Georgia State",
        "side": "away",
        "line": null,
-       "edgePts": -6.0,
+       "edgePts": -7.0,
        "prob": 0.495,
-       "price": -125,
-       "ev": -0.1082,
+       "price": -130,
+       "ev": -0.1234,
        "eligible": false,
-       "detail": "Model win prob 50% vs implied 56%"
+       "detail": "Model win prob 50% vs implied 57%"
       }
      ],
      "result": null,
-     "lockedAt": "2026-10-22T18:59:09.407847+00:00",
+     "lockedAt": "2026-10-24T15:45:35.453329+00:00",
      "lineHistory": [
       {
        "at": "2026-10-20T18:51:05.966743+00:00",
@@ -54046,6 +54419,13 @@
        "total": 58.5,
        "mlHome": 110,
        "mlAway": -125
+      },
+      {
+       "at": "2026-10-24T15:45:35.453329+00:00",
+       "spread": 2.5,
+       "total": 58.5,
+       "mlHome": 114,
+       "mlAway": -130
       }
      ]
     },
@@ -54091,51 +54471,51 @@
        {
         "provider": "DraftKings",
         "spread": -10.5,
-        "overUnder": 52.5,
+        "overUnder": 50.5,
         "homeMoneyline": -440,
         "awayMoneyline": 340,
         "formattedSpread": "Kentucky -10.5"
        },
        {
         "provider": "Bovada",
-        "spread": -11,
-        "overUnder": 52,
+        "spread": -10.5,
+        "overUnder": 51,
         "homeMoneyline": -450,
         "awayMoneyline": 335,
-        "formattedSpread": "Kentucky -11.0"
+        "formattedSpread": "Kentucky -10.5"
        }
       ],
-      "spread": -11.0,
-      "total": 52.0,
+      "spread": -10.5,
+      "total": 51.0,
       "mlHome": -440,
       "mlAway": 340
      },
      "bets": [
       {
        "type": "spread",
-       "pick": "Kentucky -11",
+       "pick": "Kentucky -10.5",
        "team": "Kentucky",
        "side": "home",
-       "line": -11.0,
-       "edgePts": 0.7,
-       "prob": 0.52,
+       "line": -10.5,
+       "edgePts": 1.2,
+       "prob": 0.535,
        "price": -110,
-       "ev": -0.0072,
+       "ev": 0.0209,
        "eligible": false,
-       "detail": "Model line: Kentucky -11.7 vs market -11.0"
+       "detail": "Model line: Kentucky -11.7 vs market -10.5"
       },
       {
        "type": "total",
-       "pick": "Over 52",
+       "pick": "Over 51",
        "team": null,
        "side": "over",
-       "line": 52.0,
-       "edgePts": 3.7,
-       "prob": 0.608,
+       "line": 51.0,
+       "edgePts": 4.7,
+       "prob": 0.636,
        "price": -110,
-       "ev": 0.1607,
+       "ev": 0.2144,
        "eligible": true,
-       "detail": "Model total 55.7 vs market 52"
+       "detail": "Model total 55.7 vs market 51"
       },
       {
        "type": "moneyline",
@@ -54165,7 +54545,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-10-22T18:59:09.407847+00:00",
+     "lockedAt": "2026-10-24T15:45:35.453329+00:00",
      "lineHistory": [
       {
        "at": "2026-10-18T12:32:01.576001+00:00",
@@ -54185,6 +54565,13 @@
        "at": "2026-10-22T18:59:09.407847+00:00",
        "spread": -11.0,
        "total": 52.0,
+       "mlHome": -440,
+       "mlAway": 340
+      },
+      {
+       "at": "2026-10-24T15:45:35.453329+00:00",
+       "spread": -10.5,
+       "total": 51.0,
        "mlHome": -440,
        "mlAway": 340
       }
@@ -54231,52 +54618,52 @@
       "books": [
        {
         "provider": "DraftKings",
-        "spread": -8.5,
-        "overUnder": 46.5,
+        "spread": -9.5,
+        "overUnder": 49.5,
         "homeMoneyline": -345,
         "awayMoneyline": 275,
-        "formattedSpread": "North Carolina -8.5"
+        "formattedSpread": "North Carolina -9.5"
        },
        {
         "provider": "Bovada",
-        "spread": -9,
-        "overUnder": 46,
+        "spread": -9.5,
+        "overUnder": 49,
         "homeMoneyline": -360,
         "awayMoneyline": 280,
-        "formattedSpread": "North Carolina -9.0"
+        "formattedSpread": "North Carolina -9.5"
        }
       ],
-      "spread": -9.0,
-      "total": 46.0,
+      "spread": -9.5,
+      "total": 49.0,
       "mlHome": -345,
       "mlAway": 280
      },
      "bets": [
       {
        "type": "spread",
-       "pick": "North Carolina -9",
+       "pick": "North Carolina -9.5",
        "team": "North Carolina",
        "side": "home",
-       "line": -9.0,
-       "edgePts": 0.9,
-       "prob": 0.526,
+       "line": -9.5,
+       "edgePts": 0.4,
+       "prob": 0.511,
        "price": -110,
-       "ev": 0.0033,
+       "ev": -0.0249,
        "eligible": false,
-       "detail": "Model line: North Carolina -9.9 vs market -9.0"
+       "detail": "Model line: North Carolina -9.9 vs market -9.5"
       },
       {
        "type": "total",
-       "pick": "Over 46",
+       "pick": "Over 49",
        "team": null,
        "side": "over",
-       "line": 46.0,
-       "edgePts": 3.8,
-       "prob": 0.609,
+       "line": 49.0,
+       "edgePts": 0.8,
+       "prob": 0.522,
        "price": -110,
-       "ev": 0.1634,
-       "eligible": true,
-       "detail": "Model total 49.8 vs market 46"
+       "ev": -0.0032,
+       "eligible": false,
+       "detail": "Model total 49.8 vs market 49"
       },
       {
        "type": "moneyline",
@@ -54306,7 +54693,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-10-22T18:59:09.407847+00:00",
+     "lockedAt": "2026-10-24T15:45:35.453329+00:00",
      "lineHistory": [
       {
        "at": "2026-10-20T18:51:05.966743+00:00",
@@ -54319,6 +54706,13 @@
        "at": "2026-10-22T18:59:09.407847+00:00",
        "spread": -9.0,
        "total": 46.0,
+       "mlHome": -345,
+       "mlAway": 280
+      },
+      {
+       "at": "2026-10-24T15:45:35.453329+00:00",
+       "spread": -9.5,
+       "total": 49.0,
        "mlHome": -345,
        "mlAway": 280
       }
@@ -54365,82 +54759,82 @@
       "books": [
        {
         "provider": "DraftKings",
-        "spread": -3.5,
+        "spread": -3,
         "overUnder": 54.5,
-        "homeMoneyline": -162,
-        "awayMoneyline": 136,
-        "formattedSpread": "Texas -3.5"
+        "homeMoneyline": -155,
+        "awayMoneyline": 130,
+        "formattedSpread": "Texas -3"
        },
        {
         "provider": "Bovada",
-        "spread": -3.5,
-        "overUnder": 54.5,
+        "spread": -3,
+        "overUnder": 54,
         "homeMoneyline": -160,
         "awayMoneyline": 135,
-        "formattedSpread": "Texas -3.5"
+        "formattedSpread": "Texas -3.0"
        }
       ],
-      "spread": -3.5,
-      "total": 54.5,
-      "mlHome": -160,
-      "mlAway": 136
+      "spread": -3.0,
+      "total": 54.0,
+      "mlHome": -155,
+      "mlAway": 135
      },
      "bets": [
       {
        "type": "spread",
-       "pick": "Texas -3.5",
+       "pick": "Texas -3",
        "team": "Texas",
        "side": "home",
-       "line": -3.5,
-       "edgePts": 1.5,
-       "prob": 0.545,
+       "line": -3.0,
+       "edgePts": 2.0,
+       "prob": 0.56,
        "price": -110,
-       "ev": 0.0411,
-       "eligible": false,
-       "detail": "Model line: Texas -5.0 vs market -3.5"
+       "ev": 0.0691,
+       "eligible": true,
+       "detail": "Model line: Texas -5.0 vs market -3.0"
       },
       {
        "type": "total",
-       "pick": "Over 54.5",
+       "pick": "Over 54",
        "team": null,
        "side": "over",
-       "line": 54.5,
-       "edgePts": 0.3,
-       "prob": 0.507,
+       "line": 54.0,
+       "edgePts": 0.8,
+       "prob": 0.522,
        "price": -110,
-       "ev": -0.0314,
+       "ev": -0.0032,
        "eligible": false,
-       "detail": "Model total 54.8 vs market 54.5"
+       "detail": "Model total 54.8 vs market 54"
       },
       {
        "type": "moneyline",
-       "pick": "Texas ML -160",
+       "pick": "Texas ML -155",
        "team": "Texas",
        "side": "home",
        "line": null,
-       "edgePts": 1.2,
+       "edgePts": 2.0,
        "prob": 0.627,
-       "price": -160,
-       "ev": 0.0195,
+       "price": -155,
+       "ev": 0.0322,
        "eligible": false,
-       "detail": "Model win prob 63% vs implied 62%"
+       "detail": "Model win prob 63% vs implied 61%"
       },
       {
        "type": "moneyline",
-       "pick": "Ole Miss ML +136",
+       "pick": "Ole Miss ML +135",
        "team": "Ole Miss",
        "side": "away",
        "line": null,
-       "edgePts": -5.1,
+       "edgePts": -5.3,
        "prob": 0.373,
-       "price": 136,
-       "ev": -0.1207,
+       "price": 135,
+       "ev": -0.1244,
        "eligible": false,
-       "detail": "Model win prob 37% vs implied 42%"
+       "detail": "Model win prob 37% vs implied 43%"
       }
      ],
      "result": null,
-     "lockedAt": "2026-10-22T18:59:09.407847+00:00",
+     "lockedAt": "2026-10-24T15:45:35.453329+00:00",
      "lineHistory": [
       {
        "at": "2026-10-18T12:32:01.576001+00:00",
@@ -54462,6 +54856,13 @@
        "total": 54.5,
        "mlHome": -160,
        "mlAway": 136
+      },
+      {
+       "at": "2026-10-24T15:45:35.453329+00:00",
+       "spread": -3.0,
+       "total": 54.0,
+       "mlHome": -155,
+       "mlAway": 135
       }
      ]
     },
@@ -54508,37 +54909,37 @@
         "provider": "DraftKings",
         "spread": -13.5,
         "overUnder": 60.5,
-        "homeMoneyline": -520,
-        "awayMoneyline": 390,
+        "homeMoneyline": -535,
+        "awayMoneyline": 400,
         "formattedSpread": "Texas State -13.5"
        },
        {
         "provider": "Bovada",
-        "spread": -13.5,
+        "spread": -14,
         "overUnder": 60.5,
         "homeMoneyline": -480,
         "awayMoneyline": 350,
-        "formattedSpread": "Texas State -13.5"
+        "formattedSpread": "Texas State -14.0"
        }
       ],
-      "spread": -13.5,
+      "spread": -14.0,
       "total": 60.5,
       "mlHome": -480,
-      "mlAway": 390
+      "mlAway": 400
      },
      "bets": [
       {
        "type": "spread",
-       "pick": "Utah State +13.5",
+       "pick": "Utah State +14",
        "team": "Utah State",
        "side": "away",
-       "line": 13.5,
-       "edgePts": 0.8,
-       "prob": 0.523,
+       "line": 14.0,
+       "edgePts": 1.3,
+       "prob": 0.537,
        "price": -110,
-       "ev": -0.0023,
+       "ev": 0.0258,
        "eligible": false,
-       "detail": "Model line: Texas State -12.7 vs market -13.5"
+       "detail": "Model line: Texas State -12.7 vs market -14.0"
       },
       {
        "type": "total",
@@ -54568,20 +54969,20 @@
       },
       {
        "type": "moneyline",
-       "pick": "Utah State ML +390",
+       "pick": "Utah State ML +400",
        "team": "Utah State",
        "side": "away",
        "line": null,
-       "edgePts": 0.2,
+       "edgePts": 0.6,
        "prob": 0.206,
-       "price": 390,
-       "ev": 0.0077,
+       "price": 400,
+       "ev": 0.0283,
        "eligible": false,
        "detail": "Model win prob 21% vs implied 20%"
       }
      ],
      "result": null,
-     "lockedAt": "2026-10-22T18:59:09.407847+00:00",
+     "lockedAt": "2026-10-24T15:45:35.453329+00:00",
      "lineHistory": [
       {
        "at": "2026-10-20T18:51:05.966743+00:00",
@@ -54589,6 +54990,13 @@
        "total": 60.5,
        "mlHome": -480,
        "mlAway": 390
+      },
+      {
+       "at": "2026-10-24T15:45:35.453329+00:00",
+       "spread": -14.0,
+       "total": 60.5,
+       "mlHome": -480,
+       "mlAway": 400
       }
      ]
     },
@@ -54635,22 +55043,22 @@
         "provider": "DraftKings",
         "spread": 3,
         "overUnder": 50.5,
-        "homeMoneyline": 130,
-        "awayMoneyline": -155,
+        "homeMoneyline": 124,
+        "awayMoneyline": -148,
         "formattedSpread": "USC -3"
        },
        {
         "provider": "Bovada",
-        "spread": 3,
-        "overUnder": 50,
+        "spread": 2.5,
+        "overUnder": 50.5,
         "homeMoneyline": 115,
         "awayMoneyline": -135,
-        "formattedSpread": "USC -3.0"
+        "formattedSpread": "USC -2.5"
        }
       ],
       "spread": 3.0,
-      "total": 50.0,
-      "mlHome": 130,
+      "total": 50.5,
+      "mlHome": 124,
       "mlAway": -135
      },
      "bets": [
@@ -54669,29 +55077,29 @@
       },
       {
        "type": "total",
-       "pick": "Over 50",
+       "pick": "Over 50.5",
        "team": null,
        "side": "over",
-       "line": 50.0,
-       "edgePts": 0.9,
-       "prob": 0.527,
+       "line": 50.5,
+       "edgePts": 0.4,
+       "prob": 0.512,
        "price": -110,
-       "ev": 0.0053,
+       "ev": -0.0229,
        "eligible": false,
-       "detail": "Model total 50.9 vs market 50"
+       "detail": "Model total 50.9 vs market 50.5"
       },
       {
        "type": "moneyline",
-       "pick": "Wisconsin ML +130",
+       "pick": "Wisconsin ML +124",
        "team": "Wisconsin",
        "side": "home",
        "line": null,
-       "edgePts": -1.7,
+       "edgePts": -2.8,
        "prob": 0.418,
-       "price": 130,
-       "ev": -0.038,
+       "price": 124,
+       "ev": -0.0631,
        "eligible": false,
-       "detail": "Model win prob 42% vs implied 43%"
+       "detail": "Model win prob 42% vs implied 45%"
       },
       {
        "type": "moneyline",
@@ -54708,7 +55116,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-10-22T18:59:09.407847+00:00",
+     "lockedAt": "2026-10-24T15:45:35.453329+00:00",
      "lineHistory": [
       {
        "at": "2026-10-18T12:32:01.576001+00:00",
@@ -54729,6 +55137,13 @@
        "spread": 3.0,
        "total": 50.0,
        "mlHome": 130,
+       "mlAway": -135
+      },
+      {
+       "at": "2026-10-24T15:45:35.453329+00:00",
+       "spread": 3.0,
+       "total": 50.5,
+       "mlHome": 124,
        "mlAway": -135
       }
      ]
@@ -54776,22 +55191,22 @@
         "provider": "DraftKings",
         "spread": 3,
         "overUnder": 51.5,
-        "homeMoneyline": 120,
-        "awayMoneyline": -142,
+        "homeMoneyline": 124,
+        "awayMoneyline": -148,
         "formattedSpread": "UTSA -3"
        },
        {
         "provider": "Bovada",
-        "spread": 2.5,
-        "overUnder": 51.5,
+        "spread": 3,
+        "overUnder": 52,
         "homeMoneyline": 110,
         "awayMoneyline": -130,
-        "formattedSpread": "UTSA -2.5"
+        "formattedSpread": "UTSA -3.0"
        }
       ],
       "spread": 3.0,
-      "total": 51.5,
-      "mlHome": 120,
+      "total": 52.0,
+      "mlHome": 124,
       "mlAway": -130
      },
      "bets": [
@@ -54810,28 +55225,28 @@
       },
       {
        "type": "total",
-       "pick": "Over 51.5",
+       "pick": "Over 52",
        "team": null,
        "side": "over",
-       "line": 51.5,
-       "edgePts": 1.0,
-       "prob": 0.528,
+       "line": 52.0,
+       "edgePts": 0.5,
+       "prob": 0.513,
        "price": -110,
-       "ev": 0.0081,
+       "ev": -0.0201,
        "eligible": false,
-       "detail": "Model total 52.5 vs market 51.5"
+       "detail": "Model total 52.5 vs market 52"
       },
       {
        "type": "moneyline",
-       "pick": "Tulane ML +120",
+       "pick": "Tulane ML +124",
        "team": "Tulane",
        "side": "home",
        "line": null,
-       "edgePts": 4.3,
+       "edgePts": 5.1,
        "prob": 0.497,
-       "price": 120,
-       "ev": 0.0938,
-       "eligible": false,
+       "price": 124,
+       "ev": 0.1136,
+       "eligible": true,
        "detail": "Model win prob 50% vs implied 45%"
       },
       {
@@ -54849,7 +55264,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-10-22T18:59:09.407847+00:00",
+     "lockedAt": "2026-10-24T15:45:35.453329+00:00",
      "lineHistory": [
       {
        "at": "2026-10-20T18:51:05.966743+00:00",
@@ -54863,6 +55278,13 @@
        "spread": 3.0,
        "total": 51.5,
        "mlHome": 120,
+       "mlAway": -130
+      },
+      {
+       "at": "2026-10-24T15:45:35.453329+00:00",
+       "spread": 3.0,
+       "total": 52.0,
+       "mlHome": 124,
        "mlAway": -130
       }
      ]
@@ -54909,7 +55331,7 @@
        {
         "provider": "DraftKings",
         "spread": -4.5,
-        "overUnder": 41.5,
+        "overUnder": 39.5,
         "homeMoneyline": -192,
         "awayMoneyline": 160,
         "formattedSpread": "New Mexico -4.5"
@@ -54917,14 +55339,14 @@
        {
         "provider": "Bovada",
         "spread": -4.5,
-        "overUnder": 41,
+        "overUnder": 40.5,
         "homeMoneyline": -180,
         "awayMoneyline": 155,
         "formattedSpread": "New Mexico -4.5"
        }
       ],
       "spread": -4.5,
-      "total": 41.0,
+      "total": 40.0,
       "mlHome": -180,
       "mlAway": 160
      },
@@ -54944,16 +55366,16 @@
       },
       {
        "type": "total",
-       "pick": "Over 41",
+       "pick": "Over 40",
        "team": null,
        "side": "over",
-       "line": 41.0,
-       "edgePts": 3.7,
-       "prob": 0.608,
+       "line": 40.0,
+       "edgePts": 4.7,
+       "prob": 0.636,
        "price": -110,
-       "ev": 0.1607,
+       "ev": 0.2144,
        "eligible": true,
-       "detail": "Model total 44.7 vs market 41"
+       "detail": "Model total 44.7 vs market 40"
       },
       {
        "type": "moneyline",
@@ -54983,7 +55405,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-10-22T18:59:09.407847+00:00",
+     "lockedAt": "2026-10-24T15:45:35.453329+00:00",
      "lineHistory": [
       {
        "at": "2026-10-18T12:32:01.576001+00:00",
@@ -55003,6 +55425,13 @@
        "at": "2026-10-22T18:59:09.407847+00:00",
        "spread": -4.5,
        "total": 41.0,
+       "mlHome": -180,
+       "mlAway": 160
+      },
+      {
+       "at": "2026-10-24T15:45:35.453329+00:00",
+       "spread": -4.5,
+       "total": 40.0,
        "mlHome": -180,
        "mlAway": 160
       }
