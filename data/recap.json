@@ -1,14 +1,15 @@
 {
  "weekKey": "2026-regular-8",
- "factsHash": "09ceea12a1009f8d",
+ "factsHash": "5125de16336c246c",
  "source": "claude",
  "lastError": null,
- "generatedAt": "2026-10-24T15:45:35.453329+00:00",
- "headline": "Army Paid Twice, Everything Else Paid Nothing At All",
+ "generatedAt": "2026-10-25T13:06:23.121811+00:00",
+ "headline": "Forty Eight Plays, One Hundred Ninety Five Dollars, Zero Alibis",
  "paragraphs": [
-  "Twelve games reached the grader, three got a polite pass, nine drew action, and ten tickets went out at ten dollars apiece. Three came back. The week closed 3-7 for a loss of 41.82 on 100 staked, an ROI of negative 41.8 percent, against a model that walked in expecting to hit 59.5 percent. Confidence and competence filed separate returns this week and only one of them was audited.",
-  "The entire profitable portion of the afternoon lived in Tulsa. Army +2 at a claimed 64 percent and a five point edge cashed for 9.09, and the matching Army ML +100 returned a clean ten after the 38-35 finish. Liberty -9 hiding behind a 34-6 scoreline was the other winner. The worst of it was Over 47.5 in Duke at Virginia, a 62 percent conviction and a 4.3 point edge that watched 19-16 happen in real time.",
-  "Spreads carried the damage at 2-6 and negative 52.3 percent, which is most of a week in one market. Of the ten plays whose lines moved, exactly two moved toward the model, so the market and the ledger agreed about who was wrong. Season now sits at 123-148-6 across 277 plays and five real weeks, down 263.09 at negative 9.5 percent, with an expected 60 percent meeting an actual 45.4. The excluded hindsight week shows 40-25-1 and plus 110.47, which proves only that picking games after they end is easy."
+  "Fifty six games got graded, twenty got waved off, thirty six drew action, and forty eight tickets went out at ten dollars each. Fourteen won. The week closed 14-32-2 for a loss of 195.23 on 480 staked, an ROI of negative 40.7 percent. The model walked in expecting 61.2 percent of these to land and delivered 30.4, which is roughly the gap between a forecast and a coin that hates you.",
+  "Spreads did the heavy damage at 8-21-1 and negative 137.28. Totals went 3-8-1 for negative 52.73 while claiming 65.1 percent confidence, the loudest number on the sheet and the least earned. Moneylines survived at 3-3 and negative 5.22, the betting equivalent of getting out of the building with your wallet. The published top five, the five the model was proudest of, went 1-4 against a stated 69.9 percent expectation and lost 30.91. Negative 61.8 ROI on the flagship.",
+  "Two calls at nearly identical conviction tell the whole story. Over 40.5 in Miami (OH) at Central Michigan hit at 28-27, a 7.5 point edge that cashed 9.09. Over 43 in Michigan State at UCLA, a 7.4 point edge rated at the same 71 percent, watched a 28-10 final and died. Lines moved on 43 plays and six moved toward the model, 14 percent, so the market was not confused about any of this. Season sits at 134-173-8 across five real weeks, down 416.50, negative 13.2 ROI. The only profitable stretch on the books is a 40-25-1 week graded in hindsight for plus 110.47, which is to say the model is undefeated at picking games it already watched.",
+  "Nothing further. The table is right there."
  ],
  "recent": [
   {
@@ -26,8 +27,8 @@
   {
    "weekKey": "2026-regular-8",
    "label": "Week 8",
-   "headline": "Army Paid Twice, Everything Else Paid Nothing At All",
-   "opening": "Twelve games reached the grader, three got a polite pass, nine drew action, and ten tickets went out at ten dollars apiece. Three came back. The week closed 3-7"
+   "headline": "Forty Eight Plays, One Hundred Ninety Five Dollars, Zero Alibis",
+   "opening": "Fifty six games got graded, twenty got waved off, thirty six drew action, and forty eight tickets went out at ten dollars each. Fourteen won. The week closed 14"
   }
  ]
 }

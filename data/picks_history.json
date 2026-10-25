@@ -831,7 +831,12 @@
    "openLine": 40.5,
    "openPrice": -110,
    "openAt": "2026-10-20T18:51:22.383359+00:00",
-   "result": null,
+   "result": {
+    "homeScore": 27,
+    "awayScore": 28,
+    "outcome": "win",
+    "profit": 9.09
+   },
    "clv": {
     "pts": 0.0,
     "closeLine": 40.5,
@@ -859,7 +864,12 @@
    "openLine": 44.5,
    "openPrice": -110,
    "openAt": "2026-10-20T18:51:22.383379+00:00",
-   "result": null,
+   "result": {
+    "homeScore": 28,
+    "awayScore": 10,
+    "outcome": "loss",
+    "profit": -10.0
+   },
    "clv": {
     "pts": -1.5,
     "closeLine": 43.0,
@@ -887,7 +897,12 @@
    "openLine": 2.5,
    "openPrice": -110,
    "openAt": "2026-10-20T18:51:22.383368+00:00",
-   "result": null,
+   "result": {
+    "homeScore": 27,
+    "awayScore": 24,
+    "outcome": "loss",
+    "profit": -10.0
+   },
    "clv": {
     "pts": 0.0,
     "closeLine": 2.5,
@@ -915,7 +930,12 @@
    "openLine": 49.0,
    "openPrice": -110,
    "openAt": "2026-10-24T15:47:10.978862+00:00",
-   "result": null,
+   "result": {
+    "homeScore": 21,
+    "awayScore": 10,
+    "outcome": "loss",
+    "profit": -10.0
+   },
    "clv": {
     "pts": 0.0,
     "closeLine": 49.0,
@@ -943,11 +963,156 @@
    "openLine": -1.0,
    "openPrice": -110,
    "openAt": "2026-10-24T15:47:10.978867+00:00",
-   "result": null,
+   "result": {
+    "homeScore": 28,
+    "awayScore": 17,
+    "outcome": "loss",
+    "profit": -10.0
+   },
    "clv": {
     "pts": 0.0,
     "closeLine": -1.0,
     "at": "2026-10-24T15:45:35.453329+00:00"
+   }
+  },
+  {
+   "season": 2026,
+   "seasonType": "regular",
+   "week": 9,
+   "gameId": 401866451,
+   "matchup": "Kent State @ Sacramento State",
+   "homeTeam": "Sacramento State",
+   "awayTeam": "Kent State",
+   "startDate": "2026-10-31T02:30:00.000Z",
+   "type": "moneyline",
+   "pick": "Sacramento State ML +300",
+   "side": "home",
+   "line": null,
+   "price": 300,
+   "prob": 0.369,
+   "ev": 0.4773,
+   "detail": "Model win prob 37% vs implied 25%",
+   "pickedAt": "2026-10-25T13:06:34.029825+00:00",
+   "openLine": null,
+   "openPrice": 300,
+   "openAt": "2026-10-25T13:06:34.029837+00:00",
+   "result": null,
+   "clv": {
+    "probPts": 0.0,
+    "closePrice": 300,
+    "at": "2026-10-25T13:06:23.121811+00:00"
+   }
+  },
+  {
+   "season": 2026,
+   "seasonType": "regular",
+   "week": 9,
+   "gameId": 401862812,
+   "matchup": "Florida Atlantic @ North Texas",
+   "homeTeam": "North Texas",
+   "awayTeam": "Florida Atlantic",
+   "startDate": "2026-10-29T23:30:00.000Z",
+   "type": "total",
+   "pick": "Under 70.5",
+   "side": "under",
+   "line": 70.5,
+   "price": -110,
+   "prob": 0.717,
+   "ev": 0.3689,
+   "detail": "Model total 62.8 vs market 70.5",
+   "pickedAt": "2026-10-25T13:06:34.029845+00:00",
+   "openLine": 70.5,
+   "openPrice": -110,
+   "openAt": "2026-10-25T13:06:34.029848+00:00",
+   "result": null,
+   "clv": {
+    "pts": 0.0,
+    "closeLine": 70.5,
+    "at": "2026-10-25T13:06:23.121811+00:00"
+   }
+  },
+  {
+   "season": 2026,
+   "seasonType": "regular",
+   "week": 9,
+   "gameId": 401871071,
+   "matchup": "Delaware @ Western Kentucky",
+   "homeTeam": "Western Kentucky",
+   "awayTeam": "Delaware",
+   "startDate": "2026-10-27T23:00:00.000Z",
+   "type": "total",
+   "pick": "Under 58.5",
+   "side": "under",
+   "line": 58.5,
+   "price": -110,
+   "prob": 0.686,
+   "ev": 0.3101,
+   "detail": "Model total 52.0 vs market 58.5",
+   "pickedAt": "2026-10-25T13:06:34.029853+00:00",
+   "openLine": 58.5,
+   "openPrice": -110,
+   "openAt": "2026-10-25T13:06:34.029855+00:00",
+   "result": null,
+   "clv": {
+    "pts": 0.0,
+    "closeLine": 58.5,
+    "at": "2026-10-25T13:06:23.121811+00:00"
+   }
+  },
+  {
+   "season": 2026,
+   "seasonType": "regular",
+   "week": 9,
+   "gameId": 401860924,
+   "matchup": "Oregon State @ Fresno State",
+   "homeTeam": "Fresno State",
+   "awayTeam": "Oregon State",
+   "startDate": "2026-11-01T03:00:00.000Z",
+   "type": "moneyline",
+   "pick": "Fresno State ML +210",
+   "side": "home",
+   "line": null,
+   "price": 210,
+   "prob": 0.41,
+   "ev": 0.2706,
+   "detail": "Model win prob 41% vs implied 32%",
+   "pickedAt": "2026-10-25T13:06:34.029858+00:00",
+   "openLine": null,
+   "openPrice": 210,
+   "openAt": "2026-10-25T13:06:34.029860+00:00",
+   "result": null,
+   "clv": {
+    "probPts": 0.0,
+    "closePrice": 210,
+    "at": "2026-10-25T13:06:23.121811+00:00"
+   }
+  },
+  {
+   "season": 2026,
+   "seasonType": "regular",
+   "week": 9,
+   "gameId": 401871072,
+   "matchup": "Sam Houston @ Missouri State",
+   "homeTeam": "Missouri State",
+   "awayTeam": "Sam Houston",
+   "startDate": "2026-10-28T00:00:00.000Z",
+   "type": "moneyline",
+   "pick": "Sam Houston ML +185",
+   "side": "away",
+   "line": null,
+   "price": 185,
+   "prob": 0.428,
+   "ev": 0.2203,
+   "detail": "Model win prob 43% vs implied 35%",
+   "pickedAt": "2026-10-25T13:06:34.029864+00:00",
+   "openLine": null,
+   "openPrice": 185,
+   "openAt": "2026-10-25T13:06:34.029865+00:00",
+   "result": null,
+   "clv": {
+    "probPts": 0.0,
+    "closePrice": 185,
+    "at": "2026-10-25T13:06:23.121811+00:00"
    }
   }
  ]
