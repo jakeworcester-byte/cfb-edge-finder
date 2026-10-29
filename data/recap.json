@@ -1,23 +1,17 @@
 {
- "weekKey": "2026-regular-8",
- "factsHash": "5125de16336c246c",
+ "weekKey": "2026-regular-9",
+ "factsHash": "e81085f1da6219ea",
  "source": "claude",
  "lastError": null,
- "generatedAt": "2026-10-25T13:06:23.121811+00:00",
- "headline": "Forty Eight Plays, One Hundred Ninety Five Dollars, Zero Alibis",
+ "generatedAt": "2026-10-29T19:59:48.687972+00:00",
+ "headline": "Four Bets, Two Winners, And A Grand Total Of $2.59",
  "paragraphs": [
-  "Fifty six games got graded, twenty got waved off, thirty six drew action, and forty eight tickets went out at ten dollars each. Fourteen won. The week closed 14-32-2 for a loss of 195.23 on 480 staked, an ROI of negative 40.7 percent. The model walked in expecting 61.2 percent of these to land and delivered 30.4, which is roughly the gap between a forecast and a coin that hates you.",
-  "Spreads did the heavy damage at 8-21-1 and negative 137.28. Totals went 3-8-1 for negative 52.73 while claiming 65.1 percent confidence, the loudest number on the sheet and the least earned. Moneylines survived at 3-3 and negative 5.22, the betting equivalent of getting out of the building with your wallet. The published top five, the five the model was proudest of, went 1-4 against a stated 69.9 percent expectation and lost 30.91. Negative 61.8 ROI on the flagship.",
-  "Two calls at nearly identical conviction tell the whole story. Over 40.5 in Miami (OH) at Central Michigan hit at 28-27, a 7.5 point edge that cashed 9.09. Over 43 in Michigan State at UCLA, a 7.4 point edge rated at the same 71 percent, watched a 28-10 final and died. Lines moved on 43 plays and six moved toward the model, 14 percent, so the market was not confused about any of this. Season sits at 134-173-8 across five real weeks, down 416.50, negative 13.2 ROI. The only profitable stretch on the books is a 40-25-1 week graded in hindsight for plus 110.47, which is to say the model is undefeated at picking games it already watched.",
-  "Nothing further. The table is right there."
+  "Week 9 was less a slate than a rounding error. Four games graded, two waved off, two drew action, and four tickets went out at ten dollars apiece. The ledger closed 2-2 for a profit of 2.59 on 40 staked, a 6.5 percent ROI that would be thrilling if the absolute number were not roughly a vending machine transaction. The model expected 51.3 percent and hit 50. For once, calibrated.",
+  "The entire week was two games wearing four hats. Kennesaw State at Middle Tennessee went double green, the +2.5 spread and the +135 moneyline both cashing when Kennesaw State won 44-28 and made the 2.5 points decorative. The best call there was the moneyline, 6.2 probability points of edge for 13.50 back. The other game, Sam Houston at Missouri State, went double red. The model liked Sam Houston +190 at 42 percent and watched a 24-3 loss. Two plays, two tens, one lesson about correlation.",
+  "By market, the spread lost 0.91 and the moneyline made 3.50, which is the sort of split you only report because the table is right there. Of the three plays whose lines moved, exactly one moved toward the model, a 33.3 percent agreement rate the market should probably be proud of. Six real weeks in, the season sits 136-175-8 across 319 plays, down 413.91, minus 13 percent ROI, with a 43.7 percent win rate against an expectation of 60.1. That gap is the whole story.",
+  "There is also a hindsight week sitting off to the side, 66 plays, 40-25-1, up 110.47 at 16.7 percent ROI, graded with the benefit of already knowing how the games ended. It is excluded for a reason, and the reason is that picking winners after the fact is not a skill, it is reading. The real number is negative 413.91. Week 9 moved it by 2.59, which is to say it did not move it."
  ],
  "recent": [
-  {
-   "weekKey": "2026-regular-6",
-   "label": "Week 6",
-   "headline": "Spreads And Totals Paid The Bill The Moneylines Ran Up",
-   "opening": "Sixty three plays went out across 58 graded games, 21 of which the model looked at and declined, and the ledger came back 34-28-1 for a profit of 41.95 on 630 s"
-  },
   {
    "weekKey": "2026-regular-7",
    "label": "Week 7",
@@ -29,6 +23,12 @@
    "label": "Week 8",
    "headline": "Forty Eight Plays, One Hundred Ninety Five Dollars, Zero Alibis",
    "opening": "Fifty six games got graded, twenty got waved off, thirty six drew action, and forty eight tickets went out at ten dollars each. Fourteen won. The week closed 14"
+  },
+  {
+   "weekKey": "2026-regular-9",
+   "label": "Week 9",
+   "headline": "Four Bets, Two Winners, And A Grand Total Of $2.59",
+   "opening": "Week 9 was less a slate than a rounding error. Four games graded, two waved off, two drew action, and four tickets went out at ten dollars apiece. The ledger cl"
   }
  ]
 }
