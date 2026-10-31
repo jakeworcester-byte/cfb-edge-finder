@@ -1,15 +1,15 @@
 {
  "weekKey": "2026-regular-9",
- "factsHash": "e81085f1da6219ea",
- "source": "claude",
- "lastError": null,
- "generatedAt": "2026-10-29T19:59:48.687972+00:00",
- "headline": "Four Bets, Two Winners, And A Grand Total Of $2.59",
+ "factsHash": null,
+ "source": "builtin",
+ "lastError": "invented the number 89",
+ "generatedAt": "2026-10-31T17:08:24.113082+00:00",
+ "headline": "3-4 on 7 value plays, -$8.32",
  "paragraphs": [
-  "Week 9 was less a slate than a rounding error. Four games graded, two waved off, two drew action, and four tickets went out at ten dollars apiece. The ledger closed 2-2 for a profit of 2.59 on 40 staked, a 6.5 percent ROI that would be thrilling if the absolute number were not roughly a vending machine transaction. The model expected 51.3 percent and hit 50. For once, calibrated.",
-  "The entire week was two games wearing four hats. Kennesaw State at Middle Tennessee went double green, the +2.5 spread and the +135 moneyline both cashing when Kennesaw State won 44-28 and made the 2.5 points decorative. The best call there was the moneyline, 6.2 probability points of edge for 13.50 back. The other game, Sam Houston at Missouri State, went double red. The model liked Sam Houston +190 at 42 percent and watched a 24-3 loss. Two plays, two tens, one lesson about correlation.",
-  "By market, the spread lost 0.91 and the moneyline made 3.50, which is the sort of split you only report because the table is right there. Of the three plays whose lines moved, exactly one moved toward the model, a 33.3 percent agreement rate the market should probably be proud of. Six real weeks in, the season sits 136-175-8 across 319 plays, down 413.91, minus 13 percent ROI, with a 43.7 percent win rate against an expectation of 60.1. That gap is the whole story.",
-  "There is also a hindsight week sitting off to the side, 66 plays, 40-25-1, up 110.47 at 16.7 percent ROI, graded with the benefit of already knowing how the games ended. It is excluded for a reason, and the reason is that picking winners after the fact is not a skill, it is reading. The real number is negative 413.91. Week 9 moved it by 2.59, which is to say it did not move it."
+  "Week 9 put 9 graded games in front of the model. It found a playable edge in 4 of them and left the other 5 alone. Those plays went 3-4, worth -$8.32 at $10 a play (-11.9% on the $70 at risk).",
+  "By market, spreads went 1-2, totals went 1-1 and moneylines went 1-1. The best of them was Over 47 in Tulane at Charlotte, a 4.9-point disagreement with the market that finished Tulane 38, Charlotte 31. The one that stung was Under 78 in Florida Atlantic at North Texas, a 12.4-point disagreement with the market that finished North Texas 48, Florida Atlantic 41.",
+  "The five plays that actually got published went 0-2 for -$20.00, behind the full board. Ranking by expected value is supposed to concentrate the good ones at the top, and whether it does is something only a season of these will answer.",
+  "Season to date the model has made 322 value plays and gone 137-177-8, -$424.82 on flat $10 bets (-13.2%). It expected to win 60% of those and won 44%. On line movement, 4 of the 13 published picks whose numbers moved closed worse than the site posted them, so the market came our way 31% of the time. Sample is getting real enough to argue with, though a model that beats closing lines is rarer than one that beats a few hundred results."
  ],
  "recent": [
   {
@@ -27,8 +27,8 @@
   {
    "weekKey": "2026-regular-9",
    "label": "Week 9",
-   "headline": "Four Bets, Two Winners, And A Grand Total Of $2.59",
-   "opening": "Week 9 was less a slate than a rounding error. Four games graded, two waved off, two drew action, and four tickets went out at ten dollars apiece. The ledger cl"
+   "headline": "3-4 on 7 value plays, -$8.32",
+   "opening": "Week 9 put 9 graded games in front of the model. It found a playable edge in 4 of them and left the other 5 alone. Those plays went 3-4, worth -$8.32 at $10 a p"
   }
  ]
 }
