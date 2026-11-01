@@ -1,15 +1,14 @@
 {
  "weekKey": "2026-regular-9",
- "factsHash": null,
- "source": "builtin",
- "lastError": "invented the number 89",
- "generatedAt": "2026-10-31T17:08:24.113082+00:00",
- "headline": "3-4 on 7 value plays, -$8.32",
+ "factsHash": "0c17893b14631199",
+ "source": "claude",
+ "lastError": null,
+ "generatedAt": "2026-11-01T14:53:05.991369+00:00",
+ "headline": "The Model Broke Even And Still Found A Way To Lose Fifty",
  "paragraphs": [
-  "Week 9 put 9 graded games in front of the model. It found a playable edge in 4 of them and left the other 5 alone. Those plays went 3-4, worth -$8.32 at $10 a play (-11.9% on the $70 at risk).",
-  "By market, spreads went 1-2, totals went 1-1 and moneylines went 1-1. The best of them was Over 47 in Tulane at Charlotte, a 4.9-point disagreement with the market that finished Tulane 38, Charlotte 31. The one that stung was Under 78 in Florida Atlantic at North Texas, a 12.4-point disagreement with the market that finished North Texas 48, Florida Atlantic 41.",
-  "The five plays that actually got published went 0-2 for -$20.00, behind the full board. Ranking by expected value is supposed to concentrate the good ones at the top, and whether it does is something only a season of these will answer.",
-  "Season to date the model has made 322 value plays and gone 137-177-8, -$424.82 on flat $10 bets (-13.2%). It expected to win 60% of those and won 44%. On line movement, 4 of the 13 published picks whose numbers moved closed worse than the site posted them, so the market came our way 31% of the time. Sample is getting real enough to argue with, though a model that beats closing lines is rarer than one that beats a few hundred results."
+  "Fifty six games went through the grinder, twenty two got left alone, thirty four produced action, and fifty six tickets went out at ten dollars apiece. The result was 27-27-2, which is the betting equivalent of sitting perfectly still for nine hours. Minus $11.20 on $560 staked, an ROI of -2.0 percent, against a model that walked in claiming it would hit 60.8 percent. It hit 50.0.",
+  "Here is where the flat week turns funny. The five plays actually published as the headline selections went 0-5 for minus fifty dollars, a clean -100 percent ROI on a group the model rated at 66.7 percent. Everything it kept in the back room went fine. Everything it put on the marquee burned. Moneyline quietly cleared $17.91 at 16.3 percent ROI while totals bled $26.37, so the lesson is that nobody, including the thing writing the picks, knows which bucket is working.",
+  "The signature humiliation came in Boulder. The model liked Kansas State plus the hook by 26.3 probability points, the largest edge it claimed all week, and Colorado won 27-24, pushing the spread and torching the +130 moneyline by exactly the margin the number predicted. Best call was Utah State under 61, worth $9.09. Season sits at 161-200-10, down $427.70, ROI -11.5 percent across six real weeks. Lines moved on 39 plays and only 10 moved toward the model."
  ],
  "recent": [
   {
@@ -27,8 +26,8 @@
   {
    "weekKey": "2026-regular-9",
    "label": "Week 9",
-   "headline": "3-4 on 7 value plays, -$8.32",
-   "opening": "Week 9 put 9 graded games in front of the model. It found a playable edge in 4 of them and left the other 5 alone. Those plays went 3-4, worth -$8.32 at $10 a p"
+   "headline": "The Model Broke Even And Still Found A Way To Lose Fifty",
+   "opening": "Fifty six games went through the grinder, twenty two got left alone, thirty four produced action, and fifty six tickets went out at ten dollars apiece. The resu"
   }
  ]
 }
