@@ -1150,78 +1150,22 @@
    "awayTeam": "Air Force",
    "startDate": "2026-11-08T00:30:00.000Z",
    "type": "total",
-   "pick": "Over 45.5",
+   "pick": "Over 44.5",
    "side": "over",
-   "line": 45.5,
+   "line": 44.5,
    "price": -110,
-   "prob": 0.802,
-   "ev": 0.5308,
-   "detail": "Model total 57.0 vs market 45.5",
-   "pickedAt": "2026-11-03T20:43:23.703784+00:00",
+   "prob": 0.822,
+   "ev": 0.5689,
+   "detail": "Model total 57.0 vs market 44.5",
+   "pickedAt": "2026-11-05T21:17:40.051172+00:00",
    "openLine": 50.5,
    "openPrice": -110,
    "openAt": "2026-11-01T14:53:09.337435+00:00",
    "result": null,
    "clv": {
-    "pts": -5.0,
-    "closeLine": 45.5,
-    "at": "2026-11-03T20:43:22.234657+00:00"
-   }
-  },
-  {
-   "season": 2026,
-   "seasonType": "regular",
-   "week": 10,
-   "gameId": 401860912,
-   "matchup": "Texas State @ Oregon State",
-   "homeTeam": "Oregon State",
-   "awayTeam": "Texas State",
-   "startDate": "2026-11-08T03:30:00.000Z",
-   "type": "total",
-   "pick": "Under 72",
-   "side": "under",
-   "line": 72.0,
-   "price": -110,
-   "prob": 0.799,
-   "ev": 0.5248,
-   "detail": "Model total 60.7 vs market 72",
-   "pickedAt": "2026-11-03T20:43:23.703797+00:00",
-   "openLine": 72.0,
-   "openPrice": -110,
-   "openAt": "2026-11-03T20:43:23.703800+00:00",
-   "result": null,
-   "clv": {
-    "pts": 0.0,
-    "closeLine": 72.0,
-    "at": "2026-11-03T20:43:22.234657+00:00"
-   }
-  },
-  {
-   "season": 2026,
-   "seasonType": "regular",
-   "week": 10,
-   "gameId": 401862817,
-   "matchup": "UTSA @ Florida Atlantic",
-   "homeTeam": "Florida Atlantic",
-   "awayTeam": "UTSA",
-   "startDate": "2026-11-06T00:30:00.000Z",
-   "type": "total",
-   "pick": "Under 73",
-   "side": "under",
-   "line": 73.0,
-   "price": -110,
-   "prob": 0.798,
-   "ev": 0.5228,
-   "detail": "Model total 61.8 vs market 73",
-   "pickedAt": "2026-11-03T20:43:23.703805+00:00",
-   "openLine": 71.5,
-   "openPrice": -110,
-   "openAt": "2026-11-01T14:53:09.337428+00:00",
-   "result": null,
-   "clv": {
-    "pts": -1.5,
-    "closeLine": 73.0,
-    "at": "2026-11-03T20:43:22.234657+00:00"
+    "pts": -6.0,
+    "closeLine": 44.5,
+    "at": "2026-11-05T21:17:38.357004+00:00"
    }
   },
   {
@@ -1241,7 +1185,7 @@
    "prob": 0.777,
    "ev": 0.4839,
    "detail": "Model total 49.8 vs market 39.5",
-   "pickedAt": "2026-11-03T20:43:23.703810+00:00",
+   "pickedAt": "2026-11-05T21:17:40.051191+00:00",
    "openLine": 39.5,
    "openPrice": -110,
    "openAt": "2026-11-03T20:43:23.703812+00:00",
@@ -1249,7 +1193,63 @@
    "clv": {
     "pts": 0.0,
     "closeLine": 39.5,
-    "at": "2026-11-03T20:43:22.234657+00:00"
+    "at": "2026-11-05T21:17:38.357004+00:00"
+   }
+  },
+  {
+   "season": 2026,
+   "seasonType": "regular",
+   "week": 10,
+   "gameId": 401860912,
+   "matchup": "Texas State @ Oregon State",
+   "homeTeam": "Oregon State",
+   "awayTeam": "Texas State",
+   "startDate": "2026-11-08T03:30:00.000Z",
+   "type": "total",
+   "pick": "Under 71",
+   "side": "under",
+   "line": 71.0,
+   "price": -110,
+   "prob": 0.777,
+   "ev": 0.4839,
+   "detail": "Model total 60.7 vs market 71",
+   "pickedAt": "2026-11-05T21:17:40.051197+00:00",
+   "openLine": 72.0,
+   "openPrice": -110,
+   "openAt": "2026-11-03T20:43:23.703800+00:00",
+   "result": null,
+   "clv": {
+    "pts": 1.0,
+    "closeLine": 71.0,
+    "at": "2026-11-05T21:17:38.357004+00:00"
+   }
+  },
+  {
+   "season": 2026,
+   "seasonType": "regular",
+   "week": 10,
+   "gameId": 401862817,
+   "matchup": "UTSA @ Florida Atlantic",
+   "homeTeam": "Florida Atlantic",
+   "awayTeam": "UTSA",
+   "startDate": "2026-11-06T00:30:00.000Z",
+   "type": "total",
+   "pick": "Under 72",
+   "side": "under",
+   "line": 72.0,
+   "price": -110,
+   "prob": 0.776,
+   "ev": 0.4817,
+   "detail": "Model total 61.8 vs market 72",
+   "pickedAt": "2026-11-05T21:17:40.051201+00:00",
+   "openLine": 71.5,
+   "openPrice": -110,
+   "openAt": "2026-11-01T14:53:09.337428+00:00",
+   "result": null,
+   "clv": {
+    "pts": -0.5,
+    "closeLine": 72.0,
+    "at": "2026-11-05T21:17:38.357004+00:00"
    }
   },
   {
@@ -1269,7 +1269,7 @@
    "prob": 0.424,
    "ev": 0.4431,
    "detail": "Model win prob 42% vs implied 29%",
-   "pickedAt": "2026-11-03T20:43:23.703816+00:00",
+   "pickedAt": "2026-11-05T21:17:40.051206+00:00",
    "openLine": null,
    "openPrice": 240,
    "openAt": "2026-11-03T20:43:23.703818+00:00",
@@ -1277,7 +1277,7 @@
    "clv": {
     "probPts": 0.0,
     "closePrice": 240,
-    "at": "2026-11-03T20:43:22.234657+00:00"
+    "at": "2026-11-05T21:17:38.357004+00:00"
    }
   }
  ]

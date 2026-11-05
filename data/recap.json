@@ -1,22 +1,16 @@
 {
- "weekKey": "2026-regular-9",
- "factsHash": "0c17893b14631199",
+ "weekKey": "2026-regular-10",
+ "factsHash": "bc76fe9bbd778a71",
  "source": "claude",
  "lastError": null,
- "generatedAt": "2026-11-01T14:53:05.991369+00:00",
- "headline": "The Model Broke Even And Still Found A Way To Lose Fifty",
+ "generatedAt": "2026-11-05T21:17:38.357004+00:00",
+ "headline": "Three Bets, One Game, And A Thirteen Dollar Hole",
  "paragraphs": [
-  "Fifty six games went through the grinder, twenty two got left alone, thirty four produced action, and fifty six tickets went out at ten dollars apiece. The result was 27-27-2, which is the betting equivalent of sitting perfectly still for nine hours. Minus $11.20 on $560 staked, an ROI of -2.0 percent, against a model that walked in claiming it would hit 60.8 percent. It hit 50.0.",
-  "Here is where the flat week turns funny. The five plays actually published as the headline selections went 0-5 for minus fifty dollars, a clean -100 percent ROI on a group the model rated at 66.7 percent. Everything it kept in the back room went fine. Everything it put on the marquee burned. Moneyline quietly cleared $17.91 at 16.3 percent ROI while totals bled $26.37, so the lesson is that nobody, including the thing writing the picks, knows which bucket is working.",
-  "The signature humiliation came in Boulder. The model liked Kansas State plus the hook by 26.3 probability points, the largest edge it claimed all week, and Colorado won 27-24, pushing the spread and torching the +130 moneyline by exactly the margin the number predicted. Best call was Utah State under 61, worth $9.09. Season sits at 161-200-10, down $427.70, ROI -11.5 percent across six real weeks. Lines moved on 39 plays and only 10 moved toward the model."
+  "Week 10 was less a slate than a rounding error. Five games graded, three waved off, two drew action, and three tickets went out at ten dollars apiece. One of them cashed. The final was 1-2 for a loss of 13.55 on thirty dollars staked, which works out to an ROI of negative 45.2 percent. Smallest week of the year, and it still found a way to be a bad one.",
+  "The entire story is Massachusetts 31, Ball State 30. The model took Massachusetts minus 3 at a 63 percent read and lost by a point of margin, then took Massachusetts on the moneyline at minus 155 with a 68 percent read and won 6.45. Best call and worst call, same field, same evening, separated by one point. The other play, Ohio minus 13.5 at 60 percent, died quietly in a 28-20 game. Spreads finished 0-2, moneylines 1-0.",
+  "Season to date across seven weeks graded for real: 162-202-10 on 374 plays, 44.5 percent winners against an expected 60.3, and 441.25 dollars gone from 3,740 staked for an ROI of negative 11.8 percent. There is also a hindsight week sitting off to the side at 40-25-1 and plus 110.47, which counts for exactly as much as a scorecard filled out after the bell. Of three plays whose line moved, one moved toward the model. That is 33.3 percent of nearly nothing."
  ],
  "recent": [
-  {
-   "weekKey": "2026-regular-7",
-   "label": "Week 7",
-   "headline": "Sixty Seven Swings, One Hundred And Nine Dollars Buried",
-   "opening": "Sixty two games graded for real, twenty passed on, forty two deemed actionable, and sixty seven plays sent out at ten dollars each. The ledger came back 27-38-2"
-  },
   {
    "weekKey": "2026-regular-8",
    "label": "Week 8",
@@ -28,6 +22,12 @@
    "label": "Week 9",
    "headline": "The Model Broke Even And Still Found A Way To Lose Fifty",
    "opening": "Fifty six games went through the grinder, twenty two got left alone, thirty four produced action, and fifty six tickets went out at ten dollars apiece. The resu"
+  },
+  {
+   "weekKey": "2026-regular-10",
+   "label": "Week 10",
+   "headline": "Three Bets, One Game, And A Thirteen Dollar Hole",
+   "opening": "Week 10 was less a slate than a rounding error. Five games graded, three waved off, two drew action, and three tickets went out at ten dollars apiece. One of th"
   }
  ]
 }
