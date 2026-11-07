@@ -1,14 +1,14 @@
 {
  "weekKey": "2026-regular-10",
- "factsHash": "bc76fe9bbd778a71",
+ "factsHash": "7e5801998fd1cfcb",
  "source": "claude",
  "lastError": null,
- "generatedAt": "2026-11-05T21:17:38.357004+00:00",
- "headline": "Three Bets, One Game, And A Thirteen Dollar Hole",
+ "generatedAt": "2026-11-07T17:41:22.037349+00:00",
+ "headline": "Totals Went Oh For Three And The Model Called It Confidence",
  "paragraphs": [
-  "Week 10 was less a slate than a rounding error. Five games graded, three waved off, two drew action, and three tickets went out at ten dollars apiece. One of them cashed. The final was 1-2 for a loss of 13.55 on thirty dollars staked, which works out to an ROI of negative 45.2 percent. Smallest week of the year, and it still found a way to be a bad one.",
-  "The entire story is Massachusetts 31, Ball State 30. The model took Massachusetts minus 3 at a 63 percent read and lost by a point of margin, then took Massachusetts on the moneyline at minus 155 with a 68 percent read and won 6.45. Best call and worst call, same field, same evening, separated by one point. The other play, Ohio minus 13.5 at 60 percent, died quietly in a 28-20 game. Spreads finished 0-2, moneylines 1-0.",
-  "Season to date across seven weeks graded for real: 162-202-10 on 374 plays, 44.5 percent winners against an expected 60.3, and 441.25 dollars gone from 3,740 staked for an ROI of negative 11.8 percent. There is also a hindsight week sitting off to the side at 40-25-1 and plus 110.47, which counts for exactly as much as a scorecard filled out after the bell. Of three plays whose line moved, one moved toward the model. That is 33.3 percent of nearly nothing."
+  "Twelve games got graded, six were left alone, and six of them coughed up nine tickets at ten dollars each. Two cashed. The week finished 2-7 for a loss of 54.46 dollars on 90 staked, an ROI of negative 60.5 percent, against a model that walked in announcing it expected to hit 67.1 percent. The gap between those two numbers is the whole column.",
+  "The totals market was the crime scene. Three plays, zero wins, thirty dollars gone, and the model rated that group at 75 percent. It took Over 39.5 at a stated 78 percent in South Florida at East Carolina, which ended 20-17, and it took Under 72 in a game Florida Atlantic won 60-29. One lonely bright spot: James Madison -13.5 in a 54-23 win, worth 9.09 dollars. The published top five went 0-2 at a 77.6 percent expectation.",
+  "Nine plays saw their line move and exactly one moved toward the model, which is 11.1 percent and roughly the market's opinion of the whole operation. Seven weeks graded for real now sit at 163-207-10 across 380 plays, down 482.16 dollars, an ROI of negative 12.7 percent, with a 44 percent win rate under a 60.5 percent expectation. The model is confident. The ledger is not."
  ],
  "recent": [
   {
@@ -26,8 +26,8 @@
   {
    "weekKey": "2026-regular-10",
    "label": "Week 10",
-   "headline": "Three Bets, One Game, And A Thirteen Dollar Hole",
-   "opening": "Week 10 was less a slate than a rounding error. Five games graded, three waved off, two drew action, and three tickets went out at ten dollars apiece. One of th"
+   "headline": "Totals Went Oh For Three And The Model Called It Confidence",
+   "opening": "Twelve games got graded, six were left alone, and six of them coughed up nine tickets at ten dollars each. Two cashed. The week finished 2-7 for a loss of 54.46"
   }
  ]
 }
