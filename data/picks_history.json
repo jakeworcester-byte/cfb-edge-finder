@@ -1322,7 +1322,7 @@
    "prob": 0.399,
    "ev": 0.5946,
    "detail": "Model win prob 40% vs implied 25%",
-   "pickedAt": "2026-11-12T21:40:22.171175+00:00",
+   "pickedAt": "2026-11-14T17:52:22.108093+00:00",
    "openLine": null,
    "openPrice": 300,
    "openAt": "2026-11-10T21:07:58.454284+00:00",
@@ -1330,7 +1330,7 @@
    "clv": {
     "probPts": 0.0,
     "closePrice": 300,
-    "at": "2026-11-12T21:40:05.386569+00:00"
+    "at": "2026-11-14T17:52:16.259138+00:00"
    }
   },
   {
@@ -1350,7 +1350,7 @@
    "prob": 0.403,
    "ev": 0.5918,
    "detail": "Model win prob 40% vs implied 25%",
-   "pickedAt": "2026-11-12T21:40:22.171186+00:00",
+   "pickedAt": "2026-11-14T17:52:22.108112+00:00",
    "openLine": null,
    "openPrice": 295,
    "openAt": "2026-11-10T21:07:58.454294+00:00",
@@ -1358,35 +1358,7 @@
    "clv": {
     "probPts": 0.0,
     "closePrice": 295,
-    "at": "2026-11-12T21:40:05.386569+00:00"
-   }
-  },
-  {
-   "season": 2026,
-   "seasonType": "regular",
-   "week": 11,
-   "gameId": 401862826,
-   "matchup": "Florida Atlantic @ Tulsa",
-   "homeTeam": "Tulsa",
-   "awayTeam": "Florida Atlantic",
-   "startDate": "2026-11-14T20:30:00.000Z",
-   "type": "total",
-   "pick": "Under 74",
-   "side": "under",
-   "line": 74.0,
-   "price": -110,
-   "prob": 0.808,
-   "ev": 0.5425,
-   "detail": "Model total 62.2 vs market 74",
-   "pickedAt": "2026-11-12T21:40:22.171190+00:00",
-   "openLine": 74.0,
-   "openPrice": -110,
-   "openAt": "2026-11-10T21:07:58.454300+00:00",
-   "result": null,
-   "clv": {
-    "pts": 0.0,
-    "closeLine": 74.0,
-    "at": "2026-11-12T21:40:05.386569+00:00"
+    "at": "2026-11-14T17:52:16.259138+00:00"
    }
   },
   {
@@ -1399,22 +1371,50 @@
    "awayTeam": "Texas Tech",
    "startDate": "2026-11-15T02:30:00.000Z",
    "type": "total",
-   "pick": "Under 73",
+   "pick": "Under 74",
    "side": "under",
-   "line": 73.0,
+   "line": 74.0,
    "price": -110,
-   "prob": 0.778,
-   "ev": 0.486,
-   "detail": "Model total 62.6 vs market 73",
-   "pickedAt": "2026-11-12T21:40:22.171192+00:00",
+   "prob": 0.8,
+   "ev": 0.5268,
+   "detail": "Model total 62.6 vs market 74",
+   "pickedAt": "2026-11-14T17:52:22.108120+00:00",
    "openLine": 68.5,
    "openPrice": -110,
    "openAt": "2026-11-08T14:55:20.031786+00:00",
    "result": null,
    "clv": {
-    "pts": -4.5,
+    "pts": -5.5,
+    "closeLine": 74.0,
+    "at": "2026-11-14T17:52:16.259138+00:00"
+   }
+  },
+  {
+   "season": 2026,
+   "seasonType": "regular",
+   "week": 11,
+   "gameId": 401862826,
+   "matchup": "Florida Atlantic @ Tulsa",
+   "homeTeam": "Tulsa",
+   "awayTeam": "Florida Atlantic",
+   "startDate": "2026-11-15T00:15:00.000Z",
+   "type": "total",
+   "pick": "Under 73",
+   "side": "under",
+   "line": 73.0,
+   "price": -110,
+   "prob": 0.787,
+   "ev": 0.5026,
+   "detail": "Model total 62.2 vs market 73",
+   "pickedAt": "2026-11-14T17:52:22.108125+00:00",
+   "openLine": 74.0,
+   "openPrice": -110,
+   "openAt": "2026-11-10T21:07:58.454300+00:00",
+   "result": null,
+   "clv": {
+    "pts": 1.0,
     "closeLine": 73.0,
-    "at": "2026-11-10T21:07:57.449881+00:00"
+    "at": "2026-11-14T17:52:16.259138+00:00"
    }
   },
   {
@@ -1434,7 +1434,7 @@
    "prob": 0.756,
    "ev": 0.4427,
    "detail": "Model total 66.6 vs market 76",
-   "pickedAt": "2026-11-12T21:40:22.171194+00:00",
+   "pickedAt": "2026-11-14T17:52:22.108130+00:00",
    "openLine": 76.5,
    "openPrice": -110,
    "openAt": "2026-11-10T21:07:58.454310+00:00",
@@ -1442,7 +1442,7 @@
    "clv": {
     "pts": 0.5,
     "closeLine": 76.0,
-    "at": "2026-11-12T21:40:05.386569+00:00"
+    "at": "2026-11-14T17:52:16.259138+00:00"
    }
   }
  ]

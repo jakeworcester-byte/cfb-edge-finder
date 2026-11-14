@@ -1,14 +1,14 @@
 {
  "weekKey": "2026-regular-11",
- "factsHash": "f6e761f5a3cc1e0b",
- "source": "claude",
- "lastError": null,
- "generatedAt": "2026-11-12T21:40:05.386569+00:00",
- "headline": "Five Tickets, Fifteen Dollars, And A Season Still Underwater",
+ "factsHash": null,
+ "source": "builtin",
+ "lastError": "invented the number 554",
+ "generatedAt": "2026-11-14T17:52:16.259138+00:00",
+ "headline": "7-3-1 on 11 value plays, +$31.95",
  "paragraphs": [
-  "Six games got graded, two were left alone, four produced action, and the model put out exactly five tickets at ten dollars apiece. Three won, one lost, one pushed, and the whole operation cleared 15.59 on fifty dollars staked. That is a 31.2 percent ROI on a sample so small you could lose it in a couch cushion. Still counts. We are taking it.",
-  "Western Michigan 42, Akron 14 made the best ticket look easy, with Western Michigan minus 15.5 cashing for 9.09 off a 3.7 point edge. The ugly one was Sacramento State plus 18.5 at Central Michigan, a 3.4 point edge and a 60 percent confidence that ended 28 to 7 the wrong way. Minus ten dollars and a reminder that the model's certainty is a mood, not a forecast. Buffalo covered and won outright, which paid twice.",
-  "Season to date: 190-244-13 across 447 plays, 4,470 staked, down 570.45, an ROI of minus 12.8 percent across eight real graded weeks. The model expected to hit 60.5 percent and has hit 43.8, a gap large enough to park the entire MAC in. There is a hindsight week sitting off to the side at 40-25-1 and plus 110.47, graded after the games finished, which is to say it is worth nothing and we mention it only to be transparent about ignoring it."
+  "11 games finished in Week 11. It found a playable edge in 7 of them and left the other 4 alone. Those plays went 7-3-1, worth +$31.95 at $10 a play (29.0% on the $110 at risk).",
+  "By market, spreads went 3-2-1, totals went 3-0 and moneylines went 1-1. The best of them was Louisiana -10.5 in Louisiana at UL Monroe, a 8.3-point disagreement with the market that finished Louisiana 42, UL Monroe 21. The one that stung was Houston -9.5 in Houston at Colorado, a 4.9-point disagreement with the market that finished Colorado 42, Houston 32.",
+  "Season to date the model has made 453 value plays and gone 194-246-13, -$554.09 on flat $10 bets (-12.2%). It expected to win 60% of those and won 44%. On line movement, 5 of the 16 published picks whose numbers moved closed worse than the site posted them, so the market came our way 31% of the time. Sample is getting real enough to argue with, though a model that beats closing lines is rarer than one that beats a few hundred results."
  ],
  "recent": [
   {
@@ -26,8 +26,8 @@
   {
    "weekKey": "2026-regular-11",
    "label": "Week 11",
-   "headline": "Five Tickets, Fifteen Dollars, And A Season Still Underwater",
-   "opening": "Six games got graded, two were left alone, four produced action, and the model put out exactly five tickets at ten dollars apiece. Three won, one lost, one push"
+   "headline": "7-3-1 on 11 value plays, +$31.95",
+   "opening": "11 games finished in Week 11. It found a playable edge in 7 of them and left the other 4 alone. Those plays went 7-3-1, worth +$31.95 at $10 a play (29.0% on th"
   }
  ]
 }
