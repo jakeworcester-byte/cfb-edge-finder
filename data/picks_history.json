@@ -1326,7 +1326,12 @@
    "openLine": null,
    "openPrice": 300,
    "openAt": "2026-11-10T21:07:58.454284+00:00",
-   "result": null,
+   "result": {
+    "homeScore": 73,
+    "awayScore": 7,
+    "outcome": "loss",
+    "profit": -10.0
+   },
    "clv": {
     "probPts": 0.0,
     "closePrice": 300,
@@ -1354,7 +1359,12 @@
    "openLine": null,
    "openPrice": 295,
    "openAt": "2026-11-10T21:07:58.454294+00:00",
-   "result": null,
+   "result": {
+    "homeScore": 37,
+    "awayScore": 35,
+    "outcome": "loss",
+    "profit": -10.0
+   },
    "clv": {
     "probPts": 0.0,
     "closePrice": 295,
@@ -1382,7 +1392,12 @@
    "openLine": 68.5,
    "openPrice": -110,
    "openAt": "2026-11-08T14:55:20.031786+00:00",
-   "result": null,
+   "result": {
+    "homeScore": 27,
+    "awayScore": 52,
+    "outcome": "loss",
+    "profit": -10.0
+   },
    "clv": {
     "pts": -5.5,
     "closeLine": 74.0,
@@ -1410,7 +1425,12 @@
    "openLine": 74.0,
    "openPrice": -110,
    "openAt": "2026-11-10T21:07:58.454300+00:00",
-   "result": null,
+   "result": {
+    "homeScore": 38,
+    "awayScore": 21,
+    "outcome": "win",
+    "profit": 9.09
+   },
    "clv": {
     "pts": 1.0,
     "closeLine": 73.0,
@@ -1438,7 +1458,12 @@
    "openLine": 76.5,
    "openPrice": -110,
    "openAt": "2026-11-10T21:07:58.454310+00:00",
-   "result": null,
+   "result": {
+    "homeScore": 35,
+    "awayScore": 16,
+    "outcome": "win",
+    "profit": 9.09
+   },
    "clv": {
     "pts": 0.5,
     "closeLine": 76.0,

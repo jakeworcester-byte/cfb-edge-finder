@@ -1,14 +1,14 @@
 {
  "weekKey": "2026-regular-11",
- "factsHash": null,
- "source": "builtin",
- "lastError": "invented the number 554",
- "generatedAt": "2026-11-14T17:52:16.259138+00:00",
- "headline": "7-3-1 on 11 value plays, +$31.95",
+ "factsHash": "efb9e629472798af",
+ "source": "claude",
+ "lastError": null,
+ "generatedAt": "2026-11-15T15:31:40.067417+00:00",
+ "headline": "Seventy Six Plays, Nineteen Dollars, And One Unforgettable 73-7",
  "paragraphs": [
-  "11 games finished in Week 11. It found a playable edge in 7 of them and left the other 4 alone. Those plays went 7-3-1, worth +$31.95 at $10 a play (29.0% on the $110 at risk).",
-  "By market, spreads went 3-2-1, totals went 3-0 and moneylines went 1-1. The best of them was Louisiana -10.5 in Louisiana at UL Monroe, a 8.3-point disagreement with the market that finished Louisiana 42, UL Monroe 21. The one that stung was Houston -9.5 in Houston at Colorado, a 4.9-point disagreement with the market that finished Colorado 42, Houston 32.",
-  "Season to date the model has made 453 value plays and gone 194-246-13, -$554.09 on flat $10 bets (-12.2%). It expected to win 60% of those and won 44%. On line movement, 5 of the 16 published picks whose numbers moved closed worse than the site posted them, so the market came our way 31% of the time. Sample is getting real enough to argue with, though a model that beats closing lines is rarer than one that beats a few hundred results."
+  "Seventy six tickets at ten dollars apiece, seven hundred sixty dollars of exposure, and the model walked away with nineteen dollars and forty five cents. That is 39-34-3, a 2.6 percent return, and the kind of profit that would not cover parking. It looked at 66 games, passed on 22, found something it liked in 44, and the three markets all finished within a whisker of break even.",
+  "The one it got right was Under 73 in Florida Atlantic at Tulsa, a 10.8 point edge at 79 percent confidence that landed when the game stopped at 38-21. The one it got wrong deserves a plaque. Colorado State at plus 300, a 14.9 probability point edge, a 40 percent shot at the upset, final score Washington State 73, Colorado State 7. It also had the under in that game. Both tickets, same scoreboard, incinerated together.",
+  "The published top five went 2-3 for minus eleven eighty two, a negative 23.6 percent return, which means the plays we put our name on were the worst five we had. The model expected 61.7 percent this week and hit 53.4. The season sits at 226-277-15 across eight real weeks, down five hundred sixty six dollars and fifty nine cents, negative 10.9 percent. Nineteen dollars does not move that needle."
  ],
  "recent": [
   {
@@ -26,8 +26,8 @@
   {
    "weekKey": "2026-regular-11",
    "label": "Week 11",
-   "headline": "7-3-1 on 11 value plays, +$31.95",
-   "opening": "11 games finished in Week 11. It found a playable edge in 7 of them and left the other 4 alone. Those plays went 7-3-1, worth +$31.95 at $10 a play (29.0% on th"
+   "headline": "Seventy Six Plays, Nineteen Dollars, And One Unforgettable 73-7",
+   "opening": "Seventy six tickets at ten dollars apiece, seven hundred sixty dollars of exposure, and the model walked away with nineteen dollars and forty five cents. That i"
   }
  ]
 }
