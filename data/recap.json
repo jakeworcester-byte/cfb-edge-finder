@@ -1,15 +1,14 @@
 {
  "weekKey": "2026-regular-12",
- "factsHash": null,
- "source": "builtin",
- "lastError": "invented the number 598",
- "generatedAt": "2026-11-19T22:31:08.323191+00:00",
- "headline": "2-3 on 5 value plays, -$11.82",
+ "factsHash": "0e5cf2debf71807c",
+ "source": "claude",
+ "lastError": null,
+ "generatedAt": "2026-11-20T15:49:39.771880+00:00",
+ "headline": "The Model Found Its Biggest Edge And Lost It By One Point",
  "paragraphs": [
-  "Week 12 put 5 graded games in front of the model. It found a playable edge in 4 of them and left the other 1 alone. Those plays went 2-3, worth -$11.82 at $10 a play (-23.6% on the $50 at risk).",
-  "By market, spreads went 2-2 and the lone moneyline lost. The best of them was Miami (OH) -9.5 in Miami (OH) at Kent State, a 3.5-point disagreement with the market that finished Miami (OH) 20, Kent State 3. The one that stung was Massachusetts -3 in Akron at Massachusetts, a 9.9-point disagreement with the market that finished Akron 34, Massachusetts 33.",
-  "The five plays that actually got published went 0-1 for -$10.00, behind the full board. Ranking by expected value is supposed to concentrate the good ones at the top, and whether it does is something only a season of these will answer.",
-  "Season to date the model has made 525 value plays and gone 228-282-15, -$598.41 on flat $10 bets (-11.4%). It expected to win 61% of those and won 45%. On line movement, 7 of the 19 published picks whose numbers moved closed worse than the site posted them, so the market came our way 37% of the time. Sample is getting real enough to argue with, though a model that beats closing lines is rarer than one that beats a few hundred results."
+  "Six games got graded, one got the shrug, and five of them produced six tickets at ten dollars apiece. The scoreboard: 2-4, down $21.82, an ROI of negative 36.4 percent against an expected win rate of 66.1 percent. The spread book went 2-3 for a loss of $11.82. The lone moneyline went 0-1. Sixty dollars in, thirty eight dollars and change out.",
+  "Akron at Massachusetts is the whole week in one line. The model saw a 9.9 point edge, the fattest number on the board, liked Massachusetts minus 3 at 77 percent, then doubled back and took the moneyline at minus 162 with 80 percent confidence. Akron won 34 to 33. Twenty dollars, one point, two tickets, zero defense available. Miami (OH) minus 9.5 at a modest 60 percent cashed 20 to 3 and nobody noticed.",
+  "One line moved all week, and it moved away. Zero percent drift toward the model, which is at least honest. Nine weeks graded for real leaves the season at 228-283-15 across 526 plays, down $608.41, an ROI of negative 11.6 percent, and a 44.6 percent hit rate against 60.7 percent expected. There is a 40-25-1 week worth $110.47 sitting in a drawer, graded after the fact, which is to say graded by a model that already knew the answers."
  ],
  "recent": [
   {
@@ -27,8 +26,8 @@
   {
    "weekKey": "2026-regular-12",
    "label": "Week 12",
-   "headline": "2-3 on 5 value plays, -$11.82",
-   "opening": "Week 12 put 5 graded games in front of the model. It found a playable edge in 4 of them and left the other 1 alone. Those plays went 2-3, worth -$11.82 at $10 a"
+   "headline": "The Model Found Its Biggest Edge And Lost It By One Point",
+   "opening": "Six games got graded, one got the shrug, and five of them produced six tickets at ten dollars apiece. The scoreboard: 2-4, down $21.82, an ROI of negative 36.4 "
   }
  ]
 }
