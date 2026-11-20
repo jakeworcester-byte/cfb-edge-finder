@@ -45,15 +45,21 @@ STAKE = 10.0                 # flat bet size for the season P/L tally
 WEIGHTS = {"sp": 0.35, "fpi": 0.30, "elo": 0.20, "srs": 0.15}
 HOME_FIELD_PTS = 2.3
 ELO_PTS_PER_POINT = 28.0     # ~28 Elo points per scoreboard point
-SIGMA_ATS = 13.5             # std dev of margin vs spread (CFB)
-SIGMA_ML = 15.5              # std dev used for outright win probability
+SIGMA_ATS = 15.3             # empirical std dev of margin vs spread (CFB)
+SIGMA_TOTAL = 17.5           # empirical std dev of totals (CFB)
+SIGMA_ML = 15.8              # empirical std dev of model margin vs actual
+MARKET_SHRINK = 0.55         # shrink raw model edge toward market before pricing EV
 FCS_DEFAULT_RATING = -24.0   # placeholder power rating for FCS opponents
 ASSUMED_SPREAD_PRICE = -110  # CFBD does not carry spread/total prices
 MIN_EDGE_SPREAD = 2.0        # pts of edge required to be pick-eligible
+MAX_EDGE_SPREAD = 6.5        # cap extreme gaps (usually missing injury/news)
 MIN_EDGE_TOTAL = 3.5
+MAX_EDGE_TOTAL = 7.5
 MIN_EDGE_ML_PROB = 0.05      # model prob must beat implied prob by this
-ML_MIN_PROB = 0.35           # no longshot MLs: normal-tail probs are unreliable
-ML_MAX_PRICE = 300           # ignore moneylines longer than +300 / shorter than -300
+MAX_EDGE_ML_PROB = 0.10      # cap extreme ML prob gaps
+ML_MIN_PROB = 0.40           # no longshot MLs: normal-tail probs are unreliable
+ML_MAX_PRICE = 200           # ignore moneylines longer than +200 / shorter than -200
+STEAM_CUTOFF_PTS = -1.0      # suppress spread/total if market moved >=1 pt against us
 TOP_N = 5
 
 # EV tiers used to break the season record down by how strong the model
@@ -276,11 +282,11 @@ def power_rating(team_ratings, elo_mean):
 
 
 def expected_points(off_rating, opp_def_rating, sp_means):
-    """SP+-derived expected points for one side, shrunk 50% toward average."""
+    """SP+-derived expected points for one side without mean-compression."""
     league_avg = (sp_means["off"] + sp_means["def"]) / 2.0
     if off_rating is None or opp_def_rating is None:
         return league_avg
-    return league_avg + 0.5 * (off_rating - sp_means["off"]) + 0.5 * (opp_def_rating - sp_means["def"])
+    return league_avg + (off_rating - sp_means["off"]) + (opp_def_rating - sp_means["def"])
 
 
 # --- lines ------------------------------------------------------------------
@@ -333,7 +339,26 @@ def fetch_lines(year, week, season_type):
 
 # --- game evaluation ---------------------------------------------------------
 
-def evaluate_game(game, ratings, elo_mean, sp_means, records, lines):
+def line_drift(bet_type, side, open_ln, curr_ln):
+    """Consensus movement toward our side since the week's opening capture."""
+    if not open_ln or not curr_ln:
+        return None
+    if bet_type == "spread":
+        os_, cs_ = open_ln.get("spread"), curr_ln.get("spread")
+        if not isinstance(os_, (int, float)) or not isinstance(cs_, (int, float)):
+            return None
+        frm = os_ if side == "home" else -os_
+        to = cs_ if side == "home" else -cs_
+        return round(frm - to, 1)
+    if bet_type == "total":
+        ot, ct = open_ln.get("total"), curr_ln.get("total")
+        if not isinstance(ot, (int, float)) or not isinstance(ct, (int, float)):
+            return None
+        return round((ct - ot) if side == "over" else (ot - ct), 1)
+    return None
+
+
+def evaluate_game(game, ratings, elo_mean, sp_means, records, lines, open_line=None):
     home = pick(game, "homeTeam", "home_team")
     away = pick(game, "awayTeam", "away_team")
     gid = pick(game, "id")
@@ -407,8 +432,16 @@ def evaluate_game(game, ratings, elo_mean, sp_means, records, lines):
         side = "home" if edge > 0 else "away"
         team = home if side == "home" else away
         line_for_side = ln["spread"] if side == "home" else -ln["spread"]
-        p_cover = norm_cdf(abs(edge) / SIGMA_ATS)
+        p_cover = norm_cdf((MARKET_SHRINK * abs(edge)) / SIGMA_ATS)
         ev = ev_per_unit(p_cover, ASSUMED_SPREAD_PRICE)
+        drift = line_drift("spread", side, open_line, ln)
+        steam_ok = drift is None or drift > STEAM_CUTOFF_PTS
+        edge_ok = MIN_EDGE_SPREAD <= abs(edge) <= MAX_EDGE_SPREAD
+        detail = f"Model line: {home} {-model_margin:+.1f} vs market {ln['spread']:+.1f}"
+        if abs(edge) > MAX_EDGE_SPREAD:
+            detail += f" (capped: >{MAX_EDGE_SPREAD:g} pt gap)"
+        elif not steam_ok:
+            detail += f" (filtered: market moved {drift:+.1f} pts against)"
         entry["bets"].append({
             "type": "spread",
             "pick": f"{team} {line_for_side:+g}",
@@ -419,52 +452,66 @@ def evaluate_game(game, ratings, elo_mean, sp_means, records, lines):
             "prob": round(p_cover, 3),
             "price": ASSUMED_SPREAD_PRICE,
             "ev": round(ev, 4),
-            "eligible": abs(edge) >= MIN_EDGE_SPREAD,
-            "detail": f"Model line: {home} {-model_margin:+.1f} vs market {ln['spread']:+.1f}",
+            "eligible": edge_ok and ev > 0 and steam_ok,
+            "detail": detail,
         })
 
     # --- total ---
     if isinstance(ln.get("total"), (int, float)):
         edge_t = model_total - ln["total"]
         direction = "Over" if edge_t > 0 else "Under"
-        p_hit = norm_cdf(abs(edge_t) / SIGMA_ATS)
+        side_t = direction.lower()
+        p_hit = norm_cdf((MARKET_SHRINK * abs(edge_t)) / SIGMA_TOTAL)
         ev = ev_per_unit(p_hit, ASSUMED_SPREAD_PRICE)
+        drift = line_drift("total", side_t, open_line, ln)
+        steam_ok = drift is None or drift > STEAM_CUTOFF_PTS
+        edge_ok = MIN_EDGE_TOTAL <= abs(edge_t) <= MAX_EDGE_TOTAL
+        detail = f"Model total {model_total:.1f} vs market {ln['total']:g}"
+        if abs(edge_t) > MAX_EDGE_TOTAL:
+            detail += f" (capped: >{MAX_EDGE_TOTAL:g} pt gap)"
+        elif not steam_ok:
+            detail += f" (filtered: total moved {drift:+.1f} pts against)"
         entry["bets"].append({
             "type": "total",
             "pick": f"{direction} {ln['total']:g}",
             "team": None,
-            "side": direction.lower(),
+            "side": side_t,
             "line": ln["total"],
             "edgePts": round(abs(edge_t), 1),
             "prob": round(p_hit, 3),
             "price": ASSUMED_SPREAD_PRICE,
             "ev": round(ev, 4),
-            "eligible": abs(edge_t) >= MIN_EDGE_TOTAL,
-            "detail": f"Model total {model_total:.1f} vs market {ln['total']:g}",
+            "eligible": edge_ok and ev > 0 and steam_ok,
+            "detail": detail,
         })
 
     # --- moneylines ---
-    for side, ml, p_win in (("home", ln.get("mlHome"), p_home_win),
-                            ("away", ln.get("mlAway"), 1.0 - p_home_win)):
+    for side, ml, raw_p_win in (("home", ln.get("mlHome"), p_home_win),
+                                ("away", ln.get("mlAway"), 1.0 - p_home_win)):
         if not isinstance(ml, (int, float)) or ml == 0:
             continue
         team = home if side == "home" else away
         imp = implied_prob(ml)
-        gap = p_win - imp
+        raw_gap = raw_p_win - imp
+        p_win = imp + MARKET_SHRINK * raw_gap
         ev = ev_per_unit(p_win, ml)
+        gap_ok = MIN_EDGE_ML_PROB <= raw_gap <= MAX_EDGE_ML_PROB
+        detail = f"Model win prob {p_win:.0%} (raw {raw_p_win:.0%}) vs implied {imp:.0%}"
+        if raw_gap > MAX_EDGE_ML_PROB:
+            detail += f" (capped: >{MAX_EDGE_ML_PROB:.0%} raw gap)"
         entry["bets"].append({
             "type": "moneyline",
             "pick": f"{team} ML {ml:+g}",
             "team": team,
             "side": side,
             "line": None,
-            "edgePts": round(gap * 100, 1),             # prob gap in pct pts
+            "edgePts": round(raw_gap * 100, 1),         # raw prob gap in pct pts
             "prob": round(p_win, 3),
             "price": ml,
             "ev": round(ev, 4),
-            "eligible": (gap >= MIN_EDGE_ML_PROB and ev > 0
-                         and p_win >= ML_MIN_PROB and abs(ml) <= ML_MAX_PRICE),
-            "detail": f"Model win prob {p_win:.0%} vs implied {imp:.0%}",
+            "eligible": (gap_ok and ev > 0
+                         and raw_p_win >= ML_MIN_PROB and abs(ml) <= ML_MAX_PRICE),
+            "detail": detail,
         })
 
     return entry
@@ -1575,7 +1622,8 @@ def main():
         "games": [], "topPicks": [],
         "modelInfo": {
             "weights": WEIGHTS, "homeField": HOME_FIELD_PTS,
-            "sigmaAts": SIGMA_ATS, "sigmaMl": SIGMA_ML,
+            "sigmaAts": SIGMA_ATS, "sigmaTotal": SIGMA_TOTAL,
+            "sigmaMl": SIGMA_ML, "marketShrink": MARKET_SHRINK,
         },
     }
 
@@ -1605,8 +1653,12 @@ def main():
         ratings, elo_mean, sp_means = fetch_ratings(year)
         records = fetch_records(year)
         lines = fetch_lines(year, week, season_type)
+        ledger = load_ledger()
+        boards = load_boards()
+        wk_games = (boards["weeks"].get(week_key(year, season_type, week)) or {}).get("games") or {}
 
-        evaluated = [evaluate_game(g, ratings, elo_mean, sp_means, records, lines)
+        evaluated = [evaluate_game(g, ratings, elo_mean, sp_means, records, lines,
+                                   opening_line(wk_games.get(str(pick(g, "id")))))
                      for g in games]
         evaluated = [e for e in evaluated if e["homeTeam"] and e["awayTeam"]]
         evaluated.sort(key=lambda e: (e["startDate"] or "", e["homeTeam"]))
@@ -1614,8 +1666,6 @@ def main():
         payload.update({"season": year, "week": week, "seasonType": season_type,
                         "games": evaluated, "topPicks": top_picks(evaluated)})
 
-        ledger = load_ledger()
-        boards = load_boards()
         record_board(boards, evaluated, year, season_type, week, now)
         attach_line_history(boards, evaluated, year, season_type, week)
         backfill_previous_week(boards, prev_week, year, now,

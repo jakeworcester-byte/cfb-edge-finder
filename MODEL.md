@@ -37,20 +37,24 @@ it slots in at ~10-15% by trimming SP+/FPI.
 
 - **Margin** = (home power rating − away power rating) + **2.3 pts home field**
   (0 at neutral sites).
-- **Total** = SP+ offense vs. opposing SP+ defense for each side, shrunk 50%
-  toward the league average to avoid overreacting to early-season ratings.
-  Projected scores are re-split so they stay consistent with the ensemble margin.
-- **Win probability** = normal CDF of margin with σ = 15.5 (college scoring
-  variance is high; this is deliberately conservative).
-- **Cover probability** = normal CDF of the edge with σ = 13.5.
+- **Total** = SP+ offense vs. opposing SP+ defense for each side on the full
+  SP+ points scale (no 50% mean compression, which previously flattened high
+  and low totals toward 52). Projected scores are re-split so they stay
+  consistent with the ensemble margin.
+- **Win probability** = normal CDF of margin with σ = 15.8 (empirical CFB
+  model margin error std dev).
+- **Cover / over-under probability** = normal CDF of `0.55 * edge` using
+  σ = 15.3 for spreads and σ = 17.5 for totals. Shrinking the raw model edge
+  by 0.55 toward the market reflects that closing lines already incorporate
+  public ratings plus injury and news flow.
 
 ## What counts as value
 
 | Bet type | Threshold to be pick-eligible |
 |---|---|
-| Spread | Model disagrees with market by ≥ 2.0 points |
-| Total | Model disagrees by ≥ 3.5 points |
-| Moneyline | Model win prob beats the implied prob by ≥ 5 points, EV > 0, model win prob ≥ 35%, and price between −300 and +300. The prob and price floors exist because the normal-curve tail systematically overrates longshot underdogs — a "+2000 dog with 165% EV" is a model artifact, not a bet. |
+| Spread | Model disagrees with market by 2.0 to 6.5 points, and consensus spread has not moved >= 1.0 pt against the pick since the week opened |
+| Total | Model disagrees by 3.5 to 7.5 points, and consensus total has not moved >= 1.0 pt against the pick since the week opened |
+| Moneyline | Raw model win prob beats the implied prob by 5 to 10 percentage points, shrunk EV > 0, raw model win prob ≥ 40%, and price between −200 and +200. Both the edge caps and price/prob floors prevent stale-rating mismatches and longshot tail artifacts from dominating the card. |
 
 Expected value assumes −110 pricing on spreads and totals (CFBD does not
 carry juice) and the **best available moneyline** across listed books.

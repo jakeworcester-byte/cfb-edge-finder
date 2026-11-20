@@ -105,7 +105,7 @@ def _add(vals, v):
         return
     if v != v or v in (float("inf"), float("-inf")):
         return
-    for x in (v, -v, abs(v), round(v, 1), round(v, 2)):
+    for x in (v, -v, abs(v), round(v), round(abs(v)), round(v, 1), round(v, 2)):
         vals.add(round(float(x), 4))
     if 0.0 <= v <= 1.0:                      # a rate quoted as a percentage
         for x in (v * 100, round(v * 100), round(v * 100, 1)):
