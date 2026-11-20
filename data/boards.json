@@ -86310,7 +86310,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -86451,7 +86451,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -86592,7 +86592,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -86733,7 +86733,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -86807,44 +86807,44 @@
        },
        {
         "provider": "Bovada",
-        "spread": 18,
-        "overUnder": 45,
+        "spread": 17.5,
+        "overUnder": 44.5,
         "homeMoneyline": 460,
         "awayMoneyline": -625,
-        "formattedSpread": "Oregon -18.0"
+        "formattedSpread": "Oregon -17.5"
        }
       ],
-      "spread": 18.0,
-      "total": 45.0,
+      "spread": 17.5,
+      "total": 44.5,
       "mlHome": 625,
       "mlAway": -625
      },
      "bets": [
       {
        "type": "spread",
-       "pick": "Michigan State +18",
+       "pick": "Michigan State +17.5",
        "team": "Michigan State",
        "side": "home",
-       "line": 18.0,
-       "edgePts": 2.0,
-       "prob": 0.529,
+       "line": 17.5,
+       "edgePts": 1.5,
+       "prob": 0.522,
        "price": -110,
-       "ev": 0.0101,
+       "ev": -0.0036,
        "eligible": false,
-       "detail": "Model line: Michigan State +16.0 vs market +18.0 (filtered: market moved -2.0 pts against)"
+       "detail": "Model line: Michigan State +16.0 vs market +17.5 (filtered: market moved -1.5 pts against)"
       },
       {
        "type": "total",
-       "pick": "Under 45",
+       "pick": "Under 44.5",
        "team": null,
        "side": "under",
-       "line": 45.0,
-       "edgePts": 1.6,
-       "prob": 0.521,
+       "line": 44.5,
+       "edgePts": 1.1,
+       "prob": 0.514,
        "price": -110,
-       "ev": -0.0062,
+       "ev": -0.0182,
        "eligible": false,
-       "detail": "Model total 43.4 vs market 45"
+       "detail": "Model total 43.4 vs market 44.5"
       },
       {
        "type": "moneyline",
@@ -86874,7 +86874,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -86894,6 +86894,13 @@
        "at": "2026-11-20T15:49:39.771880+00:00",
        "spread": 18.0,
        "total": 45.0,
+       "mlHome": 625,
+       "mlAway": -625
+      },
+      {
+       "at": "2026-11-20T15:58:05.802991+00:00",
+       "spread": 17.5,
+       "total": 44.5,
        "mlHome": 625,
        "mlAway": -625
       }
@@ -87015,7 +87022,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -87155,8 +87162,18 @@
        "detail": "Model win prob 36% (raw 37%) vs implied 34%"
       }
      ],
+     "newsCheck": {
+      "severity": "caution",
+      "summary": "ECU QB Griffis questionable in concussion protocol with Williams likely starting; cold West Point Saturday, WNW wind near 10-15 mph, flurries possible.",
+      "flags": [
+       "ECU QB Mitch Griffis in concussi",
+       "Emory Williams likely starts for",
+       "ECU skill starters (Engleman, Lo"
+      ],
+      "checkedAt": "2026-11-20T15:58:05.802991+00:00"
+     },
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -87297,7 +87314,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -87431,7 +87448,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -87572,7 +87589,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -87706,7 +87723,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -87847,7 +87864,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -87981,7 +87998,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -88114,8 +88131,18 @@
        "detail": "Model win prob 64% (raw 68%) vs implied 60%"
       }
      ],
+     "newsCheck": {
+      "severity": "caution",
+      "summary": "Weather is benign (sunny, around 60F, winds near 5 mph), but Navy's QB situation is unsettled with Woodson's status unconfirmed and Gutierrez starting.",
+      "flags": [
+       "Navy QB: no verified game-week r",
+       "No confirmed Memphis QB issue fo",
+       "Game-day forecast: mostly sunny,"
+      ],
+      "checkedAt": "2026-11-20T15:58:05.802991+00:00"
+     },
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -88249,7 +88276,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -88319,7 +88346,7 @@
      },
      "bets": [],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-19T22:31:08.323191+00:00",
@@ -88446,7 +88473,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -88580,7 +88607,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -88714,7 +88741,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -88847,8 +88874,18 @@
        "detail": "Model win prob 10% (raw 7%) vs implied 14%"
       }
      ],
+     "newsCheck": {
+      "severity": "clear",
+      "summary": "No confirmed QB outs or key scratches found for either side; Lynchburg forecast shows mild conditions with light wind and no major precipitation.",
+      "flags": [
+       "Injury data limited, confirm lat",
+       "WKU QB usage has rotated (Glenn/",
+       "Spread bet, so weather impact mi"
+      ],
+      "checkedAt": "2026-11-20T15:58:05.802991+00:00"
+     },
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -88925,7 +88962,7 @@
      },
      "bets": [],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-19T22:31:08.323191+00:00",
@@ -89051,8 +89088,18 @@
        "detail": "Model win prob 73% (raw 73%) vs implied 73%"
       }
      ],
+     "newsCheck": {
+      "severity": "caution",
+      "summary": "WVU QB Hawkins upgraded to probable with ankle bone bruise but not certain; five Mountaineers out; weather mild and calm, no total concern.",
+      "flags": [
+       "WVU QB Michael Hawkins Jr. proba",
+       "Five WVU players ruled out inclu",
+       "Houston out: DB Jamaal Shaw, OL "
+      ],
+      "checkedAt": "2026-11-20T15:58:05.802991+00:00"
+     },
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -89129,7 +89176,7 @@
      },
      "bets": [],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-19T22:31:08.323191+00:00",
@@ -89256,7 +89303,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -89390,7 +89437,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -89523,8 +89570,18 @@
        "detail": "Model win prob 7% (raw 5%) vs implied 8%"
       }
      ],
+     "newsCheck": {
+      "severity": "caution",
+      "summary": "No confirmed QB or starter outages found for either side, but Tulsa forecast shows south winds near 15 to 20 mph with gusts to 25 plus, a mild Over risk.",
+      "flags": [
+       "moderate wind 13-19 mph with gus",
+       "late rain chance arriving after ",
+       "no verified current-week injury "
+      ],
+      "checkedAt": "2026-11-20T15:58:05.802991+00:00"
+     },
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -89658,7 +89715,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -89799,7 +89856,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -89926,7 +89983,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -90060,7 +90117,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -90200,8 +90257,18 @@
        "detail": "Model win prob 23% (raw 23%) vs implied 24%"
       }
      ],
+     "newsCheck": {
+      "severity": "clear",
+      "summary": "Coastal starter Deuce Bailey appears on track; only backup QB Guerra and a WR questionable, and Lafayette forecast is mild with light winds.",
+      "flags": [
+       "Backup QB Tre Guerra questionabl",
+       "WR/DB Tristian Gardner questiona",
+       "Light wind around 5-7 mph, low r"
+      ],
+      "checkedAt": "2026-11-20T15:58:05.802991+00:00"
+     },
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -90335,7 +90402,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -90412,7 +90479,7 @@
      },
      "bets": [],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-19T22:31:08.323191+00:00",
@@ -90539,7 +90606,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -90680,7 +90747,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -90814,7 +90881,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -90948,7 +91015,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -91089,7 +91156,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -91216,7 +91283,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -91357,7 +91424,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -91491,7 +91558,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -91617,8 +91684,18 @@
        "detail": "Model win prob 36% (raw 42%) vs implied 29% (capped: >10% raw gap)"
       }
      ],
+     "newsCheck": {
+      "severity": "caution",
+      "summary": "Both QBs (Reed, Mateer) expected to play; A&M missing six incl. S Ratcliffe, OU missing two OL; breezy south winds near 13-20 mph with late storm risk.",
+      "flags": [
+       "A&M six players ruled out includ",
+       "OU OL starters Gunnar Allen and ",
+       "Okoye upgraded to probable for O"
+      ],
+      "checkedAt": "2026-11-20T15:58:05.802991+00:00"
+     },
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -91759,7 +91836,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -91899,8 +91976,18 @@
        "detail": "Model win prob 4% (raw 3%) vs implied 7%"
       }
      ],
+     "newsCheck": {
+      "severity": "caution",
+      "summary": "NDSU QB Hayes expected to play despite ankle, but TE Kessel and FB Kokat hurt; NIU has OL losses; dome game so no weather risk.",
+      "flags": [
+       "NDSU QB Nathan Hayes playing thr",
+       "NDSU TE Drew Kessel (lower leg, ",
+       "NDSU OL shuffling: RT Kene Anene"
+      ],
+      "checkedAt": "2026-11-20T15:58:05.802991+00:00"
+     },
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -92041,7 +92128,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -92182,7 +92269,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -92316,7 +92403,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -92457,7 +92544,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -92591,7 +92678,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -92725,7 +92812,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -92859,7 +92946,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -92992,8 +93079,18 @@
        "detail": "Model win prob 67% (raw 65%) vs implied 69%"
       }
      ],
+     "newsCheck": {
+      "severity": "caution",
+      "summary": "SJSU QB situation unsettled between Rolovich and Weaver with injury history; weather calm, winds under 10 mph, only light early rain.",
+      "flags": [
+       "SJSU starting QB uncertainty (Ro",
+       "SJSU WR/RB depth questionable ta",
+       "Light rain possible early, minim"
+      ],
+      "checkedAt": "2026-11-20T15:58:05.802991+00:00"
+     },
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -93127,7 +93224,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -93261,7 +93358,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -93358,8 +93455,8 @@
        "prob": 0.549,
        "price": -110,
        "ev": 0.0481,
-       "eligible": true,
-       "detail": "Model line: Louisville -10.1 vs market -13.5"
+       "eligible": false,
+       "detail": "Model line: Louisville -10.1 vs market -13.5 (filtered: news guardrail - Pitt QB Mason Heintschel is out and backup Holden Geriner is a game-time decision, risking a true freshman start; weather mild and calm.)"
       },
       {
        "type": "total",
@@ -93371,8 +93468,8 @@
        "prob": 0.59,
        "price": -110,
        "ev": 0.1268,
-       "eligible": true,
-       "detail": "Model total 57.8 vs market 50.5"
+       "eligible": false,
+       "detail": "Model total 57.8 vs market 50.5 (filtered: news guardrail - Pitt QB Mason Heintschel is out and backup Holden Geriner is a game-time decision, risking a true freshman start; weather mild and calm.)"
       },
       {
        "type": "moneyline",
@@ -93401,8 +93498,18 @@
        "detail": "Model win prob 23% (raw 26%) vs implied 19%"
       }
      ],
+     "newsCheck": {
+      "severity": "avoid",
+      "summary": "Pitt QB Mason Heintschel is out and backup Holden Geriner is a game-time decision, risking a true freshman start; weather mild and calm.",
+      "flags": [
+       "Pitt QB Mason Heintschel listed ",
+       "Holden Geriner questionable, gam",
+       "True freshman Corey Dailey possi"
+      ],
+      "checkedAt": "2026-11-20T15:58:05.802991+00:00"
+     },
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -93536,7 +93643,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -93677,7 +93784,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -93811,7 +93918,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -93945,7 +94052,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -94086,7 +94193,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -94220,7 +94327,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -94361,7 +94468,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -94422,8 +94529,8 @@
         "provider": "DraftKings",
         "spread": -5.5,
         "overUnder": 40.5,
-        "homeMoneyline": -218,
-        "awayMoneyline": 180,
+        "homeMoneyline": -230,
+        "awayMoneyline": 190,
         "formattedSpread": "Nevada -5.5"
        },
        {
@@ -94438,7 +94545,7 @@
       "spread": -5.5,
       "total": 40.5,
       "mlHome": -185,
-      "mlAway": 180
+      "mlAway": 190
      },
      "bets": [
       {
@@ -94482,20 +94589,20 @@
       },
       {
        "type": "moneyline",
-       "pick": "Hawai'i ML +180",
+       "pick": "Hawai'i ML +190",
        "team": "Hawai'i",
        "side": "away",
        "line": null,
-       "edgePts": 0.4,
-       "prob": 0.359,
-       "price": 180,
-       "ev": 0.0057,
+       "edgePts": 1.6,
+       "prob": 0.354,
+       "price": 190,
+       "ev": 0.0255,
        "eligible": false,
-       "detail": "Model win prob 36% (raw 36%) vs implied 36%"
+       "detail": "Model win prob 35% (raw 36%) vs implied 34%"
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",
@@ -94517,6 +94624,13 @@
        "total": 40.5,
        "mlHome": -185,
        "mlAway": 180
+      },
+      {
+       "at": "2026-11-20T15:58:05.802991+00:00",
+       "spread": -5.5,
+       "total": 40.5,
+       "mlHome": -185,
+       "mlAway": 190
       }
      ]
     },
@@ -94636,7 +94750,7 @@
       }
      ],
      "result": null,
-     "lockedAt": "2026-11-20T15:49:39.771880+00:00",
+     "lockedAt": "2026-11-20T15:58:05.802991+00:00",
      "lineHistory": [
       {
        "at": "2026-11-17T22:44:37.055938+00:00",

@@ -1520,7 +1520,7 @@
    "prob": 0.593,
    "ev": 0.1315,
    "detail": "Model total 74.5 vs market 67",
-   "pickedAt": "2026-11-20T15:49:40.720429+00:00",
+   "pickedAt": "2026-11-20T15:59:24.162806+00:00",
    "openLine": 67.0,
    "openPrice": -110,
    "openAt": "2026-11-20T15:49:40.720442+00:00",
@@ -1528,34 +1528,6 @@
    "clv": {
     "pts": 0.0,
     "closeLine": 67.0,
-    "at": "2026-11-19T22:31:08.323191+00:00"
-   }
-  },
-  {
-   "season": 2026,
-   "seasonType": "regular",
-   "week": 12,
-   "gameId": 401858306,
-   "matchup": "Pittsburgh @ Louisville",
-   "homeTeam": "Louisville",
-   "awayTeam": "Pittsburgh",
-   "startDate": "2026-11-22T00:30:00.000Z",
-   "type": "total",
-   "pick": "Over 50.5",
-   "side": "over",
-   "line": 50.5,
-   "price": -110,
-   "prob": 0.59,
-   "ev": 0.1268,
-   "detail": "Model total 57.8 vs market 50.5",
-   "pickedAt": "2026-11-20T15:49:40.720457+00:00",
-   "openLine": 50.5,
-   "openPrice": -110,
-   "openAt": "2026-11-20T15:49:40.720461+00:00",
-   "result": null,
-   "clv": {
-    "pts": 0.0,
-    "closeLine": 50.5,
     "at": "2026-11-19T22:31:08.323191+00:00"
    }
   },
@@ -1576,7 +1548,7 @@
    "prob": 0.589,
    "ev": 0.124,
    "detail": "Model total 30.9 vs market 38",
-   "pickedAt": "2026-11-20T15:49:40.720465+00:00",
+   "pickedAt": "2026-11-20T15:59:24.162816+00:00",
    "openLine": 38.0,
    "openPrice": -110,
    "openAt": "2026-11-20T15:49:40.720466+00:00",
@@ -1604,7 +1576,7 @@
    "prob": 0.584,
    "ev": 0.1151,
    "detail": "Model total 57.3 vs market 50.5",
-   "pickedAt": "2026-11-20T15:49:40.720469+00:00",
+   "pickedAt": "2026-11-20T15:59:24.162821+00:00",
    "openLine": 50.5,
    "openPrice": -110,
    "openAt": "2026-11-20T15:49:40.720470+00:00",
@@ -1613,6 +1585,34 @@
     "pts": 0.0,
     "closeLine": 50.5,
     "at": "2026-11-19T22:31:08.323191+00:00"
+   }
+  },
+  {
+   "season": 2026,
+   "seasonType": "regular",
+   "week": 12,
+   "gameId": 401864544,
+   "matchup": "UNLV @ San Jos\u00e9 State",
+   "homeTeam": "San Jos\u00e9 State",
+   "awayTeam": "UNLV",
+   "startDate": "2026-11-22T00:00:00.000Z",
+   "type": "total",
+   "pick": "Under 47.5",
+   "side": "under",
+   "line": 47.5,
+   "price": -110,
+   "prob": 0.584,
+   "ev": 0.1147,
+   "detail": "Model total 40.8 vs market 47.5",
+   "pickedAt": "2026-11-20T15:59:24.162824+00:00",
+   "openLine": 47.5,
+   "openPrice": -110,
+   "openAt": "2026-11-20T15:59:24.162826+00:00",
+   "result": null,
+   "clv": {
+    "pts": 0.0,
+    "closeLine": 47.5,
+    "at": "2026-11-20T15:49:39.771880+00:00"
    }
   }
  ]

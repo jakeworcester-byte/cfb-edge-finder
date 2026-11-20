@@ -1,0 +1,136 @@
+{
+ "games": {
+  "2026-regular-12:401862834": {
+   "weekKey": "2026-regular-12",
+   "matchup": "Memphis @ Navy",
+   "severity": "caution",
+   "summary": "Weather is benign (sunny, around 60F, winds near 5 mph), but Navy's QB situation is unsettled with Woodson's status unconfirmed and Gutierrez starting.",
+   "flags": [
+    "Navy QB: no verified game-week r",
+    "No confirmed Memphis QB issue fo",
+    "Game-day forecast: mostly sunny,"
+   ],
+   "checkedAt": "2026-11-20T15:58:05.802991+00:00",
+   "source": "claude"
+  },
+  "2026-regular-12:401858306": {
+   "weekKey": "2026-regular-12",
+   "matchup": "Pittsburgh @ Louisville",
+   "severity": "avoid",
+   "summary": "Pitt QB Mason Heintschel is out and backup Holden Geriner is a game-time decision, risking a true freshman start; weather mild and calm.",
+   "flags": [
+    "Pitt QB Mason Heintschel listed ",
+    "Holden Geriner questionable, gam",
+    "True freshman Corey Dailey possi"
+   ],
+   "checkedAt": "2026-11-20T15:58:05.802991+00:00",
+   "source": "claude"
+  },
+  "2026-regular-12:401856752": {
+   "weekKey": "2026-regular-12",
+   "matchup": "Texas A&M @ Oklahoma",
+   "severity": "caution",
+   "summary": "Both QBs (Reed, Mateer) expected to play; A&M missing six incl. S Ratcliffe, OU missing two OL; breezy south winds near 13-20 mph with late storm risk.",
+   "flags": [
+    "A&M six players ruled out includ",
+    "OU OL starters Gunnar Allen and ",
+    "Okoye upgraded to probable for O"
+   ],
+   "checkedAt": "2026-11-20T15:58:05.802991+00:00",
+   "source": "claude"
+  },
+  "2026-regular-12:401869946": {
+   "weekKey": "2026-regular-12",
+   "matchup": "Coastal Carolina @ Louisiana",
+   "severity": "clear",
+   "summary": "Coastal starter Deuce Bailey appears on track; only backup QB Guerra and a WR questionable, and Lafayette forecast is mild with light winds.",
+   "flags": [
+    "Backup QB Tre Guerra questionabl",
+    "WR/DB Tristian Gardner questiona",
+    "Light wind around 5-7 mph, low r"
+   ],
+   "checkedAt": "2026-11-20T15:58:05.802991+00:00",
+   "source": "claude"
+  },
+  "2026-regular-12:401864544": {
+   "weekKey": "2026-regular-12",
+   "matchup": "UNLV @ San Jos\u00e9 State",
+   "severity": "caution",
+   "summary": "SJSU QB situation unsettled between Rolovich and Weaver with injury history; weather calm, winds under 10 mph, only light early rain.",
+   "flags": [
+    "SJSU starting QB uncertainty (Ro",
+    "SJSU WR/RB depth questionable ta",
+    "Light rain possible early, minim"
+   ],
+   "checkedAt": "2026-11-20T15:58:05.802991+00:00",
+   "source": "claude"
+  },
+  "2026-regular-12:401856868": {
+   "weekKey": "2026-regular-12",
+   "matchup": "Houston @ West Virginia",
+   "severity": "caution",
+   "summary": "WVU QB Hawkins upgraded to probable with ankle bone bruise but not certain; five Mountaineers out; weather mild and calm, no total concern.",
+   "flags": [
+    "WVU QB Michael Hawkins Jr. proba",
+    "Five WVU players ruled out inclu",
+    "Houston out: DB Jamaal Shaw, OL "
+   ],
+   "checkedAt": "2026-11-20T15:58:05.802991+00:00",
+   "source": "claude"
+  },
+  "2026-regular-12:401864543": {
+   "weekKey": "2026-regular-12",
+   "matchup": "Northern Illinois @ North Dakota State",
+   "severity": "caution",
+   "summary": "NDSU QB Hayes expected to play despite ankle, but TE Kessel and FB Kokat hurt; NIU has OL losses; dome game so no weather risk.",
+   "flags": [
+    "NDSU QB Nathan Hayes playing thr",
+    "NDSU TE Drew Kessel (lower leg, ",
+    "NDSU OL shuffling: RT Kene Anene"
+   ],
+   "checkedAt": "2026-11-20T15:58:05.802991+00:00",
+   "source": "claude"
+  },
+  "2026-regular-12:401871080": {
+   "weekKey": "2026-regular-12",
+   "matchup": "Western Kentucky @ Liberty",
+   "severity": "clear",
+   "summary": "No confirmed QB outs or key scratches found for either side; Lynchburg forecast shows mild conditions with light wind and no major precipitation.",
+   "flags": [
+    "Injury data limited, confirm lat",
+    "WKU QB usage has rotated (Glenn/",
+    "Spread bet, so weather impact mi"
+   ],
+   "checkedAt": "2026-11-20T15:58:05.802991+00:00",
+   "source": "claude"
+  },
+  "2026-regular-12:401862831": {
+   "weekKey": "2026-regular-12",
+   "matchup": "East Carolina @ Army",
+   "severity": "caution",
+   "summary": "ECU QB Griffis questionable in concussion protocol with Williams likely starting; cold West Point Saturday, WNW wind near 10-15 mph, flurries possible.",
+   "flags": [
+    "ECU QB Mitch Griffis in concussi",
+    "Emory Williams likely starts for",
+    "ECU skill starters (Engleman, Lo"
+   ],
+   "checkedAt": "2026-11-20T15:58:05.802991+00:00",
+   "source": "claude"
+  },
+  "2026-regular-12:401862832": {
+   "weekKey": "2026-regular-12",
+   "matchup": "Charlotte @ Tulsa",
+   "severity": "caution",
+   "summary": "No confirmed QB or starter outages found for either side, but Tulsa forecast shows south winds near 15 to 20 mph with gusts to 25 plus, a mild Over risk.",
+   "flags": [
+    "moderate wind 13-19 mph with gus",
+    "late rain chance arriving after ",
+    "no verified current-week injury "
+   ],
+   "checkedAt": "2026-11-20T15:58:05.802991+00:00",
+   "source": "claude"
+  }
+ },
+ "lastError": null,
+ "updatedAt": "2026-11-20T15:58:05.802991+00:00"
+}
