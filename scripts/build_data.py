@@ -34,11 +34,13 @@ API_KEY = os.environ.get("CFBD_API_KEY", "").strip()
 ROOT = Path(__file__).resolve().parent.parent
 OUT_PATH = ROOT / "site" / "data.json"
 LEDGER_PATH = ROOT / "data" / "picks_history.json"
+OPENERS_PATH = ROOT / "data" / "openers_history.json"
 BOARDS_PATH = ROOT / "data" / "boards.json"
 RESULTS_PATH = ROOT / "site" / "results.json"
 LASTWEEK_PATH = ROOT / "site" / "lastweek.json"
 RECORD_PATH = ROOT / "site" / "modelrecord.json"
 RECAP_PATH = ROOT / "data" / "recap.json"
+NEWS_CACHE_PATH = ROOT / "data" / "news_checks.json"
 STAKE = 10.0                 # flat bet size for the season P/L tally
 
 # --- model constants -------------------------------------------------------
@@ -522,14 +524,17 @@ def top_picks(games):
     for g in games:
         for b in g["bets"]:
             if b["eligible"] and b["ev"] > 0:
-                cands.append({
+                item = {
                     "gameId": g["id"],
                     "matchup": f"{g['awayTeam']} @ {g['homeTeam']}",
                     "homeTeam": g["homeTeam"],
                     "awayTeam": g["awayTeam"],
                     "startDate": g["startDate"],
                     **b,
-                })
+                }
+                if g.get("newsCheck"):
+                    item["newsCheck"] = g["newsCheck"]
+                cands.append(item)
     cands.sort(key=lambda b: b["ev"], reverse=True)
     # at most one pick per game so the card isn't 3 angles on one matchup
     seen, out = set(), []
@@ -545,14 +550,14 @@ def top_picks(games):
 
 # --- pick ledger and grading ---------------------------------------------------
 
-def load_ledger():
-    if LEDGER_PATH.exists():
+def load_ledger(path=LEDGER_PATH):
+    if path.exists():
         try:
-            data = json.loads(LEDGER_PATH.read_text(encoding="utf-8"))
+            data = json.loads(path.read_text(encoding="utf-8"))
             if isinstance(data.get("picks"), list):
                 return data
         except Exception as e:
-            print(f"could not read ledger ({e}); starting fresh", file=sys.stderr)
+            print(f"could not read ledger {path.name} ({e}); starting fresh", file=sys.stderr)
     return {"picks": []}
 
 
@@ -749,9 +754,12 @@ def grade_boards(boards, scores, now):
     return graded
 
 
-def pending_week_keys(ledger, boards, now):
+def pending_week_keys(ledger, boards, now, openers=None):
     keys = {(p["season"], p["seasonType"], p["week"]) for p in ledger["picks"]
             if not p.get("result") and pick_started(p, now)}
+    if openers:
+        keys.update((p["season"], p["seasonType"], p["week"]) for p in openers["picks"]
+                    if not p.get("result") and pick_started(p, now))
     for wk in boards["weeks"].values():
         if any(not g.get("result") and pick_started(g, now) for g in wk["games"].values()):
             keys.add((wk["season"], wk["seasonType"], wk["week"]))
@@ -1480,7 +1488,40 @@ def update_week_picks(ledger, top, season, season_type, week, now):
     ledger["picks"] = others + locked + fresh
 
 
-def write_results(ledger, now, demo=False):
+def record_opener_picks(openers, top, season, season_type, week, now, wk_games):
+    """Freeze the first Top 5 snapshot of a week as the Tuesday Opener card.
+
+    Once recorded for a week, opener picks never update on Thu/Sat runs,
+    letting us compare early-week soft lines against Saturday final picks.
+    Skips weeks where games have already started before the first snapshot.
+    """
+    key = (season, season_type, week)
+    if any((p["season"], p["seasonType"], p["week"]) == key for p in openers["picks"]):
+        return 0
+    if any(g.get("result") or pick_started(g, now) for g in wk_games.values()):
+        return 0
+    added = 0
+    for c in top[:TOP_N]:
+        if pick_started(c, now):
+            continue
+        openers["picks"].append({
+            "season": season, "seasonType": season_type, "week": week,
+            "gameId": c["gameId"], "matchup": c["matchup"],
+            "homeTeam": c.get("homeTeam"), "awayTeam": c.get("awayTeam"),
+            "startDate": c["startDate"], "type": c["type"], "pick": c["pick"],
+            "side": c.get("side"), "line": c.get("line"), "price": c["price"],
+            "prob": c["prob"], "ev": c["ev"], "detail": c.get("detail"),
+            "pickedAt": now.isoformat(),
+            "openLine": c.get("line"),
+            "openPrice": c["price"],
+            "openAt": now.isoformat(),
+            "result": None,
+        })
+        added += 1
+    return added
+
+
+def write_results(ledger, now, demo=False, openers=None):
     def order(p):
         return (p["season"], 0 if p["seasonType"] == "regular" else 1,
                 p["week"], p.get("startDate") or "")
@@ -1490,6 +1531,7 @@ def write_results(ledger, now, demo=False):
         "demo": demo,
         "stake": STAKE,
         "picks": sorted(ledger["picks"], key=order),
+        "openers": sorted(openers["picks"], key=order) if openers else [],
     }
     RESULTS_PATH.write_text(json.dumps(payload, indent=1), encoding="utf-8")
 
@@ -1653,15 +1695,29 @@ def main():
         ratings, elo_mean, sp_means = fetch_ratings(year)
         records = fetch_records(year)
         lines = fetch_lines(year, week, season_type)
-        ledger = load_ledger()
+        ledger = load_ledger(LEDGER_PATH)
+        openers = load_ledger(OPENERS_PATH)
         boards = load_boards()
-        wk_games = (boards["weeks"].get(week_key(year, season_type, week)) or {}).get("games") or {}
+        wkey = week_key(year, season_type, week)
+        wk_games = (boards["weeks"].get(wkey) or {}).get("games") or {}
 
         evaluated = [evaluate_game(g, ratings, elo_mean, sp_means, records, lines,
                                    opening_line(wk_games.get(str(pick(g, "id")))))
                      for g in games]
         evaluated = [e for e in evaluated if e["homeTeam"] and e["awayTeam"]]
         evaluated.sort(key=lambda e: (e["startDate"] or "", e["homeTeam"]))
+
+        # Snapshot Tuesday Openers before pre-kickoff news guardrails filter candidates
+        raw_top = top_picks(evaluated)
+        new_openers = record_opener_picks(openers, raw_top, year, season_type, week, now, wk_games)
+
+        try:
+            import news_check
+            nc_checked, nc_avoided = news_check.apply_news_checks(
+                evaluated, wkey, NEWS_CACHE_PATH, now)
+            print(f"News guardrail: checked {nc_checked} candidates, avoided {nc_avoided} bets")
+        except Exception as e:                  # noqa: BLE001 - guardrail is optional
+            print(f"news_check crashed ({type(e).__name__}: {e})", file=sys.stderr)
 
         payload.update({"season": year, "week": week, "seasonType": season_type,
                         "games": evaluated, "topPicks": top_picks(evaluated)})
@@ -1671,12 +1727,14 @@ def main():
         backfill_previous_week(boards, prev_week, year, now,
                                ratings, elo_mean, sp_means, records)
 
-        scores = fetch_scores(pending_week_keys(ledger, boards, now))
+        scores = fetch_scores(pending_week_keys(ledger, boards, now, openers=openers))
         graded = grade_picks(ledger, scores, now)
+        graded_openers = grade_picks(openers, scores, now)
         graded_games = grade_boards(boards, scores, now)
         regraded = regrade_boards(boards)
         update_week_picks(ledger, payload["topPicks"], year, season_type, week, now)
         attach_clv(ledger, boards)
+        attach_clv(openers, boards)
 
         record = build_model_record(boards, ledger, now)
         try:
@@ -1689,11 +1747,13 @@ def main():
 
         LEDGER_PATH.parent.mkdir(parents=True, exist_ok=True)
         LEDGER_PATH.write_text(json.dumps(ledger, indent=1), encoding="utf-8")
+        OPENERS_PATH.write_text(json.dumps(openers, indent=1), encoding="utf-8")
         BOARDS_PATH.write_text(json.dumps(boards, indent=1), encoding="utf-8")
         RECORD_PATH.write_text(json.dumps(record, indent=1), encoding="utf-8")
-        write_results(ledger, now)
-        write_lastweek(boards, week_key(year, season_type, week), now, narrative=narrative)
+        write_results(ledger, now, openers=openers)
+        write_lastweek(boards, wkey, now, narrative=narrative)
         print(f"Ledger: {len(ledger['picks'])} picks total, {graded} newly graded; "
+              f"openers: {len(openers['picks'])} ({new_openers} added, {graded_openers} graded); "
               f"board games graded this run: {graded_games}, regraded: {regraded}")
         ov = record["overall"]
         print(f"Season value record: {ov['wins']}-{ov['losses']}-{ov['pushes']} "

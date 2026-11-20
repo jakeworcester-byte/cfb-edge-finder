@@ -50,6 +50,12 @@
   .b-pending { background: #2b2610; color: var(--gold); border: 1px solid #5c4a12; }
   .tag { display: inline-block; font-size: 11px; padding: 1px 8px; border-radius: 999px;
     border: 1px solid var(--border); color: var(--muted); text-transform: uppercase; }
+  .tabs { display: flex; gap: 4px; margin: 18px 0 4px; border-bottom: 1px solid var(--border); }
+  .tab { background: none; border: none; color: var(--muted); font: inherit; font-size: 14.5px;
+    font-weight: 600; padding: 10px 14px; cursor: pointer; border-bottom: 2px solid transparent;
+    margin-bottom: -1px; white-space: nowrap; }
+  .tab:hover { color: var(--text); }
+  .tab.active { color: var(--green); border-bottom-color: var(--green); }
   footer { margin-top: 36px; color: var(--muted); font-size: 12.5px;
     border-top: 1px solid var(--border); padding-top: 14px; }
   .empty { color: var(--muted); padding: 24px; text-align: center; }
@@ -106,6 +112,12 @@
     <b>Demo data.</b> Sample history shown until the CFBD_API_KEY secret is configured and real weeks are played.
   </div>
 
+  <div class="tabs">
+    <button class="tab active" id="tab-final" onclick="setCard('final')">Final Card</button>
+    <button class="tab" id="tab-openers" onclick="setCard('openers')">Tuesday Openers</button>
+  </div>
+  <div id="cardNote" class="sub" style="margin-top:8px"></div>
+
   <div class="cards" id="stats"></div>
 
   <div class="chartbox">
@@ -161,6 +173,7 @@ function weekLabel(p) {
 function drawChart(points) {
   const svg = document.getElementById('chart');
   if (points.length < 2) { svg.parentElement.style.display = 'none'; return; }
+  svg.parentElement.style.display = 'block';
   const W = 960, H = 120, pad = 8;
   const min = Math.min(0, ...points), max = Math.max(0, ...points);
   const y = v => H - pad - (v - min) / (max - min || 1) * (H - 2 * pad);
@@ -174,19 +187,25 @@ function drawChart(points) {
     <circle cx="${x(points.length - 1)}" cy="${y(last)}" r="4" fill="${last >= 0 ? '#3fb950' : '#f85149'}"/>`;
 }
 
-async function init() {
-  let data;
-  try {
-    data = await (await fetch('results.json?t=' + Date.now())).json();
-  } catch (e) {
-    document.getElementById('weeks').innerHTML = '<div class="empty">Could not load results.json</div>';
-    return;
-  }
-  document.getElementById('stamp').textContent =
-    'Updated ' + new Date(data.generatedAt).toLocaleString();
-  if (data.demo) document.getElementById('demoBanner').style.display = 'block';
+let RESULTS_DATA = null;
+let ACTIVE_CARD = 'final';
 
-  const picks = data.picks || [];
+function setCard(which) {
+  ACTIVE_CARD = which;
+  document.getElementById('tab-final').classList.toggle('active', which === 'final');
+  document.getElementById('tab-openers').classList.toggle('active', which === 'openers');
+  if (RESULTS_DATA) renderCard();
+}
+
+function renderCard() {
+  const data = RESULTS_DATA;
+  const isOpener = ACTIVE_CARD === 'openers';
+  const picks = (isOpener ? data.openers : data.picks) || [];
+  const note = document.getElementById('cardNote');
+  note.textContent = isOpener
+    ? 'Frozen on the first run of each week (Tuesday morning), before late-week steam and injury checks.'
+    : 'Updated through Saturday morning and locked at kickoff, with steam and news guardrails applied.';
+
   const graded = picks.filter(p => p.result);
   const wins = graded.filter(p => p.result.outcome === 'win').length;
   const losses = graded.filter(p => p.result.outcome === 'loss').length;
@@ -237,7 +256,9 @@ async function init() {
 
   const el = document.getElementById('weeks');
   if (!picks.length) {
-    el.innerHTML = '<div class="empty">No picks recorded yet. The first automated run of the week records them.</div>';
+    el.innerHTML = isOpener
+      ? '<div class="empty">No Tuesday Openers recorded yet. This card snapshots automatically on the first automated run of each upcoming week.</div>'
+      : '<div class="empty">No picks recorded yet. The first automated run of the week records them.</div>';
     return;
   }
   el.innerHTML = keys.slice().reverse().map(k => {
@@ -272,6 +293,25 @@ async function init() {
       }).join('')}</tbody>
     </table></div>`;
   }).join('');
+}
+
+async function init() {
+  let data;
+  try {
+    data = await (await fetch('results.json?t=' + Date.now())).json();
+  } catch (e) {
+    document.getElementById('weeks').innerHTML = '<div class="empty">Could not load results.json</div>';
+    return;
+  }
+  RESULTS_DATA = data;
+  document.getElementById('stamp').textContent =
+    'Updated ' + new Date(data.generatedAt).toLocaleString();
+  if (data.demo) document.getElementById('demoBanner').style.display = 'block';
+  const opnCount = (data.openers || []).length;
+  if (opnCount) {
+    document.getElementById('tab-openers').textContent = `Tuesday Openers (${opnCount})`;
+  }
+  renderCard();
 }
 init();
 </script>

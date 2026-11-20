@@ -374,6 +374,21 @@ function moveCell(d) {
 
 /* --- this week's board --------------------------------------------------- */
 
+function escHtml(s) {
+  return String(s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function newsTag(nc) {
+  if (!nc) return '';
+  if (nc.severity === 'caution') {
+    return `<span class="tag" style="border-color:var(--gold);color:var(--gold)" title="${escHtml(nc.summary)}">caution</span>`;
+  }
+  if (nc.severity === 'avoid') {
+    return `<span class="tag" style="border-color:var(--red);color:var(--red)" title="${escHtml(nc.summary)}">avoid</span>`;
+  }
+  return `<span class="tag" style="border-color:var(--green-dim);color:var(--green)" title="${escHtml(nc.summary)}">checked</span>`;
+}
+
 function renderTop() {
   const el = document.getElementById('topPicks');
   const picks = DATA.topPicks || [];
@@ -384,13 +399,14 @@ function renderTop() {
   el.innerHTML = picks.map((p, i) => `
     <div class="card">
       <span class="rank">#${i + 1}</span>
-      <span class="tag">${p.type}</span>
+      <span class="tag">${p.type}</span> ${newsTag(p.newsCheck)}
       <div class="pick">${p.pick} ${p.type !== 'spread' && p.type !== 'total' ? '' : fmt.price(p.price)}</div>
       <div class="matchup">${p.matchup}<br>${fmt.time(p.startDate)}</div>
       <div class="meta">
         <div>Model hit prob: <b>${fmt.pct(p.prob)}</b></div>
         <div>EV: <b class="${p.ev > 0 ? 'edge-hi' : 'neg'}">${(p.ev * 100).toFixed(1)}%</b> per unit</div>
-        <div style="color:var(--muted)">${p.detail}</div>
+        <div style="color:var(--muted)">${escHtml(p.detail)}</div>
+        ${p.newsCheck && p.newsCheck.severity === 'caution' ? `<div style="color:var(--gold);margin-top:4px">${escHtml(p.newsCheck.summary)}</div>` : ''}
       </div>
     </div>`).join('');
 }
@@ -445,7 +461,11 @@ function renderBoard() {
       <td data-label="Total edge" class="${edgeClass(tEdge)}">${tEdge != null ? tEdge.toFixed(1) : '—'}</td>
       <td data-label="Model score">${m.awayScore} — ${m.homeScore}</td>
       <td data-label="Win prob">${g.homeTeam} ${fmt.pct(m.pHomeWin)}</td>
-      <td data-label="Best bet">${bb ? `<span class="edge-hi">${bb.pick}</span> <span class="books">EV ${(bb.ev * 100).toFixed(1)}%</span>` : '<span class="books">no play</span>'}</td>
+      <td data-label="Best bet">${bb
+        ? `<span class="edge-hi">${bb.pick}</span> <span class="books">EV ${(bb.ev * 100).toFixed(1)}%</span> ${g.newsCheck && g.newsCheck.severity === 'caution' ? newsTag(g.newsCheck) : ''}`
+        : (g.newsCheck && g.newsCheck.severity === 'avoid'
+            ? `${newsTag(g.newsCheck)} <span class="books">${escHtml(g.newsCheck.summary)}</span>`
+            : '<span class="books">no play</span>')}</td>
     </tr>`;
   }).join('');
 }
