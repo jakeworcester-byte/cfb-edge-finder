@@ -1,14 +1,14 @@
 {
  "weekKey": "2026-regular-12",
- "factsHash": "0e5cf2debf71807c",
+ "factsHash": "686f6efa2522b0db",
  "source": "claude",
  "lastError": null,
- "generatedAt": "2026-11-20T15:49:39.771880+00:00",
- "headline": "The Model Found Its Biggest Edge And Lost It By One Point",
+ "generatedAt": "2026-11-21T18:59:36.862926+00:00",
+ "headline": "One Point In Amherst Cost The Model Twenty Dollars And Its Dignity",
  "paragraphs": [
-  "Six games got graded, one got the shrug, and five of them produced six tickets at ten dollars apiece. The scoreboard: 2-4, down $21.82, an ROI of negative 36.4 percent against an expected win rate of 66.1 percent. The spread book went 2-3 for a loss of $11.82. The lone moneyline went 0-1. Sixty dollars in, thirty eight dollars and change out.",
-  "Akron at Massachusetts is the whole week in one line. The model saw a 9.9 point edge, the fattest number on the board, liked Massachusetts minus 3 at 77 percent, then doubled back and took the moneyline at minus 162 with 80 percent confidence. Akron won 34 to 33. Twenty dollars, one point, two tickets, zero defense available. Miami (OH) minus 9.5 at a modest 60 percent cashed 20 to 3 and nobody noticed.",
-  "One line moved all week, and it moved away. Zero percent drift toward the model, which is at least honest. Nine weeks graded for real leaves the season at 228-283-15 across 526 plays, down $608.41, an ROI of negative 11.6 percent, and a 44.6 percent hit rate against 60.7 percent expected. There is a 40-25-1 week worth $110.47 sitting in a drawer, graded after the fact, which is to say graded by a model that already knew the answers."
+  "Twelve games got looked at, six got waved off, and six of them produced seven tickets at ten dollars each. Seventy dollars staked, 2-5, down $31.82, ROI of negative 45.5 percent. The model walked in expecting to hit 64.7 percent of these and hit 28.6 percent, which is the kind of gap you normally only see between a resume and a job performance review.",
+  "The whole week lives inside one football game. Akron 34, Massachusetts 33. The model had Massachusetts minus 3 at a 9.9 point edge and 77 percent confidence, then liked the spot so much it also took the moneyline at minus 162 with an 80 percent number on it. Two tickets, one scoreboard, twenty dollars gone by a single point. That moneyline play is the entire reason the moneyline market sits at 0-1 with an ROI of negative 100 percent and an expected win rate of 79.8 percent. The one published top five play was that same conviction, same result. Meanwhile Miami (OH) minus 9.5 came in at 60 percent, the lowest confidence of the night that mattered, and cashed 20 to 3 for $9.09. The model's certainty and the model's accuracy continue to be strangers.",
+  "The spread book finished 2-4 for negative $21.82. Of the two plays whose lines moved, exactly one moved toward the model, a 50 percent split that tells you nothing and that I am reporting anyway because it is in the table. Season wide, that is 527 plays, 228-284-15, down $618.41, an ROI of negative 11.7 percent across nine real graded weeks, with a 60.7 percent expectation producing 44.5 percent reality. There is also a hindsight graded week sitting off to the side, 40-25-1 and plus $110.47 at 16.7 percent ROI, which counts for precisely nothing because grading games after they finish is not forecasting, it is typing."
  ],
  "recent": [
   {
@@ -26,8 +26,8 @@
   {
    "weekKey": "2026-regular-12",
    "label": "Week 12",
-   "headline": "The Model Found Its Biggest Edge And Lost It By One Point",
-   "opening": "Six games got graded, one got the shrug, and five of them produced six tickets at ten dollars apiece. The scoreboard: 2-4, down $21.82, an ROI of negative 36.4 "
+   "headline": "One Point In Amherst Cost The Model Twenty Dollars And Its Dignity",
+   "opening": "Twelve games got looked at, six got waved off, and six of them produced seven tickets at ten dollars each. Seventy dollars staked, 2-5, down $31.82, ROI of nega"
   }
  ]
 }

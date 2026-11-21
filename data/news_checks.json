@@ -16,27 +16,27 @@
   "2026-regular-12:401858306": {
    "weekKey": "2026-regular-12",
    "matchup": "Pittsburgh @ Louisville",
-   "severity": "avoid",
-   "summary": "Pitt QB Mason Heintschel is out and backup Holden Geriner is a game-time decision, risking a true freshman start; weather mild and calm.",
+   "severity": "caution",
+   "summary": "Pitt QB Holden Geriner questionable and a game-time call with Mason Heintschel out; weather is calm, mild and clear, no total impact.",
    "flags": [
-    "Pitt QB Mason Heintschel listed ",
-    "Holden Geriner questionable, gam",
-    "True freshman Corey Dailey possi"
+    "Pitt QB Holden Geriner questiona",
+    "Backup QB Mason Heintschel liste",
+    "DL Sean FitzSimmons and Eliyt Na"
    ],
-   "checkedAt": "2026-11-20T15:58:05.802991+00:00",
+   "checkedAt": "2026-11-21T18:59:36.862926+00:00",
    "source": "claude"
   },
   "2026-regular-12:401856752": {
    "weekKey": "2026-regular-12",
    "matchup": "Texas A&M @ Oklahoma",
    "severity": "caution",
-   "summary": "Both QBs (Reed, Mateer) expected to play; A&M missing six incl. S Ratcliffe, OU missing two OL; breezy south winds near 13-20 mph with late storm risk.",
+   "summary": "A&M expected to start Brady Hart over Marcel Reed with 3 WRs, 2 OL and 2 defensive starters out; OU missing 2 OL; weather mild.",
    "flags": [
-    "A&M six players ruled out includ",
-    "OU OL starters Gunnar Allen and ",
-    "Okoye upgraded to probable for O"
+    "QB change: Brady Hart reportedly",
+    "Texas A&M OUT: WRs Bussey, Bethe",
+    "Texas A&M WR TK Norman questiona"
    ],
-   "checkedAt": "2026-11-20T15:58:05.802991+00:00",
+   "checkedAt": "2026-11-21T18:59:36.862926+00:00",
    "source": "claude"
   },
   "2026-regular-12:401869946": {
@@ -81,14 +81,14 @@
   "2026-regular-12:401864543": {
    "weekKey": "2026-regular-12",
    "matchup": "Northern Illinois @ North Dakota State",
-   "severity": "caution",
-   "summary": "NDSU QB Hayes expected to play despite ankle, but TE Kessel and FB Kokat hurt; NIU has OL losses; dome game so no weather risk.",
+   "severity": "clear",
+   "summary": "NDSU QB Nathan Hayes is playing through a minor toe issue and expected to start; Fargodome is indoors so weather is a non-factor.",
    "flags": [
-    "NDSU QB Nathan Hayes playing thr",
-    "NDSU TE Drew Kessel (lower leg, ",
-    "NDSU OL shuffling: RT Kene Anene"
+    "NDSU QB Hayes managing toe/ankle",
+    "NIU QB Taron Dickens had an earl",
+    "Indoor venue: no wind or precipi"
    ],
-   "checkedAt": "2026-11-20T15:58:05.802991+00:00",
+   "checkedAt": "2026-11-21T18:59:36.862926+00:00",
    "source": "claude"
   },
   "2026-regular-12:401871080": {
@@ -129,8 +129,99 @@
    ],
    "checkedAt": "2026-11-20T15:58:05.802991+00:00",
    "source": "claude"
+  },
+  "2026-regular-12:401869958": {
+   "weekKey": "2026-regular-12",
+   "matchup": "Georgia State @ Marshall",
+   "severity": "avoid",
+   "summary": "Georgia State starting QB Cameran Brown is ruled out, plus WR/TE losses; Marshall also missing QB Wilkins and an OL, undercutting the Over.",
+   "flags": [
+    "Georgia State QB Cameran Brown o",
+    "Backup Ayden Pereira expected to",
+    "GSU WR Isaiah Stone doubtful, WR"
+   ],
+   "checkedAt": "2026-11-21T18:59:36.862926+00:00",
+   "source": "claude"
+  },
+  "2026-regular-12:401864541": {
+   "weekKey": "2026-regular-12",
+   "matchup": "Hawai'i @ Nevada",
+   "severity": "clear",
+   "summary": "Bianco and Alejado both expected to start; only depth injuries noted, and Reno forecast is cold and calm with light winds, no threat to the Under.",
+   "flags": [
+    "Hawaii WR Pofele Ashlock out, Au",
+    "Nevada OL Elias Justice out, Jac",
+    "Reno kickoff cold, high near 40F"
+   ],
+   "checkedAt": "2026-11-21T18:59:36.862926+00:00",
+   "source": "claude"
+  },
+  "2026-regular-12:401858535": {
+   "weekKey": "2026-regular-12",
+   "matchup": "Indiana @ Washington",
+   "severity": "caution",
+   "summary": "IU QB unsettled (Hoover shoulder, Wilson likely); RB Turbo Richard, OL Brunner, CB Harris out; UW WRs/RBs banged up; weather calm, light rain.",
+   "flags": [
+    "Indiana QB Josh Hoover shoulder ",
+    "Indiana out: RB Turbo Richard, O",
+    "Washington QB Demond Williams Jr"
+   ],
+   "checkedAt": "2026-11-21T18:59:36.862926+00:00",
+   "source": "claude"
+  },
+  "2026-regular-12:401858307": {
+   "weekKey": "2026-regular-12",
+   "matchup": "SMU @ Notre Dame",
+   "severity": "caution",
+   "summary": "Both starting QBs (Carr, Jennings) are active and weather looks mild; ND LT Will Black questionable with concussion plus Bowen/McKinney out.",
+   "flags": [
+    "ND LT Will Black questionable (c",
+    "ND S Brauntae Johnson questionab",
+    "ND LB Drayk Bowen and CB DJ McKi"
+   ],
+   "checkedAt": "2026-11-21T18:59:36.862926+00:00",
+   "source": "claude"
+  },
+  "2026-regular-12:401862833": {
+   "weekKey": "2026-regular-12",
+   "matchup": "South Florida @ Florida Atlantic",
+   "severity": "caution",
+   "summary": "USF QB Michael Van Buren listed available after injury absence, RB Crowther questionable; storms likely in Boca Raton with winds around 10-15 mph.",
+   "flags": [
+    "USF QB Van Buren returning from ",
+    "USF RB D.J. Crowther questionabl",
+    "FAU WRs Messer and Hoch, RB Shie"
+   ],
+   "checkedAt": "2026-11-21T18:59:36.862926+00:00",
+   "source": "claude"
+  },
+  "2026-regular-12:401858302": {
+   "weekKey": "2026-regular-12",
+   "matchup": "Virginia Tech @ Miami",
+   "severity": "caution",
+   "summary": "Both QBs (Mensah, Grunkemeyer) play and weather is mild with light wind, but Miami is without WR Toney and VT has several OL/CB absences.",
+   "flags": [
+    "Miami WR Malachi Toney out (ankl",
+    "Miami RB Fletcher and S Poyser e",
+    "VT OL Wright, Austin, Bright out"
+   ],
+   "checkedAt": "2026-11-21T18:59:36.862926+00:00",
+   "source": "claude"
+  },
+  "2026-regular-12:401856870": {
+   "weekKey": "2026-regular-12",
+   "matchup": "Oklahoma State @ Arizona State",
+   "severity": "caution",
+   "summary": "OSU QB Mestemaker (shoulder) is a game-time decision with freshman Vehrs on standby; Tempe weather is clear and calm.",
+   "flags": [
+    "Starting QB Drew Mestemaker ques",
+    "Freshman Broderick Vehrs would s",
+    "OSU out: TE Carson Kolb, DT Land"
+   ],
+   "checkedAt": "2026-11-21T18:59:36.862926+00:00",
+   "source": "claude"
   }
  },
  "lastError": null,
- "updatedAt": "2026-11-20T15:58:05.802991+00:00"
+ "updatedAt": "2026-11-21T18:59:36.862926+00:00"
 }
