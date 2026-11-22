@@ -220,8 +220,21 @@
    ],
    "checkedAt": "2026-11-21T18:59:36.862926+00:00",
    "source": "claude"
+  },
+  "2026-regular-13:401866470": {
+   "weekKey": "2026-regular-13",
+   "matchup": "Kent State @ Eastern Michigan",
+   "severity": "caution",
+   "summary": "EMU QB Noah Kim has been dealing with an injury and listed questionable; weather is cold, dry and calm with light wind, no total risk.",
+   "flags": [
+    "EMU QB Noah Kim injury/questiona",
+    "EMU backup QB N. Kinsey listed o",
+    "Kent State skill players (RB Arm"
+   ],
+   "checkedAt": "2026-11-22T18:41:49.969979+00:00",
+   "source": "claude"
   }
  },
  "lastError": null,
- "updatedAt": "2026-11-21T18:59:36.862926+00:00"
+ "updatedAt": "2026-11-22T18:41:49.969979+00:00"
 }
