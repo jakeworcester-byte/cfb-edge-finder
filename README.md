@@ -53,11 +53,25 @@ Then open `site/index.html` in a browser (serve the folder with
 `python -m http.server` so `fetch` works). Without a key, the script writes
 demo data so the site still renders.
 
+## Tests
+
+Before pushing a change to the pipeline, run the test:
+
+```
+python -m unittest discover -s tests -v
+```
+
+It plays a full week (Saturday picks, Sunday grading and roll-forward,
+Tuesday lines) against a fake CFBD API, so it needs no keys. It also runs
+automatically on every push and pull request, and a failure on `main` stops
+the build before anything is deployed.
+
 ## Repo layout
 
 ```
 scripts/build_data.py     data pipeline + model + grading + recap facts
 scripts/recap.py          the Claude-written recap, with a fact check
+tests/test_pipeline.py    full-week pipeline test against a fake CFBD API
 site/index.html           the site: board, last week, season record
 site/results.html         the published Top 5 and its running P/L
 site/data.json            generated weekly data (committed copy is demo/stale)

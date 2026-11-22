@@ -1,0 +1,23 @@
+name: Tests
+
+# Runs the pipeline test on pull requests and on pushes to any branch other
+# than main. (Pushes to main run the same test inside build-and-deploy.yml,
+# before anything is built or deployed.)
+on:
+  pull_request:
+  push:
+    branches-ignore: [main]
+  workflow_dispatch: {}
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Pipeline test (no API keys needed)
+        run: python -m unittest discover -s tests -v
