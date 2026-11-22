@@ -786,6 +786,10 @@ def backfill_previous_week(boards, prev, year, now, ratings, elo_mean, sp_means,
 # --- line movement and closing line value ------------------------------------
 
 def opening_line(g):
+    """First line seen for this game, or None. `g` is None on the first run of
+    a new week, before that week's board has been recorded."""
+    if not g:
+        return None
     hist = g.get("lineHistory") or []
     return hist[0] if hist else None
 
@@ -793,6 +797,8 @@ def opening_line(g):
 def closing_line(g):
     """The last line seen before kickoff. Runs land Tue/Thu/Sat morning, so
     this is the final number the site saw, not a true post-close capture."""
+    if not g:
+        return None
     hist = g.get("lineHistory") or []
     if hist:
         return hist[-1]
