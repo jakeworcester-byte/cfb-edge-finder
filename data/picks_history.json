@@ -1652,7 +1652,7 @@
    "prob": 0.406,
    "ev": 0.1566,
    "detail": "Model win prob 41% (raw 45%) vs implied 35%",
-   "pickedAt": "2026-11-22T18:42:03.511042+00:00",
+   "pickedAt": "2026-11-22T23:34:37.910381+00:00",
    "openLine": null,
    "openPrice": 185,
    "openAt": "2026-11-22T18:42:03.511053+00:00",
@@ -1660,7 +1660,7 @@
    "clv": {
     "probPts": 0.0,
     "closePrice": 185,
-    "at": "2026-11-22T18:41:49.969979+00:00"
+    "at": "2026-11-22T23:34:36.977413+00:00"
    }
   },
   {
@@ -1680,7 +1680,7 @@
    "prob": 0.589,
    "ev": 0.1245,
    "detail": "Model total 63.7 vs market 56.5",
-   "pickedAt": "2026-11-22T18:42:03.511062+00:00",
+   "pickedAt": "2026-11-22T23:34:37.910393+00:00",
    "openLine": 56.5,
    "openPrice": -110,
    "openAt": "2026-11-22T18:42:03.511065+00:00",
@@ -1688,35 +1688,35 @@
    "clv": {
     "pts": 0.0,
     "closeLine": 56.5,
-    "at": "2026-11-22T18:41:49.969979+00:00"
+    "at": "2026-11-22T23:34:36.977413+00:00"
    }
   },
   {
    "season": 2026,
    "seasonType": "regular",
    "week": 13,
-   "gameId": 401871063,
-   "matchup": "Liberty @ Missouri State",
-   "homeTeam": "Missouri State",
-   "awayTeam": "Liberty",
-   "startDate": "2026-11-28T19:00:00.000Z",
-   "type": "spread",
-   "pick": "Liberty -14.5",
-   "side": "away",
-   "line": -14.5,
+   "gameId": 401871102,
+   "matchup": "Marshall @ UL Monroe",
+   "homeTeam": "UL Monroe",
+   "awayTeam": "Marshall",
+   "startDate": "2026-11-28T18:00:00.000Z",
+   "type": "total",
+   "pick": "Over 50.5",
+   "side": "over",
+   "line": 50.5,
    "price": -110,
-   "prob": 0.585,
-   "ev": 0.1162,
-   "detail": "Model line: Missouri State +20.5 vs market +14.5",
-   "pickedAt": "2026-11-22T18:42:03.511070+00:00",
-   "openLine": -14.5,
+   "prob": 0.582,
+   "ev": 0.1105,
+   "detail": "Model total 57.1 vs market 50.5",
+   "pickedAt": "2026-11-22T23:34:37.910398+00:00",
+   "openLine": 50.5,
    "openPrice": -110,
-   "openAt": "2026-11-22T18:42:03.511072+00:00",
+   "openAt": "2026-11-22T23:34:37.910400+00:00",
    "result": null,
    "clv": {
     "pts": 0.0,
-    "closeLine": -14.5,
-    "at": "2026-11-22T18:41:49.969979+00:00"
+    "closeLine": 50.5,
+    "at": "2026-11-22T23:34:36.977413+00:00"
    }
   },
   {
@@ -1736,7 +1736,7 @@
    "prob": 0.58,
    "ev": 0.1077,
    "detail": "Model total 33.1 vs market 39.5",
-   "pickedAt": "2026-11-22T18:42:03.511076+00:00",
+   "pickedAt": "2026-11-22T23:34:37.910404+00:00",
    "openLine": 39.5,
    "openPrice": -110,
    "openAt": "2026-11-22T18:42:03.511077+00:00",
@@ -1744,35 +1744,35 @@
    "clv": {
     "pts": 0.0,
     "closeLine": 39.5,
-    "at": "2026-11-22T18:41:49.969979+00:00"
+    "at": "2026-11-22T23:34:36.977413+00:00"
    }
   },
   {
    "season": 2026,
    "seasonType": "regular",
    "week": 13,
-   "gameId": 401858544,
-   "matchup": "Minnesota @ Wisconsin",
-   "homeTeam": "Wisconsin",
-   "awayTeam": "Minnesota",
-   "startDate": "2026-11-28T00:30:00.000Z",
-   "type": "total",
-   "pick": "Under 36.5",
-   "side": "under",
-   "line": 36.5,
-   "price": -110,
-   "prob": 0.58,
-   "ev": 0.1077,
-   "detail": "Model total 30.1 vs market 36.5",
-   "pickedAt": "2026-11-22T18:42:03.511081+00:00",
-   "openLine": 36.5,
-   "openPrice": -110,
-   "openAt": "2026-11-22T18:42:03.511083+00:00",
+   "gameId": 401856878,
+   "matchup": "Kansas State @ Iowa State",
+   "homeTeam": "Iowa State",
+   "awayTeam": "Kansas State",
+   "startDate": "2026-11-28T19:00:00.000Z",
+   "type": "moneyline",
+   "pick": "Kansas State ML +154",
+   "side": "away",
+   "line": null,
+   "price": 154,
+   "prob": 0.432,
+   "ev": 0.0977,
+   "detail": "Model win prob 43% (raw 46%) vs implied 39%",
+   "pickedAt": "2026-11-22T23:34:37.910408+00:00",
+   "openLine": null,
+   "openPrice": 154,
+   "openAt": "2026-11-22T23:34:37.910410+00:00",
    "result": null,
    "clv": {
-    "pts": 0.0,
-    "closeLine": 36.5,
-    "at": "2026-11-22T18:41:49.969979+00:00"
+    "probPts": 0.0,
+    "closePrice": 154,
+    "at": "2026-11-22T23:34:36.977413+00:00"
    }
   }
  ]
