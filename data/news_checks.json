@@ -225,16 +225,81 @@
    "weekKey": "2026-regular-13",
    "matchup": "Kent State @ Eastern Michigan",
    "severity": "caution",
-   "summary": "EMU QB Noah Kim has been dealing with an injury and listed questionable; weather is cold, dry and calm with light wind, no total risk.",
+   "summary": "EMU starts a third-string QB (Kim and Stuckey out) and Kent State QB DeShields is questionable; weather mild with light wind, modest Under risk.",
    "flags": [
-    "EMU QB Noah Kim injury/questiona",
-    "EMU backup QB N. Kinsey listed o",
-    "Kent State skill players (RB Arm"
+    "EMU QB Noah Kim out (missed 4th ",
+    "EMU QB Jace Stuckey ruled out, M",
+    "Kent State QB Dru DeShields ques"
    ],
-   "checkedAt": "2026-11-22T18:41:49.969979+00:00",
+   "checkedAt": "2026-11-24T23:41:59.722771+00:00",
+   "source": "claude"
+  },
+  "2026-regular-13:401869930": {
+   "weekKey": "2026-regular-13",
+   "matchup": "App State @ South Alabama",
+   "severity": "caution",
+   "summary": "Weather looks benign (dry, light wind, upper 50s), but App State QB Singleton has an ongoing ankle issue, so confirm starter before the Over.",
+   "flags": [
+    "App State QB M. Singleton listed",
+    "Confirm App State starting QB on",
+    "Weather: overcast, near 0% rain,"
+   ],
+   "checkedAt": "2026-11-24T23:41:59.722771+00:00",
+   "source": "claude"
+  },
+  "2026-regular-13:401856759": {
+   "weekKey": "2026-regular-13",
+   "matchup": "Florida @ Florida State",
+   "severity": "caution",
+   "summary": "Weather looks fine (dry, light wind), but Florida is without WR Vernell Brown III and FSU has multiple listed starters out or banged up.",
+   "flags": [
+    "Florida WR Vernell Brown III rul",
+    "FSU carrying several season-endi",
+    "FSU QB Will Wilson recently list"
+   ],
+   "checkedAt": "2026-11-24T23:41:59.722771+00:00",
+   "source": "claude"
+  },
+  "2026-regular-13:401862838": {
+   "weekKey": "2026-regular-13",
+   "matchup": "Temple @ Memphis",
+   "severity": "caution",
+   "summary": "Weather is fine (sunny, ~55F, winds under 10 mph); Temple QB A. Sheppard listed questionable and Memphis WR Kluse questionable.",
+   "flags": [
+    "Temple QB Sheppard questionable ",
+    "Memphis WR Kluse questionable",
+    "No severe weather: mostly sunny,"
+   ],
+   "checkedAt": "2026-11-24T23:41:59.722771+00:00",
+   "source": "claude"
+  },
+  "2026-regular-13:401864546": {
+   "weekKey": "2026-regular-13",
+   "matchup": "Air Force @ New Mexico",
+   "severity": "caution",
+   "summary": "Air Force QB carousel continues: Szarka out for season, Medders injured, third starter likely; weather in Albuquerque mild with light wind.",
+   "flags": [
+    "Air Force starting QB Liam Szark",
+    "Backup QB Evan Medders injured, ",
+    "Air Force CB depth thinned by in"
+   ],
+   "checkedAt": "2026-11-24T23:41:59.722771+00:00",
+   "source": "claude"
+  },
+  "2026-regular-13:401856762": {
+   "weekKey": "2026-regular-13",
+   "matchup": "Mississippi State @ Ole Miss",
+   "severity": "caution",
+   "summary": "MSU QB unsettled: Taylor out for season, Swann (boot) game-time call, Puckett likely; Ole Miss QB Knight hamstring. Weather mild, light wind.",
+   "flags": [
+    "MSU QB Kamario Taylor out for se",
+    "MSU QB AJ Swann day to day in wa",
+    "MSU RB Fluff Bothwell returning "
+   ],
+   "checkedAt": "2026-11-24T23:41:59.722771+00:00",
    "source": "claude"
   }
  },
  "lastError": null,
- "updatedAt": "2026-11-22T23:34:36.977413+00:00"
+ "updatedAt": "2026-11-24T23:41:59.722771+00:00"
 }
