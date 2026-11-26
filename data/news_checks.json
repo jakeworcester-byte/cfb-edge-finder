@@ -298,8 +298,138 @@
    ],
    "checkedAt": "2026-11-24T23:41:59.722771+00:00",
    "source": "claude"
+  },
+  "2026-regular-13:401856878": {
+   "weekKey": "2026-regular-13",
+   "matchup": "Kansas State @ Iowa State",
+   "severity": "caution",
+   "summary": "K-State QB Dillon Duff questionable (day to day); Avery Johnson and Jacob Knuth out, Barnett next up; weather mild with light winds.",
+   "flags": [
+    "QB Dillon Duff questionable, gam",
+    "Starting QB Avery Johnson out fo",
+    "Blake Barnett possible emergency"
+   ],
+   "checkedAt": "2026-11-26T23:25:07.024011+00:00",
+   "source": "claude"
+  },
+  "2026-regular-13:401856874": {
+   "weekKey": "2026-regular-13",
+   "matchup": "Baylor @ Houston",
+   "severity": "caution",
+   "summary": "Houston QB Weigman (shoulder) questionable with freshman Henderson ready; Baylor's Lagway nursing hamstring plus several starters iffy; weather calm.",
+   "flags": [
+    "Houston starting QB Conner Weigm",
+    "Backup Keisean Henderson played ",
+    "Baylor QB DJ Lagway tweaked hams"
+   ],
+   "checkedAt": "2026-11-26T23:25:07.024011+00:00",
+   "source": "claude"
+  },
+  "2026-regular-13:401871082": {
+   "weekKey": "2026-regular-13",
+   "matchup": "Sam Houston @ Florida International",
+   "severity": "caution",
+   "summary": "SHSU QB Landyn Locke exited last week with a knee issue and is a game-time call; Miami weather is dry, mild, winds under 10 mph.",
+   "flags": [
+    "QB Landyn Locke knee injury, sta",
+    "Backup Mason Holtzclaw could sta",
+    "Weather benign: mostly cloudy, 7"
+   ],
+   "checkedAt": "2026-11-26T23:25:07.024011+00:00",
+   "source": "claude"
+  },
+  "2026-regular-13:401856764": {
+   "weekKey": "2026-regular-13",
+   "matchup": "South Carolina @ Clemson",
+   "severity": "avoid",
+   "summary": "Clemson down to walk-on Trent Pearman at QB: Reynolds out for season, Vizzina out with severe concussion; weather fine, mild and dry.",
+   "flags": [
+    "Clemson QB Tait Reynolds out for",
+    "QB Christopher Vizzina out with ",
+    "Walk-on Trent Pearman starting, "
+   ],
+   "checkedAt": "2026-11-26T23:25:07.024011+00:00",
+   "source": "claude"
+  },
+  "2026-regular-13:401858317": {
+   "weekKey": "2026-regular-13",
+   "matchup": "Virginia @ Virginia Tech",
+   "severity": "clear",
+   "summary": "Both QBs set (Pribula for UVA, Grunkemeyer for VT); only minor questionable tags, and Saturday looks dry, mild, winds near 10 mph.",
+   "flags": [
+    "UVA S Corey Costner questionable",
+    "Virginia Tech offensive line dep",
+    "No QB injury, opt-out, or coachi"
+   ],
+   "checkedAt": "2026-11-26T23:25:07.024011+00:00",
+   "source": "claude"
+  },
+  "2026-regular-13:401856875": {
+   "weekKey": "2026-regular-13",
+   "matchup": "UCF @ Colorado",
+   "severity": "caution",
+   "summary": "UCF out LB Curtis and DB Henderson, LT Tabansi questionable; QB situation fluid both sides; Boulder mild with breezy 12-16 mph winds, PM showers possible.",
+   "flags": [
+    "UCF LB Tackett Curtis out",
+    "UCF DB Demari Henderson out",
+    "UCF WR Waden Charles out"
+   ],
+   "checkedAt": "2026-11-26T23:25:07.024011+00:00",
+   "source": "claude"
+  },
+  "2026-regular-13:401856876": {
+   "weekKey": "2026-regular-13",
+   "matchup": "Cincinnati @ BYU",
+   "severity": "caution",
+   "summary": "No QB ruled out; light winds (under 10 mph) but 50-65% chance of rain showers in Provo, a modest drag on the Over.",
+   "flags": [
+    "rain chance 50-65% at kickoff",
+    "light winds, no wind concern",
+    "no confirmed QB outs found for e"
+   ],
+   "checkedAt": "2026-11-26T23:25:07.024011+00:00",
+   "source": "claude"
+  },
+  "2026-regular-13:401858315": {
+   "weekKey": "2026-regular-13",
+   "matchup": "Pittsburgh @ California",
+   "severity": "caution",
+   "summary": "Pitt QB job unsettled between Geriner and Dailey with Heintschel out for year, and top RB Ferguson doubtful; mild Berkeley weather.",
+   "flags": [
+    "Pitt QB1 uncertain: Geriner vs f",
+    "Mason Heintschel out for season ",
+    "Pitt RB Damon Ferguson Jr. doubt"
+   ],
+   "checkedAt": "2026-11-26T23:25:07.024011+00:00",
+   "source": "claude"
+  },
+  "2026-regular-13:401871062": {
+   "weekKey": "2026-regular-13",
+   "matchup": "Jacksonville State @ Delaware",
+   "severity": "caution",
+   "summary": "No QB or starter issues found; Jax State's Caden Creel expected to start, but Saturday forecast shows dry skies with roughly 15 mph west wind.",
+   "flags": [
+    "moderate wind ~15 mph W at kicko",
+    "no reported injuries or opt-outs",
+    "Jax State already CUSA title gam"
+   ],
+   "checkedAt": "2026-11-26T23:25:07.024011+00:00",
+   "source": "claude"
+  },
+  "2026-regular-13:401871102": {
+   "weekKey": "2026-regular-13",
+   "matchup": "Marshall @ UL Monroe",
+   "severity": "clear",
+   "summary": "No reported injuries or QB issues for either side; Monroe forecast is mostly sunny, mid 60s to low 70s, winds around 11 mph.",
+   "flags": [
+    "no listed injuries on either tea",
+    "light wind near 11 mph SSW",
+    "minimal rain chance under 10 per"
+   ],
+   "checkedAt": "2026-11-26T23:25:07.024011+00:00",
+   "source": "claude"
   }
  },
  "lastError": null,
- "updatedAt": "2026-11-24T23:41:59.722771+00:00"
+ "updatedAt": "2026-11-26T23:25:07.024011+00:00"
 }

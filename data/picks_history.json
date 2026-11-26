@@ -1652,7 +1652,7 @@
    "prob": 0.422,
    "ev": 0.1385,
    "detail": "Model win prob 42% (raw 46%) vs implied 37%",
-   "pickedAt": "2026-11-24T23:42:49.636670+00:00",
+   "pickedAt": "2026-11-26T23:26:22.151653+00:00",
    "openLine": null,
    "openPrice": 154,
    "openAt": "2026-11-22T23:34:37.910410+00:00",
@@ -1660,7 +1660,7 @@
    "clv": {
     "probPts": -2.3,
     "closePrice": 170,
-    "at": "2026-11-24T23:41:59.722771+00:00"
+    "at": "2026-11-26T23:25:07.024011+00:00"
    }
   },
   {
@@ -1680,7 +1680,7 @@
    "prob": 0.386,
    "ev": 0.1377,
    "detail": "Model win prob 39% (raw 42%) vs implied 34%",
-   "pickedAt": "2026-11-24T23:42:49.636685+00:00",
+   "pickedAt": "2026-11-26T23:26:22.151667+00:00",
    "openLine": null,
    "openPrice": 195,
    "openAt": "2026-11-24T23:42:49.636687+00:00",
@@ -1688,35 +1688,35 @@
    "clv": {
     "probPts": 0.0,
     "closePrice": 195,
-    "at": "2026-11-24T23:41:59.722771+00:00"
+    "at": "2026-11-26T23:25:07.024011+00:00"
    }
   },
   {
    "season": 2026,
    "seasonType": "regular",
    "week": 13,
-   "gameId": 401856764,
-   "matchup": "South Carolina @ Clemson",
-   "homeTeam": "Clemson",
-   "awayTeam": "South Carolina",
-   "startDate": "2026-11-28T20:00:00.000Z",
-   "type": "moneyline",
-   "pick": "Clemson ML +190",
-   "side": "home",
-   "line": null,
-   "price": 190,
-   "prob": 0.383,
-   "ev": 0.1103,
-   "detail": "Model win prob 38% (raw 41%) vs implied 34%",
-   "pickedAt": "2026-11-24T23:42:49.636691+00:00",
-   "openLine": null,
-   "openPrice": 190,
-   "openAt": "2026-11-24T23:42:49.636693+00:00",
+   "gameId": 401871082,
+   "matchup": "Sam Houston @ Florida International",
+   "homeTeam": "Florida International",
+   "awayTeam": "Sam Houston",
+   "startDate": "2026-11-28T19:00:00.000Z",
+   "type": "total",
+   "pick": "Under 41",
+   "side": "under",
+   "line": 41.0,
+   "price": -110,
+   "prob": 0.583,
+   "ev": 0.1124,
+   "detail": "Model total 34.4 vs market 41",
+   "pickedAt": "2026-11-26T23:26:22.151673+00:00",
+   "openLine": 41.0,
+   "openPrice": -110,
+   "openAt": "2026-11-26T23:26:22.151676+00:00",
    "result": null,
    "clv": {
-    "probPts": 0.0,
-    "closePrice": 190,
-    "at": "2026-11-24T23:41:59.722771+00:00"
+    "pts": 0.0,
+    "closeLine": 41.0,
+    "at": "2026-11-26T23:25:07.024011+00:00"
    }
   },
   {
@@ -1736,7 +1736,7 @@
    "prob": 0.472,
    "ev": 0.1093,
    "detail": "Model win prob 47% (raw 51%) vs implied 43%",
-   "pickedAt": "2026-11-24T23:42:49.636696+00:00",
+   "pickedAt": "2026-11-26T23:26:22.151680+00:00",
    "openLine": null,
    "openPrice": 135,
    "openAt": "2026-11-24T23:42:49.636697+00:00",
@@ -1744,35 +1744,35 @@
    "clv": {
     "probPts": 0.0,
     "closePrice": 135,
-    "at": "2026-11-24T23:41:59.722771+00:00"
+    "at": "2026-11-26T23:25:07.024011+00:00"
    }
   },
   {
    "season": 2026,
    "seasonType": "regular",
    "week": 13,
-   "gameId": 401871102,
-   "matchup": "Marshall @ UL Monroe",
-   "homeTeam": "UL Monroe",
-   "awayTeam": "Marshall",
-   "startDate": "2026-11-28T18:00:00.000Z",
-   "type": "total",
-   "pick": "Over 51",
-   "side": "over",
-   "line": 51.0,
-   "price": -110,
-   "prob": 0.576,
-   "ev": 0.0987,
-   "detail": "Model total 57.1 vs market 51",
-   "pickedAt": "2026-11-24T23:42:49.636701+00:00",
-   "openLine": 50.5,
-   "openPrice": -110,
-   "openAt": "2026-11-22T23:34:37.910400+00:00",
+   "gameId": 401856875,
+   "matchup": "UCF @ Colorado",
+   "homeTeam": "Colorado",
+   "awayTeam": "UCF",
+   "startDate": "2026-11-28T19:00:00.000Z",
+   "type": "moneyline",
+   "pick": "UCF ML +110",
+   "side": "away",
+   "line": null,
+   "price": 110,
+   "prob": 0.527,
+   "ev": 0.1067,
+   "detail": "Model win prob 53% (raw 57%) vs implied 48%",
+   "pickedAt": "2026-11-26T23:26:22.151685+00:00",
+   "openLine": null,
+   "openPrice": 110,
+   "openAt": "2026-11-26T23:26:22.151687+00:00",
    "result": null,
    "clv": {
-    "pts": 0.5,
-    "closeLine": 51.0,
-    "at": "2026-11-24T23:41:59.722771+00:00"
+    "probPts": 0.0,
+    "closePrice": 110,
+    "at": "2026-11-26T23:25:07.024011+00:00"
    }
   }
  ]
